@@ -1,0 +1,50 @@
+[workspace]
+resolver = "3"
+members = ["apps/krasis", "crates/krasis-host"]
+exclude = ["upstream", "vendor"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.95"
+
+[profile.dev.package."*"]
+opt-level = 2
+debug = false
+
+[profile.dev]
+opt-level = 1
+debug = "line-tables-only"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 16
+debug = 0
+
+# One egui family for every module: the reviewed storytold fork, vendored so Krasis can construct
+# a CreationContext for a module opened after startup.
+[patch.crates-io]
+ecolor = { path = "vendor/egui/crates/ecolor" }
+emath = { path = "vendor/egui/crates/emath" }
+epaint = { path = "vendor/egui/crates/epaint" }
+epaint_default_fonts = { path = "vendor/egui/crates/epaint_default_fonts" }
+egui = { path = "vendor/egui/crates/egui" }
+egui-winit = { path = "vendor/egui/crates/egui-winit" }
+egui-wgpu = { path = "vendor/egui/crates/egui-wgpu" }
+egui_glow = { path = "vendor/egui/crates/egui_glow" }
+egui_extras = { path = "vendor/egui/crates/egui_extras" }
+egui_kittest = { path = "vendor/egui/crates/egui_kittest" }
+egui_system_font_provider = { path = "vendor/egui/crates/egui_system_font_provider" }
+eframe = { path = "vendor/egui/crates/eframe" }
+egui_demo_lib = { path = "vendor/egui/crates/egui_demo_lib" }
+egui_inspection = { path = "vendor/egui/crates/egui_inspection" }
+winit = { git = "https://github.com/storytold/winit.git", rev = "a517b3846ee8457d84ee4975110bfda6797c44dc" }
+krilla = { git = "https://github.com/storytold/craft-libs", rev = "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb" }
+hayro = { git = "https://github.com/storytold/craft-libs", rev = "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb" }
+hayro-syntax = { git = "https://github.com/storytold/craft-libs", rev = "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb" }
+hayro-interpret = { git = "https://github.com/storytold/craft-libs", rev = "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb" }
+hayro-jbig2 = { git = "https://github.com/storytold/craft-libs", rev = "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb" }
+hayro-cmap = { git = "https://github.com/storytold/craft-libs", rev = "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb" }
+hayro-postscript = { git = "https://github.com/storytold/craft-libs", rev = "9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb" }

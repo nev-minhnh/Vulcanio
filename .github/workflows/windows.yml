@@ -1,0 +1,52 @@
+# Build krasis.exe for Windows 11 (x64) and the installer, on GitHub's Windows runner.
+name: Windows build
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ["v*"]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    timeout-minutes: 300
+    env:
+      CARGO_TERM_COLOR: always
+      CARGO_INCREMENTAL: "0"
+      CARGO_PROFILE_RELEASE_DEBUG: "0"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+        with:
+          cache-on-failure: true
+      - name: Build krasis.exe
+        run: cargo build --release -p krasis --locked
+      - name: Version
+        id: version
+        shell: pwsh
+        run: |
+          $v = (Select-String -Path apps/krasis/Cargo.toml -Pattern '^version = "(.+)"').Matches[0].Groups[1].Value
+          "version=$v" >> $env:GITHUB_OUTPUT
+      - name: Portable zip
+        shell: pwsh
+        run: |
+          $v = "${{ steps.version.outputs.version }}"
+          $dir = "dist/Krasis-$v-windows-x64"
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          Copy-Item target/release/krasis.exe $dir/
+          Copy-Item LICENSE-MIT, LICENSE-APACHE, NOTICE.md, README.md $dir/
+          Compress-Archive -Path "$dir/*" -DestinationPath "dist/Krasis-$v-windows-x64.zip" -Force
+      - name: Installer
+        shell: pwsh
+        continue-on-error: true
+        run: |
+          choco install innosetup -y --no-progress
+          & "${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe" packaging\windows\krasis.iss
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Krasis-${{ steps.version.outputs.version }}-windows-x64
+          path: |
+            dist/*.zip
+            dist/*.exe
+          if-no-files-found: error
