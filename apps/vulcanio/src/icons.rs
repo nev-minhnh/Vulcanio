@@ -70,10 +70,10 @@ pub fn paint(p: &Painter, rect: Rect, icon: &Icon, color: Color32) {
             p.add(egui::Shape::convex_polygon(vec![d + vec2(0.0, -r), d + vec2(r, 0.0), d + vec2(0.0, r), d + vec2(-r, 0.0)], color, Stroke::NONE));
         }
         Icon::Module(ModuleId::Cad) => {
-            p.circle_stroke(at(0.02, 0.02), s * 0.25, st);
-            p.line_segment([at(-0.42, 0.02), at(0.42, 0.02)], Stroke::new(w * 0.7, color));
-            p.line_segment([at(0.02, -0.42), at(0.02, 0.42)], Stroke::new(w * 0.7, color));
-            p.rect_stroke(Rect::from_center_size(at(0.02, 0.02), vec2(s * 0.12, s * 0.12)), 0.0, Stroke::new(w * 0.7, color), StrokeKind::Middle);
+            p.circle_stroke(c, s * 0.25, st);
+            p.line_segment([at(-0.42, 0.0), at(0.42, 0.0)], Stroke::new(w * 0.7, color));
+            p.line_segment([at(0.0, -0.42), at(0.0, 0.42)], Stroke::new(w * 0.7, color));
+            p.rect_stroke(Rect::from_center_size(c, vec2(s * 0.12, s * 0.12)), 0.0, Stroke::new(w * 0.7, color), StrokeKind::Middle);
         }
         Icon::Home => {
             p.add(egui::Shape::line(vec![at(-0.36, 0.0), at(0.0, -0.34), at(0.36, 0.0)], st));
@@ -104,8 +104,8 @@ pub fn paint(p: &Painter, rect: Rect, icon: &Icon, color: Color32) {
         }
         Icon::Info => {
             p.circle_stroke(c, s * 0.38, st);
-            p.circle_filled(at(0.0, -0.17), s * 0.05, color);
-            p.line_segment([at(0.0, -0.04), at(0.0, 0.22)], st);
+            p.circle_filled(at(0.0, -0.16), s * 0.05, color);
+            p.line_segment([at(0.0, -0.04), at(0.0, 0.2)], st);
         }
     }
 }
