@@ -90,7 +90,7 @@ fn open_path(s: &mut Session, p: &Value) -> Result<Value> {
             return crate::cmd::interchange::open_idml(s, p);
         }
         if !native && ext != designcraft_format::EXTENSION {
-            return Err(bad("file.open", format!("{path}: not a Krasis Layout or IDML file")));
+            return Err(bad("file.open", format!("{path}: not a Vulcanio Layout or IDML file")));
         }
         let (mut d, mut warnings) = load_bytes(&bytes)?;
         crate::cmd::interchange::resolve_packaged_links(&mut d, Some(std::path::Path::new(path)));
@@ -271,7 +271,7 @@ mod document_fonts_tests {
         // The extension decides (any case), not the bytes: no InDesign-made file is needed.
         let dir = temp_dir("indd");
         let path = dir.join("Brochure.INDD");
-        std::fs::write(&path, b"not a Krasis Layout document").unwrap();
+        std::fs::write(&path, b"not a Vulcanio Layout document").unwrap();
         let mut s = Session::new();
         let e = s.execute("file.open", &json!({"path": path.to_string_lossy()})).unwrap_err().to_string();
         assert!(e.contains("InDesign Markup (IDML)") && !e.contains("expected value"), "{e}");
@@ -534,7 +534,7 @@ mod open_bytes_tests {
         let native = s.execute("file.serialize", &json!({})).unwrap();
         for (name, title) in [
             ("Brochure.designcraft", "Brochure"),
-            ("Brochure.Krasis Layout", "Brochure"),
+            ("Brochure.Vulcanio Layout", "Brochure"),
             ("Brochure", "Brochure"),
             ("Brochure.v2", "Brochure.v2"),
             ("Brochure.indd", "Brochure.indd"),

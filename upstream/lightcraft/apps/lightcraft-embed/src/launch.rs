@@ -71,7 +71,7 @@ pub(crate) fn launch_imports_in(args: &[String], cwd: Option<&std::path::Path>, 
             Some(LaunchPath::Library(dir)) if library.is_none() => library = Some(std::path::PathBuf::from(dir)),
             Some(LaunchPath::Library(dir)) => {
                 log::warn!("one library at a time: not opening {dir} given at launch");
-                notices.push(format!("{dir} was not opened: Krasis Library opens one library at a time. Open it with File ▸ Open Library…"));
+                notices.push(format!("{dir} was not opened: Vulcanio Library opens one library at a time. Open it with File ▸ Open Library…"));
             }
             Some(LaunchPath::Import(p)) => files.push(p),
             Some(LaunchPath::Refused { path, why }) => {
@@ -111,22 +111,22 @@ pub(crate) fn panic_log_path_with(env: impl Fn(&str) -> Option<std::ffi::OsStrin
     env("LIGHTCRAFT_CONFIG_DIR").filter(|value| !value.is_empty()).map(std::path::PathBuf::from).unwrap_or(temp).join("lightcraft-panics.log")
 }
 
-/// What to tell the user when Krasis Library stopped while running (`error`), and why when the GPU
+/// What to tell the user when Vulcanio Library stopped while running (`error`), and why when the GPU
 /// was lost (`lost`): GPU rendering is off from the next start.
 pub(crate) fn stopped_text(error: &str, lost: Option<&str>) -> String {
     match lost {
         Some(reason) => format!(
-            "{error}. The graphics driver reset the GPU ({reason}). Krasis Library renders on the CPU from its next start; \
+            "{error}. The graphics driver reset the GPU ({reason}). Vulcanio Library renders on the CPU from its next start; \
              Settings ▸ Performance ▸ Use the GPU for rendering turns the GPU back on"
         ),
         None => error.to_string(),
     }
 }
 
-/// Krasis Library stopped while its window was up: say so in the log and in a native message box
+/// Vulcanio Library stopped while its window was up: say so in the log and in a native message box
 /// naming the log file (as [`startup_failed`] does for a start that failed).
 pub(crate) fn stopped_while_running(text: &str, log_file: Option<&std::path::Path>) {
-    log::error!("Krasis Library stopped: {text}");
+    log::error!("Vulcanio Library stopped: {text}");
     if std::env::var_os("LIGHTCRAFT_NO_PREFS").is_some() {
         return; // tests and scripts: no dialog to click away
     }
@@ -143,7 +143,7 @@ pub(crate) fn stopped_while_running(text: &str, log_file: Option<&std::path::Pat
 /// message box naming the log file, instead of exiting without a trace — the release builds have
 /// no console on Windows, and an app started from Finder shows no standard error (issue #260).
 pub(crate) fn startup_failed(error: &str, log_file: Option<&std::path::Path>) {
-    log::error!("Krasis Library could not open its window: {error}");
+    log::error!("Vulcanio Library could not open its window: {error}");
     if std::env::var_os("LIGHTCRAFT_NO_PREFS").is_some() {
         return; // tests and scripts: no dialog to click away
     }

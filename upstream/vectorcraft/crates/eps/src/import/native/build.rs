@@ -795,7 +795,7 @@ fn unread_error(unread: &[(NodeId, Vec<String>)]) -> String {
         list.insert(format!("operators VectorCraft doesn't know ({})", ops.join(", ")));
     }
     let list: Vec<&str> = list.iter().map(String::as_str).collect();
-    format!("it has {}, which Krasis Vector doesn't read from it yet", ai::join_and(&list))
+    format!("it has {}, which Vulcanio Vector doesn't read from it yet", ai::join_and(&list))
 }
 
 /// The page's text objects in `shown` that the page objects replacing `doc`'s unread objects hold

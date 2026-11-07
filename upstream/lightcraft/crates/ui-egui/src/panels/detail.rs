@@ -331,9 +331,9 @@ pub fn show(app: &mut LightcraftApp, ui: &mut egui::Ui) {
     let shown = shown_after_windows(shown, camera_full_drawn, drawn);
     app.loupe_shown = Some((id, shown));
     app.loupe_timing.observe(id, shown, now);
-    // the camera's own JPEG is on screen, not Krasis Library's rendering of the raw: say so (once), so
+    // the camera's own JPEG is on screen, not Vulcanio Library's rendering of the raw: say so (once), so
     // colour and tone are not judged on it (PERF-CULL-4; Lightroom Classic badges its embedded
-    // previews). Not over a window render, which is Krasis Library's own.
+    // previews). Not over a window render, which is Vulcanio Library's own.
     if camera_jpeg_shown(app, &photo, shown, drawn) {
         camera_preview_badge(ui, canvas, img_rect.intersect(canvas));
     }

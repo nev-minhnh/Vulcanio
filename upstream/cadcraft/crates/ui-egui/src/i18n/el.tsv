@@ -1,4 +1,4 @@
-# Greek interface catalog for Krasis CAD. Original, AI-assisted translation by @Camthalion77 with ChatGPT.
+# Greek interface catalog for Vulcanio CAD. Original, AI-assisted translation by @Camthalion77 with ChatGPT.
 # context<TAB>English source<TAB>Greek translation. Preserve English keys and formatting.
 	  Cancel  	  Ακύρωση
 	  OK  	  Εντάξει
@@ -35,7 +35,7 @@
 	A drawing opened from a file keeps that file's format.	Ένα σχέδιο που ανοίγεται από αρχείο διατηρεί τη μορφή του αρχείου του.
 	A variable name starts with a letter and has only letters, digits and _	Το όνομα μιας μεταβλητής αρχίζει με γράμμα και περιέχει μόνο γράμματα, ψηφία και _
 	About	Πληροφορίες
-	About Krasis CAD	Πληροφορίες για το Krasis CAD
+	About Vulcanio CAD	Πληροφορίες για το Vulcanio CAD
 	Absolute	Απόλυτο
 	Accessibility	Προσβασιμότητα
 	Add	Προσθήκη
@@ -125,9 +125,9 @@
 	ByBlock	Κατά μπλοκ (ByBlock)
 	ByColor	Κατά χρώμα (ByColor)
 	ByLayer	Κατά επίπεδο (ByLayer)
-	Krasis CAD	Krasis CAD
-	Krasis CAD Help	Βοήθεια Krasis CAD
-	Krasis CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Το Krasis CAD αποθηκεύει τις προτιμήσεις, τις λειτουργίες έλξης αντικειμένων και τους διακόπτες σχεδίασης στον λογαριασμό σας και τις επαναφέρει στην εκκίνηση.
+	Vulcanio CAD	Vulcanio CAD
+	Vulcanio CAD Help	Βοήθεια Vulcanio CAD
+	Vulcanio CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Το Vulcanio CAD αποθηκεύει τις προτιμήσεις, τις λειτουργίες έλξης αντικειμένων και τους διακόπτες σχεδίασης στον λογαριασμό σας και τις επαναφέρει στην εκκίνηση.
 	Calibrate	Βαθμονόμηση
 	Calibrate 3D Mouse	Βαθμονόμηση ποντικιού 3Δ
 	Cancel	Ακύρωση
@@ -467,7 +467,7 @@
 	Hide All	Απόκρυψη όλων
 	Hide All Constraint Bars	Απόκρυψη όλων των γραμμών περιορισμών
 	Hide All Dynamic Dimensions	Απόκρυψη όλων των δυναμικών διαστάσεων
-	Hide Krasis CAD	Απόκρυψη Krasis CAD
+	Hide Vulcanio CAD	Απόκρυψη Vulcanio CAD
 	Hide Layer List	Απόκρυψη λίστας επιπέδων
 	Hide Objects	Απόκρυψη αντικειμένων
 	Hide Others	Απόκρυψη άλλων
@@ -524,7 +524,7 @@
 	Jogged	Με παράκαμψη (Jogged)
 	Jogged Linear	Γραμμική διάσταση με παράκαμψη (Jogged Linear)
 	Join	Σύνδεση αντικειμένων (Join)
-	Join the Krasis Discord…	Ελάτε στο Discord του Krasis…
+	Join the Vulcanio Discord…	Ελάτε στο Discord του Vulcanio…
 	Join us on Discord	Ελάτε στο Discord
 	Justify	Στοίχιση
 	Keep an editable copy of this table in the drawing	Διατήρηση επεξεργάσιμου αντιγράφου του πίνακα στο σχέδιο
@@ -699,7 +699,7 @@
 	OK	Εντάξει
 	On	Ενεργό
 	On/Off	Ενεργό/ανενεργό
-	Part of Krasis.	Μία από τις εφαρμογές Crafting Apps της ομάδας και της κοινότητας Krasis.
+	Part of Vulcanio.	Μία από τις εφαρμογές Crafting Apps της ομάδας και της κοινότητας Vulcanio.
 	Only in this drawing: {n}	Μόνο σε αυτό το σχέδιο: {n}
 	Only in {name}: {n}	Μόνο στο {name}: {n}
 	Oops	Επαναφορά διαγραμμένων αντικειμένων
@@ -812,7 +812,7 @@
 	Quick Select...	Γρήγορη επιλογή...
 	QuickCalc	Γρήγορη αριθμομηχανή (QuickCalc)
 	QuickCalc Pick	Επιλογή στη γρήγορη αριθμομηχανή
-	Quit Krasis CAD	Έξοδος από το Krasis CAD
+	Quit Vulcanio CAD	Έξοδος από το Vulcanio CAD
 	Radius	Ακτίνα
 	Raster Image	Εικόνα ψηφίδων (Raster Image)
 	Ray	Ημιευθεία (Ray)
@@ -1333,7 +1333,7 @@ menu	Draw	Σχεδίαση
 menu	Modify	Τροποποίηση
 menu	View	Προβολή
 	Check for Updates…	Έλεγχος για ενημερώσεις…
-	Krasis CAD is up to date.	Το Krasis CAD είναι ενημερωμένο.
+	Vulcanio CAD is up to date.	Το Vulcanio CAD είναι ενημερωμένο.
 	Could not check for updates.	Δεν ήταν δυνατός ο έλεγχος για ενημερώσεις.
 	Find All	Find All
 	Find what:	Find what:

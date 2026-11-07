@@ -696,8 +696,8 @@ pub const OS_CURSORS: bool = !cfg!(any(target_os = "macos", target_arch = "wasm3
 
 /// Does this window show the glyphs as OS cursors, on a build that can ([`OS_CURSORS`])? Not on
 /// Wayland, where the compositor decides how big a cursor bitmap shows: Hyprland shows each pixel
-/// as a point, twice too big on a 2× display (#1645). The window paints them there, as Krasis Photo
-/// and Krasis PDF do.
+/// as a point, twice too big on a 2× display (#1645). The window paints them there, as Vulcanio Photo
+/// and Vulcanio PDF do.
 pub fn os_cursors(build: bool, wayland: bool) -> bool {
     build && !wayland
 }

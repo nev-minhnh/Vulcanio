@@ -1,5 +1,5 @@
 //! Extra OS windows (document windows, Camera Raw, the screen color picker) share the main
-//! window's app id, so docks show the Krasis Photo icon on them and Wayland compositors' window
+//! window's app id, so docks show the Vulcanio Photo icon on them and Wayland compositors' window
 //! rules can match them (Hyprland's `class:`, #6697). Without one their app id is empty.
 
 /// Matches the `.desktop` file and hicolor icon name, so Wayland docks pick up the icon.

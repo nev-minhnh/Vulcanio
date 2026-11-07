@@ -1,5 +1,5 @@
-//! Krasis CAD as a Krasis module: the desktop app's frame logic and UI unchanged, created inside
-//! the Krasis window instead of its own.
+//! Vulcanio CAD as a Vulcanio module: the desktop app's frame logic and UI unchanged, created inside
+//! the Vulcanio window instead of its own.
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 #![allow(dead_code)]
 
@@ -52,7 +52,7 @@ impl App {
         };
         if let Err(error) = result {
             if self.workspace_error.as_ref() != Some(&error) {
-                eprintln!("Krasis CAD workspace: {error}");
+                eprintln!("Vulcanio CAD workspace: {error}");
                 self.cad.set_status(format!("Workspace could not be saved: {error}"));
                 self.workspace_error = Some(error);
             }
@@ -195,10 +195,10 @@ fn filters_for_save(name: &str) -> [(&'static str, &'static str); 6] {
 
 
 const APP_ID: &str = "ai.storyteller.cadcraft";
-/// Stencil bits of the window's render pass (Krasis asks for them for every module).
+/// Stencil bits of the window's render pass (Vulcanio asks for them for every module).
 pub const STENCIL_BITS: u8 = 8;
 
-/// A copy of Krasis started to read or write a DWG file does only that: the exit code.
+/// A copy of Vulcanio started to read or write a DWG file does only that: the exit code.
 pub fn worker_main() -> Option<i32> {
     cadcraft_io::dwg_worker::serve_if_asked()
 }
@@ -216,20 +216,20 @@ fn startup(vars: &env::Env) {
     }
 }
 
-/// eframe storage for Krasis CAD: the standalone app's own `app.ron`.
-pub fn storage() -> krasis_host::ModuleStorage {
-    krasis_host::ModuleStorage::for_app_id(APP_ID)
+/// eframe storage for Vulcanio CAD: the standalone app's own `app.ron`.
+pub fn storage() -> vulcanio_host::ModuleStorage {
+    vulcanio_host::ModuleStorage::for_app_id(APP_ID)
 }
 
-fn preference(lang: krasis_host::Lang) -> i18n::Preference {
+fn preference(lang: vulcanio_host::Lang) -> i18n::Preference {
     match lang {
-        krasis_host::Lang::En => i18n::Preference::English,
-        krasis_host::Lang::Vi => i18n::Preference::Vietnamese,
+        vulcanio_host::Lang::En => i18n::Preference::English,
+        vulcanio_host::Lang::Vi => i18n::Preference::Vietnamese,
     }
 }
 
-/// Create Krasis CAD inside the Krasis window.
-pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Module> {
+/// Create Vulcanio CAD inside the Vulcanio window.
+pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::Module> {
     let cc = host.cc;
     let vars = env::Env::read();
     startup(&vars);
@@ -240,7 +240,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     }
     app.set_system_cursor_default(vars.system_cursor == Switch::On);
     if let Some(error) = &workspace_error {
-        log::warn!("Krasis CAD workspace: {error}");
+        log::warn!("Vulcanio CAD workspace: {error}");
         app.set_status(error);
     }
     app.system_languages = vars.locale.clone().map(|s| vec![s]).unwrap_or_else(|| sys_locale::get_locales().collect());
@@ -253,11 +253,11 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     if let Some(prefs) = cc.storage.and_then(|s| s.get_string(cadcraft_ui_egui::autosave::PREFS_KEY)) {
         cadcraft_ui_egui::autosave::load_prefs(&prefs);
     }
-    // Krasis' language wins over the one Krasis CAD remembered.
+    // Vulcanio's language wins over the one Vulcanio CAD remembered.
     app.ui.interface_language = preference(host.lang);
     if let Some(dir) = &vars.config_dir {
         app.enable_autosave(&dir.join("autosave"));
-        // No update check: Krasis updates as one app, never Krasis CAD's executable on its own.
+        // No update check: Vulcanio updates as one app, never Vulcanio CAD's executable on its own.
         let support = dir.join("support");
         if let Err(e) = std::fs::create_dir_all(&support) {
             log::warn!("no LISP support folder {}: {e}", support.display());
@@ -302,7 +302,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     })
 }
 
-impl krasis_host::Module for App {
+impl vulcanio_host::Module for App {
     fn app(&mut self) -> &mut dyn eframe::App {
         self
     }
@@ -319,7 +319,7 @@ impl krasis_host::Module for App {
         ctx.request_repaint();
     }
 
-    fn set_language(&mut self, ctx: &egui::Context, lang: krasis_host::Lang) {
+    fn set_language(&mut self, ctx: &egui::Context, lang: vulcanio_host::Lang) {
         self.cad.ui.interface_language = preference(lang);
         ctx.request_repaint();
     }

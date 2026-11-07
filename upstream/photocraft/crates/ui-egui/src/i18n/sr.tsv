@@ -18,7 +18,7 @@
 # (Datoteka, Uređivanje, Slika ...), commands are imperatives (Otvori…, Sačuvaj kao…), tools read
 # "Alatka …" (Alatka četkica, Alatka za pomeranje), presets are "šabloni", patterns "šare" and
 # swatches "uzorci boja". Serbian quotation marks „…“ around names. Product and technology names
-# (Krasis Photo, Krasis, Camera Raw, OpenType, Lab ...) stay as they are; RGB/CMYK stay as they
+# (Vulcanio Photo, Vulcanio, Camera Raw, OpenType, Lab ...) stay as they are; RGB/CMYK stay as they
 # are; the trailing "…" of dialog commands is kept. A count that is not an @plural entry is kept
 # out of noun agreement ("Broj: {n}", "slojeva: {n}") so every number reads correctly.
 
@@ -146,7 +146,7 @@
 # Actions: a step dialog holds a suspended recording (#7365)
 # Paragraph direction (TYPE-218-2)
 # Print preview image (#8236)
-# Krasis Photo release checks.
+# Vulcanio Photo release checks.
 # Color panel menu: modes, copy commands and colour ramps (#6000)
 
 # Pen draft after a refused commit (#7648)
@@ -916,11 +916,11 @@
 	Pin bar position	Zakači položaj trake
 	Move bar	Pomeri traku
 	More options	Više opcija
-	About Krasis Photo	O programu Krasis Photo
-	Krasis Photo Website	Veb-sajt Krasis Photo-a
-	Krasis Photo on GitHub	Krasis Photo na GitHub-u
-	Krasis Website	Veb-sajt Krasis-a
-	Join the Krasis Discord…	Pridružite se Krasis Discord zajednici…
+	About Vulcanio Photo	O programu Vulcanio Photo
+	Vulcanio Photo Website	Veb-sajt Vulcanio Photo-a
+	Vulcanio Photo on GitHub	Vulcanio Photo na GitHub-u
+	Vulcanio Website	Veb-sajt Vulcanio-a
+	Join the Vulcanio Discord…	Pridružite se Vulcanio Discord zajednici…
 	Report an Issue…	Prijavi problem…
 	WIA Support…	WIA podrška…
 	Apply	Primeni
@@ -978,7 +978,7 @@
 	All Caps	Sve velika slova
 	All Slices	Svi isečci
 	All User Slices	Svi korisnički isečci
-	All shortcuts reset to Krasis Photo defaults.	Sve prečice su vraćene na podrazumevane vrednosti Krasis Photo-a.
+	All shortcuts reset to Vulcanio Photo defaults.	Sve prečice su vraćene na podrazumevane vrednosti Vulcanio Photo-a.
 	Alt	Alt
 	Always use pressure for opacity	Uvek koristi pritisak za neprozirnost
 	Always use pressure for size	Uvek koristi pritisak za veličinu
@@ -1458,9 +1458,9 @@
 	Perspective Warp is not active	Perspektivno krivljenje nije aktivno
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Perspektivno krivljenje: nacrtajte ravni duž perspektive slike, a zatim pređite na krivljenje
 	Photo Filter	Foto-filter
-	Krasis Photo	Krasis Photo
-	Krasis Photo Manages Colors	Krasis Photo upravlja bojama
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — izvorni uređivač slika otvorenog koda, napisan u Rust-u.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo Manages Colors	Vulcanio Photo upravlja bojama
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — izvorni uređivač slika otvorenog koda, napisan u Rust-u.
 	Pin Depth:	Dubina čiode:
 	Pixel Length:	Dužina u pikselima:
 	Pixels/Centimeter	Piksela/centimetar
@@ -1535,11 +1535,11 @@
 	Import Shortcuts…	Uvezi prečice…
 	Load a keyboard shortcut set saved as .kys	Učitaj skup prečica sačuvan kao .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Uvezeno {n} prečica iz {file}. Kliknite U redu da ih zadržite.
-	{n} commands are not in Krasis Photo.	{n} komandi ne postoji u Krasis Photo-u.
+	{n} commands are not in Vulcanio Photo.	{n} komandi ne postoji u Vulcanio Photo-u.
 	Keyboard shortcuts imported	Prečice na tastaturi su uvezene
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Ovde se koristi vaš skup prečica {set}: {n} prečica se razlikuje od podrazumevanih. Uređivanje › Prečice na tastaturi ih prikazuje; Vrati sve na podrazumevano poništava ovo.
 	Import keyboard shortcuts?	Uvesti prečice na tastaturi?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo je na ovom računaru pronašao vaš skup prečica {set} iz drugog uređivača slika: {n} prečica se razlikuje od Krasis Photo-ovih. Uvesti ga?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo je na ovom računaru pronašao vaš skup prečica {set} iz drugog uređivača slika: {n} prečica se razlikuje od Vulcanio Photo-ovih. Uvesti ga?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Uređivanje › Prečice na tastaturi › Vrati sve na podrazumevano poništava uvoz.
 	Don't Import	Nemoj uvesti
 	The keyboard shortcut set was not imported: {error}	Skup prečica nije uvezen: {error}
@@ -1726,7 +1726,7 @@
 	Apple Watch 45mm	Apple Watch 45 mm
 	Aqua	Akva
 	Art & Illustration	Umetnost i ilustracija
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Background Eraser Tool	Alatka gumica za pozadinu
 	Bevel & Emboss	Kosina i reljef
 	Blend Mode	Režim stapanja
@@ -1762,7 +1762,7 @@
 	Current Tool	Tekuća alatka
 	Custom Shape Tool	Alatka za prilagođeni oblik
 	Cyans	Cijan
-	Default Krasis Photo Size	Podrazumevana veličina Krasis Photo-a
+	Default Vulcanio Photo Size	Podrazumevana veličina Vulcanio Photo-a
 	Delete Workspace	Obriši radni prostor
 	Diamond	Romb
 	Dimensions:	Dimenzije:
@@ -1877,7 +1877,7 @@
 	Pen Tool	Alatka pero
 	Convert Point Tool	Alatka za pretvaranje tačke
 	Photo	Fotografija
-	Krasis Photo website	Veb-sajt Krasis Photo-a
+	Vulcanio Photo website	Veb-sajt Vulcanio Photo-a
 	Picas	Pike
 	Pillow Emboss	Jastučasti reljef
 	Pixel Replacement	Zamena piksela
@@ -2209,7 +2209,7 @@
 	System Info	Informacije o sistemu
 	More panels	Više panela
 	More documents	Više dokumenata
-	These settings aren't available in Krasis Photo yet.	Ova podešavanja još nisu dostupna u Krasis Photo-u.
+	These settings aren't available in Vulcanio Photo yet.	Ova podešavanja još nisu dostupna u Vulcanio Photo-u.
 	Graphics	Grafika
 	Reset GPU Backend	Resetuj GPU pozadinski sistem
 	Applies at next launch.	Primenjuje se pri sledećem pokretanju.
@@ -2808,8 +2808,8 @@
 	Overprint	Pretisak
 	Native file drag-and-drop is unavailable	Izvorno prevlačenje i otpuštanje datoteka nije dostupno
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Izvorno prevlačenje i otpuštanje datoteka još nije podržano na Wayland-u. Koristite Datoteka › Otvori ili kopirajte sliku u menadžeru datoteka i nalepite je pomoću {paste}.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Da biste otpuštali datoteke, pokrenite Krasis Photo pod XWayland-om: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Ili postavite Podešavanja › Performanse › Linux server prikaza na X11: Krasis Photo će se tada uvek pokretati pod XWayland-om.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Da biste otpuštali datoteke, pokrenite Vulcanio Photo pod XWayland-om: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Ili postavite Podešavanja › Performanse › Linux server prikaza na X11: Vulcanio Photo će se tada uvek pokretati pod XWayland-om.
 	Edit › Paste	Uređivanje › Nalepi
 	Use File › Open, or paste a copied image with {paste}.	Koristite Datoteka › Otvori ili nalepite kopiranu sliku pomoću {paste}.
 	Mixer Brush Tool	Alatka četkica za mešanje
@@ -2825,7 +2825,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Automatski režim koristi GPU ubrzanje kada je dostupno, a u slučaju grešaka prelazi na renderovanje procesorom.
 	Switched to CPU rendering	Prebačeno na renderovanje procesorom
 	GPU acceleration could not continue. Your documents are unchanged.	GPU ubrzanje nije moglo da se nastavi. Vaši dokumenti su nepromenjeni.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo koristi CPU kompozitor slike. Prozor i dalje može da koristi vaš grafički adapter.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo koristi CPU kompozitor slike. Prozor i dalje može da koristi vaš grafički adapter.
 	Retry GPU requires a restart. Save your work first.	Ponovni pokušaj sa GPU-om zahteva ponovno pokretanje. Prvo sačuvajte svoj rad.
 	Retry GPU tries the graphics processor again now.	Ponovo pokušaj sa GPU-om odmah ponovo isprobava grafički procesor.
 	GPU acceleration resumed.	GPU ubrzanje je nastavljeno.
@@ -3035,7 +3035,7 @@ fontWeight	Italic	Kurziv
 	Color to Alpha…	Boja u alfu…
 	Transparency Threshold	Prag providnosti
 	Opacity Threshold	Prag neprozirnosti
-	Krasis Photo — Screen Color Picker	Krasis Photo — birač boja sa ekrana
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — birač boja sa ekrana
 	Rasterize svg groups deeper than	Rasterizuj SVG grupe dublje od
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 isključuje ovaj prag; SVG grupe ugnežđene dublje od 100 nivoa uvek se rasterizuju.
 	Rule of Thirds	Pravilo trećina
@@ -3434,7 +3434,7 @@ layerLabel	No Color	Bez boje
 	Restart Required	Potrebno je ponovno pokretanje
 	Restart	Ponovo pokreni
 	Quit	Izađi
-	Quit Krasis Photo	Izađi iz Krasis Photo-a
+	Quit Vulcanio Photo	Izađi iz Vulcanio Photo-a
 	Close Window	Zatvori prozor
 	New Window	Novi prozor
 	Open Image	Otvori sliku
@@ -3638,7 +3638,7 @@ layerLabel	No Color	Bez boje
 	Custom Pixel Aspect Ratio	Prilagođeni odnos stranica piksela
 	32-bit Preview Options	Opcije 32-bitnog pregleda
 	New Guide	Nova vodilja
-	Join the Krasis Discord	Pridružite se Krasis Discord zajednici
+	Join the Vulcanio Discord	Pridružite se Vulcanio Discord zajednici
 	Report an Issue	Prijavi problem
 	Load Files into Stack	Učitaj datoteke u stek
 	Statistics	Statistika
@@ -3941,7 +3941,7 @@ layerLabel	No Color	Bez boje
 	Mezzotint	Mecotinta
 	Mosaic	Mozaik
 	Motion Blur	Zamućenje pokreta
-	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Krasis Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Izvorno prevlačenje i otpuštanje datoteka još nije podržano na Wayland-u. Koristite Datoteka › Otvori ili pokrenite Krasis Photo pod XWayland-om pomoću `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Vulcanio Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Izvorno prevlačenje i otpuštanje datoteka još nije podržano na Wayland-u. Koristite Datoteka › Otvori ili pokrenite Vulcanio Photo pod XWayland-om pomoću `WAYLAND_DISPLAY= photocraft`.
 	Neon Glow	Neonski sjaj
 	New Guide Layout	Novi raspored vodilja
 	New Video Layer from File	Novi video sloj iz datoteke
@@ -4120,9 +4120,9 @@ layerLabel	No Color	Bez boje
 	Saved {path}; image assets: {n} in {dir}	Sačuvano: {path}; slikovni resursi: {n} u {dir}
 	{message} (notes: {n}; {warning})	{message} (beleške: {n}; {warning})
 	Preferences can't be saved	Podešavanja ne mogu da se sačuvaju
-	Krasis Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Krasis Photo nastavlja da pokušava; dok čuvanje ne uspe, izmene podešavanja se gube pri zatvaranju.
+	Vulcanio Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Vulcanio Photo nastavlja da pokušava; dok čuvanje ne uspe, izmene podešavanja se gube pri zatvaranju.
 	GPU retry scheduled	Zakazan je ponovni pokušaj sa GPU-om
-	Save your work and restart Krasis Photo to retry GPU acceleration. CPU rendering remains active for this session.	Sačuvajte svoj rad i ponovo pokrenite Krasis Photo da biste ponovo pokušali GPU ubrzanje. Renderovanje procesorom ostaje aktivno do kraja ove sesije.
+	Save your work and restart Vulcanio Photo to retry GPU acceleration. CPU rendering remains active for this session.	Sačuvajte svoj rad i ponovo pokrenite Vulcanio Photo da biste ponovo pokušali GPU ubrzanje. Renderovanje procesorom ostaje aktivno do kraja ove sesije.
 	GPU device was lost; using the CPU renderer.	GPU uređaj je izgubljen; koristi se renderovanje procesorom.
 	GPU error; using the CPU renderer.	Greška GPU-a; koristi se renderovanje procesorom.
 	Couldn't open {name}: {error}	Otvaranje {name} nije uspelo: {error}
@@ -4193,7 +4193,7 @@ navigator	Zoom	Uvećanje
 	on	uključeno
 	off	isključeno
 	This adjustment ({key}) is kept as imported and can't be edited yet.	Ova korekcija ({key}) je zadržana onakva kakva je uvezena i još ne može da se uređuje.
-	Join the Krasis Discord ({url})	Pridružite se Krasis Discord zajednici ({url})
+	Join the Vulcanio Discord ({url})	Pridružite se Vulcanio Discord zajednici ({url})
 	{index} of {total}	{index} od {total}
 	{shortcut} assigned.	{shortcut} je dodeljena.
 	{shortcut} is already in use by {commands} and will be removed from it when you click OK.	{shortcut} već koristi {commands} i biće uklonjena odatle kada kliknete U redu.
@@ -4312,7 +4312,7 @@ shape	Appearance	Izgled
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Učitana je {n} radnja iz {file}|Učitane su {n} radnje iz {file}|Učitano je {n} radnji iz {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} korak još nema ekvivalent u PhotoCraftu|{n} koraka još nemaju ekvivalent u PhotoCraftu|{n} koraka još nema ekvivalent u PhotoCraftu
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} korak još nema ekvivalent u PhotoCraftu|{n} koraka još nemaju ekvivalent u PhotoCraftu|{n} koraka još nema ekvivalent u PhotoCraftu
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Sačuvana je {n} radnja u {file}|Sačuvane su {n} radnje u {file}|Sačuvano je {n} radnji u {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Izostavljen je {n} korak bez ekvivalenta u Photoshopu|Izostavljena su {n} koraka bez ekvivalenta u Photoshopu|Izostavljeno je {n} koraka bez ekvivalenta u Photoshopu
 @plural	{n} action file loaded|{n} action files loaded	Učitana je {n} datoteka radnji|Učitane su {n} datoteke radnji|Učitano je {n} datoteka radnji
@@ -4428,12 +4428,12 @@ shape	Appearance	Izgled
 	Bicubic Smoother	Bikubično glađe
 	Bicubic Sharper	Bikubično oštrije
 	Pasting from other apps is unavailable	Lepljenje iz drugih aplikacija nije dostupno
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo u ovoj sesiji ne može da pristupi sistemskoj ostavi. Na Wayland-u, Flatpak sandbox skriva protokol preko kog se čitaju slike iz drugih aplikacija.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Da biste lepili iz drugih aplikacija, pokrenite Krasis Photo pod XWayland-om: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Nema šta da se nalepi: Krasis Photo ovde ne može da čita sistemsku ostavu
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo u ovoj sesiji ne može da pristupi sistemskoj ostavi. Na Wayland-u, Flatpak sandbox skriva protokol preko kog se čitaju slike iz drugih aplikacija.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Da biste lepili iz drugih aplikacija, pokrenite Vulcanio Photo pod XWayland-om: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Nema šta da se nalepi: Vulcanio Photo ovde ne može da čita sistemsku ostavu
 	Delete this set	Obriši ovaj skup
 	New Set…	Novi skup…
-	Krasis Photo Defaults	Podrazumevano za Krasis Photo
+	Vulcanio Photo Defaults	Podrazumevano za Vulcanio Photo
 	Save a list of these shortcuts as a web page	Sačuvaj listu ovih prečica kao veb stranicu
 	Save the changes to this set	Sačuvaj izmene u ovom skupu
 	Save these shortcuts as a .kys file	Sačuvaj ove prečice kao .kys datoteku
@@ -4537,9 +4537,9 @@ smartSvg	Choose executable…	Izaberi izvršnu datoteku…
 smartSvg	Choose the application used to edit this SVG:	Izaberite aplikaciju za uređivanje ovog SVG-a:
 smartSvg	Edit SVG Smart Object	Uredi SVG pametni objekat
 smartSvg	Other application	Druga aplikacija
-smartSvg	Krasis Photo (internal editor)	Krasis Photo (interni uređivač)
+smartSvg	Vulcanio Photo (internal editor)	Vulcanio Photo (interni uređivač)
 smartSvg	SVG editor opened. Save the SVG to update this Smart Object.	SVG uređivač je otvoren. Sačuvajte SVG da biste ažurirali ovaj pametni objekat.
-smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Krasis Photo.	Sačuvajte u otvorenu SVG datoteku. Svaka sačuvana izmena postaje jedan korak opoziva u Krasis Photo-u.
+smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Vulcanio Photo.	Sačuvajte u otvorenu SVG datoteku. Svaka sačuvana izmena postaje jedan korak opoziva u Vulcanio Photo-u.
 smartSvg	Stop syncing this Smart Object	Zaustavi sinhronizaciju ovog pametnog objekta
 smartSvg	Updates wait while another document or an editing dialog is active.	Ažuriranja čekaju dok je aktivan drugi dokument ili dijalog za uređivanje.
 smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded source; format-specific features may change.	AI/PDF/EPS садржај ће се уређивати као SVG. Чување замењује уграђени извор; својства специфична за формат могу се променити.

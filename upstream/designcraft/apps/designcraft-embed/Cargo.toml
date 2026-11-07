@@ -14,7 +14,7 @@ doctest = false
 workspace = true
 
 [dependencies]
-krasis-host = { path = "../../../../crates/krasis-host" }
+vulcanio-host = { path = "../../../../crates/vulcanio-host" }
 designcraft-engine = { workspace = true }
 designcraft-ui-egui = { workspace = true }
 eframe = { workspace = true, features = ["default_fonts", "wgpu", "accesskit", "wayland", "x11", "links", "clipboard"] }

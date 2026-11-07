@@ -1,11 +1,11 @@
-//! Krasis Vector's egui frontend: an Illustrator-style UI over `vectorcraft-engine`.
+//! Vulcanio Vector's egui frontend: an Illustrator-style UI over `vectorcraft-engine`.
 //!
 //! The UI is thin: every action goes through [`VectorcraftApp::run`], which dispatches UI commands
 //! (view/window) here and everything else to the engine. The same entry point serves menus,
 //! shortcuts, the ⌘K palette and the control channel ([`control`]).
 #![forbid(unsafe_code)]
 
-/// Krasis Vector as craft-update knows it, with its 128 px icon and accent colour: the update
+/// Vulcanio Vector as craft-update knows it, with its 128 px icon and accent colour: the update
 /// prompt shows both, and an AppImage's menu entry gets the icon.
 #[cfg(not(target_arch = "wasm32"))]
 pub const UPDATE_APP: craft_update::app::App = craft_update::app::App {

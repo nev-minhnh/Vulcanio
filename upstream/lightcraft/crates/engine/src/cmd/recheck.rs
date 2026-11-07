@@ -124,7 +124,7 @@ pub fn specs() -> Vec<CommandSpec> {
         "Recheck Preview-Only Raws",
         [],
         None,
-        "{all?: bool} — probe again preview-only raws and ORFs whose support another Krasis Library version checked (the app does this in the background when a library opens; `all` rechecks every preview-only raw and ORF, e.g. when testing a decoder build of the same version), and bring each up to date as Reload from Disk would; not an undo step, develop settings and history are kept; files that can't be read are left for next time → {checked, updated: [ids], cleared: [ids] (develop from their raw data now)}",
+        "{all?: bool} — probe again preview-only raws and ORFs whose support another Vulcanio Library version checked (the app does this in the background when a library opens; `all` rechecks every preview-only raw and ORF, e.g. when testing a decoder build of the same version), and bring each up to date as Reload from Disk would; not an undo step, develop settings and history are kept; files that can't be read are left for next time → {checked, updated: [ids], cleared: [ids] (develop from their raw data now)}",
         always,
         recheck
     )]

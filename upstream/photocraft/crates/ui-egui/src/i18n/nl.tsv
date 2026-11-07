@@ -4,7 +4,7 @@
 # Clean-room: every entry was written from the plain meaning of the English label using ordinary
 # Dutch computing vocabulary (laag, selectie, masker, aanpassingslaag, penseel, verloop ...). No
 # proprietary localisation resource, string table or product UI was consulted or copied; add
-# entries the same way. Product and technology names (Krasis Photo, Krasis, OpenType, CMYK, Lab ...)
+# entries the same way. Product and technology names (Vulcanio Photo, Vulcanio, OpenType, CMYK, Lab ...)
 # stay as they are; the trailing "…" of dialog commands is kept. UI text addresses the user
 # informally ("je") and uses sentence case.
 
@@ -50,7 +50,7 @@
 # Batch / Image Processor
 
 # Native Windows printing qualification
-# Krasis Photo release checks.
+# Vulcanio Photo release checks.
 # History panel › History Brush source (#2966)
 # Bevel & Emboss shading controls.
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
@@ -859,11 +859,11 @@
 	Pin bar position	Balkpositie vastzetten
 	Move bar	Balk verplaatsen
 	More options	Meer opties
-	About Krasis Photo	Over Krasis Photo
-	Krasis Photo Website	Website van Krasis Photo
-	Krasis Photo on GitHub	Krasis Photo op GitHub
-	Krasis Website	Website van Krasis
-	Join the Krasis Discord…	Deelnemen aan de Krasis-Discord…
+	About Vulcanio Photo	Over Vulcanio Photo
+	Vulcanio Photo Website	Website van Vulcanio Photo
+	Vulcanio Photo on GitHub	Vulcanio Photo op GitHub
+	Vulcanio Website	Website van Vulcanio
+	Join the Vulcanio Discord…	Deelnemen aan de Vulcanio-Discord…
 	Report an Issue…	Probleem melden…
 	WIA Support…	WIA-ondersteuning…
 	Apply	Toepassen
@@ -918,7 +918,7 @@
 	All Caps	Alleen hoofdletters
 	All Slices	Alle segmenten
 	All User Slices	Alle gebruikerssegmenten
-	All shortcuts reset to Krasis Photo defaults.	Alle sneltoetsen zijn teruggezet naar de standaardwaarden van Krasis Photo.
+	All shortcuts reset to Vulcanio Photo defaults.	Alle sneltoetsen zijn teruggezet naar de standaardwaarden van Vulcanio Photo.
 	Alt	Alt
 	Always use pressure for opacity	Altijd druk gebruiken voor dekking
 	Always use pressure for size	Altijd druk gebruiken voor grootte
@@ -1171,8 +1171,8 @@
 	Drop an image or PSD anywhere to open it.	Sleep een afbeelding of PSD ergens naartoe om deze te openen.
 	Native file drag-and-drop is unavailable	Bestanden slepen en neerzetten is niet beschikbaar
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Bestanden slepen en neerzetten wordt nog niet ondersteund onder Wayland. Gebruik Bestand › Openen, of kopieer de afbeelding in je bestandsbeheerder en plak deze met {paste}.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Start Krasis Photo onder XWayland om bestanden neer te zetten: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Of zet Voorkeuren › Prestaties › Linux-weergaveserver op X11: Krasis Photo start dan altijd onder XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Start Vulcanio Photo onder XWayland om bestanden neer te zetten: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Of zet Voorkeuren › Prestaties › Linux-weergaveserver op X11: Vulcanio Photo start dan altijd onder XWayland.
 	Edit › Paste	Bewerken › Plakken
 	Duplicate Layers…	Lagen dupliceren…
 	Duplicate style	Stijl dupliceren
@@ -1422,9 +1422,9 @@
 	Perspective Warp is not active	Perspectiefvervorming is niet actief
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Perspectiefvervorming: teken vlakken langs het perspectief van de afbeelding en schakel daarna naar Verbuigen
 	Photo Filter	Fotofilter
-	Krasis Photo	Krasis Photo
-	Krasis Photo Manages Colors	Krasis Photo beheert kleuren
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — een opensource, native afbeeldingseditor geschreven in Rust.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo Manages Colors	Vulcanio Photo beheert kleuren
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — een opensource, native afbeeldingseditor geschreven in Rust.
 	Pin Depth:	Speldiepte:
 	Pixel Length:	Pixellengte:
 	Pixels/Centimeter	Pixels/centimeter
@@ -1498,11 +1498,11 @@
 	Import Shortcuts…	Sneltoetsen importeren…
 	Load a keyboard shortcut set saved as .kys	Een als .kys opgeslagen sneltoetsenset laden
 	Imported {n} shortcuts from {file}. Click OK to keep them.	{n} sneltoetsen geïmporteerd uit {file}. Klik op OK om ze te behouden.
-	{n} commands are not in Krasis Photo.	{n} opdrachten bestaan niet in Krasis Photo.
+	{n} commands are not in Vulcanio Photo.	{n} opdrachten bestaan niet in Vulcanio Photo.
 	Keyboard shortcuts imported	Sneltoetsen geïmporteerd
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Je sneltoetsenset {set} wordt hier gebruikt: {n} sneltoetsen wijken af van de standaardwaarden. Bewerken › Sneltoetsen toont ze; Alles terugzetten naar standaard maakt dit ongedaan.
 	Import keyboard shortcuts?	Sneltoetsen importeren?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo heeft op deze computer je sneltoetsenset {set} van een andere beeldbewerker gevonden: {n} van de sneltoetsen wijken af van die van Krasis Photo. Importeren?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo heeft op deze computer je sneltoetsenset {set} van een andere beeldbewerker gevonden: {n} van de sneltoetsen wijken af van die van Vulcanio Photo. Importeren?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Bewerken › Sneltoetsen › Alles terugzetten naar standaard maakt een import ongedaan.
 	Don't Import	Niet importeren
 	The keyboard shortcut set was not imported: {error}	De sneltoetsenset is niet geïmporteerd: {error}
@@ -1688,7 +1688,7 @@
 	Apple Watch 45mm	Apple Watch 45 mm
 	Aqua	Aqua
 	Art & Illustration	Kunst en illustratie
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Background Eraser Tool	Achtergrondgumgereedschap
 	Bevel & Emboss	Schuine kant en reliëf
 	Blend Mode	Overvloeimodus
@@ -1724,7 +1724,7 @@
 	Current Tool	Huidig gereedschap
 	Custom Shape Tool	Gereedschap Aangepaste vorm
 	Cyans	Cyaantinten
-	Default Krasis Photo Size	Standaardgrootte Krasis Photo
+	Default Vulcanio Photo Size	Standaardgrootte Vulcanio Photo
 	Delete Workspace	Werkruimte verwijderen
 	Diamond	Ruit
 	Dimensions:	Afmetingen:
@@ -1836,7 +1836,7 @@
 	Pen Tool	Pengereedschap
 	Convert Point Tool	Punt-converteergereedschap
 	Photo	Foto
-	Krasis Photo website	Website van Krasis Photo
+	Vulcanio Photo website	Website van Vulcanio Photo
 	Picas	Pica's
 	Pillow Emboss	Kussenreliëf
 	Pixel Replacement	Pixelvervanging
@@ -2171,7 +2171,7 @@
 	System Info	Systeeminformatie
 	More panels	Meer panelen
 	More documents	Meer documenten
-	These settings aren't available in Krasis Photo yet.	Deze instellingen zijn nog niet beschikbaar in Krasis Photo.
+	These settings aren't available in Vulcanio Photo yet.	Deze instellingen zijn nog niet beschikbaar in Vulcanio Photo.
 	Graphics	Grafisch
 	Reset GPU Backend	GPU-backend herstellen
 	Applies at next launch.	Wordt toegepast bij de volgende start.
@@ -2381,7 +2381,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Automatisch gebruikt GPU-versnelling indien beschikbaar en valt bij fouten terug op CPU-rendering.
 	Switched to CPU rendering	Overgeschakeld naar CPU-rendering
 	GPU acceleration could not continue. Your documents are unchanged.	GPU-versnelling kon niet doorgaan. Je documenten zijn ongewijzigd.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo gebruikt de CPU-beeldcompositor. Het venster kan nog steeds je grafische adapter gebruiken.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo gebruikt de CPU-beeldcompositor. Het venster kan nog steeds je grafische adapter gebruiken.
 	Retry GPU requires a restart. Save your work first.	GPU opnieuw proberen vereist een herstart. Sla eerst je werk op.
 	Retry GPU tries the graphics processor again now.	GPU opnieuw proberen probeert de grafische processor nu opnieuw.
 	GPU acceleration resumed.	GPU-versnelling hervat.
@@ -2773,7 +2773,7 @@ cameraRaw	Color	Kleur
 	Restart Required	Herstart vereist
 	Restart	Opnieuw starten
 	Quit	Afsluiten
-	Quit Krasis Photo	Krasis Photo afsluiten
+	Quit Vulcanio Photo	Vulcanio Photo afsluiten
 	Close Window	Venster sluiten
 	New Window	Nieuw venster
 	Open Image	Afbeelding openen
@@ -3158,7 +3158,7 @@ cameraRaw	Color	Kleur
 	Custom Pixel Aspect Ratio	Aangepaste pixelverhouding
 	32-bit Preview Options	Voorvertoningsopties 32-bit
 	New Guide	Nieuwe hulplijn
-	Join the Krasis Discord	Deelnemen aan de Krasis-Discord
+	Join the Vulcanio Discord	Deelnemen aan de Vulcanio-Discord
 	Report an Issue	Probleem melden
 	Load Files into Stack	Bestanden in stapel laden
 	Statistics	Statistieken
@@ -3545,7 +3545,7 @@ cameraRaw	Color	Kleur
 	Modify Date	Wijzigingsdatum
 	Mosaic	Mozaïek
 	Motion Blur	Bewegingsonscherpte
-	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Krasis Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Bestanden slepen en neerzetten wordt nog niet ondersteund onder Wayland. Gebruik Bestand › Openen, of start Krasis Photo onder XWayland met `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Vulcanio Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Bestanden slepen en neerzetten wordt nog niet ondersteund onder Wayland. Gebruik Bestand › Openen, of start Vulcanio Photo onder XWayland met `WAYLAND_DISPLAY= photocraft`.
 	Neon Glow	Neongloed
 	New Guide Layout	Nieuwe hulplijnindeling
 	New Path	Nieuw pad
@@ -3903,7 +3903,7 @@ cameraData	Lens	Lens
 	There is no crop size or ratio to save	Er is geen uitsnijformaat of verhouding om op te slaan
 	Search settings…	Instellingen zoeken…
 	No matching settings	Geen overeenkomende instellingen
-	Krasis Photo — Screen Color Picker	Krasis Photo — Schermkleurkiezer
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Schermkleurkiezer
 	Sampling Brush Tool	Gereedschap Monsterpenseel
 	Sampling Area Overlay	Overlay van monstergebied
 	Show Sampling Area	Monstergebied tonen
@@ -4045,7 +4045,7 @@ curves	Smooth	Vloeiend maken
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	{n} handeling geladen uit {file}|{n} handelingen geladen uit {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} stap heeft nog geen equivalent in Krasis Photo|{n} stappen hebben nog geen equivalent in Krasis Photo
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} stap heeft nog geen equivalent in Vulcanio Photo|{n} stappen hebben nog geen equivalent in Vulcanio Photo
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	{n} handeling opgeslagen in {file}|{n} handelingen opgeslagen in {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	{n} stap zonder Photoshop-equivalent weggelaten|{n} stappen zonder Photoshop-equivalent weggelaten
 @plural	{n} action file loaded|{n} action files loaded	{n} handelingenbestand geladen|{n} handelingenbestanden geladen
@@ -4144,12 +4144,12 @@ curves	Smooth	Vloeiend maken
 	Bicubic Smoother	Bicubisch vloeiender
 	Bicubic Sharper	Bicubisch scherper
 	Pasting from other apps is unavailable	Plakken vanuit andere apps is niet beschikbaar
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo heeft in deze sessie geen toegang tot het systeemklembord. Onder Wayland verbergt een Flatpak-sandbox het protocol waarmee afbeeldingen uit andere apps worden gelezen.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Om vanuit andere apps te plakken, start je Krasis Photo onder XWayland: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Niets om te plakken: Krasis Photo kan het systeemklembord hier niet lezen
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo heeft in deze sessie geen toegang tot het systeemklembord. Onder Wayland verbergt een Flatpak-sandbox het protocol waarmee afbeeldingen uit andere apps worden gelezen.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Om vanuit andere apps te plakken, start je Vulcanio Photo onder XWayland: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Niets om te plakken: Vulcanio Photo kan het systeemklembord hier niet lezen
 	Delete this set	Deze set verwijderen
 	New Set…	Nieuwe set…
-	Krasis Photo Defaults	Krasis Photo-standaard
+	Vulcanio Photo Defaults	Vulcanio Photo-standaard
 	Save a list of these shortcuts as a web page	Een lijst van deze sneltoetsen als webpagina opslaan
 	Save the changes to this set	De wijzigingen in deze set opslaan
 	Save these shortcuts as a .kys file	Deze sneltoetsen als .kys-bestand opslaan

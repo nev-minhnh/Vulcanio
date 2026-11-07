@@ -14,7 +14,7 @@
 use std::sync::mpsc::{Receiver, TryRecvError, channel};
 use std::time::{Duration, Instant};
 
-/// How often the OS is asked again, so a change to its setting is followed while Krasis CAD runs.
+/// How often the OS is asked again, so a change to its setting is followed while Vulcanio CAD runs.
 const POLL: Duration = Duration::from_secs(3);
 
 /// Watches the OS setting.

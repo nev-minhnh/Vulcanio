@@ -65,10 +65,10 @@ const FORMATS: [(&str, &str, Option<u8>, bool); 14] = [
     ("PDF Print", "pdf", None, true),
     ("EPS", "eps", None, false),
     ("AI", "ai", None, false),
-    ("Krasis Vector", "vectorcraft", None, false),
+    ("Vulcanio Vector", "vectorcraft", None, false),
 ];
 const FORMAT_LABELS: [&str; 14] =
-    ["PNG", "PNG 8", "JPG 100", "JPG 80", "JPG 50", "WebP", "GIF", "TIFF", "SVG", "PDF", "PDF Print", "EPS", "AI", "Krasis Vector"];
+    ["PNG", "PNG 8", "JPG 100", "JPG 80", "JPG 50", "WebP", "GIF", "TIFF", "SVG", "PDF", "PDF Print", "EPS", "AI", "Vulcanio Vector"];
 
 /// The printer's marks a PDF Print row writes: trim marks, registration targets, colour bars and
 /// page information.

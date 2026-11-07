@@ -1,5 +1,5 @@
 //! Programmatic gestures never replace the user's system clipboard: keys and clicks injected
-//! through the control channel (`ui.input`, `ui.menu.invoke`, …) may copy inside Krasis Interface but the
+//! through the control channel (`ui.input`, `ui.menu.invoke`, …) may copy inside Vulcanio Interface but the
 //! OS clipboard is the user's. Every copy command goes through `FigApp::clipboard_set_text` /
 //! `FigApp::clipboard_set_png`, which drop the write while the frame's input is synthetic.
 

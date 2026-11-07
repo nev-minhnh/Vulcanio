@@ -6,7 +6,7 @@
 //! AMD's Vulkan driver faulted with an access violation at the first swapchain present; creating
 //! an OpenGL instance crashed inside AMD's `atio6axx.dll` (#167); and creating a Vulkan instance
 //! loads every installed Vulkan driver into the process, of which a faulty one (Intel's
-//! `igvk64.dll`, Krasis Vector #806) crashed before the window appeared. So each start creates the
+//! `igvk64.dll`, Vulcanio Vector #806) crashed before the window appeared. So each start creates the
 //! instance with one backend, chosen before the window exists: on Windows DirectX 12 first, then
 //! OpenGL, then Vulkan, each on its own; on Linux Vulkan, with OpenGL beside it as the in-process
 //! fallback, then OpenGL alone; on macOS Metal. `WGPU_BACKEND` — wgpu's own variable: `dx12`,
@@ -21,7 +21,7 @@
 //! meanwhile — so that backend joins `failed`, the next candidate is tried and the status bar says
 //! so. Backends a restart left out (`--gpu-skip=`, see `gpu`) aren't chosen for that start but
 //! aren't recorded: the restart caught their failure, and a later launch may try them again. When
-//! every candidate has failed the list starts over, and so does a new Krasis Layout version (drivers
+//! every candidate has failed the list starts over, and so does a new Vulcanio Layout version (drivers
 //! and wgpu move on). `DESIGNCRAFT_NO_PREFS` records nothing.
 
 use std::path::{Path, PathBuf};
@@ -92,7 +92,7 @@ impl Backend {
 }
 
 /// The backends to try on this platform, best first. Windows reaches Vulkan last: creating its
-/// instance loads every installed Vulkan driver (Krasis Vector #806).
+/// instance loads every installed Vulkan driver (Vulcanio Vector #806).
 pub fn candidates() -> &'static [Backend] {
     if cfg!(windows) {
         &[Backend::Dx12, Backend::Gl, Backend::Vulkan]
@@ -106,7 +106,7 @@ pub fn candidates() -> &'static [Backend] {
 /// What `gpu.json` holds.
 #[derive(Clone, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
 pub struct Record {
-    /// The Krasis Layout version that wrote the record; another version starts afresh.
+    /// The Vulcanio Layout version that wrote the record; another version starts afresh.
     #[serde(default)]
     pub version: String,
     /// The backend of a start that has not presented a frame yet.

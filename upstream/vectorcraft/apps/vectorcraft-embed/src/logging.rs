@@ -7,7 +7,7 @@
 //! `vectorcraft.1.log` (and that one to `.2`), so the log of a run that crashed survives the next
 //! launch. Runs without preferences (`VECTORCRAFT_NO_PREFS`) log to standard error only.
 //!
-//! Levels: `info` for Krasis Vector's own crates, `warn` for everything else (wgpu and naga are
+//! Levels: `info` for Vulcanio Vector's own crates, `warn` for everything else (wgpu and naga are
 //! chatty). `RUST_LOG` replaces that with env_logger-style directives: `debug`,
 //! `warn,vectorcraft_render=trace`, `wgpu_core=info`. A directive ending in `*` matches every
 //! target that starts with it (`vectorcraft*=debug`).

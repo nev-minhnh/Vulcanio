@@ -214,7 +214,7 @@ pub(super) fn camera_preview_badge(ui: &egui::Ui, canvas: Rect, over: Rect) {
     p.rect_filled(r, 9.0, Color32::from_black_alpha(165));
     p.galley(pos2(r.left() + 8.0, r.center().y - g.size().y / 2.0), g, Color32::from_gray(225));
     register(ui, "loupe:cameraPreview", r);
-    let tip = crate::i18n::tr("The camera's own JPEG, shown until Krasis Library has rendered the raw. Judge colour and tone on the rendered photo.");
+    let tip = crate::i18n::tr("The camera's own JPEG, shown until Vulcanio Library has rendered the raw. Judge colour and tone on the rendered photo.");
     let resp = ui.interact(r, egui::Id::unique("camera-preview-badge"), Sense::hover()).on_hover_text(tip);
     resp.widget_info(|| egui::WidgetInfo::labeled(egui::Role::Label, true, format!("{text}: {tip}")));
 }

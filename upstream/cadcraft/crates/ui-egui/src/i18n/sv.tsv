@@ -1,6 +1,6 @@
-# Krasis CAD Swedish interface catalog — original translations by the Krasis CAD contributors.
+# Vulcanio CAD Swedish interface catalog — original translations by the Vulcanio CAD contributors.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from Krasis CAD's English strings; no proprietary translations were copied.
+# Written from Vulcanio CAD's English strings; no proprietary translations were copied.
 # Clean room: every entry is written from the plain meaning of the English label in ordinary
 # computing vocabulary. No other product's Swedish interface, string table or terminology
 # database was consulted, and no other catalog is used as a source.
@@ -34,7 +34,7 @@
 	A drawing opened from a file keeps that file's format.	En ritning som öppnats från en fil behåller filens format.
 	A variable name starts with a letter and has only letters, digits and _	Ett variabelnamn börjar med en bokstav och innehåller bara bokstäver, siffror och _
 	About	Om
-	About Krasis CAD	Om Krasis CAD
+	About Vulcanio CAD	Om Vulcanio CAD
 	Absolute	Absolut
 	Add Current Scale	Lägg till aktuell skala
 	Add Leader	Lägg till hänvisningslinje
@@ -110,9 +110,9 @@
 	ByBlock	Enligt block
 	ByColor	Enligt färg
 	ByLayer	Enligt lager
-	Krasis CAD	Krasis CAD
-	Krasis CAD Help	Hjälp för Krasis CAD
-	Krasis CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Krasis CAD sparar de här inställningarna, objektfästena och ritlägena för ditt användarkonto och återställer dem när programmet startar.
+	Vulcanio CAD	Vulcanio CAD
+	Vulcanio CAD Help	Hjälp för Vulcanio CAD
+	Vulcanio CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Vulcanio CAD sparar de här inställningarna, objektfästena och ritlägena för ditt användarkonto och återställer dem när programmet startar.
 	Cancel	Avbryt
 	Cartesian (x, y)	Kartesisk (x, y)
 	Center	Centrum
@@ -462,7 +462,7 @@
 	Jogged	Bruten
 	Jogged Linear	Brutet linjärt
 	Join	Foga samman
-	Join the Krasis Discord…	Gå med i ArtCrafts Discord…
+	Join the Vulcanio Discord…	Gå med i ArtCrafts Discord…
 	Join us on Discord	Gå med i ArtCrafts community på Discord
 	Keep the system cursor visible over the drawing area	Visa systemets muspekare över ritytan
 	Language	Språk
@@ -616,7 +616,7 @@
 	Offset	Förskjut
 	On	På
 	On/Off	På/av
-	Part of Krasis.	En av Crafting Apps, gjord av Krasis-teamet och dess community.
+	Part of Vulcanio.	En av Crafting Apps, gjord av Vulcanio-teamet och dess community.
 	Only in this drawing: {n}	Bara i den här ritningen: {n}
 	Only in {name}: {n}	Bara i {name}: {n}
 	Oops	Återställ raderade objekt
@@ -798,7 +798,7 @@
 	Quick Select Properties	Egenskaper för snabbmarkering
 	Quick Select...	Snabbmarkering...
 	QuickCalc	Snabbkalkyl
-	Quit Krasis CAD	Avsluta Krasis CAD
+	Quit Vulcanio CAD	Avsluta Vulcanio CAD
 	Radius	Radie
 	Raster Image	Rasterbild
 	Ray	Stråle
@@ -1216,7 +1216,7 @@
 @plural	{n} contributor	{n} bidragsgivare|{n} bidragsgivare
 	Drawing as bytes	Ritningen som byte
 	Services	Tjänster
-	Hide Krasis CAD	Dölj Krasis CAD
+	Hide Vulcanio CAD	Dölj Vulcanio CAD
 	Hide Others	Dölj övriga
 	Accessibility	Tillgänglighet
 	Show System Cursor	Visa systemets muspekare
@@ -1446,7 +1446,7 @@ menu	Modify	Ändra
 	Yards	Yard
 	Your changes will be lost if you don't save them.	Dina ändringar går förlorade om du inte sparar dem.
 	Check for Updates…	Sök efter uppdateringar…
-	Krasis CAD is up to date.	Krasis CAD är uppdaterat.
+	Vulcanio CAD is up to date.	Vulcanio CAD är uppdaterat.
 	Could not check for updates.	Det gick inte att söka efter uppdateringar.
 	Find All	Find All
 	Find what:	Find what:

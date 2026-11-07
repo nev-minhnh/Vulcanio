@@ -26,7 +26,7 @@
 //! The monitor also turns off mouse event coalescing (`NSEvent.mouseCoalescingEnabled`), which
 //! merges the drags that queue up between two reads into one: every report of the pen arrives.
 //!
-//! The event mapping comes from Krasis Photo's `crates/tablet` (`appkit.rs` and `macos.rs`). The tilt
+//! The event mapping comes from Vulcanio Photo's `crates/tablet` (`appkit.rs` and `macos.rs`). The tilt
 //! and rotation follow Apple's `NSEvent` documentation, as [`RawEvent::pose`] describes. The mapping
 //! works on plain values and is tested on every platform; the monitor reads them.
 #![cfg_attr(not(target_os = "macos"), allow(dead_code))]

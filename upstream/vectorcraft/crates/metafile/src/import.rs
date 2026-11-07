@@ -854,7 +854,7 @@ impl Player {
         if self.skipped > 0 {
             let n = self.skipped;
             self.warnings.push(format!(
-                "{n} record{} of kinds Krasis Vector doesn't read {} skipped",
+                "{n} record{} of kinds Vulcanio Vector doesn't read {} skipped",
                 if n == 1 { "" } else { "s" },
                 if n == 1 { "was" } else { "were" }
             ));

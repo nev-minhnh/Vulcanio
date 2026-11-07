@@ -1,5 +1,5 @@
-//! Krasis Layout as a Krasis module: the desktop app's frame logic and UI unchanged, created inside
-//! the Krasis window instead of its own.
+//! Vulcanio Layout as a Vulcanio module: the desktop app's frame logic and UI unchanged, created inside
+//! the Vulcanio window instead of its own.
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 #![allow(dead_code)]
 
@@ -148,7 +148,7 @@ fn prefs_path() -> Option<std::path::PathBuf> {
 static KEEP_UI_PREFS: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
 
 /// Copy an unreadable (or partly unreadable) `ui.json` beside it, as `ui.unreadable.json` or the
-/// first free `ui.unreadable-N.json`, before the next save replaces it. A newer Krasis Layout may
+/// first free `ui.unreadable-N.json`, before the next save replaces it. A newer Vulcanio Layout may
 /// have written it.
 fn keep_unreadable_prefs(path: &std::path::Path, bytes: &[u8]) {
     use std::io::Write as _;
@@ -248,17 +248,17 @@ fn control_port_from(source: &str, value: Option<String>) -> Option<u16> {
 }
 
 
-/// Create Krasis Layout inside the Krasis window.
-pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Module> {
+/// Create Vulcanio Layout inside the Vulcanio window.
+pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::Module> {
     let cc = host.cc;
-    // Krasis chose the adapter and backend for the shared window; Krasis Layout's start-up record
+    // Vulcanio chose the adapter and backend for the shared window; Vulcanio Layout's start-up record
     // only counts frames and carries notes here.
     let startup = std::sync::Arc::new(gpu::Startup::new(None, Vec::new()));
     let mut device = None;
     if let Some(rs) = &cc.wgpu_render_state {
         device = Some(rs.device.clone());
         let info = rs.adapter.get_info();
-        log::info!("Krasis Layout graphics: {} on {:?}", info.name, info.backend);
+        log::info!("Vulcanio Layout graphics: {} on {:?}", info.name, info.backend);
         startup.started_with(info.backend);
         startup.created(&cc.egui_ctx);
     }
@@ -266,7 +266,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     session.recovery_dir = profile::recovery_dir();
     let recovered = session.execute("file.recovery.open", &serde_json::json!({})).ok();
     let mut app = DesignApp::new(session, services());
-    // No update check: Krasis updates as one app, never Krasis Layout's executable on its own.
+    // No update check: Vulcanio updates as one app, never Vulcanio Layout's executable on its own.
     if let Some(n) = recovered.as_ref().and_then(|r| r["opened"].as_array()).map(Vec::len).filter(|n| *n > 0) {
         app.status(format!("Recovered {n} unsaved document{} from the last session.", if n == 1 { "" } else { "s" }));
     }
@@ -277,7 +277,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
         app.status(note);
     }
     app.ui.language = host.lang.code().to_string();
-    // Krasis draws the window frame (the system's), so Krasis Layout's own title bar stays off.
+    // Vulcanio draws the window frame (the system's), so Vulcanio Layout's own title bar stays off.
     app.integrated_titlebar = false;
     app.custom_titlebar = false;
     app.services.window_frame = window_frame::service(cc, false);
@@ -306,7 +306,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     })
 }
 
-impl krasis_host::Module for App {
+impl vulcanio_host::Module for App {
     fn app(&mut self) -> &mut dyn eframe::App {
         self
     }
@@ -326,7 +326,7 @@ impl krasis_host::Module for App {
         ctx.request_repaint();
     }
 
-    fn set_language(&mut self, ctx: &egui::Context, lang: krasis_host::Lang) {
+    fn set_language(&mut self, ctx: &egui::Context, lang: vulcanio_host::Lang) {
         self.app.ui.language = lang.code().to_string();
         ctx.request_repaint();
     }

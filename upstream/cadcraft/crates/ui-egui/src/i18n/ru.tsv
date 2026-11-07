@@ -1,6 +1,6 @@
-# Krasis CAD Russian interface catalog — original translations by @pechnikov2026-star.
+# Vulcanio CAD Russian interface catalog — original translations by @pechnikov2026-star.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from Krasis CAD's English strings; no proprietary translations were copied.
+# Written from Vulcanio CAD's English strings; no proprietary translations were copied.
 # UTF-8: context<TAB>English source<TAB>Russian translation.
 # Empty context = ordinary label; @plural = one|few|many forms with {n}.
 # Command IDs, typed keywords, technology/product names and user data stay unchanged.
@@ -28,7 +28,7 @@
 	= Equals	= Равно
 	> Greater than	> Больше чем
 	About	О программе
-	About Krasis CAD	О Krasis CAD
+	About Vulcanio CAD	О Vulcanio CAD
 	Absolute	Абсолютные
 	Add Leader	Добавить выноску
 	Align	Выровнять
@@ -84,7 +84,7 @@
 	ByBlock	Поблоку
 	ByColor	ПоЦвету
 	ByLayer	Послою
-	Krasis CAD Help	Справка Krasis CAD
+	Vulcanio CAD Help	Справка Vulcanio CAD
 	Cancel	Отмена
 	Cartesian (x, y)	Декартовы (x, y)
 	Center	Центр
@@ -358,7 +358,7 @@
 	Isolate Layer	Изолировать слой
 	Isometric Drafting	Изометрическое черчение
 	Join	Объединить
-	Join the Krasis Discord…	Присоединяйтесь к Discord Krasis…
+	Join the Vulcanio Discord…	Присоединяйтесь к Discord Vulcanio…
 	Join us on Discord	Присоединяйтесь к нам в Discord
 	Language	Язык
 	Last	Последний
@@ -489,7 +489,7 @@
 	Offset	Смещение
 	On	Включено
 	On/Off	Включить/выключить
-	Part of Krasis.	Одна из программ Crafting Apps от команды и сообщества Krasis.
+	Part of Vulcanio.	Одна из программ Crafting Apps от команды и сообщества Vulcanio.
 	Oops	Восстановить стертые объекты
 	Open (⌘O)	Открыть (⌘O)
 	Open Sample Drawing	Открыть образец чертежа
@@ -590,7 +590,7 @@
 	Quick Select Properties	Свойства быстрого выбора
 	Quick Select...	Быстрый выбор...
 	QuickCalc	Быстрокалькулятор
-	Quit Krasis CAD	Выйти из Krasis CAD
+	Quit Vulcanio CAD	Выйти из Vulcanio CAD
 	Radius	Радиус
 	Raster Image	Растровое изображение
 	Ray	Луч
@@ -997,7 +997,7 @@
 @plural	{n} contributor	{n} участник|{n} участника|{n} участников
 	Drawing as bytes	Чертеж как байты
 	Services	Службы
-	Hide Krasis CAD	Скрыть Krasis CAD
+	Hide Vulcanio CAD	Скрыть Vulcanio CAD
 	Hide Others	Скрыть остальные
 	Accessibility	Специальные возможности
 	Show System Cursor	Показывать системный курсор
@@ -1013,7 +1013,7 @@
 	Query Texts	Запрос текстов
 	Analyze Shapes	Анализ фигур
 	Check for Updates…	Проверить обновления…
-	Krasis CAD is up to date.	У вас последняя версия Krasis CAD.
+	Vulcanio CAD is up to date.	У вас последняя версия Vulcanio CAD.
 	Could not check for updates.	Не удалось проверить обновления.
 	Find All	Find All
 	Find what:	Find what:

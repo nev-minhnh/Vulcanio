@@ -275,7 +275,7 @@ fn escape(s: &str) -> String {
 }
 
 /// The XMP toolkit [`save`] names on `x:xmpmeta`.
-const TOOLKIT: &str = "Krasis Photo";
+const TOOLKIT: &str = "Vulcanio Photo";
 const META_NS: &str = "adobe:ns:meta/";
 
 /// Did [`save`] write this file? True when its `x:xmpmeta` names PhotoCraft as the toolkit
@@ -471,9 +471,9 @@ mod tests {
             &b""[..],
             b"<x:xmpmeta",
             b"<x:xmpmeta xmlns:x=\"adobe:ns:meta/\"/>",
-            b"<x:xmpmeta xmlns:x=\"adobe:ns:meta/\" xmptk=\"Krasis Photo\"/>",
-            b"<x:xmpmeta xmlns:x=\"other:ns/\" x:xmptk=\"Krasis Photo\"/>",
-            b"<x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Krasis Photo 2\"/>",
+            b"<x:xmpmeta xmlns:x=\"adobe:ns:meta/\" xmptk=\"Vulcanio Photo\"/>",
+            b"<x:xmpmeta xmlns:x=\"other:ns/\" x:xmptk=\"Vulcanio Photo\"/>",
+            b"<x:xmpmeta xmlns:x=\"adobe:ns:meta/\" x:xmptk=\"Vulcanio Photo 2\"/>",
             b"\xff\xfe",
         ] {
             assert!(!is_photocraft_xmp(other), "{}", String::from_utf8_lossy(other));

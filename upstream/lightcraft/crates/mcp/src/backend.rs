@@ -92,7 +92,7 @@ impl Remote {
 
     fn unknown_outcome(&self, method: &str, e: &std::io::Error) -> String {
         let addr = &self.addr;
-        format!("lost the Krasis Library app at {addr} after sending `{method}` ({e}); the outcome is unknown and it was not resent, check the app")
+        format!("lost the Vulcanio Library app at {addr} after sending `{method}` ({e}); the outcome is unknown and it was not resent, check the app")
     }
 }
 
@@ -169,7 +169,7 @@ impl Backend for Remote {
                         return Err(self.unknown_outcome(method, &e));
                     }
                     if resent {
-                        return Err(format!("Krasis Library app at {} is not reachable: {e} (start it with `lightcraft --control PORT`)", self.addr));
+                        return Err(format!("Vulcanio Library app at {} is not reachable: {e} (start it with `lightcraft --control PORT`)", self.addr));
                     }
                     resent = true;
                     continue;

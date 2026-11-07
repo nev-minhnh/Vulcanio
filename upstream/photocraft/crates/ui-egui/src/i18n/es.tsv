@@ -9,7 +9,7 @@
 # Clean-room: every entry was written from the plain meaning of the English label using ordinary
 # Spanish computing vocabulary (capa, pincel, selección, lienzo ...). No proprietary localisation
 # resource, string table or product UI was consulted or copied; add entries the same way.
-# Product and technology names (Krasis Photo, Krasis, OpenType, CMYK, Lab ...) stay in Latin
+# Product and technology names (Vulcanio Photo, Vulcanio, OpenType, CMYK, Lab ...) stay in Latin
 # letters; the trailing "…" of dialog commands is kept.
 # Layer Mask Display Options (the layer mask rubylith's colour and opacity)
 # Channel Options and New Spot Channel (#3761)
@@ -61,7 +61,7 @@
 # Actions panel: set folders, dialog toggle, Insert Stop
 # Batch / Image Processor
 # Native Windows printing qualification
-# Krasis Photo release checks.
+# Vulcanio Photo release checks.
 # History panel › History Brush source (#2966)
 # Bevel & Emboss shading controls.
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
@@ -880,11 +880,11 @@
 	Pin bar position	Fijar posición de la barra
 	Move bar	Mover barra
 	More options	Más opciones
-	About Krasis Photo	Acerca de Krasis Photo
-	Krasis Photo Website	Sitio web de Krasis Photo
-	Krasis Photo on GitHub	Krasis Photo en GitHub
-	Krasis Website	Sitio web de Krasis
-	Join the Krasis Discord…	Únase al Discord de Krasis…
+	About Vulcanio Photo	Acerca de Vulcanio Photo
+	Vulcanio Photo Website	Sitio web de Vulcanio Photo
+	Vulcanio Photo on GitHub	Vulcanio Photo en GitHub
+	Vulcanio Website	Sitio web de Vulcanio
+	Join the Vulcanio Discord…	Únase al Discord de Vulcanio…
 	Report an Issue…	Informar de un problema…
 	WIA Support…	Compatibilidad con WIA…
 	Apply	Aplicar
@@ -939,7 +939,7 @@
 	All Caps	Todo en mayúsculas
 	All Slices	Todos los sectores
 	All User Slices	Todos los sectores de usuario
-	All shortcuts reset to Krasis Photo defaults.	Se restablecieron todos los métodos abreviados a los valores predeterminados de Krasis Photo.
+	All shortcuts reset to Vulcanio Photo defaults.	Se restablecieron todos los métodos abreviados a los valores predeterminados de Vulcanio Photo.
 	Alt	Alt
 	Always use pressure for opacity	Usar siempre la presión para la opacidad
 	Always use pressure for size	Usar siempre la presión para el tamaño
@@ -1189,8 +1189,8 @@
 	Drop an image or PSD anywhere to open it.	Suelte una imagen o un PSD en cualquier lugar para abrirlo.
 	Native file drag-and-drop is unavailable	Arrastrar y soltar archivos de forma nativa no está disponible en Wayland
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Arrastrar y soltar archivos de forma nativa aún no es compatible con Wayland. Use Archivo › Abrir, o copie la imagen en su gestor de archivos y péguela con {paste}.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Para soltar archivos, inicie Krasis Photo con XWayland: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	O establezca Preferencias › Rendimiento › Servidor de pantalla de Linux en X11: Krasis Photo se iniciará siempre con XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Para soltar archivos, inicie Vulcanio Photo con XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	O establezca Preferencias › Rendimiento › Servidor de pantalla de Linux en X11: Vulcanio Photo se iniciará siempre con XWayland.
 	Edit › Paste	Edición › Pegar
 	Duplicate Layers…	Duplicar capas…
 	Duplicate style	Duplicar estilo
@@ -1440,9 +1440,9 @@
 	Perspective Warp is not active	La deformación de perspectiva no está activa
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Deformación de perspectiva: dibuje planos siguiendo la perspectiva de la imagen y luego cambie a Deformar
 	Photo Filter	Filtro de fotografía
-	Krasis Photo	Krasis Photo
-	Krasis Photo Manages Colors	Krasis Photo gestiona el color
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — un editor de imágenes nativo y de código abierto escrito en Rust.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo Manages Colors	Vulcanio Photo gestiona el color
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — un editor de imágenes nativo y de código abierto escrito en Rust.
 	Pin Depth:	Profundidad de la chincheta:
 	Pixel Length:	Longitud en píxeles:
 	Pixels/Centimeter	Píxeles/centímetro
@@ -1517,11 +1517,11 @@
 	Import Shortcuts…	Importar métodos abreviados…
 	Load a keyboard shortcut set saved as .kys	Cargar un conjunto de métodos abreviados de teclado guardado como .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Se importaron {n} métodos abreviados de {file}. Haga clic en Aceptar para conservarlos.
-	{n} commands are not in Krasis Photo.	{n} comandos no existen en Krasis Photo.
+	{n} commands are not in Vulcanio Photo.	{n} comandos no existen en Vulcanio Photo.
 	Keyboard shortcuts imported	Métodos abreviados de teclado importados
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Su conjunto de métodos abreviados de teclado {set} se usa aquí: {n} métodos abreviados difieren de los predeterminados. Edición › Métodos abreviados de teclado los muestra; Restablecer todo a los valores predeterminados lo deshace.
 	Import keyboard shortcuts?	¿Importar métodos abreviados de teclado?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo encontró en este equipo su conjunto de métodos abreviados de teclado {set} de otro editor de imágenes: {n} de sus métodos abreviados difieren de los de Krasis Photo. ¿Desea importarlo?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo encontró en este equipo su conjunto de métodos abreviados de teclado {set} de otro editor de imágenes: {n} de sus métodos abreviados difieren de los de Vulcanio Photo. ¿Desea importarlo?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Edición › Métodos abreviados de teclado › Restablecer todo a los valores predeterminados deshace una importación.
 	Don't Import	No importar
 	The keyboard shortcut set was not imported: {error}	No se importó el conjunto de métodos abreviados de teclado: {error}
@@ -1710,7 +1710,7 @@
 	Apple Watch 45mm	Apple Watch 45mm
 	Aqua	Aqua
 	Art & Illustration	Arte e ilustración
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Background Eraser Tool	Herramienta Borrador de fondos
 	Bevel & Emboss	Bisel y relieve
 	Blend Mode	Modo de fusión
@@ -1747,7 +1747,7 @@
 	Current Tool	Herramienta actual
 	Custom Shape Tool	Herramienta Forma personalizada
 	Cyans	Cianes
-	Default Krasis Photo Size	Tamaño predeterminado de Krasis Photo
+	Default Vulcanio Photo Size	Tamaño predeterminado de Vulcanio Photo
 	Delete Workspace	Eliminar espacio de trabajo
 	Diamond	Diamante
 	Dimensions:	Dimensiones:
@@ -1859,7 +1859,7 @@
 	Pen Tool	Herramienta Pluma
 	Convert Point Tool	Herramienta Convertir punto
 	Photo	Fotografía
-	Krasis Photo website	Sitio web de Krasis Photo
+	Vulcanio Photo website	Sitio web de Vulcanio Photo
 	Picas	Picas
 	Pillow Emboss	Relieve en almohadilla
 	Pixel Replacement	Sustitución de píxeles
@@ -2196,7 +2196,7 @@
 	System Info	Información del sistema
 	More panels	Más paneles
 	More documents	Más documentos
-	These settings aren't available in Krasis Photo yet.	Estos ajustes aún no están disponibles en Krasis Photo.
+	These settings aren't available in Vulcanio Photo yet.	Estos ajustes aún no están disponibles en Vulcanio Photo.
 	Graphics	Gráficos
 	Reset GPU Backend	Restablecer el backend de GPU
 	Applies at next launch.	Se aplicará en el próximo inicio.
@@ -2410,7 +2410,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Automático utiliza la GPU cuando está disponible y cambia a la CPU si hay errores.
 	Switched to CPU rendering	Se cambió al renderizado por CPU
 	GPU acceleration could not continue. Your documents are unchanged.	La aceleración GPU no pudo continuar. Los documentos no han cambiado.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo compone las imágenes en la CPU. La ventana aún puede usar el adaptador gráfico.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo compone las imágenes en la CPU. La ventana aún puede usar el adaptador gráfico.
 	Retry GPU requires a restart. Save your work first.	Reintentar la GPU requiere reiniciar. Guarde primero su trabajo.
 	Retry GPU tries the graphics processor again now.	Reintentar la GPU vuelve a probar el procesador gráfico ahora.
 	GPU acceleration resumed.	Se reanudó la aceleración GPU.
@@ -2630,7 +2630,7 @@ fontWeight	Italic	Cursiva
 	Color to Alpha…	Color a alfa…
 	Transparency Threshold	Umbral de transparencia
 	Opacity Threshold	Umbral de opacidad
-	Krasis Photo — Screen Color Picker	Krasis Photo — Selector de color de pantalla
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Selector de color de pantalla
 	Rasterize svg groups deeper than	Rasterizar grupos SVG con mayor profundidad
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 desactiva este umbral; los grupos SVG anidados a más de 100 niveles siempre se rasterizan.
 	Rule of Thirds	Regla de los tercios
@@ -3419,7 +3419,7 @@ layerLabel	No Color	Sin color
 	Restart Required	Es necesario reiniciar
 	Restart	Reiniciar
 	Quit	Salir
-	Quit Krasis Photo	Salir de Krasis Photo
+	Quit Vulcanio Photo	Salir de Vulcanio Photo
 	Close Window	Cerrar ventana
 	New Window	Nueva ventana
 	Open Image	Abrir imagen
@@ -3615,7 +3615,7 @@ layerLabel	No Color	Sin color
 	Custom Pixel Aspect Ratio	Relación de aspecto de píxel personalizada
 	32-bit Preview Options	Opciones de vista previa de 32 bits
 	New Guide	Nueva guía
-	Join the Krasis Discord	Únase al Discord de Krasis
+	Join the Vulcanio Discord	Únase al Discord de Vulcanio
 	Report an Issue	Informar de un problema
 	Load Files into Stack	Cargar archivos en pila
 	Statistics	Estadísticas
@@ -3912,7 +3912,7 @@ layerLabel	No Color	Sin color
 	Mezzotint	Grabado a media tinta
 	Mosaic	Mosaico
 	Motion Blur	Desenfoque de movimiento
-	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Krasis Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Arrastrar y soltar archivos de forma nativa aún no es compatible con Wayland. Use Archivo › Abrir o ejecute Krasis Photo mediante XWayland con `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Vulcanio Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Arrastrar y soltar archivos de forma nativa aún no es compatible con Wayland. Use Archivo › Abrir o ejecute Vulcanio Photo mediante XWayland con `WAYLAND_DISPLAY= photocraft`.
 	Neon Glow	Resplandor de neón
 	New Guide Layout	Nuevo diseño de guías
 	New Video Layer from File	Nueva capa de vídeo desde archivo
@@ -4084,9 +4084,9 @@ layerLabel	No Color	Sin color
 	Saved {path}; image assets: {n} in {dir}	Se guardó {path}; recursos de imagen: {n} en {dir}
 	{message} (notes: {n}; {warning})	{message} (notas: {n}; {warning})
 	Preferences can't be saved	No se pueden guardar las preferencias
-	Krasis Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Krasis Photo seguirá intentándolo; hasta que el guardado se complete, los cambios de preferencias se perderán al cerrar.
+	Vulcanio Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Vulcanio Photo seguirá intentándolo; hasta que el guardado se complete, los cambios de preferencias se perderán al cerrar.
 	GPU retry scheduled	Reintento de GPU programado
-	Save your work and restart Krasis Photo to retry GPU acceleration. CPU rendering remains active for this session.	Guarde su trabajo y reinicie Krasis Photo para volver a intentar la aceleración por GPU. La interpretación por CPU seguirá activa durante esta sesión.
+	Save your work and restart Vulcanio Photo to retry GPU acceleration. CPU rendering remains active for this session.	Guarde su trabajo y reinicie Vulcanio Photo para volver a intentar la aceleración por GPU. La interpretación por CPU seguirá activa durante esta sesión.
 	GPU device was lost; using the CPU renderer.	Se perdió el dispositivo GPU; se usará el renderizador por CPU.
 	GPU error; using the CPU renderer.	Error de GPU; se usará el renderizador por CPU.
 	Couldn't open {name}: {error}	No se pudo abrir {name}: {error}
@@ -4146,7 +4146,7 @@ layerLabel	No Color	Sin color
 navigator	Zoom	Zoom
 	Apply {option}: {state}	Aplicar {option}: {state}
 	This adjustment ({key}) is kept as imported and can't be edited yet.	Este ajuste ({key}) se conserva como se importó y aún no puede editarse.
-	Join the Krasis Discord ({url})	Unirse al Discord de Krasis ({url})
+	Join the Vulcanio Discord ({url})	Unirse al Discord de Vulcanio ({url})
 	{index} of {total}	{index} de {total}
 	{shortcut} assigned.	{shortcut} asignado.
 	{shortcut} is already in use by {commands} and will be removed from it when you click OK.	{shortcut} ya está en uso por {commands} y se quitará al hacer clic en Aceptar.
@@ -4198,7 +4198,7 @@ navigator	Zoom	Zoom
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Se cargó {n} acción de {file}|Se cargaron {n} acciones de {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} paso aún no tiene equivalente en Krasis Photo|{n} pasos aún no tienen equivalente en Krasis Photo
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} paso aún no tiene equivalente en Vulcanio Photo|{n} pasos aún no tienen equivalente en Vulcanio Photo
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Se guardó {n} acción en {file}|Se guardaron {n} acciones en {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	{n} paso sin equivalente en Photoshop omitido|{n} pasos sin equivalente en Photoshop omitidos
 @plural	{n} action file loaded|{n} action files loaded	Se cargó {n} archivo de acciones|Se cargaron {n} archivos de acciones
@@ -4296,12 +4296,12 @@ navigator	Zoom	Zoom
 	Bicubic Smoother	Bicúbica más suavizada
 	Bicubic Sharper	Bicúbica más enfocada
 	Pasting from other apps is unavailable	Pegar desde otras aplicaciones no está disponible
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo no puede acceder al portapapeles del sistema en esta sesión. En Wayland, el entorno aislado de Flatpak oculta el protocolo con el que se leen las imágenes de otras aplicaciones.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Para pegar desde otras aplicaciones, inicia Krasis Photo en XWayland: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Nada que pegar: Krasis Photo no puede leer aquí el portapapeles del sistema
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo no puede acceder al portapapeles del sistema en esta sesión. En Wayland, el entorno aislado de Flatpak oculta el protocolo con el que se leen las imágenes de otras aplicaciones.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Para pegar desde otras aplicaciones, inicia Vulcanio Photo en XWayland: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Nada que pegar: Vulcanio Photo no puede leer aquí el portapapeles del sistema
 	Delete this set	Eliminar este conjunto
 	New Set…	Nuevo conjunto…
-	Krasis Photo Defaults	Valores por defecto de Krasis Photo
+	Vulcanio Photo Defaults	Valores por defecto de Vulcanio Photo
 	Save a list of these shortcuts as a web page	Guardar una lista de estos métodos abreviados como página web
 	Save the changes to this set	Guardar los cambios en este conjunto
 	Save these shortcuts as a .kys file	Guardar estos métodos abreviados como archivo .kys

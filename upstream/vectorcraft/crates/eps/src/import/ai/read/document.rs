@@ -975,7 +975,7 @@ impl<'a> Reader<'a> {
         }
         if !self.unsupported.is_empty() {
             let list: Vec<&str> = self.unsupported.iter().map(String::as_str).collect();
-            return Err(format!("it has {}, which Krasis Vector doesn't read from it yet", join_and(&list)));
+            return Err(format!("it has {}, which Vulcanio Vector doesn't read from it yet", join_and(&list)));
         }
         if self.doc.layers.is_empty() {
             return Err("it has no layers".into());

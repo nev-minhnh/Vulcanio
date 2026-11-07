@@ -1,14 +1,14 @@
 # Bosnian (bs) catalog, Latin script, Ijekavian. Same format as zh-hant.tsv:  context <TAB> source <TAB> translation
 # (empty context = a plain UI string; `@id` = a command id; `@plural` = "one|few|other" forms).
 #
-# Clean-room: every entry is written from the meaning of Krasis Vector's English label, in standard
+# Clean-room: every entry is written from the meaning of Vulcanio Vector's English label, in standard
 # Bosnian (historija, sačuvaj, tačka, datoteka, postavke); no other application's localisation was
 # consulted or copied. Drafted with AI assistance (Claude Code) from the English meaning; not yet
 # reviewed by a native speaker. The wording is shared with storytold/craft-i18n
 # (locales/bs/vectorcraft.tsv and common.tsv). Vocabulary: radna ploča (artboard), putanja (path),
 # sidrena tačka (anchor point), potez (stroke), ispuna (fill), gradijent, uzorci boja (Swatches),
 # uzorak (pattern), neprozirnost (opacity), četkica (brush), praćenje slike (Image Trace).
-# Product and format names (Krasis Vector, OpenType, PDF ...) stay as they are; `{placeholders}`,
+# Product and format names (Vulcanio Vector, OpenType, PDF ...) stay as they are; `{placeholders}`,
 # `code` in backticks and a trailing "…" are kept.
 
 	New Design	Novi dizajn
@@ -16,7 +16,7 @@
 	Paste Design	Zalijepi dizajn
 	Select Unused	Odaberi nekorišteno
 	Glowing Edges…	Užarene ivice…
-	About Krasis Vector	O VectorCraftu
+	About Vulcanio Vector	O VectorCraftu
 	Align to Path	Poravnaj s putanjom
 	Cut Path at Selected Anchor Points	Presijeci putanju na odabranim sidrenim tačkama
 	Join Our Discord	Pridružite se našem Discordu
@@ -26,7 +26,7 @@
 	Medium Dark	Srednje tamno
 	Medium Light	Srednje svijetlo
 	Light	Svijetlo
-	Quit Krasis Vector	Zatvori Krasis Vector
+	Quit Vulcanio Vector	Zatvori Vulcanio Vector
 	Drop Artwork	Ispusti crtež
 @msg	{key} must be [x, y] with finite coordinates	{key} mora biti [x, y] s konačnim koordinatama
 @msg	ids must contain 1–10000 object ids	ids mora sadržavati 1–10000 ID-ova objekata
@@ -115,7 +115,7 @@
 	Keyboard Shortcuts…	Prečice na tastaturi…
 	Import Shortcut Set	Uvezi skup prečica
 	Import Shortcut Set…	Uvezi skup prečica…
-	Each entry of the file is matched to a Krasis Vector tool, command or panel. Check the matches and answer what is left.	Svaki unos datoteke uparuje se s alatom, naredbom ili panelom VectorCrafta. Provjerite uparivanja i odgovorite na ostatak.
+	Each entry of the file is matched to a Vulcanio Vector tool, command or panel. Check the matches and answer what is left.	Svaki unos datoteke uparuje se s alatom, naredbom ili panelom VectorCrafta. Provjerite uparivanja i odgovorite na ostatak.
 	Keys	Tipke
 	The file writes keys and modifiers as codes. Check the proposed meanings and answer the codes that are not known yet.	Datoteka zapisuje tipke i modifikatore kao kodove. Provjerite predložena značenja i odgovorite na kodove koji još nisu poznati.
 	Click, then press the key this code stands for (Esc cancels)	Kliknite, zatim pritisnite tipku koju ovaj kod predstavlja (Esc otkazuje)
@@ -125,7 +125,7 @@
 	not known yet	još nije poznato
 	Shortcuts	Prečice
 	In the File	U datoteci
-	In Krasis Vector	U VectorCraftu
+	In Vulcanio Vector	U VectorCraftu
 	Needs Attention Only	Samo oni koji zahtijevaju pažnju
 	Ready	Spremno
 	Needs a choice	Treba izbor
@@ -134,7 +134,7 @@
 	Tools take a single key (optionally with Shift)	Alati primaju jednu tipku (po želji sa Shiftom)
 	A later row takes this shortcut	Kasniji red preuzima ovu prečicu
 	Same item as a later row	Ista stavka kao kasniji red
-	Start from Krasis Vector Defaults	Počni od zadanih postavki VectorCrafta
+	Start from Vulcanio Vector Defaults	Počni od zadanih postavki VectorCrafta
 	Add to the Current Shortcuts	Dodaj u trenutne prečice
 	Remember My Choices	Zapamti moje izbore
 	{ready} of {total} ready	Spremno {ready} od {total}
@@ -148,7 +148,7 @@
 	Forget Import Matches	Zaboravi uparivanja uvoza
 @plural	agrees with {n} default shortcut|agrees with {n} default shortcuts	slaže se s {n} zadanom prečicom|slaže se s {n} zadane prečice|slaže se s {n} zadanih prečica
 @plural	{n} part of the file wasn't read|{n} parts of the file weren't read	{n} dio datoteke nije pročitan|{n} dijela datoteke nisu pročitana|{n} dijelova datoteke nije pročitano
-@msg	This shortcut file is in a form Krasis Vector can't read.	Ova datoteka prečica je u obliku koji Krasis Vector ne može pročitati.
+@msg	This shortcut file is in a form Vulcanio Vector can't read.	Ova datoteka prečica je u obliku koji Vulcanio Vector ne može pročitati.
 @msg	not a shortcut set: the text doesn't start with a slash name and an opening brace	nije skup prečica: tekst ne počinje nazivom s kosom crtom i otvarajućom vitičastom zagradom
 	Preferences…	Postavke…
 	Object	Objekat
@@ -525,7 +525,7 @@
 	Working CMYK	Radni CMYK
 	RGB	RGB
 	sRGB IEC61966-2.1	sRGB IEC61966-2.1
-	Krasis Vector Generic CMYK (SWOP-like)	Krasis Vector generički CMYK (sličan SWOP-u)
+	Vulcanio Vector Generic CMYK (SWOP-like)	Vulcanio Vector generički CMYK (sličan SWOP-u)
 	Legacy Macintosh RGB (Gamma 1.8)	Naslijeđeni Macintosh RGB (gama 1.8)
 	Internet Standard RGB (sRGB)	Internet standardni RGB (sRGB)
 	Monitor RGB	RGB monitora
@@ -757,11 +757,11 @@
 	Save Swatch Library…	Sačuvaj biblioteku uzoraka boja…
 	Symbol Libraries	Biblioteke simbola
 	Help	Pomoć
-	Krasis Website	Web stranica ArtCrafta
-	Krasis Vector on getartcraft.com	Krasis Vector na getartcraft.com
-	Krasis Vector on GitHub	Krasis Vector na GitHubu
+	Vulcanio Website	Web stranica ArtCrafta
+	Vulcanio Vector on getartcraft.com	Vulcanio Vector na getartcraft.com
+	Vulcanio Vector on GitHub	Vulcanio Vector na GitHubu
 	Search Commands…	Pretraži naredbe…
-	Krasis Vector Help…	Pomoć za Krasis Vector…
+	Vulcanio Vector Help…	Pomoć za Vulcanio Vector…
 	Auto Color	Automatska boja
 	Automatic	Automatski
 	Isolate Selected Group	Izoliraj odabranu grupu
@@ -811,7 +811,7 @@
 	Dock Panel	Usidri panel
 	Float Tool Group	Odvoji grupu alata
 	Services	Usluge
-	Hide Krasis Vector	Sakrij Krasis Vector
+	Hide Vulcanio Vector	Sakrij Vulcanio Vector
 	Hide Others	Sakrij ostale
 	Minimize	Minimiziraj
 	Zoom	Zumiranje
@@ -2104,8 +2104,8 @@ digits	Malayalam	Malajalam
 	Select All Bound Objects	Odaberi sve vezane objekte
 	Multiple objects	Više objekata
 	Graphics: {adapter}	Grafika: {adapter}
-	Part of Krasis. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Krasis Vector.	Dio ArtCrafta. MIT OR Apache-2.0. Fontovi: Source Sans 3, Inter, JetBrains Mono (OFL). Ikone: Lucide (ISC) + Krasis Vector.
-	Part of Krasis. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Icons: Lucide (ISC) + Krasis Vector.	Dio ArtCrafta. MIT OR Apache-2.0. Fontovi: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Ikone: Lucide (ISC) + Krasis Vector.
+	Part of Vulcanio. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Vulcanio Vector.	Dio ArtCrafta. MIT OR Apache-2.0. Fontovi: Source Sans 3, Inter, JetBrains Mono (OFL). Ikone: Lucide (ISC) + Vulcanio Vector.
+	Part of Vulcanio. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Icons: Lucide (ISC) + Vulcanio Vector.	Dio ArtCrafta. MIT OR Apache-2.0. Fontovi: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Ikone: Lucide (ISC) + Vulcanio Vector.
 	Version {version} — open-source vector illustration in pure Rust.	Verzija {version} — vektorska ilustracija otvorenog koda u čistom Rustu.
 	Align to Page	Poravnaj sa stranicom
 	Smooth Color	Glatka boja
@@ -2450,7 +2450,7 @@ digits	Malayalam	Malajalam
 @plural	{n} folder or file couldn't be read|{n} folders or files couldn't be read	Foldera ili datoteka koje nije moguće pročitati: {n}|Foldera ili datoteka koje nije moguće pročitati: {n}|Foldera ili datoteka koje nije moguće pročitati: {n}
 	The search stopped at its limit: search a smaller folder.	Pretraga se zaustavila na svom ograničenju: pretražite manji folder.
 	Copy only fonts you own or are licensed to install.	Kopirajte samo fontove koje posjedujete ili imate licencu za instaliranje.
-	Krasis Vector copies the fonts to {folder}.	Krasis Vector kopira fontove u {folder}.
+	Vulcanio Vector copies the fonts to {folder}.	Vulcanio Vector kopira fontove u {folder}.
 @plural	Apply to All ({n} more missing)|Apply to All ({n} more missing)	Primijeni na sve (još {n} nedostaje)|Primijeni na sve (još {n} nedostaju)|Primijeni na sve (još {n} nedostaje)
 	Ignore	Zanemari
 	Linked File Not Found	Povezana datoteka nije pronađena
@@ -2544,7 +2544,7 @@ digits	Malayalam	Malajalam
 	On: one locked object showing the document, updated when it changes.	Uključeno: jedan zaključani objekat koji prikazuje dokument, ažuriran kad se on promijeni.
 	Off: an editable copy of its art, embedded in this document.	Isključeno: kopija njegovog crteža koja se može uređivati, ugrađena u ovaj dokument.
 	Images: link to the file instead of only embedding it.	Slike: poveži s datotekom umjesto samo ugrađivanja.
-	Krasis Vector documents: one locked object, updated when the file changes.	Krasis Vector dokumenti: jedan zaključani objekat, ažuriran kad se datoteka promijeni.
+	Vulcanio Vector documents: one locked object, updated when the file changes.	Vulcanio Vector dokumenti: jedan zaključani objekat, ažuriran kad se datoteka promijeni.
 	Alignment:	Poravnanje:
 	Applies when the linked file is relinked or updated.	Primjenjuje se kad se povezana datoteka ponovo poveže ili ažurira.
 	Bounds (Fill Proportionally)	Granice (proporcionalna ispuna)
@@ -2630,7 +2630,7 @@ digits	Malayalam	Malajalam
 	A new preset starting from the selected one	Novi predložak koji počinje od odabranog
 	Differences from {preset}:	Razlike od {preset}:
 	Differences from [Default]:	Razlike od [Zadano]:
-	Differences from Krasis Vector Default:	Razlike od Krasis Vector zadano:
+	Differences from Vulcanio Vector Default:	Razlike od Vulcanio Vector zadano:
 	Edit…	Uredi…
 	None.	Ništa.
 	Presets:	Unaprijed postavljene vrijednosti:
@@ -2684,7 +2684,7 @@ digits	Malayalam	Malajalam
 	3 Color Job	Posao s 3 boje
 	Recover Documents	Oporavi dokumente
 	Restored documents open unsaved: save them to keep them.	Vraćeni dokumenti otvaraju se nesačuvani: sačuvajte ih da ih zadržite.
-	Krasis Vector didn't quit normally last time. These documents had unsaved changes:	Krasis Vector se prošli put nije normalno zatvorio. Ovi dokumenti su imali nesačuvane promjene:
+	Vulcanio Vector didn't quit normally last time. These documents had unsaved changes:	Vulcanio Vector se prošli put nije normalno zatvorio. Ovi dokumenti su imali nesačuvane promjene:
 	Do you want to save the changes you made to “{name}”?	Želite li sačuvati promjene koje ste napravili u „{name}”?
 	Don't Save	Nemoj sačuvati
 	Your changes will be lost if you don't save them.	Vaše promjene će biti izgubljene ako ih ne sačuvate.
@@ -2750,7 +2750,7 @@ digits	Malayalam	Malajalam
 	Color images	Slike u boji
 	Compatibility:	Kompatibilnost:
 	PDF 1.7	PDF 1.7
-	Krasis Vector Default	Krasis Vector zadano
+	Vulcanio Vector Default	Vulcanio Vector zadano
 	High Quality Print	Štampa visokog kvaliteta
 	[High Quality Print]	[Štampa visokog kvaliteta]
 	Press Quality	Štamparski kvalitet
@@ -2763,7 +2763,7 @@ digits	Malayalam	Malajalam
 	[PDF/X-3:2002]	[PDF/X-3:2002]
 	PDF/X-4:2010	PDF/X-4:2010
 	[PDF/X-4:2010]	[PDF/X-4:2010]
-	Keeps the document editable: Krasis Vector reopens the PDF with nothing lost. For files you'll edit again.	Dokument ostaje uređiv: Krasis Vector ponovo otvara PDF bez gubitaka. Za datoteke koje ćete ponovo uređivati.
+	Keeps the document editable: Vulcanio Vector reopens the PDF with nothing lost. For files you'll edit again.	Dokument ostaje uređiv: Vulcanio Vector ponovo otvara PDF bez gubitaka. Za datoteke koje ćete ponovo uređivati.
 	Compress text and line art	Komprimiraj tekst i linijsku grafiku
 	Compression	Kompresija
 	Compression › Color › Above Ppi	Kompresija › Boja › Iznad ppi
@@ -2841,14 +2841,14 @@ digits	Malayalam	Malajalam
 	A File…	Datoteka…
 	GPL palettes keep solid colours only, as RGB.	GPL palete zadržavaju samo pune boje, kao RGB.
 	Save Swatch Library	Sačuvaj biblioteku uzoraka boja
-	Krasis Vector Swatches (.vcswatches)	Krasis Vector uzorci boja (.vcswatches)
+	Vulcanio Vector Swatches (.vcswatches)	Vulcanio Vector uzorci boja (.vcswatches)
 	Save To:	Sačuvaj u:
 	Saved to User Defined: {}	Sačuvano u korisnički definisano: {}
 	Selected Swatches Only	Samo odabrani uzorci boja
 	Selected Swatches Only (0)	Samo odabrani uzorci boja (0)
 	User Defined Libraries	Korisnički definisane biblioteke
 	Copy Report	Kopiraj izvještaj
-	Krasis Vector read this script without running it.	Krasis Vector je pročitao ovu skriptu bez izvršavanja.
+	Vulcanio Vector read this script without running it.	Vulcanio Vector je pročitao ovu skriptu bez izvršavanja.
 	Needs nothing beyond plain JavaScript	Ne treba ništa osim običnog JavaScripta
 	Needs the script language's own objects or directives	Treba vlastite objekte ili direktive jezika skripte
 	Needs the document model	Treba model dokumenta
@@ -3827,7 +3827,7 @@ axis	Both	Obje
 	Print as Bitmap	Štampaj kao bitmapu
 	Draft	Nacrt
 	Default	Zadano
-	[Krasis Vector Default]	[Krasis Vector zadano]
+	[Vulcanio Vector Default]	[Vulcanio Vector zadano]
 	Magenta	Magenta
 	Page	Stranica
 	Print Tiling	Popločavanje štampe
@@ -3937,11 +3937,11 @@ effect	Regular	Obično
 	Quickly start a new file	Brzo započnite novu datoteku
 	Recent Files	Nedavne datoteke
 	Vector illustration — fast, open, scriptable.	Vektorska ilustracija — brza, otvorena, skriptabilna.
-	Welcome to Krasis Vector	Dobro došli u Krasis Vector
-	Krasis website	Web stranica ArtCrafta
+	Welcome to Vulcanio Vector	Dobro došli u Vulcanio Vector
+	Vulcanio website	Web stranica ArtCrafta
 	Discord	Discord
 	Join our Discord	Pridružite nam se na Discordu
-	Join the Krasis community on Discord (discord.gg/artcraft)	Pridružite se Krasis zajednici na Discordu (discord.gg/artcraft)
+	Join the Vulcanio community on Discord (discord.gg/artcraft)	Pridružite se Vulcanio zajednici na Discordu (discord.gg/artcraft)
 	Source code on GitHub	Izvorni kod na GitHubu
 	All Tools	Svi alati
 	Draw	Crtaj
@@ -3985,9 +3985,9 @@ font-technology	Variable	Varijabilni
 	Installed plug-in {}	Instaliran dodatak {}
 	Revert to the saved version of “{name}”?	Vratiti na sačuvanu verziju dokumenta „{name}”?
 	Replace “{name}”, the file this document was opened from?	Zamijeniti „{name}”, datoteku iz koje je ovaj dokument otvoren?
-	Opening it left out what Krasis Vector can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	Pri otvaranju izostavljeno je ono što Krasis Vector još ne može pročitati ({what}), pa se zamjenom to trajno gubi. Sačuvajte pod drugim nazivom da to zadržite.
+	Opening it left out what Vulcanio Vector can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	Pri otvaranju izostavljeno je ono što Vulcanio Vector još ne može pročitati ({what}), pa se zamjenom to trajno gubi. Sačuvajte pod drugim nazivom da to zadržite.
 	“{name}” already exists. Replace it?	„{name}” već postoji. Zamijeniti?
-	The name in the save panel was “{typed}”; Krasis Vector added the file type's extension. Replacing the file overwrites its contents.	Naziv u panelu za čuvanje bio je „{typed}”; Krasis Vector je dodao ekstenziju vrste datoteke. Zamjena datoteke prepisuje njen sadržaj.
+	The name in the save panel was “{typed}”; Vulcanio Vector added the file type's extension. Replacing the file overwrites its contents.	Naziv u panelu za čuvanje bio je „{typed}”; Vulcanio Vector je dodao ekstenziju vrste datoteke. Zamjena datoteke prepisuje njen sadržaj.
 	Saved {path}	Sačuvano: {path}
 	Saving	Čuvanje
 	Saving {}	Čuvanje {}
@@ -3995,7 +3995,7 @@ font-technology	Variable	Varijabilni
 	Dashed Line	Isprekidana linija
 	Panel menu	Meni panela
 	Unembed…	Poništi ugrađivanje…
-	Applies the next time Krasis Vector starts.	Primjenjuje se pri sljedećem pokretanju VectorCrafta.
+	Applies the next time Vulcanio Vector starts.	Primjenjuje se pri sljedećem pokretanju VectorCrafta.
 	Enable Contextual Task Bar	Omogući kontekstnu traku zadataka
 	Next	Sljedeće
 	OK	U redu
@@ -4432,7 +4432,7 @@ imageTrace	Outline	Obris
 @msg	can't encode the document: {0}	nije moguće kodirati dokument: {0}
 @msg	can't parse shortcut `{c}`	nije moguće raščlaniti prečicu `{c}`
 @msg	can't parse shortcut `{s}` for `{k}`	nije moguće raščlaniti prečicu `{s}` za `{k}`
-@msg	can't save version {0}: Krasis Vector writes versions {MIN_VERSION} to {VERSION}	nije moguće sačuvati verziju {0}: Krasis Vector zapisuje verzije od {MIN_VERSION} do {VERSION}
+@msg	can't save version {0}: Vulcanio Vector writes versions {MIN_VERSION} to {VERSION}	nije moguće sačuvati verziju {0}: Vulcanio Vector zapisuje verzije od {MIN_VERSION} do {VERSION}
 @msg	can't write .{ext} images	nije moguće zapisati .{ext} slike
 @msg	cannot distort a zero-size bounding box	nije moguće izobličiti granični okvir nulte veličine
 @msg	cannot read PDF: {0}	nije moguće pročitati PDF: {0}
@@ -4459,7 +4459,7 @@ imageTrace	Outline	Obris
 @msg	empty brush stroke	prazan potez četkicom
 @msg	empty cutter	prazan rezač
 @msg	empty path	prazna putanja
-@msg	file version {0} is newer than this Krasis Vector supports ({VERSION})	verzija datoteke {0} novija je od one koju ovaj Krasis Vector podržava ({VERSION})
+@msg	file version {0} is newer than this Vulcanio Vector supports ({VERSION})	verzija datoteke {0} novija je od one koju ovaj Vulcanio Vector podržava ({VERSION})
 @msg	freeform point {i} needs `at` [x, y] and a valid `color`	tačka slobodnog oblika {i} treba `at` [x, y] i važeću `color`
 @msg	freeform line {i} must be an array of point indices	linija slobodnog oblika {i} mora biti niz indeksa tačaka
 @msg	give both `start` and `end` [x, y] (or neither)	navedite i `start` i `end` [x, y] (ili nijedno)
@@ -4480,9 +4480,9 @@ imageTrace	Outline	Obris
 @msg	invalid PDF setting: {0}	nevažeća PDF postavka: {0}
 @msg	invalid image data for `{0}`	nevažeći podaci slike za `{0}`
 @msg	invalid parameters for `{cmd}`: {msg}	nevažeći parametri za `{cmd}`: {msg}
-@msg	is not an image Krasis Vector reads	nije slika koju Krasis Vector čita
-@msg	it uses `{at}`, which Krasis Vector's PostScript reader doesn't know	koristi `{at}`, što PostScript čitač VectorCrafta ne poznaje
-@msg	it uses `{at}`, which Krasis Vector's PostScript reader doesn't know, in {procs}	koristi `{at}`, što PostScript čitač VectorCrafta ne poznaje, u {procs}
+@msg	is not an image Vulcanio Vector reads	nije slika koju Vulcanio Vector čita
+@msg	it uses `{at}`, which Vulcanio Vector's PostScript reader doesn't know	koristi `{at}`, što PostScript čitač VectorCrafta ne poznaje
+@msg	it uses `{at}`, which Vulcanio Vector's PostScript reader doesn't know, in {procs}	koristi `{at}`, što PostScript čitač VectorCrafta ne poznaje, u {procs}
 @msg	its Windows metafile preview was opened instead, which may simplify the art	umjesto nje otvoren je njen Windows metafile pregled, što može pojednostaviti crtež
 @msg	its preview was placed instead, at screen resolution	umjesto nje postavljen je njen pregled, u rezoluciji ekrana
 @msg	join needs open paths	spajanje zahtijeva otvorene putanje
@@ -4536,7 +4536,7 @@ imageTrace	Outline	Obris
 @msg	no file system here	ovdje nema datotečnog sistema
 @msg	no file writer	nema zapisivača datoteka
 @msg	no files to place	nema datoteka za postavljanje
-@msg	`{file}` isn't a Krasis Vector document, a PDF or a PDF-compatible .ai file	`{file}` nije Krasis Vector dokument, PDF niti .ai datoteka kompatibilna s PDF-om
+@msg	`{file}` isn't a Vulcanio Vector document, a PDF or a PDF-compatible .ai file	`{file}` nije Vulcanio Vector dokument, PDF niti .ai datoteka kompatibilna s PDF-om
 @msg	no format to export to	nema formata za izvoz
 @msg	no free recovery area	nema slobodnog područja za oporavak
 @msg	no gradient stop or freeform point is selected	nije odabrana tačka gradijenta ni tačka slobodnog oblika
@@ -4580,7 +4580,7 @@ imageTrace	Outline	Obris
 @msg	not an action set file	nije datoteka skupa akcija
 @msg	the action set file is larger than 8 MiB	datoteka skupa akcija je veća od 8 MiB
 @msg	the action set file holds more than 1,000 actions	datoteka skupa akcija sadrži više od 1.000 akcija
-@msg	the action set file needs a later version of Krasis Vector	datoteka skupa akcija zahtijeva noviju verziju programa Krasis Vector
+@msg	the action set file needs a later version of Vulcanio Vector	datoteka skupa akcija zahtijeva noviju verziju programa Vulcanio Vector
 @msg	an action in the action set file has more than 10,000 steps	akcija u datoteci skupa akcija ima više od 10.000 koraka
 @msg	no such anchor	nema takvog sidra
 @msg	no such artboard	nema takve radne ploče
@@ -4611,8 +4611,8 @@ imageTrace	Outline	Obris
 @msg	no user workspace `{from}`	nema korisničkog radnog prostora `{from}`
 @msg	node {_1} is not text	čvor {_1} nije tekst
 @msg	not a DXF drawing	nije DXF crtež
-@msg	not a Krasis Vector file: {0}	nije Krasis Vector datoteka: {0}
-@msg	not a Krasis Vector shortcut set (missing `overrides`)	nije Krasis Vector skup prečica (nedostaje `overrides`)
+@msg	not a Vulcanio Vector file: {0}	nije Vulcanio Vector datoteka: {0}
+@msg	not a Vulcanio Vector shortcut set (missing `overrides`)	nije Vulcanio Vector skup prečica (nedostaje `overrides`)
 @msg	not a blend	nije stapanje
 @msg	not a graphic style library (format `{_1}`)	nije biblioteka grafičkih stilova (format `{_1}`)
 @msg	not a stored central record	nije sačuvani centralni zapis
@@ -4895,11 +4895,11 @@ imageTrace	Outline	Obris
 @msg	Sent to {_1}	Poslano na {_1}
 @msg	{_1} files	{_1} datoteke
 @msg	The graphics were lost and have been restarted	Grafika je izgubljena i ponovo je pokrenuta
-@msg	The graphics processor tried first couldn't show the window, so Krasis Vector started again on {summary}	Grafički procesor koji je prvi pokušan nije mogao prikazati prozor, pa se Krasis Vector ponovo pokrenuo na {summary}
-@msg	The last start of Krasis Vector ended on {name} before its window appeared, so it started on {summary}. To try that graphics processor again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	Posljednje pokretanje VectorCrafta završilo je na {name} prije nego što se pojavio prozor, pa je pokrenut na {summary}. Da ponovo pokušate taj grafički procesor, promijenite Postavke › Performanse › Grafički procesor ili pokrenite s postavljenim WGPU_BACKEND
-@msg	The last start of Krasis Vector ended while it listed the graphics processors, so it started on {summary} with OpenGL alone. To try the other graphics backends again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	Posljednje pokretanje VectorCrafta završilo je dok je izlistavao grafičke procesore, pa je pokrenut na {summary} samo s OpenGL-om. Da ponovo pokušate druge grafičke pozadinske sisteme, promijenite Postavke › Performanse › Grafički procesor ili pokrenite s postavljenim WGPU_BACKEND
-@msg	Loading Krasis Vector…	Učitavanje VectorCrafta…
-@msg	Krasis Vector failed to start: {e}	Krasis Vector se nije uspio pokrenuti: {e}
+@msg	The graphics processor tried first couldn't show the window, so Vulcanio Vector started again on {summary}	Grafički procesor koji je prvi pokušan nije mogao prikazati prozor, pa se Vulcanio Vector ponovo pokrenuo na {summary}
+@msg	The last start of Vulcanio Vector ended on {name} before its window appeared, so it started on {summary}. To try that graphics processor again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	Posljednje pokretanje VectorCrafta završilo je na {name} prije nego što se pojavio prozor, pa je pokrenut na {summary}. Da ponovo pokušate taj grafički procesor, promijenite Postavke › Performanse › Grafički procesor ili pokrenite s postavljenim WGPU_BACKEND
+@msg	The last start of Vulcanio Vector ended while it listed the graphics processors, so it started on {summary} with OpenGL alone. To try the other graphics backends again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	Posljednje pokretanje VectorCrafta završilo je dok je izlistavao grafičke procesore, pa je pokrenut na {summary} samo s OpenGL-om. Da ponovo pokušate druge grafičke pozadinske sisteme, promijenite Postavke › Performanse › Grafički procesor ili pokrenite s postavljenim WGPU_BACKEND
+@msg	Loading Vulcanio Vector…	Učitavanje VectorCrafta…
+@msg	Vulcanio Vector failed to start: {e}	Vulcanio Vector se nije uspio pokrenuti: {e}
 @msg	A browser with WebGPU or WebGL2 is required.	Potreban je preglednik s WebGPU ili WebGL2.
 @msg	The graphics were lost and couldn't be restarted.	Grafika je izgubljena i nije je moguće ponovo pokrenuti.
 @msg	Your unsaved changes are kept in this browser: reload the page to get them back.	Vaše nesačuvane promjene čuvaju se u ovom pregledniku: ponovo učitajte stranicu da ih vratite.
@@ -4922,16 +4922,16 @@ imageTrace	Outline	Obris
 @msg	it has more than {MAX_NODES} objects	ima više od {MAX_NODES} objekata
 @msg	it has no layers	nema slojeva
 @msg	it has too many values in a row	ima previše vrijednosti u redu
-@msg	it has {_1}, which Krasis Vector doesn't read from it yet	sadrži {_1}, što Krasis Vector još ne čita iz nje
+@msg	it has {_1}, which Vulcanio Vector doesn't read from it yet	sadrži {_1}, što Vulcanio Vector još ne čita iz nje
 @msg	its objects are nested too deeply	njeni objekti su previše duboko ugniježđeni
 @msg	its section ending with `%{end}` doesn't end	njen odjeljak koji završava s `%{end}` ne završava
-@msg	brushes Krasis Vector can't read yet were left out of the Brushes panel ({_1})	četkice koje Krasis Vector još ne može pročitati izostavljene su iz panela Četkice ({_1})
+@msg	brushes Vulcanio Vector can't read yet were left out of the Brushes panel ({_1})	četkice koje Vulcanio Vector još ne može pročitati izostavljene su iz panela Četkice ({_1})
 @msg	objects with several fills or strokes, effects or brushes came in as their drawn look ({_1}): their appearance isn't editable yet	objekti s više ispuna ili poteza, efekata ili četkica stigli su kao njihov iscrtani izgled ({_1}): njihov izgled se još ne može uređivati
 @msg	gradient “{name}” isn't defined in the file: a plain colour stands in for it	gradijent „{name}” nije definisan u datoteci: umjesto njega koristi se obična boja
-@msg	an image Krasis Vector can't read was left out	izostavljena je slika koju Krasis Vector ne može pročitati
+@msg	an image Vulcanio Vector can't read was left out	izostavljena je slika koju Vulcanio Vector ne može pročitati
 @msg	an image whose data is cut short was left out	izostavljena je slika čiji su podaci skraćeni
 @msg	linked pictures show the low-resolution preview saved in the file until their files are found: relink them in the Links panel	povezane slike prikazuju pregled niske rezolucije sačuvan u datoteci dok se njihove datoteke ne pronađu: ponovo ih povežite u panelu Veze
-@msg	linked type areas past Krasis Vector's limits were left out	povezana područja teksta izvan ograničenja programa Krasis Vector su izostavljena
+@msg	linked type areas past Vulcanio Vector's limits were left out	povezana područja teksta izvan ograničenja programa Vulcanio Vector su izostavljena
 @msg	type that changes writing direction inside a text object opens in the direction of its first character	tekst koji mijenja smjer pisanja unutar tekstualnog objekta otvara se u smjeru svog prvog znaka
 @msg	type used as a mask in linked areas, wraparound text or a compound path doesn't clip	tekst korišten kao maska u povezanim područjima, omotanom tekstu ili složenoj putanji ne odsijeca
 @msg	linked pictures with no preview in the file show a placeholder until their files are found: relink them in the Links panel	povezane slike bez pregleda u datoteci prikazuju čuvar mjesta dok se njihove datoteke ne pronađu: ponovo ih povežite u panelu Veze
@@ -4940,13 +4940,13 @@ imageTrace	Outline	Obris
 @msg	this file was saved without PDF compatibility, and its editing data can't be read ({why})	ova datoteka je sačuvana bez PDF kompatibilnosti, a njeni podaci za uređivanje se ne mogu pročitati ({why})
 @msg	the PDF part couldn't be read ({_1}): the file opened from its editing data	PDF dio se nije mogao pročitati ({_1}): datoteka je otvorena iz svojih podataka za uređivanje
 @msg	No fonts are missing in this document	U ovom dokumentu ne nedostaje nijedan font
-@msg	Krasis Vector doesn't search other apps' or the system's folders: {path}	Krasis Vector ne pretražuje foldere drugih aplikacija ni sistemske foldere: {path}
-@msg	Krasis Vector doesn't search the Shared or Public folder in Users: {path}	Krasis Vector ne pretražuje folder Shared ili Public u Users: {path}
+@msg	Vulcanio Vector doesn't search other apps' or the system's folders: {path}	Vulcanio Vector ne pretražuje foldere drugih aplikacija ni sistemske foldere: {path}
+@msg	Vulcanio Vector doesn't search the Shared or Public folder in Users: {path}	Vulcanio Vector ne pretražuje folder Shared ili Public u Users: {path}
 @msg	{path} is not a folder	{path} nije folder
 @msg	the search couldn't start: try again in a moment	pretraga nije mogla početi: pokušajte ponovo za trenutak
 @msg	searching a folder isn't available on the web	pretraživanje foldera nije dostupno na webu
 @msg	every search thread stopped on an internal error (please report this bug)	sve niti pretrage su se zaustavile zbog interne greške (molimo prijavite ovu grešku)
-@msg	Krasis Vector's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	Folder Fontovi VectorCrafta ovdje nije postavljen: postavljaju ga desktop aplikacija i vectorcraft-cli
+@msg	Vulcanio Vector's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	Folder Fontovi VectorCrafta ovdje nije postavljen: postavljaju ga desktop aplikacija i vectorcraft-cli
 @msg	choose the font files to add	odaberite datoteke fontova za dodavanje
 @msg	not a file	nije datoteka
 @msg	not a font file	nije datoteka fonta
@@ -5095,7 +5095,7 @@ imageTrace	Outline	Obris
 	All shortcuts reset to defaults.	Sve prečice su vraćene na zadane.
 	Imported. Press OK to keep the imported set.	Uvezeno. Pritisnite U redu da zadržite uvezeni skup.
 	⚠ {chord} was already used by {names} — it has been removed there.	⚠ {chord} je već koristio {names} — tamo je uklonjena.
-	Krasis Vector Defaults	Zadane postavke VectorCrafta
+	Vulcanio Vector Defaults	Zadane postavke VectorCrafta
 @plural	{n} shortcut is assigned more than once|{n} shortcuts are assigned more than once	{n} prečica je dodijeljena više puta|{n} prečice su dodijeljene više puta|{n} prečica je dodijeljeno više puta
 	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	Simuliraj štampa pretiske onako kako ih prikazuje Pregled pretiska; separacije ih uvijek zadržavaju. Predložak spljoštava prozirnost prije štampanja (PostScript datoteke je uvijek spljoštavaju).
 	Preserve	Očuvaj
@@ -5336,7 +5336,7 @@ file-filter	Print presets	Predlošci štampanja
 file-filter	Export presets	Predlošci izvoza
 file-filter	SVG Compressed	Komprimirani SVG
 file-filter	PDF-compatible .ai	.ai kompatibilan s PDF-om
-file-filter	Krasis Vector Template	Krasis Vector predložak
+file-filter	Vulcanio Vector Template	Vulcanio Vector predložak
 file-filter	Templates	Predlošci
 diagnostics	render	iscrtavanje
 diagnostics	ui	interfejs
@@ -5347,7 +5347,7 @@ diagnostics	ui	interfejs
 @plural	{n} commit|{n} commits	{n} commit|{n} commita|{n} commitova
 gradient-kind	Radial	Radijalno
 mark-style	Japanese	Japanski
-@msg	the compressed file unpacks to more than Krasis Vector reads ({_1} MB of document, {_2} MB per image)	komprimirana datoteka se raspakuje na više nego što Krasis Vector čita ({_1} MB dokumenta, {_2} MB po slici)
+@msg	the compressed file unpacks to more than Vulcanio Vector reads ({_1} MB of document, {_2} MB per image)	komprimirana datoteka se raspakuje na više nego što Vulcanio Vector čita ({_1} MB dokumenta, {_2} MB po slici)
 @msg	the document is too large to save compressed ({0}): save it with Use Compression off	dokument je prevelik za komprimirano čuvanje ({0}): sačuvajte ga s isključenim Koristi kompresiju
 @msg	the file stopped being read (please report this bug)	čitanje datoteke je prestalo (molimo prijavite ovu grešku)
 	Concentric Dividers:	Koncentrični razdjelnici:
@@ -5941,7 +5941,7 @@ anchor	Points:	Tačke:
 	Tracing	Praćenje
 	Touch	Dodir
 	Typography	Tipografija
-	Krasis Vector	Krasis Vector
+	Vulcanio Vector	Vulcanio Vector
 	Web	Web
 	[1P-High View]	[Pogled 1T - visoki]
 	[1P-Low View]	[Pogled 1T - niski]
@@ -6019,7 +6019,7 @@ swatch	White, Black	Bijela, crna
 swatch	Yellow	Žuta
 swatch	Yellow Green	Žuto-zelena
 	Check for Updates…	Provjeri ažuriranja…
-	Krasis Vector Updates	Krasis Vector ažuriranja
+	Vulcanio Vector Updates	Vulcanio Vector ažuriranja
 	Preparing the image…	Priprema slike…
 	Tracing the colors…	Praćenje boja…
 	Units & Scale	Jedinice i skala
@@ -6174,7 +6174,7 @@ shape	Open	Otvoren
 	Malayalam	Malajalam
 	Odia	Odija
 	Urdu	Urdu
-	Krasis Vector {release} and later (version {n})	Krasis Vector {release} i novije (verzija {n})
+	Vulcanio Vector {release} and later (version {n})	Vulcanio Vector {release} i novije (verzija {n})
 # Document Tools add-on: Export All Open Documents (#4920).
 	Export All Open Documents as PDF	Izvezi sve otvorene dokumente kao PDF
 	Export All Open Documents as SVG	Izvezi sve otvorene dokumente kao SVG

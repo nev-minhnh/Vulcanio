@@ -25,7 +25,7 @@ pub(crate) const GPU_SETUP_MARKER: &str = "gpu-setup.marker";
 
 /// Why the card is not tried when a set-up marker is found.
 #[cfg(feature = "denoise")]
-pub(super) const GPU_CRASHED: &str = "Krasis Library closed while it was setting up the graphics card for AI Denoise last time";
+pub(super) const GPU_CRASHED: &str = "Vulcanio Library closed while it was setting up the graphics card for AI Denoise last time";
 
 /// Why the card is not used when its set-up ran out of time (the start of it).
 #[cfg(feature = "denoise")]

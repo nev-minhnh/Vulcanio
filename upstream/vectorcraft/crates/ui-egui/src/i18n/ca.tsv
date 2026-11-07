@@ -2,7 +2,7 @@
 # (empty context = a plain UI string; `@id` = a command id; `@plural` = "one|other" forms;
 # `@msg` = a status or error message).
 #
-# Clean-room: written from the meaning of Krasis Vector's English labels in standard Catalan,
+# Clean-room: written from the meaning of Vulcanio Vector's English labels in standard Catalan,
 # using ordinary vector-illustration vocabulary (tauler, traçat, punt d'ancoratge, traç,
 # farciment, mostra, degradat, màscara, capa). No other application's Catalan localisation
 # resource, string table or product UI was consulted or copied, and no other catalog's
@@ -143,7 +143,7 @@
 	[Press Quality]	[Qualitat d’impremta]
 	[Smallest File Size]	[Mida de fitxer més petita]
 	[Unnamed]	[Sense nom]
-	[Krasis Vector Default]	[Krasis Vector predeterminat]
+	[Vulcanio Vector Default]	[Vulcanio Vector predeterminat]
 	A file dialog is open: choose there first	Hi ha un diàleg de fitxers obert: tria-hi primer
 	A File per Object	Un fitxer per objecte
 	A File…	Un fitxer…
@@ -157,7 +157,7 @@
 	A5	A5
 	A6	A6
 	About	Quant a
-	About Krasis Vector	Quant al Krasis Vector
+	About Vulcanio Vector	Quant al Vulcanio Vector
 	above	a sobre
 	Above Text	A sobre del text
 	Absolute	Absolut
@@ -303,7 +303,7 @@
 	Appearance Panel	Panell Aparença
 	Appearance panel	Panell Aparença
 	Applied Filters	Filtres aplicats
-	Applies the next time Krasis Vector starts.	S’aplica la propera vegada que s’iniciï Krasis Vector.
+	Applies the next time Vulcanio Vector starts.	S’aplica la propera vegada que s’iniciï Vulcanio Vector.
 	Applies when the linked file is relinked or updated.	S’aplica quan el fitxer enllaçat es torna a enllaçar o s’actualitza.
 	Apply	Aplica
 	Apply Brush	Aplica el pinzell
@@ -365,8 +365,8 @@
 	Artboard:	Tauler:
 	Artboards	Taulers
 	Artboards: {n}	Taulers: {n}
-	Krasis Website	Lloc web d’Krasis
-	Krasis website	Lloc web d’Krasis
+	Vulcanio Website	Lloc web d’Vulcanio
+	Vulcanio website	Lloc web d’Vulcanio
 	Artistic	Artístic
 	Artwork	Art
 	Artwork Colors	Colors de l’art
@@ -1105,7 +1105,7 @@
 	Diamond (open)	Rombe (obert)
 	Difference	Diferència
 	Differences from [Default]:	Diferències respecte de [Default]:
-	Differences from Krasis Vector Default:	Diferències respecte del Krasis Vector predeterminat:
+	Differences from Vulcanio Vector Default:	Diferències respecte del Vulcanio Vector predeterminat:
 	Differences from {preset}:	Diferències respecte de {preset}:
 	Diffuse	Difon
 	Diffuse Glow	Resplendor difusa
@@ -1279,7 +1279,7 @@
 	DXF Options Dialog	Diàleg d’opcions del DXF
 	e.g. 1-3, 5	p. ex. 1-3, 5
 	Each Design Represents:	Cada disseny representa:
-	Each entry of the file is matched to a Krasis Vector tool, command or panel. Check the matches and answer what is left.	Cada entrada del fitxer s’associa a una eina, una ordre o un panell del Krasis Vector. Comprova les coincidències i respon a les que quedin.
+	Each entry of the file is matched to a Vulcanio Vector tool, command or panel. Check the matches and answer what is left.	Cada entrada del fitxer s’associa a una eina, una ordre o un panell del Vulcanio Vector. Comprova les coincidències i respon a les que quedin.
 	Each page prints as one image, at the document's raster effects resolution.	Cada pàgina s’imprimeix com una imatge, amb la resolució dels efectes de ràster del document.
 	Each run may take up to {minutes} minutes and do {times} times the work other plug-ins may. It runs in the background, and you can cancel it.	Cada execució pot trigar fins a {minutes} minuts i fer {times} vegades la feina que poden fer altres complements. S’executa en segon pla i la pots cancel·lar.
 	Earth Tones	Tons terrosos
@@ -1861,7 +1861,7 @@ digits	Malayalam	Malaiàlam
 	Hide Thumbnail	Amaga la miniatura
 	Hide Thumbnails	Amaga les miniatures
 	Hide Transparency Grid	Amaga la quadrícula de transparència
-	Hide Krasis Vector	Amaga el Krasis Vector
+	Hide Vulcanio Vector	Amaga el Vulcanio Vector
 	Hide Video Rulers	Amaga les regles de vídeo
 	High	Alt
 	High (300 ppi)	Alta (300 ppi)
@@ -1963,7 +1963,7 @@ digits	Malayalam	Malaiàlam
 	In Tangent Handles	En nanses tangents
 	In the File	Al fitxer
 	In the selected objects	Als objectes seleccionats
-	In Krasis Vector	A Krasis Vector
+	In Vulcanio Vector	A Vulcanio Vector
 	Inches	Polzades
 	Include Artboard Fill	Inclou el farciment del tauler
 	Include all profiles	Inclou tots els perfils
@@ -2052,7 +2052,7 @@ digits	Malayalam	Malaiàlam
 	Join	Uneix
 	Join Our Discord	Uneix-te al nostre Discord
 	Join our Discord	Uneix-te al nostre Discord
-	Join the Krasis community on Discord (discord.gg/artcraft)	Uneix-te a la comunitat Krasis a Discord (discord.gg/artcraft)
+	Join the Vulcanio community on Discord (discord.gg/artcraft)	Uneix-te a la comunitat Vulcanio a Discord (discord.gg/artcraft)
 	Join the lines of each paragraph	Uneix les línies de cada paràgraf
 	Join Tool	Eina d’unió
 	Joins	Unions
@@ -2081,7 +2081,7 @@ digits	Malayalam	Malaiàlam
 	Keep this row's colors (exclude)	Conserva els colors d’aquesta fila (exclou)
 	Keep visible surfaces only when expanding	Conserva només les superfícies visibles en expandir
 	Keep:	Conserva:
-	Keeps the document editable: Krasis Vector reopens the PDF with nothing lost. For files you'll edit again.	Manté el document editable: Krasis Vector reobre el PDF sense perdre res. Per a fitxers que editaràs de nou.
+	Keeps the document editable: Vulcanio Vector reopens the PDF with nothing lost. For files you'll edit again.	Manté el document editable: Vulcanio Vector reobre el PDF sense perdre res. Per a fitxers que editaràs de nou.
 	Key Color:	Color clau:
 	Kerning	Kerning
 	Keyboard Increment	Increment de teclat
@@ -2793,7 +2793,7 @@ digits	Malayalam	Malaiàlam
 	Open the URL in the web browser	Obre l’URL al navegador web
 	Open this dialog with these settings next time	Obre aquest quadre de diàleg amb aquesta configuració la propera vegada
 	Open this setting's help page	Obre la pàgina d’ajuda d’aquest paràmetre
-	Opening it left out what Krasis Vector can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	En obrir-lo s’ha omès el que Krasis Vector encara no pot llegir ({what}), de manera que substituir-lo ho perd per sempre. Desa’l amb un altre nom per conservar-ho.
+	Opening it left out what Vulcanio Vector can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	En obrir-lo s’ha omès el que Vulcanio Vector encara no pot llegir ({what}), de manera que substituir-lo ho perd per sempre. Desa’l amb un altre nom per conservar-ho.
 	Opens files in other apps	Obre fitxers en altres aplicacions
 	Opens network connections	Obre connexions de xarxa
 	Open…	Obre…
@@ -2900,8 +2900,8 @@ digits	Malayalam	Malaiàlam
 	Paragraph Style Options	Opcions de l’estil de paràgraf
 	Paragraph Styles	Estils de paràgraf
 	Paragraph Symbol	Símbol de paràgraf
-	Part of Krasis. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Krasis Vector.	Forma part d’Krasis. MIT OR Apache-2.0. Tipus de lletra: Source Sans 3, Inter, JetBrains Mono (OFL). Icones: Lucide (ISC) + Krasis Vector.
-	Part of Krasis. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Icons: Lucide (ISC) + Krasis Vector.	Forma part d’Krasis. MIT OR Apache-2.0. Tipus de lletra: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Icones: Lucide (ISC) + Krasis Vector.
+	Part of Vulcanio. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Vulcanio Vector.	Forma part d’Vulcanio. MIT OR Apache-2.0. Tipus de lletra: Source Sans 3, Inter, JetBrains Mono (OFL). Icones: Lucide (ISC) + Vulcanio Vector.
+	Part of Vulcanio. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Icons: Lucide (ISC) + Vulcanio Vector.	Forma part d’Vulcanio. MIT OR Apache-2.0. Tipus de lletra: Source Sans 3, Inter, JetBrains Mono, Noto Sans SC (OFL). Icones: Lucide (ISC) + Vulcanio Vector.
 	Password	Contrasenya
 	Paste	Enganxa
 	Paste Design	Enganxa el disseny
@@ -3167,7 +3167,7 @@ digits	Malayalam	Malaiàlam
 	Quarter Space	Espai de quart
 	Quick Actions	Accions ràpides
 	Quickly start a new file	Comença ràpidament un fitxer nou
-	Quit Krasis Vector	Surt de Krasis Vector
+	Quit Vulcanio Vector	Surt de Vulcanio Vector
 	Radar Graph Tool	Eina de gràfic de radar
 	Radial	Radial
 	Radial Blur	Desenfocament radial
@@ -4109,7 +4109,7 @@ digits	Malayalam	Malaiàlam
 	Star Tool	Eina d’estrella
 	Start arrowhead	Punta de fletxa inicial
 	Start at:	Comença a:
-	Start from Krasis Vector Defaults	Parteix dels valors predeterminats del Krasis Vector
+	Start from Vulcanio Vector Defaults	Parteix dels valors predeterminats del Vulcanio Vector
 	Start Global Edit	Inicia l’edició global
 	Start Tile	Mosaic inicial
 	Start:	Inici:
@@ -4301,7 +4301,7 @@ digits	Malayalam	Malaiàlam
 	The file is too large to read in full, so only its first part is listed.	El fitxer és massa gran per llegir-lo sencer, així que només se n’enumera la primera part.
 	The file writes keys and modifiers as codes. Check the proposed meanings and answer the codes that are not known yet.	El fitxer escriu les tecles i els modificadors com a codis. Comprova els significats proposats i respon als codis que encara no es coneixen.
 	The key color becomes the stroke color. The other colors shift their hue by the same amount and keep their saturation and brightness.	El color clau esdevé el color del traç. Els altres colors desplacen el to en la mateixa quantitat i conserven la saturació i la brillantor.
-	The name in the save panel was “{typed}”; Krasis Vector added the file type's extension. Replacing the file overwrites its contents.	El nom al tauler de desament era “{typed}”; Krasis Vector ha afegit l’extensió del tipus de fitxer. Substituir el fitxer sobreescriu-ne el contingut.
+	The name in the save panel was “{typed}”; Vulcanio Vector added the file type's extension. Replacing the file overwrites its contents.	El nom al tauler de desament era “{typed}”; Vulcanio Vector ha afegit l’extensió del tipus de fitxer. Substituir el fitxer sobreescriu-ne el contingut.
 	The page as it prints	La pàgina tal com s’imprimeix
 	The plug-in is computing…	El complement està calculant…
 	The plug-in writes the whole document.	El complement escriu tot el document.
@@ -4616,17 +4616,17 @@ digits	Malayalam	Malaiàlam
 	Vector Halftone	Semitons vectorials
 	Vector Halftone…	Semitons vectorials…
 	Vector illustration — fast, open, scriptable.	Il·lustració vectorial — ràpida, oberta i programable.
-	Krasis Vector copies the fonts to {folder}.	Krasis Vector copia els tipus de lletra a {folder}.
-	Krasis Vector Default	Krasis Vector per defecte
-	Krasis Vector Defaults	Valors per defecte de Krasis Vector
-	Krasis Vector didn't quit normally last time. These documents had unsaved changes:	Krasis Vector no es va tancar correctament l’última vegada. Aquests documents tenien canvis no desats:
-	Krasis Vector documents: one locked object, updated when the file changes.	Documents de Krasis Vector: un objecte bloquejat, actualitzat quan canvia el fitxer.
-	Krasis Vector Generic CMYK (SWOP-like)	CMYK genèric de Krasis Vector (similar a SWOP)
-	Krasis Vector Help…	Ajuda de Krasis Vector…
-	Krasis Vector on getartcraft.com	Krasis Vector a getartcraft.com
-	Krasis Vector on GitHub	Krasis Vector al GitHub
-	Krasis Vector read this script without running it.	Krasis Vector ha llegit aquest script sense executar-lo.
-	Krasis Vector Swatches (.vcswatches)	Mostres de Krasis Vector (.vcswatches)
+	Vulcanio Vector copies the fonts to {folder}.	Vulcanio Vector copia els tipus de lletra a {folder}.
+	Vulcanio Vector Default	Vulcanio Vector per defecte
+	Vulcanio Vector Defaults	Valors per defecte de Vulcanio Vector
+	Vulcanio Vector didn't quit normally last time. These documents had unsaved changes:	Vulcanio Vector no es va tancar correctament l’última vegada. Aquests documents tenien canvis no desats:
+	Vulcanio Vector documents: one locked object, updated when the file changes.	Documents de Vulcanio Vector: un objecte bloquejat, actualitzat quan canvia el fitxer.
+	Vulcanio Vector Generic CMYK (SWOP-like)	CMYK genèric de Vulcanio Vector (similar a SWOP)
+	Vulcanio Vector Help…	Ajuda de Vulcanio Vector…
+	Vulcanio Vector on getartcraft.com	Vulcanio Vector a getartcraft.com
+	Vulcanio Vector on GitHub	Vulcanio Vector al GitHub
+	Vulcanio Vector read this script without running it.	Vulcanio Vector ha llegit aquest script sense executar-lo.
+	Vulcanio Vector Swatches (.vcswatches)	Mostres de Vulcanio Vector (.vcswatches)
 	Vectors	Vectors
 	Version	Versió
 	Version {version} — open-source vector illustration in pure Rust.	Versió {version} — il·lustració vectorial de codi obert en Rust pur.
@@ -4700,7 +4700,7 @@ digits	Malayalam	Malaiàlam
 	WebP	WebP
 	Weight	Pes
 	Weight:	Gruix:
-	Welcome to Krasis Vector	Us donem la benvinguda a Krasis Vector
+	Welcome to Vulcanio Vector	Us donem la benvinguda a Vulcanio Vector
 	When pasting text	En enganxar text
 	White	Blanc
 	White Intensity	Intensitat del blanc
@@ -4863,7 +4863,7 @@ digits	Malayalam	Malaiàlam
 @msg	`{_1}` is no save command	`{_1}` no és una ordre de desar
 @msg	`{area}` is no recovery area name	`{area}` no és un nom d’àrea de recuperació
 @msg	`{color}` is not a colour (#rrggbb or a preset name)	`{color}` no és un color (#rrggbb o un nom de preajust)
-@msg	`{file}` isn't a Krasis Vector document, a PDF or a PDF-compatible .ai file	`{file}` no és un document Krasis Vector, un PDF ni un fitxer .ai compatible amb PDF
+@msg	`{file}` isn't a Vulcanio Vector document, a PDF or a PDF-compatible .ai file	`{file}` no és un document Vulcanio Vector, un PDF ni un fitxer .ai compatible amb PDF
 @msg	`{given}` isn't a library panel (see window.swatchLibrary)	`{given}` no és un panell de biblioteca (vegeu window.swatchLibrary)
 @msg	`{id}` has no envelope dialog	`{id}` no té cap diàleg d’embolcall
 @msg	`{keep}` is not a side of this axis	`{keep}` no és un costat d’aquest eix
@@ -4964,7 +4964,7 @@ digits	Malayalam	Malaiàlam
 @msg	an image has no pixels and was left out	una imatge no té píxels i s’ha omès
 @msg	an image of {w} × {h} pixels is shown at reduced size	una imatge de {w} × {h} píxels es mostra a mida reduïda
 @msg	an image of {w} × {h} pixels is too large to draw	una imatge de {w} × {h} píxels és massa gran per dibuixar-la
-@msg	an image Krasis Vector can't read was left out	s’ha omès una imatge que Krasis Vector no pot llegir
+@msg	an image Vulcanio Vector can't read was left out	s’ha omès una imatge que Vulcanio Vector no pot llegir
 @msg	graphs come in as plain art, without their data or settings	els gràfics s’importen com a il·lustració normal, sense les seves dades ni la seva configuració
 @msg	an image whose data is cut short was left out	s’ha omès una imatge les dades de la qual estan tallades
 @msg	an object can't be read	no es pot llegir un objecte
@@ -5008,7 +5008,7 @@ digits	Malayalam	Malaiàlam
 @msg	can't encode the document: {0}	no es pot codificar el document: {0}
 @msg	can't parse shortcut `{c}`	no es pot analitzar la drecera `{c}`
 @msg	can't parse shortcut `{s}` for `{k}`	no es pot analitzar la drecera `{s}` per a `{k}`
-@msg	can't save version {0}: Krasis Vector writes versions {MIN_VERSION} to {VERSION}	no es pot desar la versió {0}: Krasis Vector escriu versions de {MIN_VERSION} a {VERSION}
+@msg	can't save version {0}: Vulcanio Vector writes versions {MIN_VERSION} to {VERSION}	no es pot desar la versió {0}: Vulcanio Vector escriu versions de {MIN_VERSION} a {VERSION}
 @msg	can't write .{ext} images	no es poden escriure imatges .{ext}
 @msg	cancelled; nothing was changed	cancel·lat; no s’ha canviat res
 @msg	cannot distort a zero-size bounding box	no es pot distorsionar un quadre delimitador de mida zero
@@ -5089,7 +5089,7 @@ digits	Malayalam	Malaiàlam
 @msg	Exported {path}	S’ha exportat {path}
 @msg	Exported {what}	S’ha exportat {what}
 @msg	Exporting {_1}	S’està exportant {_1}
-@msg	file version {0} is newer than this Krasis Vector supports ({VERSION})	la versió de fitxer {0} és més nova que la que admet aquest Krasis Vector ({VERSION})
+@msg	file version {0} is newer than this Vulcanio Vector supports ({VERSION})	la versió de fitxer {0} és més nova que la que admet aquest Vulcanio Vector ({VERSION})
 @msg	First measured segment no longer exists	El primer segment mesurat ja no existeix
 @msg	Flat Logo traced the image at {_1} × {_2} pixels, averaged down from {_3} × {_4}.	Flat Logo ha traçat la imatge a {_1} × {_2} píxels, amb una mitjana rebaixada des de {_3} × {_4}.
 @msg	Flatten Transparency: select objects to flatten	Aplana la transparència: seleccioneu objectes per aplanar
@@ -5143,7 +5143,7 @@ digits	Malayalam	Malaiàlam
 @msg	Invalid real scale	Escala real no vàlida
 @msg	invalid restored panel group	grup de panells restaurat no vàlid
 @msg	invalid stroke widths	amplades de traç no vàlides
-@msg	is not an image Krasis Vector reads	no és una imatge que Krasis Vector pugui llegir
+@msg	is not an image Vulcanio Vector reads	no és una imatge que Vulcanio Vector pugui llegir
 @msg	it decompresses to more than {_1} MB	es descomprimeix fins a més de {_1} MB
 @msg	it ends inside a group or compound path	acaba dins d’un grup o d’un traçat compost
 @msg	it ends inside a layer	acaba dins d’una capa
@@ -5159,9 +5159,9 @@ digits	Malayalam	Malaiàlam
 @msg	it has too many text objects	té massa objectes de text
 @msg	it has too many values in a row	té massa valors en una fila
 @msg	it has too much text	té massa text
-@msg	it has {_1}, which Krasis Vector doesn't read from it yet	té {_1}, que Krasis Vector encara no en llegeix
-@msg	it uses `{at}`, which Krasis Vector's PostScript reader doesn't know	fa servir `{at}`, que el lector de PostScript de Krasis Vector no coneix
-@msg	it uses `{at}`, which Krasis Vector's PostScript reader doesn't know, in {procs}	fa servir `{at}`, que el lector de PostScript de Krasis Vector no coneix, a {procs}
+@msg	it has {_1}, which Vulcanio Vector doesn't read from it yet	té {_1}, que Vulcanio Vector encara no en llegeix
+@msg	it uses `{at}`, which Vulcanio Vector's PostScript reader doesn't know	fa servir `{at}`, que el lector de PostScript de Vulcanio Vector no coneix
+@msg	it uses `{at}`, which Vulcanio Vector's PostScript reader doesn't know, in {procs}	fa servir `{at}`, que el lector de PostScript de Vulcanio Vector no coneix, a {procs}
 @msg	its editing data doesn't say where its art is	les seves dades d’edició no diuen on és el seu art
 @msg	its editing data doesn't say where its artboard is	les seves dades d’edició no diuen on és el seu tauler
 @msg	its editing data has no layers	les seves dades d’edició no tenen capes
@@ -5187,7 +5187,7 @@ digits	Malayalam	Malaiàlam
 @msg	library panel `{given}` isn't missing its library	al panell de biblioteca `{given}` no li falta la biblioteca
 @msg	library panel `{given}` isn't open	el panell de biblioteca `{given}` no està obert
 @msg	linked pictures show the low-resolution preview saved in the file until their files are found: relink them in the Links panel	les imatges enllaçades mostren la previsualització de baixa resolució desada al fitxer fins que es trobin els seus fitxers: torneu-les a enllaçar al panell Enllaços
-@msg	linked type areas past Krasis Vector's limits were left out	s’han omès les àrees de text enllaçades que superen els límits de Krasis Vector
+@msg	linked type areas past Vulcanio Vector's limits were left out	s’han omès les àrees de text enllaçades que superen els límits de Vulcanio Vector
 @msg	type that changes writing direction inside a text object opens in the direction of its first character	el text que canvia de direcció d’escriptura dins d’un objecte de text s’obre en la direcció del seu primer caràcter
 @msg	type used as a mask in linked areas, wraparound text or a compound path doesn't clip	el text usat com a màscara en àrees enllaçades, en text ajustat o en un traçat compost no retalla
 @msg	linked pictures with no preview in the file show a placeholder until their files are found: relink them in the Links panel	les imatges enllaçades sense previsualització al fitxer mostren un marcador de posició fins que es trobin els seus fitxers: torneu-les a enllaçar al panell Enllaços
@@ -5195,7 +5195,7 @@ digits	Malayalam	Malaiàlam
 @msg	Live Paint takes paths and compound paths: convert type, images and other objects to paths first	La pintura interactiva accepta traçats i traçats compostos: convertiu abans el text, les imatges i altres objectes a traçats
 @msg	Live Paint: select paths or compound paths	Pintura interactiva: seleccioneu traçats o traçats compostos
 @msg	Live Paint: these paths are too degenerate to paint	Pintura interactiva: aquests traçats són massa degenerats per pintar-los
-@msg	Loading Krasis Vector…	Carregant Krasis Vector…
+@msg	Loading Vulcanio Vector…	Carregant Vulcanio Vector…
 @msg	Make Guides: select paths	Crea guies: seleccioneu traçats
 @msg	mask art ends outside a mask dictionary	l’art de la màscara acaba fora d’un diccionari de màscara
 @msg	Measured anchor no longer exists	El punt d’ancoratge mesurat ja no existeix
@@ -5318,7 +5318,7 @@ digits	Malayalam	Malaiàlam
 @msg	not an action set file	no és un fitxer de conjunt d’accions
 @msg	the action set file is larger than 8 MiB	el fitxer de conjunt d’accions supera els 8 MiB
 @msg	the action set file holds more than 1,000 actions	el fitxer de conjunt d’accions conté més de 1.000 accions
-@msg	the action set file needs a later version of Krasis Vector	el fitxer de conjunt d’accions necessita una versió més recent del Krasis Vector
+@msg	the action set file needs a later version of Vulcanio Vector	el fitxer de conjunt d’accions necessita una versió més recent del Vulcanio Vector
 @msg	an action in the action set file has more than 10,000 steps	una acció del fitxer de conjunt d’accions té més de 10.000 passos
 @msg	no such anchor	no existeix aquest punt d’ancoratge
 @msg	no such artboard	no existeix aquest tauler
@@ -5363,8 +5363,8 @@ digits	Malayalam	Malaiàlam
 @msg	not a shortcut set: the text doesn't start with a slash name and an opening brace	no és un conjunt de dreceres: el text no comença amb un nom precedit de barra i una clau d’obertura
 @msg	not a stored central record	no és un registre central emmagatzemat
 @msg	not a valid plug-in module: {0}	no és un mòdul de complement vàlid: {0}
-@msg	not a Krasis Vector file: {0}	no és un fitxer de Krasis Vector: {0}
-@msg	not a Krasis Vector shortcut set (missing `overrides`)	no és un conjunt de dreceres de Krasis Vector (falta `overrides`)
+@msg	not a Vulcanio Vector file: {0}	no és un fitxer de Vulcanio Vector: {0}
+@msg	not a Vulcanio Vector shortcut set (missing `overrides`)	no és un conjunt de dreceres de Vulcanio Vector (falta `overrides`)
 @msg	not an EMF or WMF file	no és un fitxer EMF o WMF
 @msg	not an RTF file: it doesn't start with {\\rtf	no és un fitxer RTF: no comença amb {\\rtf
 @msg	not found	no s’ha trobat
@@ -5392,7 +5392,7 @@ digits	Malayalam	Malaiàlam
 @msg	object {id} is not a selected top-level object	l’objecte {id} no és un objecte de nivell superior seleccionat
 @msg	objects can't be nested more than 32 deep	els objectes no es poden niar més de 32 nivells
 @msg	objects inside a blend, envelope, repeat or Intertwine group can't be attached to a path	els objectes dins d’una fusió, un embolcall, una repetició o un grup Intertwine no es poden adjuntar a un traçat
-@msg	brushes Krasis Vector can't read yet were left out of the Brushes panel ({_1})	els pinzells que Krasis Vector encara no pot llegir s'han deixat fora del tauler Pinzells ({_1})
+@msg	brushes Vulcanio Vector can't read yet were left out of the Brushes panel ({_1})	els pinzells que Vulcanio Vector encara no pot llegir s'han deixat fora del tauler Pinzells ({_1})
 @msg	objects with several fills or strokes, effects or brushes came in as their drawn look ({_1}): their appearance isn't editable yet	els objectes amb diversos farciments o traços, efectes o pinzells han arribat amb el seu aspecte dibuixat ({_1}): la seva aparença encara no és editable
 @msg	Offset Path: select paths	Desplaça el traçat: selecciona traçats
 @msg	Offset Path: the offset leaves nothing of the selected paths (an inset larger than the shapes)	Desplaça el traçat: el desplaçament no deixa res dels traçats seleccionats (una retracció més gran que les formes)
@@ -5572,7 +5572,7 @@ digits	Malayalam	Malaiàlam
 @msg	the background worker stopped	el processador en segon pla s’ha aturat
 @msg	the blend has no spine	la fusió no té espina
 @msg	the Color Picker is not open	el selector de color no està obert
-@msg	the compressed file unpacks to more than Krasis Vector reads ({_1} MB of document, {_2} MB per image)	el fitxer comprimit es descomprimeix a més del que Krasis Vector llegeix ({_1} MB de document, {_2} MB per imatge)
+@msg	the compressed file unpacks to more than Vulcanio Vector reads ({_1} MB of document, {_2} MB per image)	el fitxer comprimit es descomprimeix a més del que Vulcanio Vector llegeix ({_1} MB de document, {_2} MB per imatge)
 @msg	the compressed file unpacks to more than {_1} MB	el fitxer comprimit es descomprimeix a més de {_1} MB
 @msg	the document has never been saved	el document no s’ha desat mai
 @msg	the document has no artboard	el document no té cap tauler
@@ -5602,7 +5602,7 @@ digits	Malayalam	Malaiàlam
 @msg	the file's variable library couldn't be read: the Variables panel doesn't list it	no s’ha pogut llegir la biblioteca de variables del fitxer: el panell Variables no la llista
 @msg	a variable of unknown kind can't be bound to objects	una variable de tipus desconegut no es pot vincular a objectes
 @msg	the files come to more than 1 GB: add fewer at a time	els fitxers sumen més d’1 GB: afegeix-ne menys alhora
-@msg	The graphics processor tried first couldn't show the window, so Krasis Vector started again on {summary}	El processador gràfic provat primer no ha pogut mostrar la finestra, així que Krasis Vector s’ha iniciat de nou amb {summary}
+@msg	The graphics processor tried first couldn't show the window, so Vulcanio Vector started again on {summary}	El processador gràfic provat primer no ha pogut mostrar la finestra, així que Vulcanio Vector s’ha iniciat de nou amb {summary}
 @msg	The graphics were lost and couldn't be restarted.	Els gràfics s’han perdut i no s’han pogut reiniciar.
 @msg	The graphics were lost and have been restarted	Els gràfics s’han perdut i s’han reiniciat
 @msg	the guide is on a hidden or locked layer	la guia és en una capa oculta o bloquejada
@@ -5613,8 +5613,8 @@ digits	Malayalam	Malaiàlam
 @msg	The image was traced at {_1} × {_2} pixels, scaled down from {_3} × {_4} ({_5} megapixels at most).	La imatge s’ha traçat a {_1} × {_2} píxels, reduïda des de {_3} × {_4} ({_5} megapíxels com a màxim).
 @msg	the image's pixels can't be read	no es poden llegir els píxels de la imatge
 @msg	the image's pixels don't match its size	els píxels de la imatge no coincideixen amb la seva mida
-@msg	The last start of Krasis Vector ended on {name} before its window appeared, so it started on {summary}. To try that graphics processor again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	L’últim inici de Krasis Vector va acabar a {name} abans que aparegués la seva finestra, així que s’ha iniciat amb {summary}. Per tornar a provar aquell processador gràfic, canvia Preferències › Rendiment › Processador gràfic o inicia amb WGPU_BACKEND definit
-@msg	The last start of Krasis Vector ended while it listed the graphics processors, so it started on {summary} with OpenGL alone. To try the other graphics backends again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	L’últim inici de Krasis Vector va acabar mentre llistava els processadors gràfics, així que s’ha iniciat amb {summary} només amb OpenGL. Per tornar a provar els altres sistemes gràfics, canvia Preferències › Rendiment › Processador gràfic o inicia amb WGPU_BACKEND definit
+@msg	The last start of Vulcanio Vector ended on {name} before its window appeared, so it started on {summary}. To try that graphics processor again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	L’últim inici de Vulcanio Vector va acabar a {name} abans que aparegués la seva finestra, així que s’ha iniciat amb {summary}. Per tornar a provar aquell processador gràfic, canvia Preferències › Rendiment › Processador gràfic o inicia amb WGPU_BACKEND definit
+@msg	The last start of Vulcanio Vector ended while it listed the graphics processors, so it started on {summary} with OpenGL alone. To try the other graphics backends again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	L’últim inici de Vulcanio Vector va acabar mentre llistava els processadors gràfics, així que s’ha iniciat amb {summary} només amb OpenGL. Per tornar a provar els altres sistemes gràfics, canvia Preferències › Rendiment › Processador gràfic o inicia amb WGPU_BACKEND definit
 @msg	the library item is damaged	l’element de la biblioteca està malmès
 @msg	the layer has no objects to clip by	la capa no té objectes amb què retallar
 @msg	the layer or group is locked	la capa o el grup està bloquejat
@@ -5690,7 +5690,7 @@ digits	Malayalam	Malaiàlam
 @msg	this isn't a flat-colour logo ({_1}% of its solid areas match a few flat colours), so Flat Logo mode would turn its gradients into patches: use Color mode instead	aquest no és un logotip de colors plans ({_1}% de les seves àrees sòlides coincideixen amb uns quants colors plans), així que el mode Logotip pla convertiria els seus degradats en pedaços: fes servir el mode Color
 @msg	this kind of brush has no options dialog yet	aquest tipus de pinzell encara no té cap diàleg d’opcions
 @msg	this PostScript file can't be read ({why}): save it as PDF or SVG in the app that made it	aquest fitxer PostScript no es pot llegir ({why}): desa’l com a PDF o SVG a l’aplicació que l’ha creat
-@msg	This shortcut file is in a form Krasis Vector can't read.	Aquest fitxer de dreceres té un format que Krasis Vector no pot llegir.
+@msg	This shortcut file is in a form Vulcanio Vector can't read.	Aquest fitxer de dreceres té un format que Vulcanio Vector no pot llegir.
 @msg	this system has no screen color sampler	aquest sistema no té cap mostrejador de color de pantalla
 @msg	this trace would make more than {max} anchor points, more than the document can show smoothly: raise Noise, lower Paths or Colors, or pick a lower-fidelity preset	aquesta traça crearia més de {max} punts d’ancoratge, més dels que el document pot mostrar amb fluïdesa: augmenta el Soroll, redueix Traçats o Colors, o tria un preajust de fidelitat més baixa
 @msg	thumbnail: no page {n} (the file has 1)	miniatura: no hi ha la pàgina {n} (el fitxer en té 1)
@@ -5743,10 +5743,10 @@ digits	Malayalam	Malaiàlam
 @msg	a new document won't read these variables back with their kind: {names}	un document nou no tornarà a llegir aquestes variables amb el seu tipus: {names}
 @msg	a new document refuses this file because of these variables: {names}	un document nou rebutja aquest fitxer a causa d'aquestes variables: {names}
 @msg	the header `{header}` for `{name}` would read back as the variable `{other}`: rename one of them	la capçalera `{header}` de `{name}` es tornaria a llegir com la variable `{other}`: canvieu el nom d’una de les dues
-@msg	Krasis Vector doesn't search other apps' or the system's folders: {path}	Krasis Vector no cerca a les carpetes d’altres aplicacions ni del sistema: {path}
-@msg	Krasis Vector doesn't search the Shared or Public folder in Users: {path}	Krasis Vector no cerca a la carpeta Shared o Public d’Usuaris: {path}
-@msg	Krasis Vector failed to start: {e}	Krasis Vector no s’ha pogut iniciar: {e}
-@msg	Krasis Vector's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	aquí no s’ha definit la carpeta Fonts de Krasis Vector: l’aplicació d’escriptori i vectorcraft-cli la defineixen
+@msg	Vulcanio Vector doesn't search other apps' or the system's folders: {path}	Vulcanio Vector no cerca a les carpetes d’altres aplicacions ni del sistema: {path}
+@msg	Vulcanio Vector doesn't search the Shared or Public folder in Users: {path}	Vulcanio Vector no cerca a la carpeta Shared o Public d’Usuaris: {path}
+@msg	Vulcanio Vector failed to start: {e}	Vulcanio Vector no s’ha pogut iniciar: {e}
+@msg	Vulcanio Vector's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	aquí no s’ha definit la carpeta Fonts de Vulcanio Vector: l’aplicació d’escriptori i vectorcraft-cli la defineixen
 @msg	version {0} files can't be compressed: only version {COMPRESSED_SINCE} and later open compressed files	els fitxers de la versió {0} no es poden comprimir: només la versió {COMPRESSED_SINCE} i posteriors obren fitxers comprimits
 @msg	videoRulerPixelAspectRatio must be a number from 0.1 to 10	videoRulerPixelAspectRatio ha de ser un nombre d’entre 0,1 i 10
 @msg	width and height are at least 1 pixel	l’amplada i l’alçada són com a mínim d’1 píxel
@@ -5821,7 +5821,7 @@ file-filter	Export presets	Preajustos d’exportació
 file-filter	SVG Compressed	SVG comprimit
 file-filter	Swatch libraries	Biblioteques de mostres
 file-filter	Templates	Plantilles
-file-filter	Krasis Vector Template	Plantilla de Krasis Vector
+file-filter	Vulcanio Vector Template	Plantilla de Vulcanio Vector
 font-script	Japanese	Japonès
 font-technology	Variable	Variable
 gradient-kind	Radial	Radial
@@ -6276,7 +6276,7 @@ breakText	Glyphs	Glifs
 	Malayalam	Malaiàlam
 	Odia	Oriya
 	Urdu	Urdú
-	Krasis Vector {release} and later (version {n})	Krasis Vector {release} i posteriors (versió {n})
+	Vulcanio Vector {release} and later (version {n})	Vulcanio Vector {release} i posteriors (versió {n})
 # Document Tools add-on: Export All Open Documents (#4920).
 	Export All Open Documents as PDF	Exporta tots els documents oberts com a PDF
 	Export All Open Documents as SVG	Exporta tots els documents oberts com a SVG

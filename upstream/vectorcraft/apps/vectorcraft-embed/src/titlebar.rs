@@ -34,7 +34,7 @@ pub(crate) fn adapter_summary(info: &eframe::wgpu::AdapterInfo) -> String {
 /// Windows and Linux: no OS title bar; the app bar is the title bar (`vectorcraft_ui_egui::titlebar`).
 /// macOS keeps its traffic lights over the integrated title strip.
 ///
-/// Used on macOS and Windows (where Krasis Vector keeps today's frame regardless of the
+/// Used on macOS and Windows (where Vulcanio Vector keeps today's frame regardless of the
 /// `craft-window` probe) and by the tests; Linux and the BSDs take the decision from the probe.
 #[cfg_attr(not(any(target_os = "macos", target_os = "windows")), allow(dead_code))]
 pub(crate) const CUSTOM_TITLEBAR: bool = !cfg!(target_os = "macos");
@@ -53,14 +53,14 @@ pub(crate) fn opted_into_system_title_bar(saved: Option<&vectorcraft_ui_egui::Ui
 /// ([`craft_window::Frame::Desktop`]) on macOS, Windows, X11 and any Wayland compositor with
 /// server-side decorations (KDE, Sway, Hyprland, COSMIC); the app draws it
 /// ([`craft_window::Frame::App`]) only where the compositor leaves it to the app (GNOME's Mutter),
-/// or when `VECTORCRAFT_TITLEBAR` overrides the probe. Krasis Vector draws its own title bar exactly
+/// or when `VECTORCRAFT_TITLEBAR` overrides the probe. Vulcanio Vector draws its own title bar exactly
 /// when `craft-window` says the app owns the frame **and** the user has not opted into the system
 /// title bar; the preference always forces the native frame back on.
 ///
 /// macOS and Windows keep today's behavior and are decided by [`CUSTOM_TITLEBAR`] rather than the
 /// probe: `craft-window` returns `Frame::Desktop` for both (the OS always draws a frame), but
-/// Krasis Vector insets its content under the macOS traffic lights and draws its own caption buttons
-/// on Windows — an overdraw on an OS-decorated window that is Krasis Vector's choice, not
+/// Vulcanio Vector insets its content under the macOS traffic lights and draws its own caption buttons
+/// on Windows — an overdraw on an OS-decorated window that is Vulcanio Vector's choice, not
 /// `craft-window`'s. Only Linux and the BSDs take the decision from the probe.
 #[cfg(not(any(target_os = "macos", target_os = "windows")))]
 pub(crate) fn custom_titlebar_from(frame: &craft_window::Frame, opted_into_system: bool) -> bool {
@@ -105,7 +105,7 @@ pub(crate) fn custom_titlebar(saved: Option<&vectorcraft_ui_egui::UiState>) -> b
 pub(crate) fn native_options(custom_titlebar: bool) -> eframe::NativeOptions {
     eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
-            .with_title("Krasis Vector")
+            .with_title("Vulcanio Vector")
             .with_inner_size(window::DEFAULT_SIZE)
             .with_min_inner_size(window::MIN_SIZE)
             .with_drag_and_drop(true)

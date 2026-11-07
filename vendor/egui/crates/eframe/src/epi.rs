@@ -97,7 +97,7 @@ pub struct CreationContext<'s> {
 }
 
 impl<'s> CreationContext<'s> {
-    /// Krasis: the creation context for an app created after the window is running, from the host
+    /// Vulcanio: the creation context for an app created after the window is running, from the host
     /// app's [`Frame`]. `storage` is the embedded app's own storage (not the host's).
     pub fn for_embedded(egui_ctx: egui::Context, frame: &Frame, storage: Option<&'s dyn Storage>) -> Self {
         Self {

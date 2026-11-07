@@ -349,7 +349,7 @@ impl LightcraftApp {
     /// Cancel a press that reached egui without making it a click or starting a drag. The reset
     /// itself happens before egui's next input pass in [`Self::raw_input_hook`], where replacing
     /// the pointer state and stopping the drag is safe (the same approach as the sibling
-    /// SoundCraft/Krasis Vector apps). No pointer movement is injected: moving beyond
+    /// SoundCraft/Vulcanio Vector apps). No pointer movement is injected: moving beyond
     /// `max_click_dist` suppresses a click but can also start a drag on a slider or curve.
     pub(super) fn queue_pointer_cleanup(&mut self) {
         self.pointer_cleanup = true;

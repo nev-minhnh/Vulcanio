@@ -319,7 +319,7 @@ fn a_field_that_selects_on_focus_is_retyped_whole() {
 /// keystroke replaces the text instead of being inserted into it.
 #[test]
 fn text_typed_on_the_first_focused_pass_replaces_the_whole_text() {
-    let mut rig = Rig::new("Krasis Library Library");
+    let mut rig = Rig::new("Vulcanio Library Library");
     rig.select_on_focus = true;
     // the dialog draws the field, then asks for its focus: effective on the next pass
     rig.frame_with(vec![], true);
@@ -329,7 +329,7 @@ fn text_typed_on_the_first_focused_pass_replaces_the_whole_text() {
     assert_eq!(rig.text, "Fresh", "the first keystroke replaced the selected text");
     // the text from before the edit is still what Esc gives back
     rig.key(Key::Escape, Modifiers::NONE);
-    assert_eq!(rig.text, "Krasis Library Library");
+    assert_eq!(rig.text, "Vulcanio Library Library");
     assert_eq!(rig.endings, vec![Ending::Escape]);
 }
 

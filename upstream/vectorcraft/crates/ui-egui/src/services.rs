@@ -127,7 +127,7 @@ pub struct Services {
     /// Open a file (or a folder) in the system's default app for it (desktop: Edit Original, Show
     /// Package). Without it (the web) those answer with an error.
     pub open_file: Option<RevealFn>,
-    /// Open a file in Krasis Photo where it is installed (desktop: Edit Original of a raster image
+    /// Open a file in Vulcanio Photo where it is installed (desktop: Edit Original of a raster image
     /// with Preferences › File Handling › Use System Defaults for Edit Original off); `Ok(false)`
     /// when it isn't. Without it Edit Original uses `open_file`.
     pub open_in_photocraft: Option<OpenInFn>,

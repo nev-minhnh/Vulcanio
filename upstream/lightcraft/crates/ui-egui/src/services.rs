@@ -36,7 +36,7 @@ pub type OpenModelFolderFn = std::sync::Arc<dyn Fn(&str) -> Result<(), String> +
 pub type ScreenProfileFn = Box<dyn FnMut() -> Option<Vec<u8>>>;
 
 /// Whether an external editor can be started (its name as in [`Services::open_with`]); the
-/// error says why not and what to do (e.g. Krasis Photo isn't installed).
+/// error says why not and what to do (e.g. Vulcanio Photo isn't installed).
 pub type CheckEditorFn = Box<dyn Fn(&str) -> Result<(), String>>;
 
 /// Something the host does with the session (web: back up or restore the library in browser

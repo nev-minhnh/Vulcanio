@@ -1,7 +1,7 @@
 # Spanish (es) catalog. Same format as zh-hant.tsv:  context <TAB> source <TAB> translation
 # (empty context = a plain UI string; `@id` = a command id; `@plural` = "one|other" forms).
 #
-# Clean-room: written from the meaning of Krasis Vector's English labels in neutral, international
+# Clean-room: written from the meaning of Vulcanio Vector's English labels in neutral, international
 # Spanish (Latin American usage: agregar, computadora, mouse), using the feature names Spanish-speaking
 # users of vector illustration software know (Mesa de trabajo, Muestras, Trazo, Relleno, Trazado,
 # Punto de ancla, Pluma, Selección directa, Buscatrazos, Motivo, Preajuste). No other application's
@@ -98,7 +98,7 @@
 	A lower value follows the stroke closely; a higher one gives fewer points and smoother curves.	Un valor menor sigue el trazo de cerca; uno mayor da menos puntos y curvas más suaves.
 	A new preset starting from the selected one	Un preajuste nuevo a partir del seleccionado
 	A saved copy of the selected preset	Una copia guardada del preajuste seleccionado
-	About Krasis Vector	Acerca de Krasis Vector
+	About Vulcanio Vector	Acerca de Vulcanio Vector
 	above	arriba
 	Absolute Position	Posición absoluta
 	Accurate	Preciso
@@ -204,7 +204,7 @@ font-technology	Variable	Variables
 	Appearance Panel	Panel Apariencia
 	Appearance panel	Panel Apariencia
 	Applies when the linked file is relinked or updated.	Se aplica al volver a vincular o actualizar el archivo vinculado.
-	Applies the next time Krasis Vector starts.	Se aplica la próxima vez que se inicie Krasis Vector.
+	Applies the next time Vulcanio Vector starts.	Se aplica la próxima vez que se inicie Vulcanio Vector.
 	Apply	Aplicar
 	Apply Brush	Aplicar pincel
 	Apply Character Style	Aplicar estilo de carácter
@@ -241,8 +241,8 @@ font-technology	Variable	Variables
 	Artboard {number}	Mesa de trabajo {number}
 	Artboard:	Mesa de trabajo:
 	Artboards	Mesas de trabajo
-	Krasis Website	Sitio web de Krasis
-	Krasis website	Sitio web de Krasis
+	Vulcanio Website	Sitio web de Vulcanio
+	Vulcanio website	Sitio web de Vulcanio
 	Artwork Colors	Colores de la ilustración
 	As Multiple Assets	Como varios recursos
 	As Single Asset	Como un solo recurso
@@ -405,7 +405,7 @@ font-technology	Variable	Variables
 	Check Script	Comprobar script
 	Check Script…	Comprobar script…
 	Copy Report	Copiar informe
-	Krasis Vector read this script without running it.	Krasis Vector leyó este script sin ejecutarlo.
+	Vulcanio Vector read this script without running it.	Vulcanio Vector leyó este script sin ejecutarlo.
 	Needs nothing beyond plain JavaScript	Solo necesita JavaScript simple
 	Needs the script language's own objects or directives	Necesita objetos o directivas propios del lenguaje del script
 	Needs the document model	Necesita el modelo de documento
@@ -1648,7 +1648,7 @@ font-technology	Variable	Variables
 	Join	Unir
 	Join Our Discord	Únete a nuestro Discord
 	Join our Discord	Únete a nuestro Discord
-	Join the Krasis community on Discord (discord.gg/artcraft)	Únete a la comunidad de Krasis en Discord (discord.gg/artcraft)
+	Join the Vulcanio community on Discord (discord.gg/artcraft)	Únete a la comunidad de Vulcanio en Discord (discord.gg/artcraft)
 	Join the lines of each paragraph	Unir las líneas de cada párrafo
 	Join Tool	Herramienta Unir
 	Justification…	Justificación…
@@ -1676,7 +1676,7 @@ font-technology	Variable	Variables
 # Import Shortcut Set (Keyboard Shortcuts › Import…, File › Open of a .kys file) and its commands.
 	Import Shortcut Set	Importar conjunto de métodos abreviados
 	Import Shortcut Set…	Importar conjunto de métodos abreviados…
-	Each entry of the file is matched to a Krasis Vector tool, command or panel. Check the matches and answer what is left.	Cada entrada del archivo se asocia con una herramienta, un comando o un panel de Krasis Vector. Revisa las asociaciones y responde lo que falta.
+	Each entry of the file is matched to a Vulcanio Vector tool, command or panel. Check the matches and answer what is left.	Cada entrada del archivo se asocia con una herramienta, un comando o un panel de Vulcanio Vector. Revisa las asociaciones y responde lo que falta.
 	Keys	Teclas
 	The file writes keys and modifiers as codes. Check the proposed meanings and answer the codes that are not known yet.	El archivo guarda las teclas y los modificadores como códigos. Revisa los significados propuestos y responde los códigos que aún no se conocen.
 	Click, then press the key this code stands for (Esc cancels)	Haz clic y luego presiona la tecla que representa este código (Esc cancela)
@@ -1686,7 +1686,7 @@ font-technology	Variable	Variables
 	not known yet	aún desconocido
 	Shortcuts	Métodos abreviados
 	In the File	En el archivo
-	In Krasis Vector	En Krasis Vector
+	In Vulcanio Vector	En Vulcanio Vector
 	Needs Attention Only	Solo lo que requiere atención
 	Ready	Listo
 	Needs a choice	Requiere una elección
@@ -1695,7 +1695,7 @@ font-technology	Variable	Variables
 	Tools take a single key (optionally with Shift)	Las herramientas usan una sola tecla (opcionalmente con Shift)
 	A later row takes this shortcut	Una fila posterior usa este método abreviado
 	Same item as a later row	Mismo elemento que una fila posterior
-	Start from Krasis Vector Defaults	Partir de los valores predeterminados de Krasis Vector
+	Start from Vulcanio Vector Defaults	Partir de los valores predeterminados de Vulcanio Vector
 	Add to the Current Shortcuts	Agregar a los métodos abreviados actuales
 	Remember My Choices	Recordar mis elecciones
 	{ready} of {total} ready	{ready} de {total} listos
@@ -2350,7 +2350,7 @@ font-technology	Variable	Variables
 	Paragraph Style Options	Opciones de estilo de párrafo
 	Paragraph Styles	Estilos de párrafo
 	Paragraph Symbol	Símbolo de párrafo
-	Part of Krasis. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Krasis Vector.	Parte de Krasis. MIT OR Apache-2.0. Fuentes: Source Sans 3, Inter, JetBrains Mono (OFL). Iconos: Lucide (ISC) + Krasis Vector.
+	Part of Vulcanio. MIT OR Apache-2.0. Fonts: Source Sans 3, Inter, JetBrains Mono (OFL). Icons: Lucide (ISC) + Vulcanio Vector.	Parte de Vulcanio. MIT OR Apache-2.0. Fuentes: Source Sans 3, Inter, JetBrains Mono (OFL). Iconos: Lucide (ISC) + Vulcanio Vector.
 	Password	Contraseña
 	Paste	Pegar
 	Paste in Back	Pegar detrás
@@ -2546,7 +2546,7 @@ digits	Malayalam	Malayálam
 	Quarter Space	Cuarto de espacio
 	Quick Actions	Acciones rápidas
 	Quickly start a new file	Empieza rápidamente un archivo nuevo
-	Quit Krasis Vector	Salir de Krasis Vector
+	Quit Vulcanio Vector	Salir de Vulcanio Vector
 	Radar Graph Tool	Herramienta Gráfico de radar
 	Radial	Radial
 	Radial Glows	Resplandores radiales
@@ -2677,7 +2677,7 @@ digits	Malayalam	Malayálam
 @plural	{n} folder or file couldn't be read|{n} folders or files couldn't be read	No se pudo leer {n} carpeta o archivo|No se pudieron leer {n} carpetas o archivos
 	The search stopped at its limit: search a smaller folder.	La búsqueda se detuvo en su límite: busca en una carpeta más pequeña.
 	Copy only fonts you own or are licensed to install.	Copia solo fuentes que te pertenezcan o cuya licencia te permita instalarlas.
-	Krasis Vector copies the fonts to {folder}.	Krasis Vector copia las fuentes en {folder}.
+	Vulcanio Vector copies the fonts to {folder}.	Vulcanio Vector copia las fuentes en {folder}.
 	Registered Trademark Symbol	Símbolo de marca registrada
 	Registration marks	Marcas de registro
 	Registry name:	Nombre del registro:
@@ -2786,9 +2786,9 @@ digits	Malayalam	Malayálam
 	Revert	Revertir
 	Revert to the saved version of “{name}”?	¿Revertir a la versión guardada de “{name}”?
 	Replace “{name}”, the file this document was opened from?	¿Reemplazar “{name}”, el archivo desde el que se abrió este documento?
-	Opening it left out what Krasis Vector can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	Al abrirlo quedó fuera lo que Krasis Vector aún no puede leer ({what}), así que reemplazarlo lo pierde para siempre. Guárdelo con otro nombre para conservarlo.
+	Opening it left out what Vulcanio Vector can't read yet ({what}), so replacing it loses that for good. Save under another name to keep it.	Al abrirlo quedó fuera lo que Vulcanio Vector aún no puede leer ({what}), así que reemplazarlo lo pierde para siempre. Guárdelo con otro nombre para conservarlo.
 	“{name}” already exists. Replace it?	“{name}” ya existe. ¿Reemplazarlo?
-	The name in the save panel was “{typed}”; Krasis Vector added the file type's extension. Replacing the file overwrites its contents.	El nombre en el panel de guardado era “{typed}”, y Krasis Vector añadió la extensión del tipo de archivo. Reemplazar el archivo sobrescribe su contenido.
+	The name in the save panel was “{typed}”; Vulcanio Vector added the file type's extension. Replacing the file overwrites its contents.	El nombre en el panel de guardado era “{typed}”, y Vulcanio Vector añadió la extensión del tipo de archivo. Reemplazar el archivo sobrescribe su contenido.
 	Revolve…	Revolución…
 	RGB Color	Color RGB
 	Right	Derecha
@@ -3689,10 +3689,10 @@ digits	Malayalam	Malayálam
 	Vector Halftone	Semitono vectorial
 	Vector Halftone…	Semitono vectorial…
 	Vector illustration — fast, open, scriptable.	Ilustración vectorial: rápida, abierta y programable.
-	Krasis Vector didn't quit normally last time. These documents had unsaved changes:	Krasis Vector no se cerró correctamente la última vez. Estos documentos tenían cambios sin guardar:
-	Krasis Vector Help…	Ayuda de Krasis Vector…
-	Krasis Vector on getartcraft.com	Krasis Vector en getartcraft.com
-	Krasis Vector on GitHub	Krasis Vector en GitHub
+	Vulcanio Vector didn't quit normally last time. These documents had unsaved changes:	Vulcanio Vector no se cerró correctamente la última vez. Estos documentos tenían cambios sin guardar:
+	Vulcanio Vector Help…	Ayuda de Vulcanio Vector…
+	Vulcanio Vector on getartcraft.com	Vulcanio Vector en getartcraft.com
+	Vulcanio Vector on GitHub	Vulcanio Vector en GitHub
 	Vectors	Vectores
 	Version {version} — open-source vector illustration in pure Rust.	Versión {version}: ilustración vectorial de código abierto en Rust puro.
 	Version:	Versión:
@@ -3732,7 +3732,7 @@ digits	Malayalam	Malayálam
 	Web Snap:	Ajuste a web:
 	Weight	Grosor
 	Weight:	Grosor:
-	Welcome to Krasis Vector	Te damos la bienvenida a Krasis Vector
+	Welcome to Vulcanio Vector	Te damos la bienvenida a Vulcanio Vector
 	When pasting text	Al pegar texto
 	White	Blanco
 	Widget Position:	Posición del widget:
@@ -4042,7 +4042,7 @@ axis	Both	Ambos
 @msg	Split Into Grid: select paths large enough for the grid	Dividir en cuadrícula: selecciona trazados lo bastante grandes para la cuadrícula
 @msg	Targa files are RGB: colorModel rgb	los archivos Targa son RGB: colorModel rgb
 @msg	Text Wrap: select a wrap object	Ceñir texto: selecciona un objeto para ceñir
-@msg	This shortcut file is in a form Krasis Vector can't read.	Este archivo de métodos abreviados tiene un formato que Krasis Vector no puede leer.
+@msg	This shortcut file is in a form Vulcanio Vector can't read.	Este archivo de métodos abreviados tiene un formato que Vulcanio Vector no puede leer.
 @msg	`aspect` must be a number (%)	`aspect` debe ser un número (%)
 @msg	`at` must be [x, y]	`at` debe ser [x, y]
 @msg	`color` must be a colour	`color` debe ser un color
@@ -4172,7 +4172,7 @@ axis	Both	Ambos
 @msg	can't encode the document: {0}	no se puede codificar el documento: {0}
 @msg	can't parse shortcut `{c}`	no se puede interpretar el atajo `{c}`
 @msg	can't parse shortcut `{s}` for `{k}`	no se puede interpretar el atajo `{s}` de `{k}`
-@msg	can't save version {0}: Krasis Vector writes versions {MIN_VERSION} to {VERSION}	no se puede guardar la versión {0}: Krasis Vector escribe las versiones {MIN_VERSION} a {VERSION}
+@msg	can't save version {0}: Vulcanio Vector writes versions {MIN_VERSION} to {VERSION}	no se puede guardar la versión {0}: Vulcanio Vector escribe las versiones {MIN_VERSION} a {VERSION}
 @msg	can't write .{ext} images	no se pueden escribir imágenes .{ext}
 @msg	cannot distort a zero-size bounding box	no se puede distorsionar un cuadro delimitador de tamaño cero
 @msg	cannot read PDF: {0}	no se puede leer el PDF: {0}
@@ -4199,7 +4199,7 @@ axis	Both	Ambos
 @msg	empty brush stroke	trazo de pincel vacío
 @msg	empty cutter	cortador vacío
 @msg	empty path	trazado vacío
-@msg	file version {0} is newer than this Krasis Vector supports ({VERSION})	la versión de archivo {0} es más reciente de lo que admite este Krasis Vector ({VERSION})
+@msg	file version {0} is newer than this Vulcanio Vector supports ({VERSION})	la versión de archivo {0} es más reciente de lo que admite este Vulcanio Vector ({VERSION})
 @msg	freeform point {i} needs `at` [x, y] and a valid `color`	el punto de forma libre {i} necesita `at` [x, y] y un `color` válido
 @msg	freeform line {i} must be an array of point indices	la línea de forma libre {i} debe ser una lista de índices de puntos
 @msg	give both `start` and `end` [x, y] (or neither)	indica `start` y `end` [x, y] (o ninguno de los dos)
@@ -4220,9 +4220,9 @@ axis	Both	Ambos
 @msg	invalid PDF setting: {0}	ajuste de PDF no válido: {0}
 @msg	invalid image data for `{0}`	datos de imagen no válidos para `{0}`
 @msg	invalid parameters for `{cmd}`: {msg}	parámetros no válidos para `{cmd}`: {msg}
-@msg	is not an image Krasis Vector reads	no es una imagen que Krasis Vector pueda leer
-@msg	it uses `{at}`, which Krasis Vector's PostScript reader doesn't know	usa `{at}`, que el lector de PostScript de Krasis Vector no conoce
-@msg	it uses `{at}`, which Krasis Vector's PostScript reader doesn't know, in {procs}	usa `{at}`, que el lector de PostScript de Krasis Vector no conoce, en {procs}
+@msg	is not an image Vulcanio Vector reads	no es una imagen que Vulcanio Vector pueda leer
+@msg	it uses `{at}`, which Vulcanio Vector's PostScript reader doesn't know	usa `{at}`, que el lector de PostScript de Vulcanio Vector no conoce
+@msg	it uses `{at}`, which Vulcanio Vector's PostScript reader doesn't know, in {procs}	usa `{at}`, que el lector de PostScript de Vulcanio Vector no conoce, en {procs}
 @msg	its Windows metafile preview was opened instead, which may simplify the art	en su lugar se abrió su previsualización de metarchivo de Windows, que puede simplificar la ilustración
 @msg	its preview was placed instead, at screen resolution	en su lugar se colocó su previsualización, a resolución de pantalla
 @msg	join needs open paths	unir necesita trazados abiertos
@@ -4279,7 +4279,7 @@ axis	Both	Ambos
 @msg	no file system here	aquí no hay sistema de archivos
 @msg	no file writer	no hay escritor de archivos
 @msg	no files to place	no hay archivos para colocar
-@msg	`{file}` isn't a Krasis Vector document, a PDF or a PDF-compatible .ai file	`{file}` no es un documento de Krasis Vector, un PDF ni un archivo .ai compatible con PDF
+@msg	`{file}` isn't a Vulcanio Vector document, a PDF or a PDF-compatible .ai file	`{file}` no es un documento de Vulcanio Vector, un PDF ni un archivo .ai compatible con PDF
 @msg	no format to export to	no hay formato al que exportar
 @msg	no free recovery area	no hay ningún área de recuperación libre
 @msg	no gradient stop or freeform point is selected	no hay ninguna parada de degradado ni punto de forma libre seleccionado
@@ -4321,7 +4321,7 @@ axis	Both	Ambos
 @msg	not an action set file	no es un archivo de conjunto de acciones
 @msg	the action set file is larger than 8 MiB	el archivo de conjunto de acciones supera los 8 MiB
 @msg	the action set file holds more than 1,000 actions	el archivo de conjunto de acciones contiene más de 1000 acciones
-@msg	the action set file needs a later version of Krasis Vector	el archivo de conjunto de acciones necesita una versión más reciente de Krasis Vector
+@msg	the action set file needs a later version of Vulcanio Vector	el archivo de conjunto de acciones necesita una versión más reciente de Vulcanio Vector
 @msg	an action in the action set file has more than 10,000 steps	una acción del archivo de conjunto de acciones tiene más de 10 000 pasos
 @msg	no such anchor	no existe ese punto de ancla
 @msg	no such artboard	no existe esa mesa de trabajo
@@ -4353,8 +4353,8 @@ axis	Both	Ambos
 @msg	node {_1} is not text	el nodo {_1} no es texto
 @msg	node {_1} is on a locked artboard	el nodo {_1} está en una mesa de trabajo bloqueada
 @msg	not a DXF drawing	no es un dibujo DXF
-@msg	not a Krasis Vector file: {0}	no es un archivo de Krasis Vector: {0}
-@msg	not a Krasis Vector shortcut set (missing `overrides`)	no es un conjunto de atajos de Krasis Vector (falta `overrides`)
+@msg	not a Vulcanio Vector file: {0}	no es un archivo de Vulcanio Vector: {0}
+@msg	not a Vulcanio Vector shortcut set (missing `overrides`)	no es un conjunto de atajos de Vulcanio Vector (falta `overrides`)
 @msg	not a blend	no es una fusión
 @msg	not a graphic style library (format `{_1}`)	no es una biblioteca de estilos gráficos (formato `{_1}`)
 @msg	not a shortcut set: the text doesn't start with a slash name and an opening brace	no es un conjunto de métodos abreviados: el texto no empieza con un nombre con barra y una llave de apertura
@@ -4638,11 +4638,11 @@ axis	Both	Ambos
 @msg	Sent to {_1}	Se envió a {_1}
 @msg	{_1} files	{_1} archivos
 @msg	The graphics were lost and have been restarted	Se perdieron los gráficos y se reiniciaron
-@msg	The graphics processor tried first couldn't show the window, so Krasis Vector started again on {summary}	El procesador gráfico probado primero no pudo mostrar la ventana, así que Krasis Vector se inició de nuevo con {summary}
-@msg	The last start of Krasis Vector ended on {name} before its window appeared, so it started on {summary}. To try that graphics processor again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	El último inicio de Krasis Vector terminó en {name} antes de que apareciera la ventana, así que se inició con {summary}. Para volver a probar ese procesador gráfico, cambia Preferencias › Rendimiento › Procesador gráfico o inicia con la variable WGPU_BACKEND definida
-@msg	The last start of Krasis Vector ended while it listed the graphics processors, so it started on {summary} with OpenGL alone. To try the other graphics backends again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	El último inicio de Krasis Vector terminó mientras enumeraba los procesadores gráficos, así que se inició solo con OpenGL, en {summary}. Para volver a probar las demás interfaces gráficas, cambia Preferencias › Rendimiento › Procesador gráfico o inicia con la variable WGPU_BACKEND definida
-@msg	Loading Krasis Vector…	Cargando Krasis Vector…
-@msg	Krasis Vector failed to start: {e}	Krasis Vector no pudo iniciarse: {e}
+@msg	The graphics processor tried first couldn't show the window, so Vulcanio Vector started again on {summary}	El procesador gráfico probado primero no pudo mostrar la ventana, así que Vulcanio Vector se inició de nuevo con {summary}
+@msg	The last start of Vulcanio Vector ended on {name} before its window appeared, so it started on {summary}. To try that graphics processor again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	El último inicio de Vulcanio Vector terminó en {name} antes de que apareciera la ventana, así que se inició con {summary}. Para volver a probar ese procesador gráfico, cambia Preferencias › Rendimiento › Procesador gráfico o inicia con la variable WGPU_BACKEND definida
+@msg	The last start of Vulcanio Vector ended while it listed the graphics processors, so it started on {summary} with OpenGL alone. To try the other graphics backends again, change Preferences › Performance › Graphics Processor or start with WGPU_BACKEND set	El último inicio de Vulcanio Vector terminó mientras enumeraba los procesadores gráficos, así que se inició solo con OpenGL, en {summary}. Para volver a probar las demás interfaces gráficas, cambia Preferencias › Rendimiento › Procesador gráfico o inicia con la variable WGPU_BACKEND definida
+@msg	Loading Vulcanio Vector…	Cargando Vulcanio Vector…
+@msg	Vulcanio Vector failed to start: {e}	Vulcanio Vector no pudo iniciarse: {e}
 @msg	A browser with WebGPU or WebGL2 is required.	Se necesita un navegador con WebGPU o WebGL2.
 @msg	The graphics were lost and couldn't be restarted.	Se perdieron los gráficos y no se pudieron reiniciar.
 @msg	Your unsaved changes are kept in this browser: reload the page to get them back.	Tus cambios sin guardar se conservan en este navegador: vuelve a cargar la página para recuperarlos.
@@ -4673,17 +4673,17 @@ axis	Both	Ambos
 @msg	it has more than {MAX_NODES} objects	tienen más de {MAX_NODES} objetos
 @msg	it has no layers	no tienen capas
 @msg	it has too many values in a row	tienen demasiados valores seguidos
-@msg	it has {_1}, which Krasis Vector doesn't read from it yet	tienen {_1}, que Krasis Vector aún no lee de ellos
+@msg	it has {_1}, which Vulcanio Vector doesn't read from it yet	tienen {_1}, que Vulcanio Vector aún no lee de ellos
 @msg	its objects are nested too deeply	sus objetos están anidados a demasiada profundidad
 @msg	its section ending with `%{end}` doesn't end	su sección que termina con `%{end}` no termina
-@msg	brushes Krasis Vector can't read yet were left out of the Brushes panel ({_1})	los pinceles que Krasis Vector aún no puede leer se omitieron del panel Pinceles ({_1})
+@msg	brushes Vulcanio Vector can't read yet were left out of the Brushes panel ({_1})	los pinceles que Vulcanio Vector aún no puede leer se omitieron del panel Pinceles ({_1})
 @msg	objects with several fills or strokes, effects or brushes came in as their drawn look ({_1}): their appearance isn't editable yet	los objetos con varios rellenos o trazos, efectos o pinceles se importaron con su aspecto dibujado ({_1}): su aspecto aún no se puede editar
 @msg	gradient “{name}” isn't defined in the file: a plain colour stands in for it	el degradado “{name}” no está definido en el archivo: lo sustituye un color sólido
-@msg	an image Krasis Vector can't read was left out	se omitió una imagen que Krasis Vector no puede leer
+@msg	an image Vulcanio Vector can't read was left out	se omitió una imagen que Vulcanio Vector no puede leer
 @msg	graphs come in as plain art, without their data or settings	los gráficos se importan como ilustración normal, sin sus datos ni sus ajustes
 @msg	an image whose data is cut short was left out	se omitió una imagen con datos incompletos
 @msg	linked pictures show the low-resolution preview saved in the file until their files are found: relink them in the Links panel	las imágenes vinculadas muestran la vista previa de baja resolución guardada en el archivo hasta que se encuentren sus archivos: vuelva a vincularlas en el panel Vínculos
-@msg	linked type areas past Krasis Vector's limits were left out	se omitieron las áreas de texto enlazadas que superan los límites de Krasis Vector
+@msg	linked type areas past Vulcanio Vector's limits were left out	se omitieron las áreas de texto enlazadas que superan los límites de Vulcanio Vector
 @msg	type that changes writing direction inside a text object opens in the direction of its first character	el texto que cambia de dirección de escritura dentro de un objeto de texto se abre en la dirección de su primer carácter
 @msg	type used as a mask in linked areas, wraparound text or a compound path doesn't clip	el texto usado como máscara en áreas enlazadas, texto ceñido o un trazado compuesto no recorta
 @msg	linked pictures with no preview in the file show a placeholder until their files are found: relink them in the Links panel	las imágenes vinculadas sin vista previa en el archivo muestran un marcador de posición hasta que se encuentren sus archivos: vuelva a vincularlas en el panel Vínculos
@@ -4692,13 +4692,13 @@ axis	Both	Ambos
 @msg	this file was saved without PDF compatibility, and its editing data can't be read ({why})	este archivo se guardó sin compatibilidad con PDF y sus datos de edición no se pueden leer ({why})
 @msg	the PDF part couldn't be read ({_1}): the file opened from its editing data	no se pudo leer la parte PDF ({_1}): el archivo se abrió desde sus datos de edición
 @msg	No fonts are missing in this document	No faltan fuentes en este documento
-@msg	Krasis Vector doesn't search other apps' or the system's folders: {path}	Krasis Vector no busca en carpetas de otras aplicaciones ni del sistema: {path}
-@msg	Krasis Vector doesn't search the Shared or Public folder in Users: {path}	Krasis Vector no busca en las carpetas Shared ni Public de Users: {path}
+@msg	Vulcanio Vector doesn't search other apps' or the system's folders: {path}	Vulcanio Vector no busca en carpetas de otras aplicaciones ni del sistema: {path}
+@msg	Vulcanio Vector doesn't search the Shared or Public folder in Users: {path}	Vulcanio Vector no busca en las carpetas Shared ni Public de Users: {path}
 @msg	{path} is not a folder	{path} no es una carpeta
 @msg	the search couldn't start: try again in a moment	no se pudo iniciar la búsqueda: inténtalo de nuevo en un momento
 @msg	searching a folder isn't available on the web	en la web no se puede buscar en una carpeta
 @msg	every search thread stopped on an internal error (please report this bug)	todos los hilos de búsqueda se detuvieron por un error interno (informa de este error)
-@msg	Krasis Vector's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	La carpeta Fonts de Krasis Vector no está configurada aquí: la configuran la aplicación de escritorio y vectorcraft-cli
+@msg	Vulcanio Vector's Fonts folder isn't set here: the desktop app and vectorcraft-cli set it	La carpeta Fonts de Vulcanio Vector no está configurada aquí: la configuran la aplicación de escritorio y vectorcraft-cli
 @msg	choose the font files to add	elige los archivos de fuentes que quieres agregar
 @msg	not a file	no es un archivo
 @msg	not a font file	no es un archivo de fuente
@@ -4711,7 +4711,7 @@ axis	Both	Ambos
 
 # The macOS menu bar (native_menu): the app and Window menus' system items, Settings pages.
 	Services	Servicios
-	Hide Krasis Vector	Ocultar Krasis Vector
+	Hide Vulcanio Vector	Ocultar Vulcanio Vector
 	Zoom	Zoom
 	Bring All to Front	Traer todo al frente
 	Settings	Ajustes
@@ -4719,7 +4719,7 @@ axis	Both	Ambos
 	On: one locked object showing the document, updated when it changes.	Activado: un objeto bloqueado que muestra el documento y se actualiza cuando este cambia.
 	Off: an editable copy of its art, embedded in this document.	Desactivado: una copia editable de su ilustración, incrustada en este documento.
 	Images: link to the file instead of only embedding it.	Imágenes: vincular al archivo en lugar de solo incrustarlo.
-	Krasis Vector documents: one locked object, updated when the file changes.	Documentos de Krasis Vector: un objeto bloqueado que se actualiza cuando cambia el archivo.
+	Vulcanio Vector documents: one locked object, updated when the file changes.	Documentos de Vulcanio Vector: un objeto bloqueado que se actualiza cuando cambia el archivo.
 	A file dialog is open: choose there first	Hay un cuadro de diálogo de archivos abierto: elija primero en él
 	The document was closed while its file dialog was open	Se cerró el documento mientras su cuadro de diálogo de archivos estaba abierto
 	The dialog was closed before its file dialog answered	El cuadro de diálogo se cerró antes de que respondiera su cuadro de diálogo de archivos
@@ -4985,7 +4985,7 @@ lighting	Light	Luz
 	Edge Intensity	Intensidad de bordes
 	Posterization	Posterización
 	Highlight Area	Área de iluminaciones
-@msg	the compressed file unpacks to more than Krasis Vector reads ({_1} MB of document, {_2} MB per image)	el archivo comprimido ocupa al descomprimirse más de lo que Krasis Vector lee ({_1} MB de documento, {_2} MB por imagen)
+@msg	the compressed file unpacks to more than Vulcanio Vector reads ({_1} MB of document, {_2} MB per image)	el archivo comprimido ocupa al descomprimirse más de lo que Vulcanio Vector lee ({_1} MB de documento, {_2} MB por imagen)
 @msg	the document is too large to save compressed ({0}): save it with Use Compression off	el documento es demasiado grande para guardarlo comprimido ({0}): guárdelo con Usar compresión desactivado
 @msg	the file stopped being read (please report this bug)	se dejó de leer el archivo (informe de este error)
 	Concentric Dividers:	Divisiones concéntricas:
@@ -5080,7 +5080,7 @@ effect	Regular	Regular
 	All shortcuts reset to defaults.	Se restablecieron todos los métodos abreviados a los valores predeterminados.
 	Imported. Press OK to keep the imported set.	Importado. Presiona Aceptar para conservar el conjunto importado.
 	⚠ {chord} was already used by {names} — it has been removed there.	Atención: {chord} ya estaba en uso por {names}; se quitó de allí.
-	Krasis Vector Defaults	Valores predeterminados de Krasis Vector
+	Vulcanio Vector Defaults	Valores predeterminados de Vulcanio Vector
 @plural	{n} shortcut is assigned more than once|{n} shortcuts are assigned more than once	{n} método abreviado está asignado más de una vez|{n} métodos abreviados están asignados más de una vez
 	Simulate prints overprints as Overprint Preview shows them; separations always keep them. A preset flattens transparency before printing (PostScript files always flatten it).	«Simular» imprime las sobreimpresiones tal como las muestra la vista previa de sobreimpresión; las separaciones siempre las conservan. Un preajuste acopla la transparencia antes de imprimir (los archivos PostScript siempre la acoplan).
 	Preserve	Conservar
@@ -5278,7 +5278,7 @@ file-filter	Print presets	Preajustes de impresión
 file-filter	Export presets	Ajustes de exportación
 file-filter	SVG Compressed	SVG comprimido
 file-filter	PDF-compatible .ai	.ai compatible con PDF
-file-filter	Krasis Vector Template	Plantilla de Krasis Vector
+file-filter	Vulcanio Vector Template	Plantilla de Vulcanio Vector
 file-filter	Templates	Plantillas
 diagnostics	render	renderizado
 diagnostics	ui	interfaz
@@ -5320,7 +5320,7 @@ mark-style	Japanese	Japonesas
 	High Fidelity Photo	Foto de alta fidelidad
 	Image Trace (Make and Expand)	Calco de imagen (crear y expandir)
 	Joins:	Uniones:
-	Keeps the document editable: Krasis Vector reopens the PDF with nothing lost. For files you'll edit again.	Mantiene el documento editable: Krasis Vector vuelve a abrir el PDF sin perder nada. Para archivos que volverás a editar.
+	Keeps the document editable: Vulcanio Vector reopens the PDF with nothing lost. For files you'll edit again.	Mantiene el documento editable: Vulcanio Vector vuelve a abrir el PDF sin perder nada. Para archivos que volverás a editar.
 	Lab Spot Colors	Tintas planas Lab
 	Lasso	Lazo
 	Length:	Longitud:
@@ -5360,9 +5360,9 @@ mark-style	Japanese	Japonesas
 	Touch Type	Retocar texto
 	UTF-16 (Unicode)	UTF-16 (Unicode)
 	Variation	Variación
-	Krasis Vector Default	Predeterminado de Krasis Vector
-	Krasis Vector Generic CMYK (SWOP-like)	CMYK genérico de Krasis Vector (similar a SWOP)
-	Krasis Vector Swatches (.vcswatches)	Muestras de Krasis Vector (.vcswatches)
+	Vulcanio Vector Default	Predeterminado de Vulcanio Vector
+	Vulcanio Vector Generic CMYK (SWOP-like)	CMYK genérico de Vulcanio Vector (similar a SWOP)
+	Vulcanio Vector Swatches (.vcswatches)	Muestras de Vulcanio Vector (.vcswatches)
 	Vertical Area Type	Texto de área vertical
 	Vertical Type	Texto vertical
 	Vertical Type on a Path	Texto vertical en trazado
@@ -6232,7 +6232,7 @@ breakText	Glyphs	Glifos
 	Malayalam	Malayálam
 	Odia	Oriya
 	Urdu	Urdu
-	Krasis Vector {release} and later (version {n})	Krasis Vector {release} y posteriores (versión {n})
+	Vulcanio Vector {release} and later (version {n})	Vulcanio Vector {release} y posteriores (versión {n})
 # Document Tools add-on: Export All Open Documents (#4920).
 	Export All Open Documents as PDF	Exportar todos los documentos abiertos como PDF
 	Export All Open Documents as SVG	Exportar todos los documentos abiertos como SVG

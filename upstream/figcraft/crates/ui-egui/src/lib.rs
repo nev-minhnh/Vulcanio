@@ -1,11 +1,11 @@
-//! The Krasis Interface egui frontend.
+//! The Vulcanio Interface egui frontend.
 //!
 //! A thin shell over [`figcraft_engine::Session`]: panels read engine state and act by running
 //! commands; the canvas forwards pointer events to the engine's tools and draws overlays. Nothing
 //! below this crate knows about egui, so the frontend can be replaced.
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 
-/// Krasis Interface as craft-update knows it, with its 128 px icon and accent colour: the update
+/// Vulcanio Interface as craft-update knows it, with its 128 px icon and accent colour: the update
 /// prompt shows both, and an AppImage's menu entry gets the icon.
 #[cfg(not(target_arch = "wasm32"))]
 pub const UPDATE_APP: craft_update::app::App = craft_update::app::App {
@@ -578,7 +578,7 @@ pub struct UiState {
     /// Dev Mode: annotations on the canvas and the ready-for-dev list.
     pub dev: dev_mode::DevUi,
 
-    /// What Krasis Interface last put on the system clipboard: when the clipboard still holds it, a paste
+    /// What Vulcanio Interface last put on the system clipboard: when the clipboard still holds it, a paste
     /// uses our copied layers; anything else there (an image, SVG, text) came from another app.
     /// `None` also means a programmatic copy changed the engine clipboard without writing the OS
     /// clipboard, so the system text is no longer known to be ours.
@@ -758,7 +758,7 @@ pub(crate) struct PendingAck {
     pub(crate) reply: ControlReply,
 }
 
-/// The whole Krasis Interface UI.
+/// The whole Vulcanio Interface UI.
 pub struct FigApp {
     pub session: Session,
     pub ui: UiState,

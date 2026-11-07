@@ -216,7 +216,7 @@ impl Default for IdentityPlate {
     fn default() -> Self {
         IdentityPlate {
             enabled: false,
-            text: "Krasis Library".into(),
+            text: "Vulcanio Library".into(),
             image: String::new(),
             size: 0.05,
             color: [255, 255, 255],

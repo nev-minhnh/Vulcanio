@@ -92,7 +92,7 @@ mod native {
     /// passes for a complete one.
     pub fn dwg_to_dxf_noted(bytes: &[u8], limits: Limits) -> Result<(Vec<u8>, Vec<String>), String> {
         if bytes.len() > limits.max_dwg_bytes {
-            return Err(format!("DWG: the file is {}, larger than the {} Krasis CAD opens", mb(bytes.len() as u64), mb(limits.max_dwg_bytes as u64)));
+            return Err(format!("DWG: the file is {}, larger than the {} Vulcanio CAD opens", mb(bytes.len() as u64), mb(limits.max_dwg_bytes as u64)));
         }
         let outcome = std::panic::catch_unwind(|| {
             acadrust::DwgReader::from_stream_with_options(Cursor::new(bytes), acadrust::DwgReadOptions::failsafe()).read_with_stats()
@@ -954,7 +954,7 @@ mod native {
         // runs inside `catch_unwind` so a decode failure is reported rather than crashing.
         if dxf.len() > Limits::DEFAULT.max_dxf_bytes {
             return Err(format!(
-                "DXF: the input is {}, larger than the {} Krasis CAD converts to DWG",
+                "DXF: the input is {}, larger than the {} Vulcanio CAD converts to DWG",
                 mb(dxf.len() as u64),
                 mb(Limits::DEFAULT.max_dxf_bytes as u64)
             ));
@@ -963,7 +963,7 @@ mod native {
         let data = match kept.and_then(|k| declare_version(dxf, k)) {
             Some(d) if d.len() > Limits::DEFAULT.max_dxf_bytes => {
                 return Err(format!(
-                    "DXF: the input is {} as UTF-8, larger than the {} Krasis CAD converts to DWG",
+                    "DXF: the input is {} as UTF-8, larger than the {} Vulcanio CAD converts to DWG",
                     mb(d.len() as u64),
                     mb(Limits::DEFAULT.max_dxf_bytes as u64)
                 ));

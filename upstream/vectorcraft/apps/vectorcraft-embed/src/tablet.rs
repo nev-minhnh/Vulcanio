@@ -29,8 +29,8 @@
 //! The reader starts only for a window on X11. On native Wayland, `DISPLAY` names an XWayland
 //! that receives none of the window's input.
 //!
-//! The mapping and the reader come from Krasis Photo's `crates/tablet` (`xi.rs` and `x11.rs`).
-//! Krasis Photo maps the rotation to 0..360° and reads an axis a pen lacks as 0; here the middle of
+//! The mapping and the reader come from Vulcanio Photo's `crates/tablet` (`xi.rs` and `x11.rs`).
+//! Vulcanio Photo maps the rotation to 0..360° and reads an axis a pen lacks as 0; here the middle of
 //! the rotation's range is 0°, and an axis a pen lacks reads nothing.
 #![cfg_attr(not(target_os = "linux"), allow(dead_code))]
 

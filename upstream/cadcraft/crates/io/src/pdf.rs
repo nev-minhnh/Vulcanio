@@ -439,8 +439,8 @@ fn write_pdf(d: &Drawing, items: &[(Space, PdfOptions)], o: &PdfOptions, text_as
         let links = all_links(d, o);
         let title = if o.title.is_empty() { items.first().map(|(s, _)| sheet_name(s)).unwrap_or_default() } else { o.title.clone() };
         let metadata = Metadata {
-            creator: "Krasis CAD".into(),
-            producer: "Krasis CAD".into(),
+            creator: "Vulcanio CAD".into(),
+            producer: "Vulcanio CAD".into(),
             title: Some(title.chars().take(MAX_TEXT).collect()),
             ..Metadata::default()
         };

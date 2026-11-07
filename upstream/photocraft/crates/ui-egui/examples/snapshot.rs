@@ -1,4 +1,4 @@
-//! Render the full Krasis Photo UI offscreen (no window, no focus stealing) and save a PNG.
+//! Render the full Vulcanio Photo UI offscreen (no window, no focus stealing) and save a PNG.
 //!
 //! ```sh
 //! cargo run --release -p photocraft-ui-egui --example snapshot -- \

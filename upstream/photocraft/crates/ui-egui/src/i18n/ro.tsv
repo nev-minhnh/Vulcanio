@@ -10,7 +10,7 @@
 # Romanian computing and photo-editing vocabulary (strat, pensulă, selecție, pânză/canvas ...). No
 # proprietary localisation resource, string table or product UI was consulted or copied; add
 # entries the same way.
-# Product and technology names (Krasis Photo, Krasis, OpenType, CMYK, Lab ...) stay in Latin
+# Product and technology names (Vulcanio Photo, Vulcanio, OpenType, CMYK, Lab ...) stay in Latin
 # letters; the trailing "…" of dialog commands is kept.
 # Machine-translated with Claude (Anthropic) for @tronicum; not yet reviewed by a native speaker.
 # Layer Mask Display Options (the layer mask rubylith's colour and opacity)
@@ -843,11 +843,11 @@
 	Timeline	Cronologie
 	Tool Presets	Presetări instrument
 	Tools	Instrumente
-	About Krasis Photo	Despre Krasis Photo
-	Krasis Photo Website	Site-ul Krasis Photo
-	Krasis Photo on GitHub	Krasis Photo pe GitHub
-	Krasis Website	Site-ul Krasis
-	Join the Krasis Discord…	Alăturați-vă Discord-ului Krasis…
+	About Vulcanio Photo	Despre Vulcanio Photo
+	Vulcanio Photo Website	Site-ul Vulcanio Photo
+	Vulcanio Photo on GitHub	Vulcanio Photo pe GitHub
+	Vulcanio Website	Site-ul Vulcanio
+	Join the Vulcanio Discord…	Alăturați-vă Discord-ului Vulcanio…
 	Report an Issue…	Raportare problemă…
 	WIA Support…	Suport WIA…
 	Apply	Aplicare
@@ -902,7 +902,7 @@
 	All Caps	Toate majuscule
 	All Slices	Toate feliile
 	All User Slices	Toate feliile utilizatorului
-	All shortcuts reset to Krasis Photo defaults.	Toate comenzile rapide au fost resetate la valorile implicite ale Krasis Photo.
+	All shortcuts reset to Vulcanio Photo defaults.	Toate comenzile rapide au fost resetate la valorile implicite ale Vulcanio Photo.
 	Alt	Alt
 	Always use pressure for opacity	Utilizare permanentă a presiunii pentru opacitate
 	Always use pressure for size	Utilizare permanentă a presiunii pentru dimensiune
@@ -1152,8 +1152,8 @@
 	Drop an image or PSD anywhere to open it.	Plasați o imagine sau un PSD oriunde pentru a-l deschide.
 	Native file drag-and-drop is unavailable	Tragerea și plasarea nativă a fișierelor nu este disponibilă pe Wayland
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Tragerea și plasarea nativă a fișierelor nu este încă suportată pe Wayland. Utilizați Fișier › Deschidere, sau copiați imaginea din gestionarul de fișiere și inserați-o cu {paste}.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Pentru a plasa fișiere, porniți Krasis Photo sub XWayland: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Sau setați Preferințe › Performanță › Server de afișare Linux la X11: Krasis Photo va porni mereu sub XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Pentru a plasa fișiere, porniți Vulcanio Photo sub XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Sau setați Preferințe › Performanță › Server de afișare Linux la X11: Vulcanio Photo va porni mereu sub XWayland.
 	Edit › Paste	Editare › Inserare
 	Duplicate Layers…	Duplicare straturi…
 	Duplicate style	Duplicare stil
@@ -1403,9 +1403,9 @@
 	Perspective Warp is not active	Deformarea de perspectivă nu este activă
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Deformare de perspectivă: desenați planuri de-a lungul perspectivei imaginii, apoi comutați la Deformare
 	Photo Filter	Filtru foto
-	Krasis Photo	Krasis Photo
-	Krasis Photo Manages Colors	Krasis Photo gestionează culorile
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — un editor de imagini nativ, open-source, scris în Rust.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo Manages Colors	Vulcanio Photo gestionează culorile
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — un editor de imagini nativ, open-source, scris în Rust.
 	Pin Depth:	Profunzime pin:
 	Pixel Length:	Lungime în pixeli:
 	Pixels/Centimeter	Pixeli/centimetru
@@ -1481,11 +1481,11 @@
 	Import Shortcuts…	Import comenzi rapide…
 	Load a keyboard shortcut set saved as .kys	Încărcare un set de comenzi rapide de la tastatură salvat ca .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	S-au importat {n} comenzi rapide din {file}. Faceți clic pe OK pentru a le păstra.
-	{n} commands are not in Krasis Photo.	{n} comenzi nu există în Krasis Photo.
+	{n} commands are not in Vulcanio Photo.	{n} comenzi nu există în Vulcanio Photo.
 	Keyboard shortcuts imported	Comenzi rapide de la tastatură importate
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Setul dvs. de comenzi rapide de la tastatură {set} este în uz aici: {n} comenzi rapide diferă de valorile implicite. Editare › Comenzi rapide de la tastatură le afișează; Resetare tot la valorile implicite anulează acest lucru.
 	Import keyboard shortcuts?	Importați comenzile rapide de la tastatură?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo a găsit pe acest computer setul dvs. de comenzi rapide de la tastatură {set} dintr-un alt editor de imagini: {n} dintre comenzile sale rapide diferă de cele ale Krasis Photo. Doriți să îl importați?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo a găsit pe acest computer setul dvs. de comenzi rapide de la tastatură {set} dintr-un alt editor de imagini: {n} dintre comenzile sale rapide diferă de cele ale Vulcanio Photo. Doriți să îl importați?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Editare › Comenzi rapide de la tastatură › Resetare tot la valorile implicite anulează un import.
 	Don't Import	Nu importați
 	The keyboard shortcut set was not imported: {error}	Setul de comenzi rapide de la tastatură nu a fost importat: {error}
@@ -1674,7 +1674,7 @@
 	Apple Watch 45mm	Apple Watch 45mm
 	Aqua	Aqua
 	Art & Illustration	Artă și ilustrație
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Background Eraser Tool	Instrument Radieră de fundal
 	Bevel & Emboss	Relief și teșire
 	Blend Mode	Mod de amestecare
@@ -1711,7 +1711,7 @@
 	Current Tool	Instrument curent
 	Custom Shape Tool	Instrument Formă personalizată
 	Cyans	Cianuri
-	Default Krasis Photo Size	Dimensiune implicită Krasis Photo
+	Default Vulcanio Photo Size	Dimensiune implicită Vulcanio Photo
 	Delete Workspace	Ștergere spațiu de lucru
 	Diamond	Diamant
 	Dimensions:	Dimensiuni:
@@ -1822,7 +1822,7 @@
 	Pen Tool	Instrument Pană
 	Convert Point Tool	Instrument Conversie punct
 	Photo	Fotografie
-	Krasis Photo website	Site-ul web Krasis Photo
+	Vulcanio Photo website	Site-ul web Vulcanio Photo
 	Picas	Pica
 	Pillow Emboss	Relief tip pernă
 	Pixel Replacement	Înlocuire pixeli
@@ -2154,7 +2154,7 @@
 	System Info	Informații sistem
 	More panels	Mai multe panouri
 	More documents	Mai multe documente
-	These settings aren't available in Krasis Photo yet.	Aceste setări nu sunt încă disponibile în Krasis Photo.
+	These settings aren't available in Vulcanio Photo yet.	Aceste setări nu sunt încă disponibile în Vulcanio Photo.
 	Graphics	Grafică
 	Reset GPU Backend	Resetare backend GPU
 	Applies at next launch.	Se aplică la următoarea pornire.
@@ -2367,7 +2367,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Automat utilizează accelerarea GPU atunci când este disponibilă și trece la randare pe CPU în caz de erori.
 	Switched to CPU rendering	S-a comutat la randare pe CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Accelerarea GPU nu a putut continua. Documentele dvs. sunt neschimbate.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo compune imaginile pe CPU. Fereastra poate utiliza totuși adaptorul grafic.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo compune imaginile pe CPU. Fereastra poate utiliza totuși adaptorul grafic.
 	Retry GPU requires a restart. Save your work first.	Reîncercarea GPU necesită o repornire. Salvați mai întâi munca dvs.
 	Retry GPU tries the graphics processor again now.	Reîncercarea GPU încearcă din nou procesorul grafic acum.
 	GPU acceleration resumed.	Accelerarea GPU a fost reluată.
@@ -2587,7 +2587,7 @@ fontWeight	Italic	Cursivă
 	Color to Alpha…	Culoare la alfa…
 	Transparency Threshold	Prag transparență
 	Opacity Threshold	Prag opacitate
-	Krasis Photo — Screen Color Picker	Krasis Photo — Selector de culoare de pe ecran
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Selector de culoare de pe ecran
 	Rasterize svg groups deeper than	Rasterizare grupuri SVG mai profunde decât
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 dezactivează acest prag; grupurile SVG imbricate la mai mult de 100 de niveluri sunt întotdeauna rasterizate.
 	Rule of Thirds	Regula terților
@@ -3376,7 +3376,7 @@ layerLabel	No Color	Fără culoare
 	Restart Required	Este necesară repornirea
 	Restart	Repornire
 	Quit	Ieșire
-	Quit Krasis Photo	Ieșire din Krasis Photo
+	Quit Vulcanio Photo	Ieșire din Vulcanio Photo
 	Close Window	Închidere fereastră
 	New Window	Fereastră nouă
 	Open Image	Deschidere imagine
@@ -3572,7 +3572,7 @@ layerLabel	No Color	Fără culoare
 	Custom Pixel Aspect Ratio	Raport de aspect pixel personalizat
 	32-bit Preview Options	Opțiuni previzualizare 32 biți
 	New Guide	Ghidaj nou
-	Join the Krasis Discord	Alăturați-vă Discord-ului Krasis
+	Join the Vulcanio Discord	Alăturați-vă Discord-ului Vulcanio
 	Report an Issue	Raportare problemă
 	Load Files into Stack	Încărcare fișiere în stivă
 	Statistics	Statistici
@@ -3869,7 +3869,7 @@ layerLabel	No Color	Fără culoare
 	Mezzotint	Mezzotintă
 	Mosaic	Mozaic
 	Motion Blur	Neclaritate mișcare
-	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Krasis Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Tragerea și plasarea nativă a fișierelor nu este încă suportată pe Wayland. Utilizați Fișier › Deschidere, sau porniți Krasis Photo prin XWayland cu `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Vulcanio Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Tragerea și plasarea nativă a fișierelor nu este încă suportată pe Wayland. Utilizați Fișier › Deschidere, sau porniți Vulcanio Photo prin XWayland cu `WAYLAND_DISPLAY= photocraft`.
 	Neon Glow	Strălucire neon
 	New Guide Layout	Aranjament nou de ghidaje
 	New Video Layer from File	Strat video nou din fișier
@@ -4041,9 +4041,9 @@ layerLabel	No Color	Fără culoare
 	Saved {path}; image assets: {n} in {dir}	S-a salvat {path}; resurse imagine: {n} în {dir}
 	{message} (notes: {n}; {warning})	{message} (note: {n}; {warning})
 	Preferences can't be saved	Preferințele nu pot fi salvate
-	Krasis Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Krasis Photo va continua să încerce; până când o salvare are succes, modificările preferințelor se vor pierde la închidere.
+	Vulcanio Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Vulcanio Photo va continua să încerce; până când o salvare are succes, modificările preferințelor se vor pierde la închidere.
 	GPU retry scheduled	Reîncercare GPU programată
-	Save your work and restart Krasis Photo to retry GPU acceleration. CPU rendering remains active for this session.	Salvați-vă munca și reporniți Krasis Photo pentru a reîncerca accelerarea GPU. Randarea pe CPU rămâne activă pentru această sesiune.
+	Save your work and restart Vulcanio Photo to retry GPU acceleration. CPU rendering remains active for this session.	Salvați-vă munca și reporniți Vulcanio Photo pentru a reîncerca accelerarea GPU. Randarea pe CPU rămâne activă pentru această sesiune.
 	GPU device was lost; using the CPU renderer.	Dispozitivul GPU s-a pierdut; se va folosi randorul CPU.
 	GPU error; using the CPU renderer.	Eroare GPU; se va folosi randorul CPU.
 	Couldn't open {name}: {error}	Nu s-a putut deschide {name}: {error}
@@ -4103,7 +4103,7 @@ layerLabel	No Color	Fără culoare
 navigator	Zoom	Zoom
 	Apply {option}: {state}	Aplicare {option}: {state}
 	This adjustment ({key}) is kept as imported and can't be edited yet.	Acest ajustaj ({key}) este conservat ca a fost importat și nu poate fi editat încă.
-	Join the Krasis Discord ({url})	Alăturare la Discord-ul Krasis ({url})
+	Join the Vulcanio Discord ({url})	Alăturare la Discord-ul Vulcanio ({url})
 	{index} of {total}	{index} din {total}
 	{shortcut} assigned.	{shortcut} asignat.
 	{shortcut} is already in use by {commands} and will be removed from it when you click OK.	{shortcut} este deja folosit de {commands} și va fi eliminat de acolo când faceți clic pe OK.
@@ -4155,7 +4155,7 @@ navigator	Zoom	Zoom
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	S-a încărcat {n} acțiune din {file}|S-au încărcat {n} acțiuni din {file}|S-au încărcat {n} de acțiuni din {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} pas nu are încă echivalent în Krasis Photo|{n} pași nu au încă echivalent în Krasis Photo|{n} de pași nu au încă echivalent în Krasis Photo
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} pas nu are încă echivalent în Vulcanio Photo|{n} pași nu au încă echivalent în Vulcanio Photo|{n} de pași nu au încă echivalent în Vulcanio Photo
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	S-a salvat {n} acțiune în {file}|S-au salvat {n} acțiuni în {file}|S-au salvat {n} de acțiuni în {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	{n} pas fără echivalent în Photoshop a fost omis|{n} pași fără echivalent în Photoshop au fost omiși|{n} de pași fără echivalent în Photoshop au fost omiși
 	Starting serial	Număr de serie inițial
@@ -4216,17 +4216,17 @@ navigator	Zoom	Zoom
 	Kept {name}: written by another application	S-a păstrat {name}: a fost scris de altă aplicație
 	Shadow Tint	Tentă umbre
 	Check for Updates…	Căutare actualizări…
-	Krasis Photo Updates	Actualizări Krasis Photo
+	Vulcanio Photo Updates	Actualizări Vulcanio Photo
 	Checking for updates…	Se caută actualizări…
 	Open the release page to choose an installer for your system.	Deschideți pagina versiunii pentru a alege un instalator pentru sistemul dvs.
 	Open Download Page	Deschidere pagină de descărcare
-	Krasis Photo is up to date.	Krasis Photo este actualizat.
+	Vulcanio Photo is up to date.	Vulcanio Photo este actualizat.
 	Could not check for updates.	Nu s-au putut căuta actualizări.
 	Updates have not been checked yet.	Actualizările nu au fost încă căutate.
 	Check Again	Căutare din nou
 	Automatically Check for Updates	Căutare automată a actualizărilor
 	Installed version: {version}	Versiune instalată: {version}
-	Krasis Photo {version} is available.	Krasis Photo {version} este disponibil.
+	Vulcanio Photo {version} is available.	Vulcanio Photo {version} este disponibil.
 	Paints from the History panel's source state	Pictează pe baza stării sursă din panoul Istoric
 	Sets the source for the history brush	Stabilește sursa pentru pensula istoric
 	Highlight Mode	Mod luminile
@@ -4254,12 +4254,12 @@ navigator	Zoom	Zoom
 	Bicubic Smoother	Bicubică mai netedă
 	Bicubic Sharper	Bicubică mai clară
 	Pasting from other apps is unavailable	Inserarea din alte aplicații nu este disponibilă
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo nu poate accesa clipboard-ul sistemului în această sesiune. Pe Wayland, un sandbox Flatpak ascunde protocolul prin care se citesc imaginile din alte aplicații.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Pentru a insera din alte aplicații, porniți Krasis Photo sub XWayland: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Nimic de inserat: Krasis Photo nu poate citi aici clipboard-ul sistemului
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo nu poate accesa clipboard-ul sistemului în această sesiune. Pe Wayland, un sandbox Flatpak ascunde protocolul prin care se citesc imaginile din alte aplicații.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Pentru a insera din alte aplicații, porniți Vulcanio Photo sub XWayland: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Nimic de inserat: Vulcanio Photo nu poate citi aici clipboard-ul sistemului
 	Delete this set	Ștergere acest set
 	New Set…	Set nou…
-	Krasis Photo Defaults	Valori implicite Krasis Photo
+	Vulcanio Photo Defaults	Valori implicite Vulcanio Photo
 	Save a list of these shortcuts as a web page	Salvare o listă a acestor comenzi rapide ca pagină web
 	Save the changes to this set	Salvare modificările în acest set
 	Save these shortcuts as a .kys file	Salvare aceste comenzi rapide ca fișier .kys

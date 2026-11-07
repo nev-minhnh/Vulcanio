@@ -1,4 +1,4 @@
-# Build Krasis for Windows 11 and, if Inno Setup is installed, its installer.
+# Build Vulcanio for Windows 11 and, if Inno Setup is installed, its installer.
 #
 #   powershell -ExecutionPolicy Bypass -File packaging\windows\build.ps1 [-WithFonts]
 #
@@ -18,10 +18,10 @@ if ($WithFonts) {
     $env:CRAFT_FONTS_DIR = $fonts
 }
 # A release build of six large apps: give the linker room and use every core.
-cargo build --release -p krasis
+cargo build --release -p vulcanio
 if ($LASTEXITCODE -ne 0) { throw "cargo build failed" }
 
-$exe = Join-Path $root "target\release\krasis.exe"
+$exe = Join-Path $root "target\release\vulcanio.exe"
 Write-Host "Built $exe" -ForegroundColor Green
 
 $iscc = @(
@@ -30,7 +30,7 @@ $iscc = @(
     "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe"
 ) | Where-Object { Test-Path $_ } | Select-Object -First 1
 if ($iscc) {
-    & $iscc (Join-Path $PSScriptRoot "krasis.iss")
+    & $iscc (Join-Path $PSScriptRoot "vulcanio.iss")
     if ($LASTEXITCODE -ne 0) { throw "Inno Setup failed" }
     Write-Host "Installer in $(Join-Path $root 'dist')" -ForegroundColor Green
 } else {

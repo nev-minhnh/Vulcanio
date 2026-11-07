@@ -257,7 +257,7 @@ impl Server {
                         "resources": {"subscribe": false, "listChanged": false},
                         "prompts": {"listChanged": false},
                     },
-                    "serverInfo": {"name": "figcraft", "title": "Krasis Interface", "version": env!("CARGO_PKG_VERSION")},
+                    "serverInfo": {"name": "figcraft", "title": "Vulcanio Interface", "version": env!("CARGO_PKG_VERSION")},
                     "instructions": format!("{INSTRUCTIONS} Backend: {}.{}", self.backend.describe(), self.roots_note()),
                 }))
             }

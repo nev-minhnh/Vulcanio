@@ -10,11 +10,11 @@ use std::sync::mpsc::Receiver;
 use std::time::{Duration, Instant};
 
 /// Validate the source using a private preview, then expose only an original-format copy.
-/// `regenerate_ai` is true only when the interactive editor is Krasis Vector: other editors
+/// `regenerate_ai` is true only when the interactive editor is Vulcanio Vector: other editors
 /// (Illustrator, a chosen program) get the original AI bytes.
 pub(super) fn prepare(editor: &Path, source: &ExternalVectorSource, stop: &Receiver<()>, regenerate_ai: bool) -> Result<(OwnedSvg, Vec<u8>), String> {
     render_preview(editor, source, stop)?;
-    // Foreign AI opens read-only for ordinary Save in Krasis Vector. Regenerate only this
+    // Foreign AI opens read-only for ordinary Save in Vulcanio Vector. Regenerate only this
     // private AI working copy with editable AI data; never weaken that source-file protection.
     // Comparing the watcher with this initial copy prevents an open-only/no-op replacement.
     let regenerate = regenerate_ai && source.extension == "ai";
@@ -51,12 +51,12 @@ fn run_export(editor: &Path, source: &ExternalVectorSource, stop: &Receiver<()>,
     let owned = OwnedSvg::create_format(&source.bytes, format)?;
     let cli_name = if cfg!(windows) { "vectorcraft-cli.exe" } else { "vectorcraft-cli" };
     let cli = editor.parent().ok_or("The editor has no installation directory")?.join(cli_name);
-    // Selecting an editor explicitly also selects its adjacent Krasis Vector CLI; PATH and the
+    // Selecting an editor explicitly also selects its adjacent Vulcanio Vector CLI; PATH and the
     // embedded file name never participate in executable discovery.
     let metadata =
-        std::fs::symlink_metadata(&cli).map_err(|_| "Embedded AI/PDF/EPS editing needs vectorcraft-cli next to the selected Krasis Vector executable")?;
+        std::fs::symlink_metadata(&cli).map_err(|_| "Embedded AI/PDF/EPS editing needs vectorcraft-cli next to the selected Vulcanio Vector executable")?;
     if !metadata.is_file() || metadata.file_type().is_symlink() {
-        return Err("Krasis Vector CLI must be a regular file".into());
+        return Err("Vulcanio Vector CLI must be a regular file".into());
     }
     let input = owned.root.join(format!("Source.{}", source.extension));
     let mut file = std::fs::OpenOptions::new().write(true).create_new(true).open(&input).map_err(|e| format!("Cannot create vector input: {e}"))?;
@@ -83,9 +83,9 @@ fn run_export(editor: &Path, source: &ExternalVectorSource, stop: &Receiver<()>,
         .stdout(Stdio::from(responses_output))
         .stderr(Stdio::null())
         .spawn()
-        .map_err(|e| format!("Cannot start Krasis Vector conversion: {e}"))?;
+        .map_err(|e| format!("Cannot start Vulcanio Vector conversion: {e}"))?;
     let result = (|| {
-        let mut stdin = child.stdin.take().ok_or("Krasis Vector conversion input is unavailable")?;
+        let mut stdin = child.stdin.take().ok_or("Vulcanio Vector conversion input is unavailable")?;
         for (id, command, params) in commands {
             let request = serde_json::json!({"jsonrpc":"2.0","id":id,"method":"tools/call","params":{"name":"run_command","arguments":{"command":command,"params":params}}});
             writeln!(stdin, "{request}").map_err(|e| format!("Cannot send vector conversion request: {e}"))?;
@@ -98,12 +98,12 @@ fn run_export(editor: &Path, source: &ExternalVectorSource, stop: &Receiver<()>,
             }
             if let Some(status) = child.try_wait().map_err(|e| format!("Cannot wait for vector conversion: {e}"))? {
                 if !status.success() {
-                    return Err("Krasis Vector could not convert the embedded vector".into());
+                    return Err("Vulcanio Vector could not convert the embedded vector".into());
                 }
                 break;
             }
             if Instant::now() >= deadline {
-                return Err("Krasis Vector conversion timed out".into());
+                return Err("Vulcanio Vector conversion timed out".into());
             }
             std::thread::sleep(Duration::from_millis(25));
         }
@@ -114,7 +114,7 @@ fn run_export(editor: &Path, source: &ExternalVectorSource, stop: &Receiver<()>,
         validate_responses(&responses)?;
         let converted = owned.read(&owned.stamp()?)?;
         if format == "ai" && !converted.starts_with(b"%PDF-") {
-            return Err("Krasis Vector did not save a PDF-compatible AI working copy".into());
+            return Err("Vulcanio Vector did not save a PDF-compatible AI working copy".into());
         }
         Ok(converted)
     })();
@@ -150,7 +150,7 @@ fn source_svg(bytes: &[u8], size: Option<(f64, f64)>) -> Result<Vec<u8>, String>
     let doc = roxmltree::Document::parse(text).map_err(|e| format!("Invalid converted SVG: {e}"))?;
     let root = doc.root_element();
     if root.tag_name().name() != "svg" {
-        return Err("Krasis Vector did not return SVG".into());
+        return Err("Vulcanio Vector did not return SVG".into());
     }
     let Some((w, h)) = size else {
         return Ok(bytes.to_vec());
@@ -179,14 +179,14 @@ fn source_svg(bytes: &[u8], size: Option<(f64, f64)>) -> Result<Vec<u8>, String>
 /// Require successful replies for both opening the source and exporting the SVG.
 fn validate_responses(text: &str) -> Result<(), String> {
     if text.len() > 1024 * 1024 {
-        return Err("Krasis Vector conversion responses exceeded the limit".into());
+        return Err("Vulcanio Vector conversion responses exceeded the limit".into());
     }
     let replies: Vec<serde_json::Value> =
-        text.lines().map(serde_json::from_str).collect::<Result<_, _>>().map_err(|_| "Invalid Krasis Vector conversion response")?;
+        text.lines().map(serde_json::from_str).collect::<Result<_, _>>().map_err(|_| "Invalid Vulcanio Vector conversion response")?;
     for id in [1, 2] {
-        let reply = replies.iter().find(|r| r.get("id").and_then(serde_json::Value::as_u64) == Some(id)).ok_or("Missing Krasis Vector conversion response")?;
+        let reply = replies.iter().find(|r| r.get("id").and_then(serde_json::Value::as_u64) == Some(id)).ok_or("Missing Vulcanio Vector conversion response")?;
         if reply.get("error").is_some() || reply.get("result").and_then(|r| r.get("isError")).and_then(serde_json::Value::as_bool) != Some(false) {
-            return Err("Krasis Vector could not open or export the embedded vector; original contents were retained".into());
+            return Err("Vulcanio Vector could not open or export the embedded vector; original contents were retained".into());
         }
     }
     Ok(())
@@ -269,8 +269,8 @@ done
 printf '{"id":1,"result":{"isError":false}}\n{"id":2,"result":{"isError":false}}\n'
 "#;
 
-    /// Illustrator or another chosen editor gets the original AI; only Krasis Vector's own working
-    /// copy is regenerated (Krasis Vector opens a foreign AI read-only).
+    /// Illustrator or another chosen editor gets the original AI; only Vulcanio Vector's own working
+    /// copy is regenerated (Vulcanio Vector opens a foreign AI read-only).
     #[cfg(unix)]
     #[test]
     fn ai_working_copy_is_regenerated_only_for_vectorcraft() {
@@ -318,7 +318,7 @@ mod live_vectorcraft_tests {
 
     /// Opt-in executable test uses only our own PostScript, never user artwork or Adobe assets.
     #[test]
-    #[ignore = "set VECTORCRAFT_TEST_EDITOR to a local Krasis Vector executable"]
+    #[ignore = "set VECTORCRAFT_TEST_EDITOR to a local Vulcanio Vector executable"]
     fn real_vectorcraft_converts_eps_and_rejects_failed_open_without_blank_replacement() {
         let editor = std::env::var_os("VECTORCRAFT_TEST_EDITOR").expect("VECTORCRAFT_TEST_EDITOR");
         let editor = Path::new(&editor);

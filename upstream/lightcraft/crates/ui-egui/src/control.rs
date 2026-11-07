@@ -546,7 +546,7 @@ pub fn handle(app: &mut LightcraftApp, ctx: &egui::Context, req: &ControlRequest
 /// Shown when an export has nowhere to go (no folder typed or chosen, and no home folder to default to).
 pub const NO_EXPORT_FOLDER: &str = "Choose an export folder first.";
 
-/// Default export folder: `~/Pictures/Krasis Library Exports` (`%USERPROFILE%\Pictures\Krasis Library Exports`
+/// Default export folder: `~/Pictures/Vulcanio Library Exports` (`%USERPROFILE%\Pictures\Vulcanio Library Exports`
 /// on Windows, where `HOME` usually isn't set). Empty when no home folder is known.
 pub fn default_export_dir() -> String {
     let home = if cfg!(windows) { std::env::var_os("USERPROFILE").or_else(|| std::env::var_os("HOME")) } else { std::env::var_os("HOME") };

@@ -1,6 +1,6 @@
 //! Explicit desktop SVG editing. Clipboard/source data never supplies a command or program path.
 //!
-//! The owned temporary SVG is watched off the UI thread. Closing the Krasis Photo session stops
+//! The owned temporary SVG is watched off the UI thread. Closing the Vulcanio Photo session stops
 //! watching and removes its temporary directory; it does not terminate the external editor.
 
 use photocraft_ui_egui::{ExternalSvgEditor, ExternalSvgSession, ExternalVectorSave};
@@ -39,11 +39,11 @@ mod native {
         let chosen_vectorcraft = matches!(&editor, ExternalSvgEditor::VectorCraft);
         let chosen_bundle = matches!(&editor, ExternalSvgEditor::Program(path) if cfg!(target_os = "macos") && Path::new(path).extension().is_some_and(|ext| ext.eq_ignore_ascii_case("app")) && Path::new(path).is_dir());
         let executable = if portal && source.extension == "svg" { None } else { Some(resolve(editor)?) };
-        // Only Krasis Vector's own working copy of an AI is regenerated (it opens foreign AI
+        // Only Vulcanio Vector's own working copy of an AI is regenerated (it opens foreign AI
         // read-only); Illustrator and other editors get the original bytes.
         let regenerate_ai = chosen_vectorcraft || executable.as_ref().is_some_and(|resolved| is_vectorcraft(resolved, chosen_bundle));
-        // Display conversion is always performed by Krasis Vector's CLI, even when the user
-        // chooses a different interactive editor. A Krasis Vector build with an adjacent CLI keeps
+        // Display conversion is always performed by Vulcanio Vector's CLI, even when the user
+        // chooses a different interactive editor. A Vulcanio Vector build with an adjacent CLI keeps
         // its matching CLI; for a macOS bundle that is the bundle's own `Contents/MacOS`.
         let converter = if source.extension == "svg" { None } else { Some(resolve_converter(executable.as_ref().map(|e| e.program.as_path()))?) };
         if source.bytes.is_empty() || source.bytes.len() > MAX_BYTES || !matches!(source.extension.as_str(), "svg" | "pdf" | "ai" | "eps") {
@@ -141,11 +141,11 @@ mod native {
         }
     }
 
-    /// Whether a chosen program is Krasis Vector: a macOS bundle `resolve_program` identified by
-    /// its bundle id (it then runs the executable directly), a known Krasis Vector installation,
-    /// or an executable named as Krasis Vector is (`vectorcraft`/`vectorcraft.exe`, an AppImage
+    /// Whether a chosen program is Vulcanio Vector: a macOS bundle `resolve_program` identified by
+    /// its bundle id (it then runs the executable directly), a known Vulcanio Vector installation,
+    /// or an executable named as Vulcanio Vector is (`vectorcraft`/`vectorcraft.exe`, an AppImage
     /// `vectorcraft-<version>-….AppImage`, the Flatpak launcher `ai.storyteller.vectorcraft`).
-    /// A neighbouring CLI alone doesn't make an editor Krasis Vector.
+    /// A neighbouring CLI alone doesn't make an editor Vulcanio Vector.
     fn is_vectorcraft(resolved: &Resolved, chosen_bundle: bool) -> bool {
         resolved.bundle.is_none()
             && (chosen_bundle
@@ -165,7 +165,7 @@ mod native {
 
     /// The executable whose adjacent `vectorcraft-cli` converts AI/PDF/EPS previews. A selected
     /// build that carries its own CLI keeps it (for a macOS bundle, `Contents/MacOS` of that same
-    /// bundle). Otherwise the first known Krasis Vector installation that has one is used; document
+    /// bundle). Otherwise the first known Vulcanio Vector installation that has one is used; document
     /// metadata never participates in discovery.
     fn resolve_converter(selected: Option<&Path>) -> Result<PathBuf, String> {
         if let Some(editor) = selected
@@ -176,10 +176,10 @@ mod native {
         vectorcraft_programs()
             .into_iter()
             .find(|program| has_adjacent_cli(program))
-            .ok_or_else(|| "AI/PDF/EPS editing also needs an installed Krasis Vector CLI to validate display previews".into())
+            .ok_or_else(|| "AI/PDF/EPS editing also needs an installed Vulcanio Vector CLI to validate display previews".into())
     }
 
-    /// A known Krasis Vector location: a bare executable, or a macOS application bundle.
+    /// A known Vulcanio Vector location: a bare executable, or a macOS application bundle.
     #[cfg(unix)]
     #[derive(Debug, PartialEq, Eq)]
     enum Install {
@@ -187,7 +187,7 @@ mod native {
         Bundle(PathBuf),
     }
 
-    /// Fixed Krasis Vector locations in search order. On macOS the standard application folders
+    /// Fixed Vulcanio Vector locations in search order. On macOS the standard application folders
     /// come first; the Unix install prefixes apply everywhere. Nothing is searched recursively.
     #[cfg(unix)]
     fn vectorcraft_installs(home: Option<&Path>, macos: bool) -> Vec<Install> {
@@ -209,7 +209,7 @@ mod native {
         installs
     }
 
-    /// Every valid known Krasis Vector executable, in search order.
+    /// Every valid known Vulcanio Vector executable, in search order.
     #[cfg(unix)]
     fn vectorcraft_programs() -> Vec<PathBuf> {
         let home = std::env::var_os("HOME").map(PathBuf::from);
@@ -217,7 +217,7 @@ mod native {
             .into_iter()
             .filter_map(|install| match install {
                 Install::Executable(path) => validate_executable(&path).ok(),
-                // Krasis Vector opens the files named on its command line and does not handle
+                // Vulcanio Vector opens the files named on its command line and does not handle
                 // macOS open-document events, so its bundle executable is run directly.
                 Install::Bundle(bundle) => bundle_executable(&bundle).ok().map(|(_, program)| program),
             })
@@ -233,7 +233,7 @@ mod native {
                 .into_iter()
                 .next()
                 .map(Resolved::direct)
-                .ok_or_else(|| format!("Krasis Vector was not found. Choose its executable with {OTHER_APPLICATION}")),
+                .ok_or_else(|| format!("Vulcanio Vector was not found. Choose its executable with {OTHER_APPLICATION}")),
             ExternalSvgEditor::Illustrator if cfg!(target_os = "macos") => newest_illustrator(Path::new("/Applications")),
             ExternalSvgEditor::Illustrator => Err(format!("Choose a local executable with {OTHER_APPLICATION}")),
         }
@@ -246,7 +246,7 @@ mod native {
     fn resolve_program(path: &Path, macos_bundles: bool) -> Result<Resolved, String> {
         if macos_bundles && path.extension().is_some_and(|ext| ext.eq_ignore_ascii_case("app")) && path.is_dir() {
             let (bundle, program, vectorcraft) = bundle_executable_and_identity(path)?;
-            // Unlike Cocoa editors, Krasis Vector consumes file arguments, not LaunchServices
+            // Unlike Cocoa editors, Vulcanio Vector consumes file arguments, not LaunchServices
             // open-document events. Identify the app by its bundle id, not the presence of a
             // CLI beside an unrelated user-selected editor. SVG editing needs no CLI at all.
             return Ok(if vectorcraft { Resolved::direct(program) } else { Resolved { program, bundle: Some(bundle) } });
@@ -303,7 +303,7 @@ mod native {
         bundle_executable_and_identity(bundle).map(|(bundle, program, _)| (bundle, program))
     }
 
-    /// Validate the bundle and identify Krasis Vector from its declared application identifier.
+    /// Validate the bundle and identify Vulcanio Vector from its declared application identifier.
     /// A neighbouring converter alone does not identify an arbitrary chosen editor.
     #[cfg(unix)]
     fn bundle_executable_and_identity(bundle: &Path) -> Result<(PathBuf, PathBuf, bool), String> {
@@ -429,7 +429,7 @@ mod native {
                 candidates
                     .into_iter()
                     .find_map(|path| validate_executable(&path).ok())
-                    .ok_or_else(|| format!("Krasis Vector was not found. Choose its executable with {OTHER_APPLICATION}"))
+                    .ok_or_else(|| format!("Vulcanio Vector was not found. Choose its executable with {OTHER_APPLICATION}"))
             }
             ExternalSvgEditor::Illustrator => {
                 let mut candidates = vec![];
@@ -461,7 +461,7 @@ mod native {
         resolve_editor(editor).map(Resolved::direct)
     }
 
-    /// The known Krasis Vector executable, if one is installed.
+    /// The known Vulcanio Vector executable, if one is installed.
     #[cfg(windows)]
     fn vectorcraft_programs() -> Vec<PathBuf> {
         resolve_editor(ExternalSvgEditor::VectorCraft).ok().into_iter().collect()
@@ -901,7 +901,7 @@ mod native {
     mod tests {
         use super::*;
 
-        /// Only Krasis Vector gets a regenerated AI working copy: Illustrator, another program or a
+        /// Only Vulcanio Vector gets a regenerated AI working copy: Illustrator, another program or a
         /// bundle opened through LaunchServices gets the original.
         #[test]
         fn only_vectorcraft_editors_get_a_regenerated_ai() {
@@ -913,7 +913,7 @@ mod native {
             assert!(is_vectorcraft(&program("ai.storyteller.vectorcraft"), false));
             assert!(!is_vectorcraft(&program(if cfg!(windows) { "vectorcraft-cli.exe" } else { "vectorcraft-cli" }), false));
             assert!(!is_vectorcraft(&program("uninstall-vectorcraft.exe"), false));
-            assert!(is_vectorcraft(&program("Renamed"), true), "a bundle identified as Krasis Vector runs directly");
+            assert!(is_vectorcraft(&program("Renamed"), true), "a bundle identified as Vulcanio Vector runs directly");
             let cocoa = Resolved { program: root.join("Editor"), bundle: Some(root.join("Editor.app")) };
             assert!(!is_vectorcraft(&cocoa, true));
         }
@@ -988,7 +988,7 @@ mod native {
             assert_eq!(command.get_args().collect::<Vec<_>>(), [file.as_os_str()]);
         }
 
-        /// A selected Krasis Vector bundle must receive the watched file as argv, including
+        /// A selected Vulcanio Vector bundle must receive the watched file as argv, including
         /// SVG-only installations without a CLI. Other applications retain open-document
         /// events even if someone placed a vectorcraft-cli file beside their executable.
         #[cfg(unix)]
@@ -997,7 +997,7 @@ mod native {
             let directory = tempfile::tempdir().unwrap();
             for binary in [false, true] {
                 let mut info = plist::Dictionary::new();
-                info.insert("CFBundleExecutable".into(), plist::Value::String("Krasis Vector".into()));
+                info.insert("CFBundleExecutable".into(), plist::Value::String("Vulcanio Vector".into()));
                 info.insert("CFBundleIdentifier".into(), plist::Value::String("ai.storyteller.vectorcraft".into()));
                 let mut bytes = Vec::new();
                 if binary {
@@ -1005,9 +1005,9 @@ mod native {
                 } else {
                     plist::Value::Dictionary(info).to_writer_xml(&mut bytes).unwrap();
                 }
-                let bundle = fake_bundle(directory.path(), if binary { "Renamed" } else { "Krasis Vector" }, "Krasis Vector", &bytes);
+                let bundle = fake_bundle(directory.path(), if binary { "Renamed" } else { "Vulcanio Vector" }, "Vulcanio Vector", &bytes);
                 let resolved = resolve_program(&bundle, true).unwrap();
-                assert!(resolved.bundle.is_none(), "Krasis Vector must receive file arguments");
+                assert!(resolved.bundle.is_none(), "Vulcanio Vector must receive file arguments");
                 assert!(!has_adjacent_cli(&resolved.program), "SVG editing works without the converter");
                 let file = directory.path().join("Artwork.svg");
                 let command = resolved.command(&file);
@@ -1026,12 +1026,12 @@ mod native {
         #[test]
         fn macos_bundle_reads_binary_info_plists() {
             let mut info = plist::Dictionary::new();
-            info.insert("CFBundleExecutable".into(), plist::Value::String("Krasis Vector".into()));
+            info.insert("CFBundleExecutable".into(), plist::Value::String("Vulcanio Vector".into()));
             let mut bytes = Vec::new();
             plist::Value::Dictionary(info).to_writer_binary(&mut bytes).unwrap();
             assert!(bytes.starts_with(b"bplist00"));
             let directory = tempfile::tempdir().unwrap();
-            let bundle = fake_bundle(directory.path(), "Krasis Vector", "Krasis Vector", &bytes);
+            let bundle = fake_bundle(directory.path(), "Vulcanio Vector", "Vulcanio Vector", &bytes);
             let (canonical, program) = bundle_executable(&bundle).unwrap();
             assert_eq!(program, canonical.join("Contents/MacOS/VectorCraft"));
         }
@@ -1122,7 +1122,7 @@ mod native {
         fn bundled_vectorcraft_cli_is_found_inside_the_same_bundle() {
             use std::os::unix::fs::PermissionsExt;
             let directory = tempfile::tempdir().unwrap();
-            let bundle = fake_bundle(directory.path(), "Krasis Vector", "Krasis Vector", &xml_info("Krasis Vector"));
+            let bundle = fake_bundle(directory.path(), "Vulcanio Vector", "Vulcanio Vector", &xml_info("Vulcanio Vector"));
             let (_, program) = bundle_executable(&bundle).unwrap();
             assert!(!has_adjacent_cli(&program), "no CLI yet");
             // A CLI beside the bundle directory is not inside the bundle.

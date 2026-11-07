@@ -33,8 +33,8 @@ fn root_with(env: impl Fn(&str) -> Option<OsString>, exe_dir: Option<&Path>) -> 
 }
 
 /// `<dir>/DesignCraftData` when `dir` holds [`PORTABLE_MARKER`], where `dir` is the folder the
-/// user sees the app in: the executable's, or the one holding `Krasis Layout.app` when the executable
-/// sits inside a macOS bundle (`Krasis Layout.app/Contents/MacOS`, signed, never edited by hand).
+/// user sees the app in: the executable's, or the one holding `Vulcanio Layout.app` when the executable
+/// sits inside a macOS bundle (`Vulcanio Layout.app/Contents/MacOS`, signed, never edited by hand).
 /// A folder named like the marker is no marker. A data folder that cannot be written (a portable
 /// copy unzipped into Program Files) is no portable install either: settings and recovery would be
 /// lost without a word, so the platform paths are used and [`unwritable_portable_dir`] says why.
@@ -89,7 +89,7 @@ pub fn recovery_dir() -> Option<PathBuf> {
         .and_then(own_run)
 }
 
-/// This run's folder in the recovery folder `root`. A second running Krasis Layout has its own, so
+/// This run's folder in the recovery folder `root`. A second running Vulcanio Layout has its own, so
 /// neither writes over the other's documents nor takes them for a crash's.
 fn own_run(root: PathBuf) -> Option<PathBuf> {
     match designcraft_engine::recovery::run_dir(&root) {

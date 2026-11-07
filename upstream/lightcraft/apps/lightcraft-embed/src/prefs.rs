@@ -239,7 +239,7 @@ impl PrefsWriter {
             Err(e) => {
                 if !self.failing {
                     log::warn!("{e}");
-                    app.notices.push(format!("{e}. Krasis Library keeps trying."));
+                    app.notices.push(format!("{e}. Vulcanio Library keeps trying."));
                 }
                 self.failing = true;
                 // don't retry every frame

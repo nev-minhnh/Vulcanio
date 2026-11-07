@@ -94,8 +94,8 @@ impl std::fmt::Display for FormatError {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
             FormatError::Io(e) => write!(f, "{e}"),
-            FormatError::Corrupt(e) => write!(f, "not a valid Krasis Interface file: {e}"),
-            FormatError::Newer(v) => write!(f, "this file was saved by a newer Krasis Interface (format version {v})"),
+            FormatError::Corrupt(e) => write!(f, "not a valid Vulcanio Interface file: {e}"),
+            FormatError::Newer(v) => write!(f, "this file was saved by a newer Vulcanio Interface (format version {v})"),
         }
     }
 }
@@ -483,7 +483,7 @@ impl<'de> Deserialize<'de> for Header {
         impl<'de> Visitor<'de> for HeaderVisitor {
             type Value = Header;
             fn expecting(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-                f.write_str("a Krasis Interface document object")
+                f.write_str("a Vulcanio Interface document object")
             }
             fn visit_map<A: MapAccess<'de>>(self, mut map: A) -> Result<Header, A::Error> {
                 let mut h = Header::default();

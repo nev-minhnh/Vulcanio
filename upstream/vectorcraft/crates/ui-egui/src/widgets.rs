@@ -71,7 +71,7 @@ pub use text::{
 pub use toggles::{check, check_box, check_name, check_tip, check3, radio, radio_button};
 
 /// A widget id salt that needs only [`std::hash::Hash`]. egui 0.37's [`egui::AsIdSalt`] also
-/// requires `Debug` for its debug-only id-source registry; Krasis Vector's public field helpers do
+/// requires `Debug` for its debug-only id-source registry; Vulcanio Vector's public field helpers do
 /// not need a `Debug` bound merely to salt a widget id, and never make an accessible name from it.
 #[derive(Clone, Copy)]
 struct HashOnly<T>(T);

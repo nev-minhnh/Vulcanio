@@ -107,7 +107,7 @@ pub(super) fn show_in_folders(app: &mut LightcraftApp, id: Option<lightcraft_cat
 
 /// Photo ▸ Edit In: render a copy of each selected photo with its edits (stacked on its original)
 /// as Settings ▸ External Editing asks for that editor, then open them there. `p` may override the
-/// file (`format`, `colorSpace`, `bitDepth`) and the editor (`app`). Krasis Photo is checked first,
+/// file (`format`, `colorSpace`, `bitDepth`) and the editor (`app`). Vulcanio Photo is checked first,
 /// so a missing editor leaves no copy behind. Once the copies exist, an editor that won't open them
 /// is reported in the result's `failed` (and a toast), not as an error.
 pub(super) fn edit_in(app: &mut LightcraftApp, ctx: &egui::Context, p: &Value, photocraft: bool) -> Result<Value, String> {
@@ -144,7 +144,7 @@ fn edit_in_inner(app: &mut LightcraftApp, ctx: &egui::Context, p: &Value, photoc
         if let Some(id) = id {
             app.ui.external_edits.push(*id);
         }
-        // the copy is Krasis Library's own render, but it goes through the same gate as any other
+        // the copy is Vulcanio Library's own render, but it goes through the same gate as any other
         // path handed to the system opener (#2135)
         match lightcraft_engine::open_path::openable(path, "") {
             Err(e) => failed = Some(e),
@@ -213,7 +213,7 @@ fn open_originals(app: &mut LightcraftApp, p: &Value) -> Result<Value, String> {
     let mut files = Vec::new();
     let mut skipped = Vec::new();
     for id in ids {
-        // the path may come from an imported catalog: only a photo file Krasis Library reads is
+        // the path may come from an imported catalog: only a photo file Vulcanio Library reads is
         // handed to the opener, never a program (#2135)
         match app.session.catalog.photo(id).map(|ph| (ph.file_name.clone(), ph.source.clone())) {
             Some((name, lightcraft_engine::catalog::Source::File { path })) => match lightcraft_engine::open_path::openable(&path, &name) {

@@ -126,8 +126,8 @@ pub const UI_COMMANDS: &[(&str, &str, &[&str], Option<&str>)] = &[
     ("ui.dialog.parameters", "Parameters Manager", &["Window", "Parameters Manager"], None),
     ("ui.dialog.dsettings", "Drafting Settings...", &[], None),
     #[cfg(not(target_arch = "wasm32"))]
-    ("ui.dialog.about", "About Krasis CAD", &["Help", "About Krasis CAD"], None),
-    ("ui.dialog.commands", "Command Reference", &["Help", "Krasis CAD Help"], Some("F1")),
+    ("ui.dialog.about", "About Vulcanio CAD", &["Help", "About Vulcanio CAD"], None),
+    ("ui.dialog.commands", "Command Reference", &["Help", "Vulcanio CAD Help"], Some("F1")),
     ("ui.toggle.history", "Command History", &["Window", "Command History"], Some("F2")),
     ("ui.cmdline.lines", "Command Line History Lines", &[], None),
     ("ui.cmdline.clear", "Clear Command History", &[], None),
@@ -136,7 +136,7 @@ pub const UI_COMMANDS: &[(&str, &str, &[&str], Option<&str>)] = &[
     ("ui.shortcuts", "Keyboard Shortcuts...", &["Tools", "Customize", "Keyboard Shortcuts..."], None),
     ("ui.language", "Language", &[], None),
     ("ui.noop", "", &[], None),
-    ("ui.quit", "Quit Krasis CAD", &[], Some("Cmd+Q")),
+    ("ui.quit", "Quit Vulcanio CAD", &[], Some("Cmd+Q")),
 ];
 
 pub fn is_ui_command(id: &str) -> bool {
@@ -879,7 +879,7 @@ pub fn run_transparent(app: &mut CadApp, id: &str) {
     }
 }
 
-/// Krasis CAD's keyboard shortcuts and function keys, each with the command it runs. Every shortcut a
+/// Vulcanio CAD's keyboard shortcuts and function keys, each with the command it runs. Every shortcut a
 /// command shows (its registry `key`, or a UI command's) must be here, or pressing it does nothing.
 pub(crate) fn builtin_shortcuts() -> Vec<(egui::KeyboardShortcut, &'static str)> {
     use egui::{Key, KeyboardShortcut, Modifiers};
@@ -921,7 +921,7 @@ pub(crate) fn builtin_shortcuts() -> Vec<(egui::KeyboardShortcut, &'static str)>
     ]
 }
 
-/// Keyboard shortcuts and function keys: the user's ([`crate::keys`]) and Krasis CAD's own.
+/// Keyboard shortcuts and function keys: the user's ([`crate::keys`]) and Vulcanio CAD's own.
 pub fn shortcuts(app: &mut CadApp, ctx: &egui::Context) {
     use egui::{Key, KeyboardShortcut, Modifiers};
     // A recording ends with the dialog it was started in; while it lasts the keys are its own.

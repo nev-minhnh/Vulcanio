@@ -1,5 +1,5 @@
-//! Krasis Photo as a Krasis module: the desktop app's frame logic and UI unchanged, created inside
-//! the Krasis window instead of its own.
+//! Vulcanio Photo as a Vulcanio module: the desktop app's frame logic and UI unchanged, created inside
+//! the Vulcanio window instead of its own.
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 #![allow(dead_code, unused_imports)]
 
@@ -166,12 +166,12 @@ fn attach_log_file(_logger: Option<&'static logging::AppLogger>) {}
 
 struct App(PhotocraftApp);
 
-fn lang_pref(lang: krasis_host::Lang) -> &'static str {
+fn lang_pref(lang: vulcanio_host::Lang) -> &'static str {
     lang.code()
 }
 
-/// Create Krasis Photo inside the Krasis window.
-pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Module> {
+/// Create Vulcanio Photo inside the Vulcanio window.
+pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::Module> {
     let cc = host.cc;
     photocraft_engine::malloc_tuning::apply();
     crash_guard::install_hook();
@@ -200,7 +200,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     PhotocraftApp::install_type_reset_hooks(&cc.egui_ctx);
     let mut app = PhotocraftApp::new(session, services);
     app.min_frame_ms = uncapped.then_some(1000.0 / 240.0);
-    // Krasis draws the window frame (the system's), so Krasis Photo's own title bar stays off.
+    // Vulcanio draws the window frame (the system's), so Vulcanio Photo's own title bar stays off.
     app.integrated_titlebar = false;
     app.custom_titlebar = false;
     app.background_jobs = std::env::var_os("PHOTOCRAFT_INLINE_JOBS").is_none();
@@ -222,7 +222,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
         }
     }
     app.perf.gpu_info.canvas = "cpu".into();
-    app.perf.gpu_info.selected = "krasis".into();
+    app.perf.gpu_info.selected = "vulcanio".into();
     if let Some(rs) = cc.wgpu_render_state.clone() {
         app.perf.gpu_info.set_adapter(&rs.adapter.get_info());
         app.perf.gpu_info.set_available(&rs.available_adapters);
@@ -269,17 +269,17 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     Box::new(App(app))
 }
 
-fn set_language_pref(app: &mut PhotocraftApp, _ctx: &egui::Context, lang: krasis_host::Lang) {
+fn set_language_pref(app: &mut PhotocraftApp, _ctx: &egui::Context, lang: vulcanio_host::Lang) {
     let code = lang_pref(lang);
     if app.session.prefs().interface.language != code
         && let Err(e) = app.run("prefs.set", serde_json::json!({"path": "interface.language", "value": code}))
     {
-        log::warn!("Krasis Photo interface language {code}: {e}");
+        log::warn!("Vulcanio Photo interface language {code}: {e}");
     }
     photocraft_ui_egui::i18n::set_current(photocraft_ui_egui::i18n::Lang::from_pref(code));
 }
 
-impl krasis_host::Module for App {
+impl vulcanio_host::Module for App {
     fn app(&mut self) -> &mut dyn eframe::App {
         &mut self.0
     }
@@ -297,7 +297,7 @@ impl krasis_host::Module for App {
         ctx.request_repaint();
     }
 
-    fn set_language(&mut self, ctx: &egui::Context, lang: krasis_host::Lang) {
+    fn set_language(&mut self, ctx: &egui::Context, lang: vulcanio_host::Lang) {
         set_language_pref(&mut self.0, ctx, lang);
         ctx.request_repaint();
     }

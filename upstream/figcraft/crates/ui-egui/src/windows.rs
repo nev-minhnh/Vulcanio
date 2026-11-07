@@ -191,8 +191,8 @@ pub(crate) fn fail_input_acks(app: &mut FigApp, viewport: ViewportId) {
 
 fn title_of(ds: Option<&DocState>) -> String {
     match ds {
-        Some(ds) => format!("{}{} – Krasis Interface", ds.doc.name, if ds.is_dirty() { " •" } else { "" }),
-        None => "Krasis Interface".into(),
+        Some(ds) => format!("{}{} – Vulcanio Interface", ds.doc.name, if ds.is_dirty() { " •" } else { "" }),
+        None => "Vulcanio Interface".into(),
     }
 }
 

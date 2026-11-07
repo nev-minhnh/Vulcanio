@@ -1,105 +1,123 @@
-# Krasis — Your creative oasis
+<p align="center"><img src="apps/vulcanio/assets/vulcanio-256.png" width="128" alt="Vulcanio logo"></p>
 
-*Krasis — Ốc đảo sáng tạo của bạn*
+# Vulcanio — The all-in-one studio
 
-**Phiên bản 1.1.0**
+*Vulcanio — Studio sáng tạo tất cả trong một*
 
-Krasis gộp sáu ứng dụng sáng tạo mã nguồn mở viết bằng Rust vào **một ứng dụng, một cửa sổ** cho
-Windows 11:
+**Phiên bản 1.2.0** · Windows 11 (x64) · Rust · Giấy phép MIT HOẶC Apache-2.0
 
-| Ứng dụng trong Krasis | Dùng để |
-|---|---|
-| Krasis Photo — Chỉnh sửa ảnh | Lớp, mặt nạ, cọ, bộ lọc, PSD |
-| Krasis Library — Thư viện ảnh & RAW | Nhập, sắp xếp, xử lý RAW không phá hủy |
-| Krasis Vector — Minh họa vector | Đường dẫn, hình khối, SVG/PDF/AI/EPS |
-| Krasis Layout — Dàn trang | Tạp chí, sách, IDML, xuất PDF/EPUB |
-| Krasis Interface — Thiết kế giao diện | Khung, thành phần, bố cục tự động, nguyên mẫu |
-| Krasis CAD — Thiết kế kỹ thuật | Vẽ 2D, DWG/DXF, dòng lệnh |
+Vulcanio gộp sáu ứng dụng sáng tạo mã nguồn mở viết bằng Rust vào **một ứng dụng, một cửa sổ**:
 
-Mã nguồn gốc và giấy phép của từng thành phần: xem [NOTICE.md](NOTICE.md).
+| Ứng dụng trong Vulcanio | Dùng để | Định dạng chính |
+|---|---|---|
+| Vulcanio Photo — Chỉnh sửa ảnh | Lớp, mặt nạ, cọ, bộ lọc | PSD, PNG, JPEG, WebP, TIFF… |
+| Vulcanio Library — Thư viện ảnh & RAW | Nhập, sắp xếp, xử lý RAW không phá hủy | RAW (CR3, NEF, ARW, DNG…), JPEG |
+| Vulcanio Vector — Minh họa vector | Đường dẫn, hình khối, chữ, gradient | SVG, PDF, AI, EPS |
+| Vulcanio Layout — Dàn trang | Tạp chí, sách, trang mẫu, văn bản chạy | IDML, PDF, EPUB, Markdown |
+| Vulcanio Interface — Thiết kế giao diện | Khung, thành phần, bố cục tự động, nguyên mẫu | .fig, SVG, PNG |
+| Vulcanio CAD — Thiết kế kỹ thuật | Vẽ 2D chính xác, lớp, khối, kích thước, dòng lệnh | DWG, DXF |
 
-Mỗi ứng dụng giữ **nguyên toàn bộ tính năng và giao diện** của nó (menu, bảng điều khiển, hộp
-thoại, tạo/mở/lưu/xuất tệp, phím tắt, kênh điều khiển…): Krasis chạy chính mã nguồn của ứng dụng
-đó bên trong cửa sổ của mình.
+Mỗi ứng dụng giữ **nguyên toàn bộ tính năng và giao diện** (menu, bảng điều khiển, hộp thoại,
+tạo/mở/lưu/xuất tệp, phím tắt, thanh tab tài liệu…): Vulcanio chạy chính mã nguồn của ứng dụng đó
+bên trong cửa sổ của mình. Nguồn gốc và giấy phép của từng thành phần: xem [NOTICE.md](NOTICE.md).
 
-## Có gì trong Krasis
+## Tính năng
 
-- **Thanh ứng dụng** bên trái (như thanh tab dọc của Edge): Trang chủ và sáu ứng dụng; chấm vàng
-  cho biết ứng dụng đang chạy. Nhấp chuột phải để Mở…, Tạo mới hoặc Đóng ứng dụng.
+- **Thanh ứng dụng** bên trái theo màu logo: Trang chủ và sáu ứng dụng; chấm cam cho biết ứng dụng
+  đang chạy. Nhấp chuột phải để Mở…, Tạo mới hoặc Đóng ứng dụng.
+- **Tự thu gọn**: khi đang mở một ứng dụng, thanh bên trái thu lại thành **một vạch mảnh** màu logo
+  ở mép trái; đưa chuột vào vạch để thanh trượt ra. Bật/tắt bằng nút ở cuối thanh hoặc trong Cài đặt.
 - **Trang chủ**: logo, khẩu hiệu, sáu thẻ ứng dụng (Mới… / Mở…), tệp gần đây, kéo-thả tệp.
-- **Mở tệp đúng ứng dụng**: Krasis chọn ứng dụng phù hợp theo phần mở rộng; khi nhiều ứng dụng mở
-  được (ví dụ `.png`, `.svg`, `.pdf`, `.psd`), Krasis hỏi “Mở bằng” và có thể ghi nhớ lựa chọn.
-  Mở từ Explorer, dòng lệnh, kéo-thả, hoặc khi Krasis đang chạy (tệp được chuyển cho cửa sổ đang mở).
-- **Mượt như Edge**: trình chiếu VSync với hai khung hình trong hàng đợi, cuộn và thu phóng bằng bánh
-  xe chuột có gia tốc êm (chỉnh được thời gian trong Cài đặt), hiệu ứng chuyển cảnh khi đổi ứng dụng,
-  hoạt ảnh cho thanh ứng dụng và thẻ. Chế độ “Độ trễ thấp nhất” dành cho bút vẽ.
-- **Tiếng Anh và tiếng Việt**: đổi trong Cài đặt › Ngôn ngữ; cả Krasis và sáu ứng dụng cùng đổi.
-  DesignCraft được bổ sung bản dịch tiếng Việt đầy đủ (2.125 chuỗi).
-- **Ứng dụng ngủ như tab ngủ của Edge**: chỉ ứng dụng ở phía trước chạy; các ứng dụng khác giữ
-  nguyên tài liệu và trạng thái. Mỗi ứng dụng giữ giao diện riêng (chủ đề, phông chữ, thu phóng).
-- **Đóng an toàn**: khi đóng cửa sổ, lần lượt từng ứng dụng đang chạy hỏi về thay đổi chưa lưu.
-- **Một bản cập nhật cho cả bộ**: các ứng dụng con không tự cập nhật riêng (tránh ghi đè `krasis.exe`).
-- **Thanh ứng dụng tự ẩn** (1.1): khi đang mở một ứng dụng, thanh bên trái thu gọn; đưa chuột tới
-  mép trái để hiện. Bật/tắt bằng nút ở cuối thanh hoặc Cài đặt › Thanh ứng dụng.
-- **Một chủ đề cho cả bộ** (1.1): Sáng/Tối/Theo hệ thống trong Cài đặt áp dụng cho Krasis và cả sáu
-  ứng dụng.
-- **Tiết kiệm bộ nhớ** (1.1): ứng dụng chỉ khởi động khi dùng; ứng dụng không mở tệp nào tự đóng
-  sau 1 phút chạy nền; khi Krasis thu nhỏ hoặc chạy nền, bộ nhớ không dùng được trả lại Windows;
-  GPU dùng chế độ tiết kiệm bộ nhớ; không nạp sẵn ảnh mẫu hay quét toàn bộ phông chữ lúc khởi động.
+- **Mở tệp đúng ứng dụng**: theo phần mở rộng; khi nhiều ứng dụng mở được (`.png`, `.svg`, `.pdf`,
+  `.psd`…), Vulcanio hỏi “Mở bằng” và có thể ghi nhớ lựa chọn. Mở từ Explorer, dòng lệnh, kéo-thả,
+  hoặc khi Vulcanio đang chạy (tệp được chuyển cho cửa sổ đang mở).
+- **Tab tài liệu** trong từng ứng dụng: mỗi tệp mở ra là một tab trên thanh tab của ứng dụng đó.
+- **Mượt như Microsoft Edge**: VSync với hai khung hình trong hàng đợi; cuộn và thu phóng bằng bánh
+  xe có gia tốc êm (chỉnh thời gian trong Cài đặt); chuyển cảnh khi đổi ứng dụng; bảng điều khiển và
+  thanh công cụ trượt vào khi xuất hiện; menu, chú thích và mục thu gọn có hoạt ảnh ở mọi ứng dụng.
+- **Một chủ đề cho cả bộ**: Sáng / Tối / Theo hệ thống áp dụng cho Vulcanio và cả sáu ứng dụng.
+- **Tiếng Anh và tiếng Việt** cho Vulcanio và các ứng dụng.
+- **Tiết kiệm bộ nhớ**: ứng dụng chỉ khởi động khi dùng; ứng dụng không mở tệp nào tự đóng sau 1 phút
+  chạy nền; khi Vulcanio thu nhỏ hoặc chạy nền, bộ nhớ không dùng được trả lại Windows.
+- **Đóng an toàn**: khi đóng cửa sổ, từng ứng dụng đang chạy lần lượt hỏi về thay đổi chưa lưu.
+- Không có liên kết cộng đồng, quảng cáo hay tự cập nhật riêng lẻ trong các ứng dụng con.
 
-## Dựng cho Windows 11
+## Tải về và chạy
 
-Cần: [Rust](https://rustup.rs) 1.95 trở lên (bộ công cụ MSVC) và Visual Studio 2022 Build Tools với
-“Desktop development with C++”. Tùy chọn: [Inno Setup 6](https://jrsoftware.org/isinfo.php) để tạo
-bộ cài.
+Bản dựng sẵn: tab **Actions** › lần chạy “Windows build” mới nhất › artifact
+`Vulcanio-1.2.0-windows-x64` (gồm `Vulcanio-1.2.0-windows-x64.zip` chạy ngay, và bộ cài
+`Vulcanio-Setup-1.2.0.exe` nếu có). Giải nén và chạy `vulcanio.exe`; không cần cài thêm gì.
+
+## Dựng từ mã nguồn
+
+Cần [Rust](https://rustup.rs) 1.95 trở lên (bộ công cụ MSVC) và Visual Studio 2022 Build Tools với
+“Desktop development with C++”. Tùy chọn: [Inno Setup 6](https://jrsoftware.org/isinfo.php) để tạo bộ cài.
 
 ```powershell
-git clone <kho của bạn> krasis
-cd krasis
+git clone https://github.com/nev-minhnh/Vulcanio vulcanio
+cd vulcanio
 powershell -ExecutionPolicy Bypass -File packaging\windows\build.ps1   # thêm -WithFonts để nhúng phông CJK
 ```
 
-Kết quả: `target\release\krasis.exe` (không cần Visual C++ Redistributable) và, nếu có Inno Setup,
-`dist\Krasis-Setup-1.1.0.exe`. Bộ cài thêm Krasis vào “Open with” và Settings › Apps › Default apps
-cho 98 loại tệp. Bản dựng đầu tiên mất khá lâu (khoảng 3,2 triệu dòng Rust).
+Kết quả: `target\release\vulcanio.exe` và, nếu có Inno Setup, `dist\Vulcanio-Setup-1.2.0.exe`.
+Bộ cài thêm Vulcanio vào “Open with” và Settings › Apps › Default apps cho 98 loại tệp.
 
-Chạy thử khi đang phát triển: `cargo run -p krasis` (hồ sơ dev đã tối ưu thư viện ở mức 2).
+Mỗi lần đẩy lên nhánh `main`, GitHub Actions (`.github/workflows/windows.yml`) tự dựng bản Windows.
+Chạy thử khi phát triển: `cargo run -p vulcanio`.
 
 ### Dòng lệnh
 
 ```
-krasis [--module photo|light|vector|design|fig|cad] [--new-instance] [tệp…]
+vulcanio [--module photo|light|vector|design|fig|cad] [--new-instance] [tệp…]
 ```
 
-Biến môi trường: `KRASIS_LOG=debug` (nhật ký trong thư mục dữ liệu `Krasis\data\logs`),
-`WGPU_BACKEND=dx12|vulkan|gl` (chọn API đồ họa), `WGPU_POWER_PREF=low|high` (chọn GPU). Các biến
-riêng của từng ứng dụng (`PHOTOCRAFT_CONTROL_PORT`, `CADCRAFT_CONTROL_PORT`, …) vẫn có tác dụng.
+Biến môi trường: `VULCANIO_LOG=debug` (nhật ký trong thư mục dữ liệu `Vulcanio\data\logs`),
+`WGPU_BACKEND=dx12|vulkan|gl` (chọn API đồ họa), `WGPU_POWER_PREF=low|high` (chọn GPU).
 
 ## Cấu trúc mã nguồn
 
 ```
-apps/krasis/            ứng dụng Krasis: thanh ứng dụng, trang chủ, định tuyến tệp, cài đặt
-crates/krasis-host/     trait Module và kho lưu cài đặt cho từng ứng dụng
-upstream/<app>/         mã nguồn gốc của sáu ứng dụng (giữ nguyên)
+apps/vulcanio/            ứng dụng Vulcanio: thanh ứng dụng, trang chủ, định tuyến tệp, cài đặt
+crates/vulcanio-host/     trait Module và kho lưu cài đặt cho từng ứng dụng
+upstream/<app>/           mã nguồn sáu ứng dụng
 upstream/<app>/apps/<app>-embed/
-                        ứng dụng desktop của mỗi app, đổi từ chương trình thành thư viện
-vendor/egui/            nhánh egui dùng chung, thêm 3 điểm mở rộng cho Krasis
-packaging/windows/      build.ps1 và bộ cài Inno Setup
+                          ứng dụng desktop của mỗi app, đổi từ chương trình thành thư viện
+vendor/egui/              nhánh egui dùng chung, thêm các điểm mở rộng cho Vulcanio
+packaging/windows/        build.ps1 và bộ cài Inno Setup
+.github/workflows/        dựng bản Windows trên GitHub Actions
 ```
+
+## Lịch sử phiên bản
+
+- **1.2.0** — Đổi tên thành Vulcanio, logo và khẩu hiệu mới; thanh ứng dụng theo màu logo, để lại vạch
+  mảnh khi thu gọn; hộp thoại Cài đặt / Giới thiệu có nút đóng (×) và luôn dùng giao diện Vulcanio;
+  cỡ chữ thanh ứng dụng; bảng điều khiển trượt vào và hoạt ảnh đồng nhất ở mọi ứng dụng; gỡ liên kết
+  cộng đồng và kiểm tra cập nhật còn sót.
+- **1.1.0** — Giảm bộ nhớ, thanh ứng dụng tự ẩn, một chủ đề cho cả bộ, bỏ tên và logo gốc, bỏ Discord.
+- **1.0.0** — Bản đầu tiên.
+
+## Giấy phép
+
+Vulcanio được phát hành theo **MIT** ([LICENSE-MIT](LICENSE-MIT)) **hoặc Apache-2.0**
+([LICENSE-APACHE](LICENSE-APACHE)), tùy bạn chọn — giống các ứng dụng mà nó chứa. Ghi công và các
+thay đổi: [NOTICE.md](NOTICE.md).
 
 ---
 
 ## English
 
-Krasis (v1.1.0) puts six open-source Rust creative apps (photo editing, a RAW photo library,
-vector illustration, page layout, interface design and CAD; see NOTICE.md) in one Windows 11 app
-and window. Every app keeps all of its features and its
-own interface; Krasis adds the app rail, a home screen, file routing with an Open With chooser,
-Edge-like smoothness (vsync pacing, eased wheel scrolling and zooming, transitions), English and
-Vietnamese, a single instance that receives files from Explorer, and an unsaved-work check across
-apps on close.
+**Vulcanio — The all-in-one studio** (v1.2.0) puts six open-source Rust creative apps (photo
+editing, a RAW photo library, vector illustration, page layout, interface design and CAD) in one
+Windows 11 app and window. Every app keeps all of its features, its own interface and its document
+tabs. Vulcanio adds an app bar in the logo's colours that tucks into a thin line while you work, a
+home screen, file routing with an Open With chooser, one theme for every app, Edge-like smoothness
+(vsync pacing, eased wheel scrolling and zooming, transitions, panels that slide in), English and
+Vietnamese, memory saving for apps in the background, a single instance that receives files from
+Explorer, and an unsaved-work check across apps on close.
 
 Build on Windows: `powershell -ExecutionPolicy Bypass -File packaging\windows\build.ps1`
-(Rust 1.95+, MSVC build tools; Inno Setup 6 for the installer).
+(Rust 1.95+, MSVC build tools; Inno Setup 6 for the installer). GitHub Actions builds the Windows
+release on every push to `main`.
 
-Licence: MIT OR Apache-2.0, as the apps it hosts. See [NOTICE.md](NOTICE.md).
+License: MIT OR Apache-2.0, at your option. See [LICENSE-MIT](LICENSE-MIT),
+[LICENSE-APACHE](LICENSE-APACHE) and [NOTICE.md](NOTICE.md).

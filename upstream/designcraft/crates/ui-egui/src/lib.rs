@@ -1,4 +1,4 @@
-//! Krasis Layout's egui frontend: an InDesign-style UI over `designcraft-engine`.
+//! Vulcanio Layout's egui frontend: an InDesign-style UI over `designcraft-engine`.
 //!
 //! The UI is thin: every action goes through [`DesignApp::run`], which dispatches UI commands
 //! (view/window) here and everything else to the engine. Menus, shortcuts, the ⌘K palette and
@@ -6,7 +6,7 @@
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 #![forbid(unsafe_code)]
 
-/// Krasis Layout as craft-update knows it, with its 128 px icon and accent colour: the update
+/// Vulcanio Layout as craft-update knows it, with its 128 px icon and accent colour: the update
 /// prompt shows both, and an AppImage's menu entry gets the icon.
 #[cfg(not(target_arch = "wasm32"))]
 pub const UPDATE_APP: craft_update::app::App = craft_update::app::App {

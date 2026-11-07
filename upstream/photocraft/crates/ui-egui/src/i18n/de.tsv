@@ -12,7 +12,7 @@
 # Clean-room: every entry was written from the plain meaning of the English label using ordinary
 # German image-editing vocabulary (Ebene, Maske, Auswahl, Weichzeichnen ...). No proprietary
 # localisation resource, string table or product UI was consulted or copied; add entries the same
-# way. Product and technology names (Krasis Photo, Krasis, OpenType, CMYK, Lab ...) stay in Latin
+# way. Product and technology names (Vulcanio Photo, Vulcanio, OpenType, CMYK, Lab ...) stay in Latin
 # letters; the trailing "…" of dialog commands is kept. Plural rule: one|other (n != 1 -> other).
 
 # Layer Mask Display Options (the layer mask rubylith's colour and opacity)
@@ -87,7 +87,7 @@
 # Batch / Image Processor
 
 # Native Windows printing qualification
-# Krasis Photo release checks.
+# Vulcanio Photo release checks.
 # History panel › History Brush source (#2966)
 # Bevel & Emboss shading controls.
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
@@ -906,11 +906,11 @@
 	Pin bar position	Leistenposition fixieren
 	Move bar	Leiste verschieben
 	More options	Weitere Optionen
-	About Krasis Photo	Über Krasis Photo
-	Krasis Photo Website	Krasis Photo-Website
-	Krasis Photo on GitHub	Krasis Photo auf GitHub
-	Krasis Website	Krasis-Website
-	Join the Krasis Discord…	Krasis-Discord beitreten…
+	About Vulcanio Photo	Über Vulcanio Photo
+	Vulcanio Photo Website	Vulcanio Photo-Website
+	Vulcanio Photo on GitHub	Vulcanio Photo auf GitHub
+	Vulcanio Website	Vulcanio-Website
+	Join the Vulcanio Discord…	Vulcanio-Discord beitreten…
 	Report an Issue…	Problem melden…
 	WIA Support…	WIA-Unterstützung…
 	Apply	Anwenden
@@ -965,7 +965,7 @@
 	All Caps	Großbuchstaben
 	All Slices	Alle Slices
 	All User Slices	Alle Benutzer-Slices
-	All shortcuts reset to Krasis Photo defaults.	Alle Kurzbefehle wurden auf die Krasis Photo-Standards zurückgesetzt.
+	All shortcuts reset to Vulcanio Photo defaults.	Alle Kurzbefehle wurden auf die Vulcanio Photo-Standards zurückgesetzt.
 	Alt	Alt
 	Always use pressure for opacity	Druck immer für Deckkraft verwenden
 	Always use pressure for size	Druck immer für Größe verwenden
@@ -1220,8 +1220,8 @@
 	Drop an image or PSD anywhere to open it.	Ziehe ein Bild oder PSD an eine beliebige Stelle, um es zu öffnen.
 	Native file drag-and-drop is unavailable	Natives Ziehen und Ablegen von Dateien ist nicht verfügbar
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Natives Ziehen und Ablegen von Dateien wird unter Wayland noch nicht unterstützt. Nutze Datei › Öffnen oder kopiere das Bild im Dateimanager und füge es mit {paste} ein.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Um Dateien abzulegen, starte Krasis Photo unter XWayland: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Oder stelle Voreinstellungen › Leistung › Linux-Anzeigeserver auf X11: Krasis Photo startet dann immer unter XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Um Dateien abzulegen, starte Vulcanio Photo unter XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Oder stelle Voreinstellungen › Leistung › Linux-Anzeigeserver auf X11: Vulcanio Photo startet dann immer unter XWayland.
 	Edit › Paste	Bearbeiten › Einfügen
 	Duplicate Layers…	Ebenen duplizieren…
 	Duplicate style	Stil duplizieren
@@ -1471,9 +1471,9 @@
 	Perspective Warp is not active	Perspektivische Verkrümmung ist nicht aktiv
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Perspektivische Verkrümmung: zeichne Flächen entlang der Bildperspektive, wechsle dann zu Verkrümmen
 	Photo Filter	Foto-Filter
-	Krasis Photo	Krasis Photo
-	Krasis Photo Manages Colors	Krasis Photo verwaltet die Farben
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — ein nativer Open-Source-Bildeditor, geschrieben in Rust.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo Manages Colors	Vulcanio Photo verwaltet die Farben
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — ein nativer Open-Source-Bildeditor, geschrieben in Rust.
 	Pin Depth:	Pin-Tiefe:
 	Pixel Length:	Pixel-Länge:
 	Pixels/Centimeter	Pixel/Zentimeter
@@ -1548,11 +1548,11 @@
 	Import Shortcuts…	Tastaturbefehle importieren…
 	Load a keyboard shortcut set saved as .kys	Einen als .kys gespeicherten Tastaturbefehlssatz laden
 	Imported {n} shortcuts from {file}. Click OK to keep them.	{n} Tastaturbefehle aus {file} importiert. Mit OK übernehmen.
-	{n} commands are not in Krasis Photo.	{n} Befehle gibt es in Krasis Photo nicht.
+	{n} commands are not in Vulcanio Photo.	{n} Befehle gibt es in Vulcanio Photo nicht.
 	Keyboard shortcuts imported	Tastaturbefehle importiert
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Dein Tastaturbefehlssatz {set} wird hier verwendet: {n} Tastaturbefehle weichen von den Standardwerten ab. Bearbeiten › Tastaturbefehle zeigt sie; Alles auf Standardwerte zurücksetzen macht es rückgängig.
 	Import keyboard shortcuts?	Tastaturbefehle importieren?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo hat auf diesem Computer deinen Tastaturbefehlssatz {set} aus einem anderen Bildbearbeitungsprogramm gefunden: {n} seiner Tastaturbefehle weichen von denen in Krasis Photo ab. Importieren?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo hat auf diesem Computer deinen Tastaturbefehlssatz {set} aus einem anderen Bildbearbeitungsprogramm gefunden: {n} seiner Tastaturbefehle weichen von denen in Vulcanio Photo ab. Importieren?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Bearbeiten › Tastaturbefehle › Alles auf Standardwerte zurücksetzen macht einen Import rückgängig.
 	Don't Import	Nicht importieren
 	The keyboard shortcut set was not imported: {error}	Der Tastaturbefehlssatz wurde nicht importiert: {error}
@@ -1741,7 +1741,7 @@
 	Apple Watch 45mm	Apple Watch 45 mm
 	Aqua	Aqua
 	Art & Illustration	Kunst & Illustration
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Background Eraser Tool	Hintergrund-Radiergummi-Werkzeug
 	Bevel & Emboss	Abgeflachte Kante & Relief
 	Blend Mode	Fusionsmodus
@@ -1777,7 +1777,7 @@
 	Current Tool	Aktuelles Werkzeug
 	Custom Shape Tool	Werkzeug für benutzerdefinierte Formen
 	Cyans	Cyantöne
-	Default Krasis Photo Size	Standard-Krasis Photo-Größe
+	Default Vulcanio Photo Size	Standard-Vulcanio Photo-Größe
 	Delete Workspace	Arbeitsbereich löschen
 	Diamond	Raute
 	Dimensions:	Abmessungen:
@@ -1889,7 +1889,7 @@
 	Pen Tool	Stift-Werkzeug
 	Convert Point Tool	Punkt-umwandeln-Werkzeug
 	Photo	Foto
-	Krasis Photo website	Krasis Photo-Website
+	Vulcanio Photo website	Vulcanio Photo-Website
 	Picas	Pica
 	Pillow Emboss	Polsterrelief
 	Pixel Replacement	Pixelersatz
@@ -2227,7 +2227,7 @@
 	System Info	Systeminformationen
 	More panels	Weitere Bedienfelder
 	More documents	Weitere Dokumente
-	These settings aren't available in Krasis Photo yet.	Diese Einstellungen gibt es in Krasis Photo noch nicht.
+	These settings aren't available in Vulcanio Photo yet.	Diese Einstellungen gibt es in Vulcanio Photo noch nicht.
 	Graphics	Grafik
 	Reset GPU Backend	GPU-Backend zurücksetzen
 	Applies at next launch.	Wird beim nächsten Start angewendet.
@@ -2441,7 +2441,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Automatisch nutzt GPU-Beschleunigung, wenn verfügbar, und fällt bei Fehlern auf CPU-Rendering zurück.
 	Switched to CPU rendering	Auf CPU-Rendering umgeschaltet
 	GPU acceleration could not continue. Your documents are unchanged.	GPU-Beschleunigung konnte nicht fortgesetzt werden. Deine Dokumente sind unverändert.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo nutzt den CPU-Bildkompositor. Das Fenster kann weiterhin deinen Grafikadapter verwenden.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo nutzt den CPU-Bildkompositor. Das Fenster kann weiterhin deinen Grafikadapter verwenden.
 	Retry GPU requires a restart. Save your work first.	GPU erneut versuchen erfordert einen Neustart. Speichere zuerst deine Arbeit.
 	Retry GPU tries the graphics processor again now.	GPU erneut versuchen versucht es sofort wieder mit dem Grafikprozessor.
 	GPU acceleration resumed.	GPU-Beschleunigung wieder aktiv.
@@ -2659,7 +2659,7 @@ fontWeight	Italic	Kursiv
 	Color to Alpha…	Farbe zu Alpha…
 	Transparency Threshold	Transparenz-Schwellenwert
 	Opacity Threshold	Deckkraft-Schwellenwert
-	Krasis Photo — Screen Color Picker	Krasis Photo — Bildschirmfarbenauswahl
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Bildschirmfarbenauswahl
 	Rasterize svg groups deeper than	SVG-Gruppen ab dieser Tiefe rastern
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 schaltet diese Schwelle aus; SVG-Gruppen, die tiefer als 100 Ebenen verschachtelt sind, werden immer gerastert.
 	Rule of Thirds	Drittel-Regel
@@ -2927,7 +2927,7 @@ curves	Smooth	Glätten
 	Medium Blue	Mittelblau
 	Light Gray	Hellgrau
 	Stop	Stopp
-	Join the Krasis Discord ({url})	Dem Krasis-Discord beitreten ({url})
+	Join the Vulcanio Discord ({url})	Dem Vulcanio-Discord beitreten ({url})
 	Nothing to paste: the clipboard holds no image	Nichts einzufügen: Die Zwischenablage enthält kein Bild
 	Graphics adapter: {adapter}	Grafikadapter: {adapter}
 	Backend: {backend} ({type})	Backend: {backend} ({type})
@@ -3303,7 +3303,7 @@ curves	Smooth	Glätten
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	{n} Aktion aus {file} geladen|{n} Aktionen aus {file} geladen
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} Schritt hat noch keine Entsprechung in Krasis Photo|{n} Schritte haben noch keine Entsprechung in Krasis Photo
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} Schritt hat noch keine Entsprechung in Vulcanio Photo|{n} Schritte haben noch keine Entsprechung in Vulcanio Photo
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	{n} Aktion in {file} gespeichert|{n} Aktionen in {file} gespeichert
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	{n} Schritt ohne Photoshop-Entsprechung ausgelassen|{n} Schritte ohne Photoshop-Entsprechung ausgelassen
 @plural	{n} action file loaded|{n} action files loaded	{n} Aktionsdatei geladen|{n} Aktionsdateien geladen
@@ -3408,12 +3408,12 @@ curves	Smooth	Glätten
 	Bicubic Smoother	Bikubisch glatter
 	Bicubic Sharper	Bikubisch schärfer
 	Pasting from other apps is unavailable	Einfügen aus anderen Apps ist nicht verfügbar
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo kann in dieser Sitzung nicht auf die Systemzwischenablage zugreifen. Unter Wayland verbirgt eine Flatpak-Sandbox das Protokoll, über das Bilder aus anderen Apps gelesen werden.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Um aus anderen Apps einzufügen, starte Krasis Photo unter XWayland: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Nichts einzufügen: Krasis Photo kann die Systemzwischenablage hier nicht lesen
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo kann in dieser Sitzung nicht auf die Systemzwischenablage zugreifen. Unter Wayland verbirgt eine Flatpak-Sandbox das Protokoll, über das Bilder aus anderen Apps gelesen werden.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Um aus anderen Apps einzufügen, starte Vulcanio Photo unter XWayland: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Nichts einzufügen: Vulcanio Photo kann die Systemzwischenablage hier nicht lesen
 	Delete this set	Diesen Satz löschen
 	New Set…	Neuer Satz…
-	Krasis Photo Defaults	Krasis Photo-Standard
+	Vulcanio Photo Defaults	Vulcanio Photo-Standard
 	Save a list of these shortcuts as a web page	Liste dieser Kurzbefehle als Webseite speichern
 	Save the changes to this set	Änderungen in diesem Satz speichern
 	Save these shortcuts as a .kys file	Diese Kurzbefehle als .kys-Datei speichern
@@ -3488,9 +3488,9 @@ curves	Smooth	Glätten
 smartSvg	Edit SVG Smart Object	SVG-Smart-Objekt bearbeiten
 smartSvg	Choose the application used to edit this SVG:	Wählen Sie die Anwendung zum Bearbeiten dieses SVG:
 smartSvg	Other application	Andere Anwendung
-smartSvg	Krasis Photo (internal editor)	Krasis Photo (interner Editor)
+smartSvg	Vulcanio Photo (internal editor)	Vulcanio Photo (interner Editor)
 smartSvg	Choose executable…	Programm auswählen…
-smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Krasis Photo.	Speichern Sie die geöffnete SVG-Datei. Jede gespeicherte Änderung wird in Krasis Photo zu einem Rückgängig-Schritt.
+smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Vulcanio Photo.	Speichern Sie die geöffnete SVG-Datei. Jede gespeicherte Änderung wird in Vulcanio Photo zu einem Rückgängig-Schritt.
 smartSvg	Updates wait while another document or an editing dialog is active.	Aktualisierungen warten, während ein anderes Dokument oder ein Bearbeitungsdialog aktiv ist.
 smartSvg	Stop syncing this Smart Object	Synchronisierung dieses Smart-Objekts beenden
 smartSvg	SVG editor opened. Save the SVG to update this Smart Object.	SVG-Editor geöffnet. Speichern Sie das SVG, um dieses Smart-Objekt zu aktualisieren.

@@ -30,9 +30,9 @@ pub const VERSION: u32 = 4;
 
 #[derive(Debug, thiserror::Error)]
 pub enum FormatError {
-    #[error("not a Krasis Layout document: {0}")]
+    #[error("not a Vulcanio Layout document: {0}")]
     NotOurs(String),
-    #[error("document is from a newer Krasis Layout (format {0}); please update")]
+    #[error("document is from a newer Vulcanio Layout (format {0}); please update")]
     TooNew(u64),
     #[error("{0}")]
     Io(String),
@@ -103,7 +103,7 @@ fn save_with_large_entries_from(doc: &Document, preview: Option<&[u8]>, large_en
         z.write_all(MIME.as_bytes()).map_err(|e| FormatError::Io(e.to_string()))?;
         z.start_file("meta.json", deflate).map_err(io)?;
         let version = required_version(doc);
-        let meta = json!({"format": "designcraft", "version": version, "generator": concat!("Krasis Layout ", env!("CARGO_PKG_VERSION"))});
+        let meta = json!({"format": "designcraft", "version": version, "generator": concat!("Vulcanio Layout ", env!("CARGO_PKG_VERSION"))});
         z.write_all(meta.to_string().as_bytes()).map_err(|e| FormatError::Io(e.to_string()))?;
         if let Some(png) = preview {
             z.start_file(PREVIEW, stored).map_err(io)?;

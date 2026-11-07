@@ -411,8 +411,8 @@ fn open_file(path: &str) -> Result<(), String> {
 }
 
 /// Edit Original with Preferences › File Handling › Use System Defaults for Edit Original off
-/// (#5236): open the raster image `path` in Krasis Photo, found only where it installs
-/// ([`find_photocraft`]); `Ok(false)` when it isn't installed. Krasis Photo gets the path as its only
+/// (#5236): open the raster image `path` in Vulcanio Photo, found only where it installs
+/// ([`find_photocraft`]); `Ok(false)` when it isn't installed. Vulcanio Photo gets the path as its only
 /// argument and is never started through a shell.
 fn open_in_photocraft(path: &str) -> Result<bool, String> {
     explorer_safe(path)?;
@@ -468,12 +468,12 @@ fn open_in_photocraft(path: &str) -> Result<bool, String> {
     c.spawn().map(|_| true).map_err(|e| format!("can't open {path} in {}: {e}", app.display()))
 }
 
-/// Krasis Photo where it is installed: the first of [`photocraft_candidates`] that is an application.
+/// Vulcanio Photo where it is installed: the first of [`photocraft_candidates`] that is an application.
 pub(crate) fn find_photocraft(home: Option<&std::path::Path>, path_var: Option<&std::ffi::OsStr>) -> Option<std::path::PathBuf> {
     photocraft_candidates(home, path_var).into_iter().find(|p| check_app(p).is_ok())
 }
 
-/// Where Krasis Photo may be installed: the Applications folders on macOS; on Windows where its
+/// Where Vulcanio Photo may be installed: the Applications folders on macOS; on Windows where its
 /// installer puts it ([`windows_candidates`]); else a `photocraft` program on the `PATH`.
 pub(crate) fn photocraft_candidates(home: Option<&std::path::Path>, path_var: Option<&std::ffi::OsStr>) -> Vec<std::path::PathBuf> {
     if cfg!(target_os = "macos") {
@@ -497,7 +497,7 @@ pub(crate) fn photocraft_candidates(home: Option<&std::path::Path>, path_var: Op
     on_path
 }
 
-/// Windows: Krasis Photo's installer puts it in `Krasis\Krasis Photo` under a folder of
+/// Windows: Vulcanio Photo's installer puts it in `Vulcanio\Vulcanio Photo` under a folder of
 /// `program_folders` (for the current user `%LOCALAPPDATA%\Programs`, for everyone Program Files)
 /// and registers its path under App Paths, which also covers a folder chosen in setup. So: the
 /// `registered` paths first, then those folders, then `on_path`.
@@ -508,7 +508,7 @@ pub(crate) fn windows_candidates(
 ) -> Vec<std::path::PathBuf> {
     let mut v = registered;
     for f in program_folders {
-        let p = f.join("Krasis").join("PhotoCraft").join("photocraft.exe");
+        let p = f.join("Vulcanio").join("PhotoCraft").join("photocraft.exe");
         if !v.contains(&p) {
             v.push(p);
         }
@@ -517,7 +517,7 @@ pub(crate) fn windows_candidates(
     v
 }
 
-/// The paths Krasis Photo's installer registers under App Paths, for the current user and then for
+/// The paths Vulcanio Photo's installer registers under App Paths, for the current user and then for
 /// everyone.
 #[cfg(windows)]
 fn registered_photocraft() -> Vec<std::path::PathBuf> {
@@ -556,7 +556,7 @@ fn registry_default_path(hive: windows::Win32::System::Registry::HKEY, subkey: &
 }
 
 /// The path in a registry string value read as UTF-16, up to its first NUL, without surrounding
-/// spaces or quotes, like `C:\Program Files\Krasis\Krasis Photo\photocraft.exe`.
+/// spaces or quotes, like `C:\Program Files\Vulcanio\Vulcanio Photo\photocraft.exe`.
 #[cfg_attr(not(any(windows, test)), allow(dead_code))]
 pub(crate) fn registered_path(value: &[u16]) -> Option<std::path::PathBuf> {
     let end = value.iter().position(|&c| c == 0).unwrap_or(value.len());
@@ -566,7 +566,7 @@ pub(crate) fn registered_path(value: &[u16]) -> Option<std::path::PathBuf> {
 
 /// Is `app` an application Edit Original may start: an `.app` bundle on macOS, an `.exe` on
 /// Windows, an executable file elsewhere? Anything else (a document, a folder, a script on
-/// Windows) found where Krasis Photo installs is not taken for it.
+/// Windows) found where Vulcanio Photo installs is not taken for it.
 pub(crate) fn check_app(app: &std::path::Path) -> Result<(), String> {
     let ext = app.extension().map(|e| e.to_string_lossy().to_ascii_lowercase()).unwrap_or_default();
     let ok = if cfg!(target_os = "macos") {
@@ -599,7 +599,7 @@ mod open_with_tests {
         tempfile::Builder::new().prefix(&format!("vc-open-with-{name}-")).tempdir().unwrap()
     }
 
-    /// #5236: only an application counts as Krasis Photo, never a document, a folder or a missing
+    /// #5236: only an application counts as Vulcanio Photo, never a document, a folder or a missing
     /// path.
     #[test]
     fn only_applications_are_started() {
@@ -626,7 +626,7 @@ mod open_with_tests {
         }
     }
 
-    /// Krasis Photo is looked for only where it installs.
+    /// Vulcanio Photo is looked for only where it installs.
     #[test]
     fn photocraft_is_found_where_it_installs() {
         let temp = scratch("find");
@@ -641,7 +641,7 @@ mod open_with_tests {
             let bin = d.join("bin");
             std::fs::create_dir_all(&bin).unwrap();
             let path_var = std::env::join_paths([&bin]).unwrap();
-            // On Windows an installed Krasis Photo (registered, or in a program folder) comes first, so
+            // On Windows an installed Vulcanio Photo (registered, or in a program folder) comes first, so
             // there only the `PATH` candidate is checked.
             if !cfg!(windows) {
                 assert!(find_photocraft(None, Some(&path_var)).is_none(), "not installed");
@@ -662,8 +662,8 @@ mod open_with_tests {
         }
     }
 
-    /// #5327 review: on Windows Krasis Photo is looked for where its installer puts it: the path it
-    /// registers, then `Krasis\Krasis Photo` in the per-user and per-machine program folders, then
+    /// #5327 review: on Windows Vulcanio Photo is looked for where its installer puts it: the path it
+    /// registers, then `Vulcanio\Vulcanio Photo` in the per-user and per-machine program folders, then
     /// the `PATH`.
     #[test]
     fn windows_looks_where_the_photocraft_installer_puts_it() {
@@ -671,7 +671,7 @@ mod open_with_tests {
         let registered = vec![PathBuf::from("D:/Tools/PhotoCraft/photocraft.exe")];
         let folders = [PathBuf::from("C:/Users/me/AppData/Local/Programs"), PathBuf::from("C:/Program Files"), PathBuf::from("C:/Program Files")];
         let on_path = vec![PathBuf::from("C:/bin/photocraft.exe")];
-        let exe = |f: &str| PathBuf::from(f).join("Krasis").join("PhotoCraft").join("photocraft.exe");
+        let exe = |f: &str| PathBuf::from(f).join("Vulcanio").join("PhotoCraft").join("photocraft.exe");
         assert_eq!(
             windows_candidates(registered, &folders, on_path),
             [
@@ -689,8 +689,8 @@ mod open_with_tests {
     fn the_registered_path_is_read_from_the_utf16_value() {
         let wide = |s: &str| s.encode_utf16().chain([0, 0]).collect::<Vec<u16>>();
         assert_eq!(
-            registered_path(&wide(r"C:\Program Files\Krasis\PhotoCraft\photocraft.exe")),
-            Some(std::path::PathBuf::from(r"C:\Program Files\Krasis\PhotoCraft\photocraft.exe"))
+            registered_path(&wide(r"C:\Program Files\Vulcanio\PhotoCraft\photocraft.exe")),
+            Some(std::path::PathBuf::from(r"C:\Program Files\Vulcanio\PhotoCraft\photocraft.exe"))
         );
         assert_eq!(
             registered_path(&wide(" \"C:\\Prögram Fïles\\Тест\\写真\\photocraft.exe\" ")),

@@ -105,7 +105,7 @@ fn theme_card<V: PartialEq + Copy>(ui: &mut egui::Ui, t: &Tokens, card: ThemeCar
         });
 }
 
-/// A small Krasis Library window painted with `kind`'s tokens: the top bar with its search field, the
+/// A small Vulcanio Library window painted with `kind`'s tokens: the top bar with its search field, the
 /// photo with the filmstrip under it, the Edit panel (histogram and sliders), the tool strip and
 /// the bottom bar.
 fn theme_preview(ui: &mut egui::Ui, kind: crate::theme::ThemeKind, width: f32) {

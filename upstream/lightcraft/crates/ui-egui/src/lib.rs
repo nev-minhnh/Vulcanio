@@ -1,4 +1,4 @@
-//! Krasis Library's egui frontend: a Lightroom-style UI over `lightcraft-engine`.
+//! Vulcanio Library's egui frontend: a Lightroom-style UI over `lightcraft-engine`.
 //!
 //! The UI is thin: every action goes through [`LightcraftApp::run`], which handles UI commands
 //! (views, panels, zoom — see [`menus::ui_commands`]) and forwards everything else to the engine.
@@ -6,7 +6,7 @@
 #![forbid(unsafe_code)]
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 
-/// Krasis Library as craft-update knows it, with its 128 px icon and accent colour: the update
+/// Vulcanio Library as craft-update knows it, with its 128 px icon and accent colour: the update
 /// prompt shows both, and an AppImage's menu entry gets the icon.
 #[cfg(not(target_arch = "wasm32"))]
 pub const UPDATE_APP: craft_update::app::App = craft_update::app::App {

@@ -146,7 +146,7 @@ pub fn browser_stopped(unsaved: usize, kept: usize) -> String {
     } else {
         i18n::tr("Reload the page to get back the unsaved files the browser had room for.")
     };
-    format!("{} {next}", i18n::tr("Krasis Interface stopped because of an internal error."))
+    format!("{} {next}", i18n::tr("Vulcanio Interface stopped because of an internal error."))
 }
 
 /// The largest file read in the browser: wasm has at most 4 GiB of memory, and a file's contents

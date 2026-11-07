@@ -1,16 +1,16 @@
 //! Linux: Preferences › Performance › Linux Display Server › X11 opens the window through XWayland
 //! on a Wayland session, where dropped files arrive (winit 0.30 has no Wayland drag and drop,
 //! #1151). Automatic and X11 (XWayland) When a Pen Is Attached do so only when a pen is attached
-//! as the app starts, as Krasis Photo does: winit 0.30 doesn't bind the Wayland tablet protocol, so
+//! as the app starts, as Vulcanio Photo does: winit 0.30 doesn't bind the Wayland tablet protocol, so
 //! on native Wayland the pen moves only the compositor's cursor, and XWayland hands the pen to X11
 //! windows as a pointer (#2028, #4967). `VECTORCRAFT_NATIVE_WAYLAND=1` keeps a pen's window on
 //! Wayland. Only when XWayland can run the window: an X display is set and
 //! the X11 libraries winit loads at runtime are installed. Otherwise the window opens on Wayland,
 //! so a missing library never keeps the app from starting.
 //!
-//! The library check comes from Krasis Photo's `linux_libs.rs`: no `dlopen` (that needs `unsafe`),
+//! The library check comes from Vulcanio Photo's `linux_libs.rs`: no `dlopen` (that needs `unsafe`),
 //! just the dynamic linker's cache (`ldconfig -p`) and the usual library directories. The pen
-//! check comes from Krasis Photo's `tablet.rs`: the input devices the kernel lists in
+//! check comes from Vulcanio Photo's `tablet.rs`: the input devices the kernel lists in
 //! `/proc/bus/input/devices`.
 #![cfg_attr(not(target_os = "linux"), allow(dead_code))]
 
@@ -184,7 +184,7 @@ mod tests {
     }
 
     /// `/proc/bus/input/devices` of a laptop with a Wacom Intuos Pro attached (64-bit longs: the
-    /// pen's `KEY=1c03 0 0 0 0 0` has bit 0x140, `BTN_TOOL_PEN`), from Krasis Photo's tests.
+    /// pen's `KEY=1c03 0 0 0 0 0` has bit 0x140, `BTN_TOOL_PEN`), from Vulcanio Photo's tests.
     const WITH_PEN: &str = "I: Bus=0011 Vendor=0001 Product=0001 Version=ab83\n\
         N: Name=\"AT Translated Set 2 keyboard\"\n\
         H: Handlers=sysrq kbd event3 leds\n\
@@ -203,7 +203,7 @@ mod tests {
         B: ABS=1000f000003\n";
 
     /// A uinput virtual keyboard that claims every key code, `BTN_TOOL_PEN` included, and has no
-    /// absolute axes (`EV=20013`, no `B: ABS=` line), from Krasis Photo's tests.
+    /// absolute axes (`EV=20013`, no `B: ABS=` line), from Vulcanio Photo's tests.
     const VIRTUAL_KEYBOARD: &str = "I: Bus=0003 Vendor=1234 Product=5678 Version=0111\n\
         N: Name=\"Virtual Keyboard\"\n\
         H: Handlers=sysrq rfkill kbd event256 leds \n\

@@ -67,7 +67,7 @@ pub(crate) fn download(app: &mut LightcraftApp, dir: &std::path::Path, mirrors: 
 
 /// Settings' Download Lens Database: into the app's own folder, from the usual mirrors.
 pub fn download_default(app: &mut LightcraftApp) -> Result<(), String> {
-    let dir = lensfun_download::default_dir().ok_or("this computer has no folder for Krasis Library's data")?;
+    let dir = lensfun_download::default_dir().ok_or("this computer has no folder for Vulcanio Library's data")?;
     download(app, &dir, lensfun_download::mirrors())
 }
 
@@ -78,7 +78,7 @@ pub fn offer(ui: &mut egui::Ui) {
     ui.add_space(4.0);
     ui.add(
         egui::Label::new(crate::i18n::tr_format!(
-            "Krasis Library can correct distortion and vignetting for many lenses using the open lens database (lensfun, about {size} MB).",
+            "Vulcanio Library can correct distortion and vignetting for many lenses using the open lens database (lensfun, about {size} MB).",
             size = lensfun_download::download_megabytes()
         ))
         .wrap(),
@@ -193,7 +193,7 @@ pub fn readout(app: &LightcraftApp, p: &lightcraft_catalog::Photo) -> String {
         }
         None if app.session.lensfun.running() => crate::i18n::tr("Downloading the lens database…").to_string(),
         None if matches!(app.session.lensfun.state(), lensfun_download::State::Failed(_)) && lens_profiles::database().is_none() => {
-            crate::i18n::tr("The lens database could not be downloaded. Krasis Library tries again the next time it starts.").to_string()
+            crate::i18n::tr("The lens database could not be downloaded. Vulcanio Library tries again the next time it starts.").to_string()
         }
         None => match lens_refresh::no_profile_reason(p) {
             Some(r) if p.meta.lens.trim().is_empty() => crate::i18n::tr(&r).to_string(),
@@ -252,7 +252,7 @@ mod tests {
         }
         assert!(matches!(app.session.lensfun.state(), lightcraft_engine::lensfun_download::State::Failed(_)), "{:?}", app.session.lensfun.state());
         if lightcraft_engine::lens_profiles::database().is_none() {
-            assert_eq!(super::readout(&app, &p), "The lens database could not be downloaded. Krasis Library tries again the next time it starts.");
+            assert_eq!(super::readout(&app, &p), "The lens database could not be downloaded. Vulcanio Library tries again the next time it starts.");
         }
         let _ = std::fs::remove_dir_all(&root);
     }

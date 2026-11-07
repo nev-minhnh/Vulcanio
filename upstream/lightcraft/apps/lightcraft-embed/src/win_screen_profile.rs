@@ -1,4 +1,4 @@
-//! The ICC profile Windows assigns to the monitor showing Krasis Library's window.
+//! The ICC profile Windows assigns to the monitor showing Vulcanio Library's window.
 //!
 //! On an SDR desktop Windows passes what an app draws to the monitor unchanged, so sRGB previews
 //! look oversaturated on a wide-gamut monitor and ignore a calibration. While no monitor profile is

@@ -124,7 +124,7 @@ mod extension_tests {
         assert_eq!(with_document_extension("/a/Brochure"), "/a/Brochure.designcraft");
         assert_eq!(with_document_extension("/a/Brochure.idml"), "/a/Brochure.idml.designcraft");
         assert_eq!(with_document_extension("/a/v1.2 Brochure"), "/a/v1.2 Brochure.designcraft");
-        assert_eq!(with_document_extension("/a/Brochure.Krasis Layout"), "/a/Brochure.Krasis Layout");
+        assert_eq!(with_document_extension("/a/Brochure.Vulcanio Layout"), "/a/Brochure.Vulcanio Layout");
         assert_eq!(with_document_extension("/a/.."), "/a/..");
     }
 

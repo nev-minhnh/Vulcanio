@@ -53,7 +53,7 @@ fn read_reply_line(reader: &mut impl BufRead, reply: &mut String, max: usize) ->
     if n > max && !reply.ends_with('\n') {
         return Err(std::io::Error::new(
             std::io::ErrorKind::InvalidData,
-            format!("reply from the control port is longer than {max} bytes; is that Krasis CAD's control server?"),
+            format!("reply from the control port is longer than {max} bytes; is that Vulcanio CAD's control server?"),
         ));
     }
     Ok(n)
@@ -105,7 +105,7 @@ impl Remote {
         Err(std::io::Error::new(
             std::io::ErrorKind::TimedOut,
             format!(
-                "Krasis CAD was opened but its control port {} did not answer; if it was already open without the port, quit it and try again",
+                "Vulcanio CAD was opened but its control port {} did not answer; if it was already open without the port, quit it and try again",
                 self.addr
             ),
         ))
@@ -173,7 +173,7 @@ fn not_open(addr: &str, e: std::io::Error) -> std::io::Error {
     std::io::Error::new(
         e.kind(),
         format!(
-            "Krasis CAD is not answering at {addr} ({e}). Open Krasis CAD with its control port (`--control PORT` or CADCRAFT_CONTROL_PORT), then try again"
+            "Vulcanio CAD is not answering at {addr} ({e}). Open Vulcanio CAD with its control port (`--control PORT` or CADCRAFT_CONTROL_PORT), then try again"
         ),
     )
 }
@@ -182,10 +182,10 @@ fn not_open(addr: &str, e: std::io::Error) -> std::io::Error {
 fn launch_app(addr: &str) -> std::io::Result<()> {
     let port = addr.rsplit(':').next().filter(|p| p.parse::<u16>().is_ok()).ok_or_else(|| std::io::Error::other(format!("no port in {addr}")))?;
     if cfg!(target_os = "macos") {
-        let ok = std::process::Command::new("open").args(["-a", "Krasis CAD", "--args", "--control", port]).status()?.success();
-        if ok { Ok(()) } else { Err(std::io::Error::other("could not open Krasis CAD (is it in Applications?)")) }
+        let ok = std::process::Command::new("open").args(["-a", "Vulcanio CAD", "--args", "--control", port]).status()?.success();
+        if ok { Ok(()) } else { Err(std::io::Error::other("could not open Vulcanio CAD (is it in Applications?)")) }
     } else {
-        Err(std::io::Error::other(format!("Krasis CAD is not running; start it with `cadcraft --control {port}`")))
+        Err(std::io::Error::other(format!("Vulcanio CAD is not running; start it with `cadcraft --control {port}`")))
     }
 }
 
@@ -227,7 +227,7 @@ impl Remote {
                 // A mutation whose reply was lost must never be sent twice.
                 if sent && !is_read_only(method) {
                     return Err(format!(
-                        "Krasis CAD at {}: {e}; the reply was lost, so `{method}` may or may not have been applied. Inspect the drawing first",
+                        "Vulcanio CAD at {}: {e}; the reply was lost, so `{method}` may or may not have been applied. Inspect the drawing first",
                         self.addr
                     ));
                 }
@@ -236,7 +236,7 @@ impl Remote {
                 self.roundtrip(&req.to_string()).map_err(|(e, _)| {
                     self.token = None;
                     self.conn = None;
-                    format!("Krasis CAD at {}: {e}", self.addr)
+                    format!("Vulcanio CAD at {}: {e}", self.addr)
                 })?
             }
         };
@@ -286,7 +286,7 @@ impl Backend for Remote {
         true
     }
     fn describe(&self) -> String {
-        format!("connected to Krasis CAD at {}", self.addr)
+        format!("connected to Vulcanio CAD at {}", self.addr)
     }
 }
 
@@ -454,7 +454,7 @@ impl Backend for Headless {
         false
     }
     fn describe(&self) -> String {
-        "headless Krasis CAD session".into()
+        "headless Vulcanio CAD session".into()
     }
 }
 

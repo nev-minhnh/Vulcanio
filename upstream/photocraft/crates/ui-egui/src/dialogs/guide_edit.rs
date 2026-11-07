@@ -1,4 +1,4 @@
-//! A guide dialog's draft. Rendering and command validation stay in Krasis Photo; the
+//! A guide dialog's draft. Rendering and command validation stay in Vulcanio Photo; the
 //! [`edit_session`](crate::edit_session) module owns proposal validity, stale-context rejection
 //! and the single-use/no-op commit decision.
 use crate::edit_session::{EditSession, FinishError};

@@ -262,7 +262,7 @@ pub enum PlaybackSpeed {
     Pause,
 }
 
-/// The pause between steps that Pause For takes, in whole seconds: Krasis Vector's own range.
+/// The pause between steps that Pause For takes, in whole seconds: Vulcanio Vector's own range.
 pub const PAUSE_SECONDS: std::ops::RangeInclusive<u32> = 1..=60;
 
 /// How actions play, kept with the UI preferences.
@@ -2281,7 +2281,7 @@ mod tests {
             (json!(" ".repeat(files::MAX_SET_FILE + 1)), "the action set file is larger than 8 MiB"),
             (
                 json!("{\"format\": \"vcactions\", \"version\": 3, \"name\": \"S\", \"actions\": []}"),
-                "the action set file needs a later version of Krasis Vector",
+                "the action set file needs a later version of Vulcanio Vector",
             ),
         ] {
             assert_eq!(app.run(LOAD_SET, json!({ "data": data })).unwrap_err(), want);

@@ -38,7 +38,7 @@ use crate::activity::{Activity, Cancel, TaskGuard};
 /// folders are never used. None there: a new top-level album is made. More than one: nothing is
 /// imported (error [`AMBIGUOUS_ALBUM`]).
 pub const SCRIPT: &str = r#"on run argv
-	if (count of argv) < 3 then error "Krasis Library: no files to import" number -50
+	if (count of argv) < 3 then error "Vulcanio Library: no files to import" number -50
 	set albumName to item 2 of argv
 	set mediaFiles to {}
 	repeat with i from 3 to (count of argv)
@@ -63,7 +63,7 @@ pub const SCRIPT: &str = r#"on run argv
 					end considering
 					if sameName and candidateParent is missing value then set end of topLevel to contents of candidate
 				end repeat
-				if (count of topLevel) > 1 then error "Krasis Library: several top-level albums have this name" number 23601
+				if (count of topLevel) > 1 then error "Vulcanio Library: several top-level albums have this name" number 23601
 				if (count of topLevel) is 1 then
 					set targetAlbum to item 1 of topLevel
 				else

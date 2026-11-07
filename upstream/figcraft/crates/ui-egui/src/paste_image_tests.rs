@@ -16,7 +16,7 @@ use crate::{FigApp, Services};
 /// What the system clipboard holds when a paste chord is pressed (#716).
 #[derive(Clone, Copy, Debug)]
 enum Held {
-    /// Krasis Interface's own copy (its SVG text).
+    /// Vulcanio Interface's own copy (its SVG text).
     Ours,
     /// Text copied in another app.
     Text,
@@ -123,7 +123,7 @@ impl Win {
         self.frame(vec![Event::ModifiersChanged(Modifiers::NONE)]);
     }
 
-    /// A red rectangle A copied in Krasis Interface, and a grey rectangle B selected; then `held` on the
+    /// A red rectangle A copied in Vulcanio Interface, and a grey rectangle B selected; then `held` on the
     /// system clipboard. Returns (A, B).
     fn copy_a_select_b(&mut self, held: Held) -> (NodeId, NodeId) {
         let s = &mut self.app.session;
@@ -239,7 +239,7 @@ fn pasting_an_image_keeps_the_other_fills_variables() {
     assert!(!node.bound.is_empty(), "the colour fill under the image keeps its variable");
 }
 
-/// An image layer copied in Krasis Interface pastes as a layer, a selected shape or not.
+/// An image layer copied in Vulcanio Interface pastes as a layer, a selected shape or not.
 #[test]
 fn an_image_layer_copied_in_figcraft_pastes_as_a_layer() {
     let mut w = Win::new();

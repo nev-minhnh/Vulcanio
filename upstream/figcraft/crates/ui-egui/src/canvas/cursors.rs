@@ -1,5 +1,5 @@
 //! The pointer on the canvas: each engine cursor ([`figcraft_engine::tools::Cursor`]) as one of
-//! the system's cursors, or as a small glyph Krasis Interface draws at the pointer with the system's
+//! the system's cursors, or as a small glyph Vulcanio Interface draws at the pointer with the system's
 //! hidden (a rotate cursor turned to its corner, the pen's states, the eyedropper, the comment
 //! pin). The glyphs are original, drawn from lines and the code-drawn icons: no cursor images.
 
@@ -8,7 +8,7 @@ use figcraft_engine::tools::{Cursor, PenCursor};
 
 use crate::icons::{self, Icon};
 
-/// A cursor Krasis Interface draws.
+/// A cursor Vulcanio Interface draws.
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Glyph {
     /// A curved double arrow about the direction (degrees, 0 = right, 90 = down) from the box's

@@ -1,6 +1,6 @@
-# Krasis CAD German interface catalog — original translations by the Krasis CAD contributors.
+# Vulcanio CAD German interface catalog — original translations by the Vulcanio CAD contributors.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from Krasis CAD's English strings; no proprietary translations were copied.
+# Written from Vulcanio CAD's English strings; no proprietary translations were copied.
 # UTF-8: context<TAB>English source<TAB>German translation.
 # Empty context = ordinary label; @plural = one|other forms with {n}.
 # Keep command IDs, keywords, technology/product names and user data unchanged.
@@ -28,7 +28,7 @@
 	= Equals	= Gleich
 	> Greater than	> Größer als
 	About	Über
-	About Krasis CAD	Über Krasis CAD
+	About Vulcanio CAD	Über Vulcanio CAD
 	Absolute	Absolut
 	Add Leader	Führungslinie hinzufügen
 	Align	Ausrichten
@@ -84,7 +84,7 @@
 	ByBlock	VonBlock
 	ByColor	VonFarbe
 	ByLayer	VonLayer
-	Krasis CAD Help	Krasis CAD-Hilfe
+	Vulcanio CAD Help	Vulcanio CAD-Hilfe
 	Cancel	Abbrechen
 	Cartesian (x, y)	Kartesisch (x, y)
 	Center	Zentrum
@@ -363,7 +363,7 @@
 	Isolate Layer	Layer isolieren
 	Isometric Drafting	Isometrisches Zeichnen
 	Join	Verbinden
-	Join the Krasis Discord…	Dem Krasis-Discord beitreten…
+	Join the Vulcanio Discord…	Dem Vulcanio-Discord beitreten…
 	Join us on Discord	Treten Sie uns auf Discord bei
 	Language	Sprache
 	Last	Letzter
@@ -494,7 +494,7 @@
 	Offset	Versatz
 	On	Ein
 	On/Off	Ein/Aus
-	Part of Krasis.	Eine der Crafting Apps vom Krasis-Team und seiner Community.
+	Part of Vulcanio.	Eine der Crafting Apps vom Vulcanio-Team und seiner Community.
 	Oops	Gelöschte Objekte wiederherstellen
 	Open (⌘O)	Öffnen (⌘O)
 	Open Sample Drawing	Beispielzeichnung öffnen
@@ -596,7 +596,7 @@
 	Quick Select Properties	Schnellauswahl-Eigenschaften
 	Quick Select...	Schnellauswahl...
 	QuickCalc	QuickCalc
-	Quit Krasis CAD	Krasis CAD beenden
+	Quit Vulcanio CAD	Vulcanio CAD beenden
 	Radius	Radius
 	Raster Image	Rasterbild
 	Ray	Strahl
@@ -1003,7 +1003,7 @@
 @plural	{n} contributor	{n} Mitwirkender|{n} Mitwirkende
 	Drawing as bytes	Zeichnung als Bytes
 	Services	Dienste
-	Hide Krasis CAD	Krasis CAD ausblenden
+	Hide Vulcanio CAD	Vulcanio CAD ausblenden
 	Hide Others	Andere ausblenden
 	Accessibility	Bedienungshilfen
 	Show System Cursor	Systemzeiger anzeigen
@@ -1039,7 +1039,7 @@
 	Text color	Textfarbe
 	Click the ruler to add a tab stop, right-click to remove one	Klick auf das Lineal setzt einen Tabstopp, Rechtsklick entfernt ihn
 	Check for Updates…	Nach Updates suchen…
-	Krasis CAD is up to date.	Krasis CAD ist auf dem neuesten Stand.
+	Vulcanio CAD is up to date.	Vulcanio CAD ist auf dem neuesten Stand.
 	Could not check for updates.	Die Suche nach Updates ist fehlgeschlagen.
 	Find All	Find All
 	Find what:	Find what:

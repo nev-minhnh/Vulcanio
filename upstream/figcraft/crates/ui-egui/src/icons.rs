@@ -1,4 +1,4 @@
-//! Krasis Interface's icon set, drawn in code from simple primitives on a 16×16 grid. Original artwork
+//! Vulcanio Interface's icon set, drawn in code from simple primitives on a 16×16 grid. Original artwork
 //! (MIT OR Apache-2.0): no third-party icons are used anywhere.
 //!
 //! The grid is pixel-exact at 16 px: 1-unit strokes sit on half coordinates (pixel centres) and

@@ -639,7 +639,7 @@ fn missing_penpot_font_warnings(doc: &Document, families: &[String]) -> Vec<Stri
         .join(", ");
     let extra = if count > 8 { format!(" and {} more", count - 8) } else { String::new() };
     vec![format!(
-        "Penpot: {count} font family/families are not installed or embedded: {names}{extra}. Krasis Interface uses fallback fonts for display, but preserves the original family names; install the licensed fonts and reopen the file to restore text metrics."
+        "Penpot: {count} font family/families are not installed or embedded: {names}{extra}. Vulcanio Interface uses fallback fonts for display, but preserves the original family names; install the licensed fonts and reopen the file to restore text metrics."
     )]
 }
 

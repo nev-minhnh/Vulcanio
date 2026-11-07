@@ -1,4 +1,4 @@
-# Windows: link the C runtime statically, so krasis.exe needs no Visual C++ Redistributable.
+# Windows: link the C runtime statically, so vulcanio.exe needs no Visual C++ Redistributable.
 [target.x86_64-pc-windows-msvc]
 rustflags = ["-C", "target-feature=+crt-static"]
 

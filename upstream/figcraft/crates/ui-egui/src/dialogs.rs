@@ -50,11 +50,11 @@ const ISSUES: &str = "https://github.com/storytold/figcraft/issues";
 pub fn window_failed(error: &str, backend_set: bool, tried: Option<&str>) -> String {
     let hint = if let Some(apis) = tried {
         trf(
-            "Krasis Interface tried {apis}, then again with lower requirements on the power-saving GPU. Updating the graphics driver often helps.",
+            "Vulcanio Interface tried {apis}, then again with lower requirements on the power-saving GPU. Updating the graphics driver often helps.",
             &[("apis", &apis)],
         )
     } else if backend_set {
-        tr("WGPU_BACKEND is set and names the graphics API to use; unsetting it lets Krasis Interface choose.").to_string()
+        tr("WGPU_BACKEND is set and names the graphics API to use; unsetting it lets Vulcanio Interface choose.").to_string()
     } else if cfg!(windows) {
         // Direct3D 12 and OpenGL are both offered, but wgpu keeps the Direct3D 12 adapter it picked
         // even when its device then fails, so naming OpenGL alone can still help.
@@ -63,7 +63,7 @@ pub fn window_failed(error: &str, backend_set: bool, tried: Option<&str>) -> Str
 
 set WGPU_BACKEND=gl
 figcraft.exe",
-            tr("Updating the graphics driver often helps. To use OpenGL only, start Krasis Interface from a Command Prompt with:")
+            tr("Updating the graphics driver often helps. To use OpenGL only, start Vulcanio Interface from a Command Prompt with:")
         )
     } else {
         tr("Updating the graphics driver often helps. WGPU_BACKEND (vulkan, gl, metal) names another graphics API to try.").to_string()
@@ -74,7 +74,7 @@ figcraft.exe",
 {hint}
 
 {}",
-        trf("Krasis Interface couldn't open its window: {error}", &[("error", &error)]),
+        trf("Vulcanio Interface couldn't open its window: {error}", &[("error", &error)]),
         trf("If it keeps happening, please report it at {link} with this message.", &[("link", &ISSUES)])
     )
 }
@@ -152,11 +152,11 @@ fn about_body(ui: &mut egui::Ui, t: &Tokens) {
     });
     ui.add_space(12.0);
     ui.label(tr(
-        "Interface design and prototyping. A free, open-source, clean-room design tool written from scratch in Rust, part of the Krasis apps.",
+        "Interface design and prototyping. A free, open-source, clean-room design tool written from scratch in Rust, part of the Vulcanio apps.",
     ));
     ui.add_space(8.0);
     ui.label(
-        RichText::new(tr("Dual-licensed MIT OR Apache-2.0. Made by the Krasis team and community.")).color(t.text_secondary).font(regular(11.0)),
+        RichText::new(tr("Dual-licensed MIT OR Apache-2.0. Made by the Vulcanio team and community.")).color(t.text_secondary).font(regular(11.0)),
     );
 }
 
@@ -216,7 +216,7 @@ pub fn show(app: &mut FigApp, ctx: &Context) {
     let t = Tokens::get(ctx);
     if app.ui.about {
         let mut open = true;
-        window(tr("About Krasis Interface"), ctx).open(&mut open).show(ctx, |ui| {
+        window(tr("About Vulcanio Interface"), ctx).open(&mut open).show(ctx, |ui| {
             ui.set_width(ABOUT_WIDTH);
             tab_strip(ui, &t, &AboutTab::ALL, AboutTab::label, &mut app.ui.about_tab);
             ui.add_space(12.0);
@@ -264,7 +264,7 @@ pub fn show(app: &mut FigApp, ctx: &Context) {
             }
             // Where the app registers itself as the opener of invite links (Windows).
             if let Some(on) = app.session.invite_links_on() {
-                if crate::widgets::checkbox(ui, on, tr("Open invite links in Krasis Interface")) {
+                if crate::widgets::checkbox(ui, on, tr("Open invite links in Vulcanio Interface")) {
                     app.run("collab.registerLinks", json!({"on": !on}));
                 }
                 crate::widgets::label(
@@ -288,7 +288,7 @@ pub fn show(app: &mut FigApp, ctx: &Context) {
                     app.run("pref.publishServer", json!({"url": url}));
                 }
                 let usual = prefs.publish_server == figcraft_engine::live::DEFAULT_SERVER;
-                if crate::widgets::button(ui, tr("Reset"), false, !usual).on_hover_text(tr("Back to the Krasis Interface server")).clicked() {
+                if crate::widgets::button(ui, tr("Reset"), false, !usual).on_hover_text(tr("Back to the Vulcanio Interface server")).clicked() {
                     app.run("pref.publishServer", json!({}));
                 }
             });

@@ -4,7 +4,7 @@
 # Integer plural forms: one|few|many (1, 21; 2–4, 22–24; 0, 5–19).
 # Rule: https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html#uk
 # Preserve {name} placeholders, shortcut names and trailing dialog ellipses.
-# Original translations from the meaning of Krasis Photo's English source keys.
+# Original translations from the meaning of Vulcanio Photo's English source keys.
 # No proprietary translation resources were used.
 # Licensed MIT OR Apache-2.0. See LICENSE-translations.txt and ATTRIBUTION.md.
 
@@ -172,7 +172,7 @@
 # Batch / Image Processor
 
 # Native Windows printing qualification
-# Krasis Photo release checks.
+# Vulcanio Photo release checks.
 # History panel › History Brush source (#2966)
 # Bevel & Emboss shading controls.
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
@@ -689,12 +689,12 @@
 	3D	3D
 	Toolbars	Панелі інструментів
 	Hide All	Приховати все
-	About Krasis Photo	Про Krasis Photo
-	Krasis Photo Website	Вебсайт Krasis Photo
-	Krasis Photo on GitHub	Krasis Photo на GitHub
+	About Vulcanio Photo	Про Vulcanio Photo
+	Vulcanio Photo Website	Вебсайт Vulcanio Photo
+	Vulcanio Photo on GitHub	Vulcanio Photo на GitHub
 	Report an Issue…	Повідомити про проблему…
-	Krasis Website	Вебсайт Krasis
-	Join the Krasis Discord…	Приєднатися до Discord Krasis…
+	Vulcanio Website	Вебсайт Vulcanio
+	Join the Vulcanio Discord…	Приєднатися до Discord Vulcanio…
 	System Info…	Інформація про систему…
 	Move	Переміщення
 	Marquee	Прямокутне виділення
@@ -768,11 +768,11 @@
 	Import Shortcuts…	Імпортувати сполучення клавіш…
 	Load a keyboard shortcut set saved as .kys	Завантажити набір сполучень клавіш, збережений як .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Імпортовано сполучень клавіш: {n} із {file}. Натисніть OK, щоб зберегти їх.
-	{n} commands are not in Krasis Photo.	Команд, яких немає в Krasis Photo: {n}.
+	{n} commands are not in Vulcanio Photo.	Команд, яких немає в Vulcanio Photo: {n}.
 	Keyboard shortcuts imported	Сполучення клавіш імпортовано
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Тут використовується ваш набір сполучень клавіш {set}: сполучень, що відрізняються від стандартних: {n}. Їх показує Редагування › Сполучення клавіш; «Скинути все до стандартних» скасовує імпорт.
 	Import keyboard shortcuts?	Імпортувати сполучення клавіш?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo знайшов на цьому комп'ютері ваш набір сполучень клавіш {set} з іншого графічного редактора: сполучень, що відрізняються від Krasis Photo: {n}. Імпортувати його?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo знайшов на цьому комп'ютері ваш набір сполучень клавіш {set} з іншого графічного редактора: сполучень, що відрізняються від Vulcanio Photo: {n}. Імпортувати його?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Редагування › Сполучення клавіш › «Скинути все до стандартних» скасовує імпорт.
 	Don't Import	Не імпортувати
 	The keyboard shortcut set was not imported: {error}	Набір сполучень клавіш не імпортовано: {error}
@@ -1063,7 +1063,7 @@
 	Embed Color Profile	Вбудувати колірний профіль
 	Assign Profile…	Призначити профіль…
 	Convert to Profile…	Перетворити на профіль…
-	Krasis Photo Manages Colors	Krasis Photo керує кольорами
+	Vulcanio Photo Manages Colors	Vulcanio Photo керує кольорами
 	Printer Manages Colors	Принтер керує кольорами
 	(print to the printer)	(друк на принтері)
 	Absolute Colorimetric	Абсолютний колориметричний
@@ -1631,15 +1631,15 @@
 	Use File › Open, or paste a copied image with {paste}.	Скористайтеся меню Файл › Відкрити або вставте скопійоване зображення за допомогою {paste}.
 	Native file drag-and-drop is unavailable	Нативне перетягування файлів недоступне
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Нативне перетягування файлів у Wayland ще не підтримується. Скористайтеся меню Файл › Відкрити або скопіюйте зображення у файловому менеджері та вставте його за допомогою {paste}.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Щоб перетягувати файли, запустіть Krasis Photo під XWayland: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Або виберіть X11 у Налаштування › Продуктивність › Сервер відображення Linux: Krasis Photo завжди запускатиметься під XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Щоб перетягувати файли, запустіть Vulcanio Photo під XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Або виберіть X11 у Налаштування › Продуктивність › Сервер відображення Linux: Vulcanio Photo завжди запускатиметься під XWayland.
 	Edit › Paste	Редагування › Вставити
 	Photo	Фото
 	Print	Друк
 	Art & Illustration	Мистецтво та ілюстрація
 	Mobile	Мобільні пристрої
 	Film & Video	Фільм і відео
-	Default Krasis Photo Size	Типовий розмір Krasis Photo
+	Default Vulcanio Photo Size	Типовий розмір Vulcanio Photo
 	Clipboard	Буфер обміну
 	Photo (2 × 3 in)	Фото (2 × 3 дюйми)
 	Photo (4 × 6 in)	Фото (4 × 6 дюймів)
@@ -1790,8 +1790,8 @@
 	Reverse	Зворотний
 	Align with layer	Вирівняти за шаром
 	Join us on Discord	Приєднуйтеся до нас у Discord
-	Krasis Photo website	Вебсайт Krasis Photo
-	Krasis	Krasis
+	Vulcanio Photo website	Вебсайт Vulcanio Photo
+	Vulcanio	Vulcanio
 	GitHub	GitHub
 	No character style	Без стилю символів
 	No author	Автор відсутній
@@ -1815,9 +1815,9 @@
 	Don't Save	Не зберігати
 	No	Ні
 	Yes	Так
-	These settings aren't available in Krasis Photo yet.	Ці параметри ще недоступні у Krasis Photo.
+	These settings aren't available in Vulcanio Photo yet.	Ці параметри ще недоступні у Vulcanio Photo.
 	Shortcut removed.	Клавіатурне скорочення вилучено.
-	All shortcuts reset to Krasis Photo defaults.	Усі клавіатурні скорочення скинуто до типових значень Krasis Photo.
+	All shortcuts reset to Vulcanio Photo defaults.	Усі клавіатурні скорочення скинуто до типових значень Vulcanio Photo.
 	Add Shortcut	Додати клавіатурне скорочення
 	Delete Shortcut	Видалити клавіатурне скорочення
 	Press keys…	Натисніть клавіші…
@@ -2295,8 +2295,8 @@
 	Output:	Вихід:
 	Paint Overlay	Малювати накладання
 	Pattern Size	Розмір візерунка
-	Krasis Photo	Krasis Photo
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — нативний редактор зображень із відкритим кодом, написаний на Rust.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — нативний редактор зображень із відкритим кодом, написаний на Rust.
 	Position and Size	Положення та розмір
 	Preserve Details	Зберігати деталі
 	Preserve Luminosity	Зберігати світність
@@ -2617,7 +2617,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Автоматичний режим використовує прискорення GPU, коли воно доступне, та переходить на рендеринг CPU в разі помилок.
 	Switched to CPU rendering	Перехід на рендеринг CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Прискорення GPU не може продовжувати роботу. Ваші документи не змінено.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo використовує компонувальник зображень CPU. Вікно може й далі використовувати ваш графічний адаптер.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo використовує компонувальник зображень CPU. Вікно може й далі використовувати ваш графічний адаптер.
 	Retry GPU requires a restart. Save your work first.	Повторна спроба використати GPU потребує перезапуску. Спочатку збережіть роботу.
 	Retry GPU tries the graphics processor again now.	Повторити спробу з GPU — одразу знову спробувати графічний процесор.
 	GPU acceleration resumed.	Прискорення GPU відновлено.
@@ -3460,7 +3460,7 @@ cameraRaw	Masking	Маскування
 	Custom Pixel Aspect Ratio	Довільне співвідношення сторін пікселя
 	32-bit Preview Options	Параметри 32-бітного перегляду
 	New Guide	Нова напрямна
-	Join the Krasis Discord	Приєднатися до Discord Krasis
+	Join the Vulcanio Discord	Приєднатися до Discord Vulcanio
 	Report an Issue	Повідомити про проблему
 	WIA Support	Підтримка WIA
 	Load Files into Stack	Завантажити файли у стос
@@ -3840,7 +3840,7 @@ cameraData	Lens	Об'єктив
 	Click: smooth point · Double-click: corner · Drag a point: move · Click first point: close · {key} finish	Клацання: плавна точка · Подвійне клацання: кут · Перетягування точки: перемістити · Клацання першої точки: замкнути · {key}: завершити
 	Search settings…	Пошук налаштувань…
 	No matching settings	Немає відповідних налаштувань
-	Krasis Photo — Screen Color Picker	Krasis Photo — Піпетка кольору екрана
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Піпетка кольору екрана
 	Sampling Brush Tool	Пензель області вибірки
 	Sampling Area Overlay	Накладання області вибірки
 	Show Sampling Area	Показати область вибірки
@@ -3989,7 +3989,7 @@ curves	Smooth	Згладити
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Завантажено {n} операцію з {file}|Завантажено {n} операції з {file}|Завантажено {n} операцій з {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} крок ще не має відповідника в Krasis Photo|{n} кроки ще не мають відповідника в Krasis Photo|{n} кроків ще не мають відповідника в Krasis Photo
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} крок ще не має відповідника в Vulcanio Photo|{n} кроки ще не мають відповідника в Vulcanio Photo|{n} кроків ще не мають відповідника в Vulcanio Photo
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Збережено {n} операцію до {file}|Збережено {n} операції до {file}|Збережено {n} операцій до {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Пропущено {n} крок без відповідника в Photoshop|Пропущено {n} кроки без відповідника в Photoshop|Пропущено {n} кроків без відповідника в Photoshop
 @plural	{n} action file loaded|{n} action files loaded	Завантажено {n} файл операцій|Завантажено {n} файли операцій|Завантажено {n} файлів операцій
@@ -4088,12 +4088,12 @@ curves	Smooth	Згладити
 	Bicubic Smoother	Бікубічна, гладкіша
 	Bicubic Sharper	Бікубічна, чіткіша
 	Pasting from other apps is unavailable	Вставлення з інших застосунків недоступне
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	У цьому сеансі Krasis Photo не має доступу до системного буфера обміну. У Wayland пісочниця Flatpak приховує протокол, через який читаються зображення з інших застосунків.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Щоб вставляти з інших застосунків, запустіть Krasis Photo під XWayland: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Нічого вставити: тут Krasis Photo не може прочитати системний буфер обміну
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	У цьому сеансі Vulcanio Photo не має доступу до системного буфера обміну. У Wayland пісочниця Flatpak приховує протокол, через який читаються зображення з інших застосунків.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Щоб вставляти з інших застосунків, запустіть Vulcanio Photo під XWayland: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Нічого вставити: тут Vulcanio Photo не може прочитати системний буфер обміну
 	Delete this set	Видалити цей набір
 	New Set…	Новий набір…
-	Krasis Photo Defaults	Стандартні Krasis Photo
+	Vulcanio Photo Defaults	Стандартні Vulcanio Photo
 	Save a list of these shortcuts as a web page	Зберегти список цих клавіатурних скорочень як вебсторінку
 	Save the changes to this set	Зберегти зміни в цьому наборі
 	Save these shortcuts as a .kys file	Зберегти ці клавіатурні скорочення як файл .kys

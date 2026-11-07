@@ -1,5 +1,5 @@
-//! Help › About Krasis Layout: tabs About · Contributors · Models. About is the splash with the
-//! Krasis mark, version, and community links (Discord first and largest), plus the other Krasis
+//! Help › About Vulcanio Layout: tabs About · Contributors · Models. About is the splash with the
+//! Vulcanio mark, version, and community links (Discord first and largest), plus the other Vulcanio
 //! apps; Contributors and Models are the compiled-in credits (`crate::credits`).
 
 use designcraft_engine::links;
@@ -9,28 +9,28 @@ use serde_json::json;
 use crate::DesignApp;
 use crate::theme::{Tokens, semibold};
 
-/// Krasis brand blue (from `docs/brand/artcraft-mark.svg`).
+/// Vulcanio brand blue (from `docs/brand/artcraft-mark.svg`).
 pub const BRAND: Color32 = Color32::from_rgb(0x4e, 0x7b, 0xfb);
 /// Discord's brand colour, used for the "Join our Discord" buttons (colour only; no Discord artwork).
 pub const DISCORD: Color32 = Color32::from_rgb(0x58, 0x65, 0xf2);
 
-/// The Krasis mark outline (viewBox -10 -19.42 136.34 136.34), from `docs/brand/artcraft-mark.svg`.
+/// The Vulcanio mark outline (viewBox -10 -19.42 136.34 136.34), from `docs/brand/artcraft-mark.svg`.
 const MARK_PATH: &str = "M104.28,49.49L81.55,0h-31.23l-3.17,4.76L14.75,53.63,0,75.85l21.55,21.55,63.79-36.94,16.99,37.04,14.01-21.74-12.06-26.27ZM32.89,65.66l32.42-48.87,10.91,23.77-43.32,25.09Z";
 
-/// The other Krasis apps (app-page slug, name, what it is) — same list as the README.
+/// The other Vulcanio apps (app-page slug, name, what it is) — same list as the README.
 pub const SIBLINGS: &[(&str, &str, &str)] = &[
-    ("photocraft", "Krasis Photo", "image editing"),
-    ("vectorcraft", "Krasis Vector", "vector illustration"),
-    ("filmcraft", "Krasis Video", "video editing, color and sound"),
-    ("lightcraft", "Krasis Library", "photo library and raw development"),
-    ("pdfcraft", "Krasis PDF", "reading, organizing and protecting PDFs"),
-    ("effectcraft", "Krasis Effects", "motion graphics and visual effects"),
+    ("photocraft", "Vulcanio Photo", "image editing"),
+    ("vectorcraft", "Vulcanio Vector", "vector illustration"),
+    ("filmcraft", "Vulcanio Video", "video editing, color and sound"),
+    ("lightcraft", "Vulcanio Library", "photo library and raw development"),
+    ("pdfcraft", "Vulcanio PDF", "reading, organizing and protecting PDFs"),
+    ("effectcraft", "Vulcanio Effects", "motion graphics and visual effects"),
 ];
 
 /// The About window's tabs, in `UiState::about_tab` order (`help.about {tab}` names them in lowercase).
 pub const ABOUT_TABS: [&str; 3] = ["About", "Contributors", "Models"];
 
-/// Paint the Krasis mark into `rect` (square), rasterised once per size and cached.
+/// Paint the Vulcanio mark into `rect` (square), rasterised once per size and cached.
 pub fn paint_mark(ui: &egui::Ui, rect: Rect, color: Color32) {
     use designcraft_render::vello_cpu::{self, kurbo, peniko};
     let ctx = ui.ctx();
@@ -160,7 +160,7 @@ pub fn show(app: &mut DesignApp, ctx: &egui::Context) {
             ui.add_space(6.0);
             ui.label(crate::rtl::widget(
                 ui,
-                egui::RichText::new(crate::i18n::tr(&app.ui.language, "Krasis Layout")).font(semibold(26.0)).color(t.text_strong),
+                egui::RichText::new(crate::i18n::tr(&app.ui.language, "Vulcanio Layout")).font(semibold(26.0)).color(t.text_strong),
             ));
             crate::rtl::label(
                 ui,
@@ -177,7 +177,7 @@ pub fn show(app: &mut DesignApp, ctx: &egui::Context) {
             ));
             ui.label(crate::rtl::widget(
                 ui,
-                egui::RichText::new(crate::i18n::tr(&app.ui.language, "Part of the Krasis suite of open creative tools."))
+                egui::RichText::new(crate::i18n::tr(&app.ui.language, "Part of the Vulcanio suite of open creative tools."))
                     .size(12.0)
                     .color(t.text_dim),
             ));

@@ -359,7 +359,7 @@ mod tests {
             assert!(font.font_data() == expected.bytes, "existing CJK face order: {} {}", expected.family, expected.style);
         }
         for vertical in [false, true] {
-            for text in ["Krasis Library AV 123", "日本語、。你好世界한국어"] {
+            for text in ["Vulcanio Library AV 123", "日本語、。你好世界한국어"] {
                 let before = TextLayout::new(text, 40.0, vertical, previous).unwrap();
                 let after = TextLayout::new(text, 40.0, vertical, CRAFT_FONTS).unwrap();
                 assert_eq!((before.width, before.height), (after.width, after.height));

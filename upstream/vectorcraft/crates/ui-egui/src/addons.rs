@@ -1,4 +1,4 @@
-//! The module defines Krasis Vector's built-in add-on menus and panels. Object › Plug-ins lists their tools and commands.
+//! The module defines Vulcanio Vector's built-in add-on menus and panels. Object › Plug-ins lists their tools and commands.
 
 pub mod arrange;
 pub mod cleanup;

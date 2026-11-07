@@ -1303,11 +1303,11 @@ fn context_menu_open_and_edit(app: &mut LightcraftApp, ui: &mut egui::Ui, id: Ph
     if ui.button(crate::i18n::tr("Open in Detail")).clicked() {
         let _ = app.run("view.detail", json!({}));
     }
-    // Photo ▸ Edit In: a copy with this photo's edits, opened in Krasis Photo or another editor
+    // Photo ▸ Edit In: a copy with this photo's edits, opened in Vulcanio Photo or another editor
     // (desktop only: the web can't start programs)
     ui.add_enabled_ui(crate::menus::ui_enabled(app, "photo.editInPhotoCraft"), |ui| {
         crate::widgets::menu_button(ui, crate::i18n::tr("Edit In"), |ui| {
-            if ui.button(crate::i18n::tr("Edit in Krasis Photo")).clicked() {
+            if ui.button(crate::i18n::tr("Edit in Vulcanio Photo")).clicked() {
                 let _ = app.run("photo.editInPhotoCraft", json!({}));
             }
             if ui.button(crate::i18n::tr("Edit in Other Editor")).clicked() {

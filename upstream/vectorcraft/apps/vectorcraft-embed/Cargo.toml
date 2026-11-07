@@ -18,7 +18,7 @@ wgpu = ["eframe/wgpu", "dep:winsafe"]
 accessibility = ["eframe/accesskit"]
 
 [dependencies]
-krasis-host = { path = "../../../../crates/krasis-host" }
+vulcanio-host = { path = "../../../../crates/vulcanio-host" }
 vectorcraft-engine = { workspace = true, features = ["bundled-fonts"] }
 vectorcraft-ui-egui = { workspace = true }
 vectorcraft-text = { workspace = true }

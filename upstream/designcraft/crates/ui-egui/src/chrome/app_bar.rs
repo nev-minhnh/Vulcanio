@@ -312,8 +312,8 @@ pub fn app_bar(app: &mut DesignApp, ui: &mut egui::Ui) {
             });
             // Centred title.
             let title = match app.session.active() {
-                Some(d) => format!("Krasis Layout — {}", crate::rtl::isolate(&d.title())),
-                None => "Krasis Layout".to_string(),
+                Some(d) => format!("Vulcanio Layout — {}", crate::rtl::isolate(&d.title())),
+                None => "Vulcanio Layout".to_string(),
             };
             // Centred between the menus and the right-hand controls; left out when it won't fit.
             let galley = crate::rtl::plain(ui.ctx(), &title, egui::FontId::proportional(11.5), t.text);

@@ -90,17 +90,17 @@ pub fn is_native_name(name: &str) -> bool {
 
 #[derive(Debug, thiserror::Error)]
 pub enum FormatError {
-    #[error("not a Krasis Vector file: {0}")]
+    #[error("not a Vulcanio Vector file: {0}")]
     NotVectorcraft(String),
-    #[error("file version {0} is newer than this Krasis Vector supports ({VERSION})")]
+    #[error("file version {0} is newer than this Vulcanio Vector supports ({VERSION})")]
     TooNew(u32),
     #[error("invalid image data for `{0}`")]
     BadImage(String),
-    #[error("can't save version {0}: Krasis Vector writes versions {MIN_VERSION} to {VERSION}")]
+    #[error("can't save version {0}: Vulcanio Vector writes versions {MIN_VERSION} to {VERSION}")]
     BadVersion(u32),
     #[error("version {0} files can't be compressed: only version {COMPRESSED_SINCE} and later open compressed files")]
     CompressedTooOld(u32),
-    #[error("the compressed file unpacks to more than Krasis Vector reads ({} MB of document, {} MB per image)", MAX_JSON >> 20, MAX_BLOB >> 20)]
+    #[error("the compressed file unpacks to more than Vulcanio Vector reads ({} MB of document, {} MB per image)", MAX_JSON >> 20, MAX_BLOB >> 20)]
     TooBig,
     #[error("the document is too large to save compressed ({0}): save it with Use Compression off")]
     TooBigToCompress(String),
@@ -326,7 +326,7 @@ pub fn save_to(doc: &Document, o: &SaveOptions, w: impl Write) -> Result<(), For
     // Older apps only know the name from before the rename.
     env.field(&mut out, "format", &if o.version < 3 { LEGACY_EXTENSION } else { EXTENSION })?;
     env.field(&mut out, "version", &o.version)?;
-    env.field(&mut out, "generator", &format!("Krasis Vector {}", env!("CARGO_PKG_VERSION")))?;
+    env.field(&mut out, "generator", &format!("Vulcanio Vector {}", env!("CARGO_PKG_VERSION")))?;
     if let Some(png) = &o.preview {
         env.field(&mut out, "preview", &Image::inline("image/png", png))?;
     }
@@ -667,7 +667,7 @@ mod tests {
         assert!(legacy.contains("\"drawcraft\""));
         assert!(sniff(legacy.as_bytes()));
         assert_eq!(load(legacy.as_bytes()).unwrap().artboards[0].rect, d.artboards[0].rect);
-        assert!(is_native_name("old/Poster.Krasis Vector") && is_native_name("new.vectorcraft") && !is_native_name("x.svg"));
+        assert!(is_native_name("old/Poster.Vulcanio Vector") && is_native_name("new.vectorcraft") && !is_native_name("x.svg"));
         assert!(load(br#"{"format":"other","version":1,"document":{}}"#).is_err());
     }
 
@@ -703,7 +703,7 @@ mod tests {
     fn sniff_takes_every_layout_written() {
         let before_rename = [
             r#"{"format":"drawcraft","version":1,"generator":"DrawCraft 0.1.0","document":{},"images":{}}"#,
-            "{\n  \"format\": \"drawcraft\",\n  \"version\": 2,\n  \"generator\": \"Krasis Vector 0.1.0\",\n  \"document\": {},\n  \"images\": {}\n}",
+            "{\n  \"format\": \"drawcraft\",\n  \"version\": 2,\n  \"generator\": \"Vulcanio Vector 0.1.0\",\n  \"document\": {},\n  \"images\": {}\n}",
         ];
         for text in before_rename {
             assert!(sniff(text.as_bytes()), "{text}");
@@ -728,7 +728,7 @@ mod tests {
         assert!(matches!(e, FormatError::NotVectorcraft(_)), "{e}");
         assert!(e.to_string().contains(&craft_vectorcraft_format::Error::TooBig.to_string()), "{e}");
         let e = FormatError::from(craft_vectorcraft_format::Error::Format("x".into()));
-        assert_eq!(e.to_string(), "not a Krasis Vector file: format is `x`");
+        assert_eq!(e.to_string(), "not a Vulcanio Vector file: format is `x`");
         assert!(matches!(FormatError::from(craft_vectorcraft_format::Error::TooNew(9)), FormatError::TooNew(9)));
     }
 
@@ -785,7 +785,7 @@ mod tests {
                     let mut file = craft_vectorcraft_format::File::new(Written(&b));
                     file.format = if version < 3 { LEGACY_EXTENSION } else { EXTENSION }.into();
                     file.version = version;
-                    file.generator = Some(format!("Krasis Vector {}", env!("CARGO_PKG_VERSION")));
+                    file.generator = Some(format!("Vulcanio Vector {}", env!("CARGO_PKG_VERSION")));
                     file.preview = o.preview.as_deref().map(|p| Image::inline("image/png", p));
                     // The images come first in the data after the JSON, then the profiles and the PDF.
                     let mut tail = file.tail();
@@ -822,7 +822,7 @@ mod tests {
         let message = |json: &str| load(json.as_bytes()).err().map(|e| e.to_string());
         assert_eq!(
             message(r#""x""#).as_deref(),
-            Some(r#"not a Krasis Vector file: invalid type: string "x", expected struct File at line 1 column 3"#)
+            Some(r#"not a Vulcanio Vector file: invalid type: string "x", expected struct File at line 1 column 3"#)
         );
         assert!(
             message(r#"{"format":"vectorcraft","version":4}"#).is_some_and(|m| m.starts_with("not a VectorCraft file: missing field `document`"))
@@ -992,19 +992,19 @@ mod tests {
         for g in [Some("VectorCraft 0.20.0"), Some("VectorCraft 0.9.12"), Some("DrawCraft 0.1.0"), Some("VectorCraft"), None] {
             assert_eq!(opened(g), (now, Some(-30.0)), "{g:?}");
         }
-        for g in ["Krasis Vector 0.21.0", "Krasis Vector 0.21.3", "Krasis Vector 1.0.0"] {
+        for g in ["Vulcanio Vector 0.21.0", "Vulcanio Vector 0.21.3", "Vulcanio Vector 1.0.0"] {
             assert_eq!(opened(Some(g)), (now, Some(30.0)), "{g}");
         }
         // A file may repeat `generator`: the first one names the app.
         let mut v: serde_json::Value = serde_json::from_slice(&current).unwrap();
         v["document"]["version"] = 1.into();
-        v["generator"] = "Krasis Vector 0.21.0".into();
+        v["generator"] = "Vulcanio Vector 0.21.0".into();
         let text = serde_json::to_string(&v).unwrap();
         let first = r#""generator":"VectorCraft 0.21.0""#;
         let twice = text.replacen(first, &format!(r#"{first},"generator":"DrawCraft 0.1.0""#), 1);
         assert_ne!(twice, text);
         assert_eq!(angle(&load(twice.as_bytes()).unwrap()), Some(30.0));
-        v["generator"] = "Krasis Vector 0.20.0".into();
+        v["generator"] = "Vulcanio Vector 0.20.0".into();
         let old = load(&serde_json::to_vec(&v).unwrap()).unwrap();
         let again = load(&save(&old, false)).unwrap();
         assert_eq!((again.version, angle(&again)), (now, Some(-30.0)), "saved again, it is the current version");

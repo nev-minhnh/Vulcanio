@@ -18,7 +18,7 @@ pub const UI_COMMANDS: &[(&str, &str, Option<&str>, &str)] = &[
     ("app.placeDialog", "Place…", Some("Cmd+D"), "{path?} — without a path, choose the file in a dialog"),
     ("app.saveDialog", "Save As…", Some("Cmd+Shift+S"), "{path?} — without a path, choose where in a dialog"),
     ("app.save", "Save", Some("Cmd+S"), "{}"),
-    ("app.quit", "Quit Krasis Layout", Some("Cmd+Q"), "{} — close the window; each document with unsaved changes asks first"),
+    ("app.quit", "Quit Vulcanio Layout", Some("Cmd+Q"), "{} — close the window; each document with unsaved changes asks first"),
     ("app.saveCopyDialog", "Save a Copy…", Some("Cmd+Alt+S"), "{path?} — choose where to write a copy (the document stays as it is)"),
     ("app.loadSwatches", "Load Swatches…", None, "{path?} — pick a swatch exchange (.ase) file"),
     (
@@ -352,7 +352,7 @@ pub const UI_COMMANDS: &[(&str, &str, Option<&str>, &str)] = &[
     ("window.workspace.new", "New Workspace", None, "{name} — save the current workspace (window.newWorkspace)"),
     ("window.workspace.delete", "Delete Workspace", None, "{name} — delete a saved workspace (window.deleteWorkspace)"),
     ("window.workspace.reset", "Reset Workspace", None, "{} — back to the current workspace as saved (window.resetWorkspace)"),
-    ("window.workspace.lock", "Lock Workspace", None, "{locked?} — not available in Krasis Layout"),
+    ("window.workspace.lock", "Lock Workspace", None, "{locked?} — not available in Vulcanio Layout"),
     (
         "ui.dock",
         "Change Panel Layout",
@@ -386,7 +386,7 @@ pub const UI_COMMANDS: &[(&str, &str, Option<&str>, &str)] = &[
     ("window.taskBarReset", "Reset Bar Position", None, "{} — the Contextual Task Bar follows the selection again, under it"),
     (
         "help.about",
-        "About Krasis Layout",
+        "About Vulcanio Layout",
         None,
         "{open?: true, tab?: \"about\"|\"contributors\"|\"models\"} — the About window: splash with community links, contributor and model credits (open: false closes it)",
     ),

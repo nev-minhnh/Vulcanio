@@ -192,7 +192,7 @@ fn foreign(set: &ParsedSet) -> ForeignSet {
     ForeignSet::new(entries).with_name(set.name.clone()).with_truncated(set.dropped)
 }
 
-/// What Krasis Layout's contexts take from a set: Default keys bind in the command's home scope; an
+/// What Vulcanio Layout's contexts take from a set: Default keys bind in the command's home scope; an
 /// item without Default keys takes its Text keys. Unmatched items get likely commands.
 pub fn import_options(remembered: BTreeMap<String, CommandRef>) -> ImportOptions {
     ImportOptions {
@@ -277,7 +277,7 @@ fn report_json(r: &ImportReport) -> Value {
 pub fn summary(lang: &str, report: &Value) -> String {
     let n = |k: &str| report[k].as_u64().unwrap_or_default().to_string();
     let len = |k: &str| report[k].as_array().map_or(0, Vec::len).to_string();
-    // Rows for keys in contexts Krasis Layout lacks belong to items that did match.
+    // Rows for keys in contexts Vulcanio Layout lacks belong to items that did match.
     let unmatched = report["unmatched"].as_array().map_or(0, |rows| rows.iter().filter(|r| r["reason"] != "context").count());
     let mut out = crate::i18n::tr(lang, "Imported {count} shortcuts from “{set}”; {unmatched} items not matched, {unreadable} unreadable.")
         .replace("{count}", &n("imported"))
@@ -358,7 +358,7 @@ mod tests {
                 {"item": "File > Close", "line": 10, "keys": "Tables: Ctrl+3", "reason": "context"},
             ])
         );
-        // Keys in a context Krasis Layout lacks don't make their matched item count as unmatched.
+        // Keys in a context Vulcanio Layout lacks don't make their matched item count as unmatched.
         assert!(summary("en", &r).contains("; 1 items not matched"), "{}", summary("en", &r));
         assert_eq!(r["unmatchedWithoutShortcut"], 1);
         assert_eq!(r["unreadable"][0]["item"], "File > Save");

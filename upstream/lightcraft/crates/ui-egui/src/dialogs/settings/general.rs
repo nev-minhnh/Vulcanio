@@ -76,7 +76,7 @@ pub(super) fn general_tab(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens
     heading(ui, t, crate::i18n::tr("Dialogs"));
     check(ui, "settings.closeDialogsOutside", &mut app.ui.settings.close_dialogs_outside, "Close a dialog by clicking outside it");
     heading(ui, t, crate::i18n::tr("External Editing"));
-    row(ui, t, crate::i18n::tr("Krasis Photo"), |ui| {
+    row(ui, t, crate::i18n::tr("Vulcanio Photo"), |ui| {
         field(
             ui,
             crate::text_field::TextField::singleline("field:photocraftPath", &mut app.ui.settings.photocraft_path)
@@ -89,7 +89,7 @@ pub(super) fn general_tab(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens
         ui,
         t,
         crate::i18n::tr(
-            "Photo ▸ Edit In ▸ Edit in Krasis Photo (⇧⌘E, or right-click a photo) renders a copy with your edits, stacks it with the original and opens it in Krasis Photo. Save there and the copy updates here. As PSD, Krasis Photo saves straight back to it. Leave the location empty unless you use a portable copy.",
+            "Photo ▸ Edit In ▸ Edit in Vulcanio Photo (⇧⌘E, or right-click a photo) renders a copy with your edits, stacks it with the original and opens it in Vulcanio Photo. Save there and the copy updates here. As PSD, Vulcanio Photo saves straight back to it. Leave the location empty unless you use a portable copy.",
         ),
     );
     row(ui, t, crate::i18n::tr("Other editor"), |ui| {
@@ -143,7 +143,7 @@ fn lens_profiles(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens) {
         }
     });
     let mut offer = app.ui.settings.lens_database != Offer::Declined;
-    if check(ui, "settings.lensDatabaseOffer", &mut offer, "Offer the lens database download when Krasis Library starts") {
+    if check(ui, "settings.lensDatabaseOffer", &mut offer, "Offer the lens database download when Vulcanio Library starts") {
         app.ui.settings.lens_database = if offer { Offer::Ask } else { Offer::Declined };
     }
     hint(

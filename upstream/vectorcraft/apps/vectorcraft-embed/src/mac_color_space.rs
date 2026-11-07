@@ -1,7 +1,7 @@
-//! macOS: the windows' Metal layers are tagged sRGB, so macOS converts what Krasis Vector draws to
+//! macOS: the windows' Metal layers are tagged sRGB, so macOS converts what Vulcanio Vector draws to
 //! the display's color profile (#2249, #3161).
 //!
-//! Krasis Vector draws sRGB values. Apple's documentation of `CAMetalLayer.colorspace` says: "When a
+//! Vulcanio Vector draws sRGB values. Apple's documentation of `CAMetalLayer.colorspace` says: "When a
 //! color space is present, Core Animation performs any necessary color space transformations when
 //! compositing this content. The default value is `nil`, indicating that the rendered content
 //! isn’t color-matched"

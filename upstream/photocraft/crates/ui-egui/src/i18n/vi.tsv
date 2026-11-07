@@ -15,7 +15,7 @@
 # Clean-room: every entry was written from the plain meaning of the English label using ordinary
 # Vietnamese computing and image-editing vocabulary. No proprietary localisation resource, string
 # table or product UI was consulted or copied; add entries the same way. Product and technology
-# names (Krasis Photo, Krasis, OpenType, RGB, CMYK, Lab, PSD, PNG, JPEG, WebP, OpenEXR, AVIF …)
+# names (Vulcanio Photo, Vulcanio, OpenType, RGB, CMYK, Lab, PSD, PNG, JPEG, WebP, OpenEXR, AVIF …)
 # stay as they are; the trailing "…" of dialog commands is kept. Plural rule: one form
 # (`plural_none` in i18n/mod.rs).
 
@@ -789,9 +789,9 @@
 	3-up Vertical	3 cửa sổ dọc
 	4-up	4 cửa sổ
 	6-up	6 cửa sổ
-	About Krasis Photo	Giới thiệu Krasis Photo
+	About Vulcanio Photo	Giới thiệu Vulcanio Photo
 	Actions	Thao tác
-	Krasis Website	Trang web Krasis
+	Vulcanio Website	Trang web Vulcanio
 	Brush Settings	Thiết lập cọ
 	Brushes	Cọ
 	Cascade	Xếp tầng
@@ -811,7 +811,7 @@
 	Histogram	Histogram
 	History	Lịch sử
 	Info	Thông tin
-	Join the Krasis Discord…	Tham gia Discord Krasis…
+	Join the Vulcanio Discord…	Tham gia Discord Vulcanio…
 	Layer Comps	Tổ hợp lớp
 	Lock Workspace	Khóa không gian làm việc
 	Match All	Đồng bộ tất cả
@@ -831,8 +831,8 @@
 	Paragraph Styles	Kiểu đoạn văn
 	Paths	Đường dẫn
 	Patterns	Họa tiết
-	Krasis Photo on GitHub	Krasis Photo trên GitHub
-	Krasis Photo Website	Trang web Krasis Photo
+	Vulcanio Photo on GitHub	Vulcanio Photo trên GitHub
+	Vulcanio Photo Website	Trang web Vulcanio Photo
 	Photography	Nhiếp ảnh
 	Pixel Art	Pixel Art
 	Pro Medium Gray Theme	Chủ đề Pro xám vừa
@@ -1659,7 +1659,7 @@ cameraRaw	Shadows	Vùng tối
 	Subdivisions	Phân chia
 	System title bar	Thanh tiêu đề hệ thống
 	Text file	Tệp văn bản
-	These settings aren't available in Krasis Photo yet.	Các thiết lập này chưa có trong Krasis Photo.
+	These settings aren't available in Vulcanio Photo yet.	Các thiết lập này chưa có trong Vulcanio Photo.
 	Tiny	Rất nhỏ
 	Traditional (72.27 points/inch)	Truyền thống (72,27 point/inch)
 	Transparency & Gamut	Độ trong suốt & gam màu
@@ -1685,7 +1685,7 @@ cameraRaw	Shadows	Vùng tối
 	About	Giới thiệu
 	Contributors	Người đóng góp
 	Models	Mô hình
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — trình chỉnh sửa ảnh gốc mã nguồn mở viết bằng Rust.
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — trình chỉnh sửa ảnh gốc mã nguồn mở viết bằng Rust.
 	Version {version}	Phiên bản {version}
 	Unsaved changes	Thay đổi chưa lưu
 	Answer the unsaved-changes prompt first	Hãy trả lời hộp thoại thay đổi chưa lưu trước
@@ -1723,10 +1723,10 @@ cameraRaw	Shadows	Vùng tối
 	Leave as is (don't color manage)	Giữ nguyên (không quản lý màu)
 	Discard the embedded profile (don't color manage)	Bỏ hồ sơ nhúng (không quản lý màu)
 	Native file drag-and-drop is unavailable	Kéo thả tệp gốc không khả dụng
-	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Krasis Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Kéo thả tệp gốc chưa được hỗ trợ trên Wayland. Dùng Tệp › Mở, hoặc chạy Krasis Photo dưới XWayland với `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Vulcanio Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Kéo thả tệp gốc chưa được hỗ trợ trên Wayland. Dùng Tệp › Mở, hoặc chạy Vulcanio Photo dưới XWayland với `WAYLAND_DISPLAY= photocraft`.
 	Switched to CPU rendering	Đã chuyển sang kết xuất CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Không thể tiếp tục tăng tốc GPU. Tài liệu của bạn không đổi.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo đang dùng bộ kết hợp ảnh CPU. Cửa sổ vẫn có thể dùng bộ điều hợp đồ họa của bạn.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo đang dùng bộ kết hợp ảnh CPU. Cửa sổ vẫn có thể dùng bộ điều hợp đồ họa của bạn.
 	Retry GPU	Thử lại GPU
 	Retry GPU requires a restart. Save your work first.	Thử lại GPU cần khởi động lại. Hãy lưu công việc trước.
 	Retry GPU tries the graphics processor again now.	Thử lại GPU sẽ thử lại bộ xử lý đồ họa ngay bây giờ.
@@ -2081,7 +2081,7 @@ colorRange	Invert	Đảo ngược
 	Tool	Công cụ
 	New document…	Tài liệu mới…
 	Join us on Discord	Tham gia Discord
-	Krasis Photo website	Trang web Krasis Photo
+	Vulcanio Photo website	Trang web Vulcanio Photo
 	Anchor:	Neo:
 	Canvas extension color:	Màu mở rộng canvas:
 layers	Fill	Độ tô
@@ -2236,7 +2236,7 @@ layers	Fill:	Độ tô:
 	A save to {name} is still running; try again when it finishes	Đang lưu {name}; thử lại khi hoàn tất
 	Adwaita Dark Theme	Chủ đề Adwaita tối
 	Adwaita Light Theme	Chủ đề Adwaita sáng
-	All shortcuts reset to Krasis Photo defaults.	Đã đặt lại mọi phím tắt về mặc định Krasis Photo.
+	All shortcuts reset to Vulcanio Photo defaults.	Đã đặt lại mọi phím tắt về mặc định Vulcanio Photo.
 	Appearance Mode	Chế độ giao diện
 	Auto Hide	Tự động ẩn
 	Click to add a point, right-click to remove	Nhấp để thêm điểm, nhấp chuột phải để xóa
@@ -2318,7 +2318,7 @@ layers	Fill:	Độ tô:
 	Vector Mask from Current Path	Mặt nạ vector từ đường dẫn hiện tại
 	{label} is writing the file and can no longer be canceled	{label} đang ghi tệp và không thể hủy nữa
 	{name} options	Tùy chọn {name}
-	{n} commands are not in Krasis Photo.	{n} lệnh không có trong Krasis Photo.
+	{n} commands are not in Vulcanio Photo.	{n} lệnh không có trong Vulcanio Photo.
 	{size} (was {old})	{size} (trước là {old})
 	{w} px x {h} px ({ppi} ppi)	{w} px x {h} px ({ppi} ppi)
 	…and {n} more	…và {n} nữa
@@ -2331,7 +2331,7 @@ layers	Fill:	Độ tô:
 	Corner Crop Marks	Dấu cắt góc
 	Default printer	Máy in mặc định
 	No Color Management	Không quản lý màu
-	Krasis Photo Manages Colors	Krasis Photo quản lý màu
+	Vulcanio Photo Manages Colors	Vulcanio Photo quản lý màu
 	Printer	Máy in
 	Printer Manages Colors	Máy in quản lý màu
 	Printer Setup	Thiết lập máy in
@@ -2430,7 +2430,7 @@ layers	Fill:	Độ tô:
 	Add	Thêm
 	Appearance	Giao diện
 shape	Appearance	Diện mạo
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Bottom	Dưới
 	Capture	Ghi lại
 	Change	Thay
@@ -2447,14 +2447,14 @@ shape	Appearance	Diện mạo
 	Inverse	Đảo vùng chọn
 	Lighten	Làm sáng
 	Missing delete command	Thiếu lệnh xóa
-	Krasis Photo	Krasis Photo
+	Vulcanio Photo	Vulcanio Photo
 	Reset	Đặt lại
 	Tetrahedral	Tetrahedral
 	Top	Trên
 	Trilinear	Trilinear
 	Show channels in color	Hiện kênh bằng màu
 	Import keyboard shortcuts?	Nhập phím tắt?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo tìm thấy bộ phím tắt {set} từ trình chỉnh sửa ảnh khác trên máy này: {n} phím tắt khác với Krasis Photo. Nhập vào?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo tìm thấy bộ phím tắt {set} từ trình chỉnh sửa ảnh khác trên máy này: {n} phím tắt khác với Vulcanio Photo. Nhập vào?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Chỉnh sửa › Phím tắt › Đặt lại tất cả về mặc định sẽ hoàn tác lần nhập.
 	Don't Import	Không nhập
 	The keyboard shortcut set was not imported: {error}	Không nhập được bộ phím tắt: {error}
@@ -2465,7 +2465,7 @@ shape	Appearance	Diện mạo
 	Next Document	Tài liệu tiếp theo
 	Open EXR Parts…	Mở các phần EXR…
 	Pencil	Bút chì
-	Krasis Photo — Screen Color Picker	Krasis Photo — Bộ chọn màu màn hình
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Bộ chọn màu màn hình
 	Previous Document	Tài liệu trước
 	Refine	Tinh chỉnh
 	Remove from Recent	Xóa khỏi Gần đây
@@ -2657,8 +2657,8 @@ shape	Appearance	Diện mạo
 	Basic	Cơ bản
 	Brush Preset picker	Bộ chọn cài đặt cọ
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Chưa hỗ trợ kéo-thả tệp gốc trên Wayland. Hãy dùng Tệp › Mở, hoặc sao chép ảnh trong trình quản lý tệp và dán bằng {paste}.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Để thả tệp, hãy khởi chạy Krasis Photo dưới XWayland: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Hoặc đặt Tùy chọn › Hiệu năng › Máy chủ hiển thị Linux thành X11: Krasis Photo sẽ luôn khởi chạy dưới XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Để thả tệp, hãy khởi chạy Vulcanio Photo dưới XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Hoặc đặt Tùy chọn › Hiệu năng › Máy chủ hiển thị Linux thành X11: Vulcanio Photo sẽ luôn khởi chạy dưới XWayland.
 	Kerning	Điều chỉnh khoảng cách chữ
 	Layout	Bố cục
 	Metrics	Số đo
@@ -2687,7 +2687,7 @@ shape	Appearance	Diện mạo
 	Could not use Puppet Warp: the layer is empty	Không thể dùng Uốn búp bê: lớp rỗng
 	Crosswise	Ngang
 	Current Tool	Công cụ hiện tại
-	Default Krasis Photo Size	Kích thước mặc định của Krasis Photo
+	Default Vulcanio Photo Size	Kích thước mặc định của Vulcanio Photo
 	Delete Workspace	Xoá không gian làm việc
 	Document Dimensions	Kích thước tài liệu
 	Document Profile	Hồ sơ tài liệu
@@ -3746,7 +3746,7 @@ curves	Smooth	Làm mượt
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Đã nạp {n} hành động từ {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} bước chưa có chức năng tương ứng trong Krasis Photo
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} bước chưa có chức năng tương ứng trong Vulcanio Photo
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Đã lưu {n} hành động vào {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Đã bỏ qua {n} bước không có chức năng tương ứng trong Photoshop
 @plural	{n} action file loaded|{n} action files loaded	Đã nạp {n} tệp hành động
@@ -3859,12 +3859,12 @@ curves	Smooth	Làm mượt
 	Bicubic Smoother	Bicubic mượt hơn
 	Bicubic Sharper	Bicubic sắc hơn
 	Pasting from other apps is unavailable	Không thể dán từ ứng dụng khác
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo không truy cập được bộ nhớ tạm của hệ thống trong phiên này. Trên Wayland, sandbox của Flatpak ẩn giao thức dùng để đọc hình ảnh từ ứng dụng khác.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Để dán từ ứng dụng khác, hãy khởi động Krasis Photo dưới XWayland: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Không có gì để dán: Krasis Photo không thể đọc bộ nhớ tạm của hệ thống ở đây
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo không truy cập được bộ nhớ tạm của hệ thống trong phiên này. Trên Wayland, sandbox của Flatpak ẩn giao thức dùng để đọc hình ảnh từ ứng dụng khác.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Để dán từ ứng dụng khác, hãy khởi động Vulcanio Photo dưới XWayland: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Không có gì để dán: Vulcanio Photo không thể đọc bộ nhớ tạm của hệ thống ở đây
 	Delete this set	Xóa bộ này
 	New Set…	Bộ mới…
-	Krasis Photo Defaults	Mặc định của Krasis Photo
+	Vulcanio Photo Defaults	Mặc định của Vulcanio Photo
 	Save a list of these shortcuts as a web page	Lưu danh sách các phím tắt này thành trang web
 	Save the changes to this set	Lưu thay đổi vào bộ này
 	Save these shortcuts as a .kys file	Lưu các phím tắt này thành tệp .kys
@@ -3973,9 +3973,9 @@ smartSvg	Choose executable…	Chọn tệp thực thi…
 smartSvg	Choose the application used to edit this SVG:	Chọn ứng dụng dùng để chỉnh sửa SVG này:
 smartSvg	Edit SVG Smart Object	Chỉnh sửa Đối tượng thông minh SVG
 smartSvg	Other application	Ứng dụng khác
-smartSvg	Krasis Photo (internal editor)	Krasis Photo (trình chỉnh sửa nội bộ)
+smartSvg	Vulcanio Photo (internal editor)	Vulcanio Photo (trình chỉnh sửa nội bộ)
 smartSvg	SVG editor opened. Save the SVG to update this Smart Object.	Đã mở trình chỉnh sửa SVG. Lưu SVG để cập nhật Đối tượng thông minh này.
-smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Krasis Photo.	Lưu vào tệp SVG đã mở. Mỗi lần lưu thay đổi tạo một bước hoàn tác trong Krasis Photo.
+smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Vulcanio Photo.	Lưu vào tệp SVG đã mở. Mỗi lần lưu thay đổi tạo một bước hoàn tác trong Vulcanio Photo.
 smartSvg	Stop syncing this Smart Object	Dừng đồng bộ Đối tượng thông minh này
 smartSvg	Updates wait while another document or an editing dialog is active.	Các cập nhật sẽ chờ khi tài liệu khác hoặc hộp thoại chỉnh sửa đang hoạt động.
 smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded source; format-specific features may change.	Nội dung AI/PDF/EPS sẽ được chỉnh sửa dưới dạng SVG. Lưu sẽ thay thế nguồn nhúng; các tính năng riêng của định dạng có thể thay đổi.

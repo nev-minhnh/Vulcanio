@@ -21,7 +21,7 @@ rawnind-model = ["denoise", "lightcraft-engine/rawnind-model"]
 heif = ["lightcraft-codecs/heif"]
 
 [dependencies]
-krasis-host = { path = "../../../../crates/krasis-host" }
+vulcanio-host = { path = "../../../../crates/vulcanio-host" }
 lightcraft-engine = { workspace = true, features = ["sam"] }
 lightcraft-sysmem = { workspace = true }
 lightcraft-ui-egui = { workspace = true }

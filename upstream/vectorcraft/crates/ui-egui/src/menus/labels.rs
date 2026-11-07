@@ -326,7 +326,7 @@ pub fn menu_strings() -> std::collections::BTreeSet<String> {
                         .strip_suffix('°')
                         .map(|n| n.strip_prefix('-').unwrap_or(n))
                         .is_some_and(|n| !n.is_empty() && n.chars().all(|c| c.is_ascii_digit()));
-                    // Krasis Vector › Language lists each language by its own name.
+                    // Vulcanio Vector › Language lists each language by its own name.
                     let language_name = *id == "app.language" && crate::i18n::Lang::all().any(|lang| lang.name() == *l);
                     if !user_data(id, params) && !size && !angle && !language_name && *l != "—" {
                         out.insert(l.to_string());

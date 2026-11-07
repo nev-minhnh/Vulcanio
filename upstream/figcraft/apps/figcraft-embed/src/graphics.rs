@@ -11,7 +11,7 @@
 //! Direct3D 12 took the first `dxcompiler.dll` on the search path, another program's, and failed
 //! on the missing `dxil.dll` beside it; Metal's Intel compiler aborts on them on older Macs. So
 //! Direct3D 12 compiles with FXC, which is part of Windows, and the validation shaders are left
-//! out: Krasis Interface draws nothing indirectly, so they would check nothing.
+//! out: Vulcanio Interface draws nothing indirectly, so they would check nothing.
 //!
 //! When the graphics still fail before the window's first frame, the app starts again with the
 //! next of its [`attempts`]: on Windows Vulkan, then OpenGL; elsewhere OpenGL; and last the first

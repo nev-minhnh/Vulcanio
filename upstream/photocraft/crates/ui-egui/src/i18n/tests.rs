@@ -375,7 +375,7 @@ fn azerbaijani_keeps_context_placeholders_and_command_names() {
     assert_eq!(tr_ctx(lang, "cameraRaw", "Light"), "İşıq");
     assert_eq!(tr_ctx(lang, "fontWeight", "Light"), "İncə");
     assert_ne!(tr_id(lang, "edit.clear", "Clear"), "Clear");
-    assert!(fmt(tr(lang, "About {app}"), &[("app", "Krasis Photo")]).contains("Krasis Photo"));
+    assert!(fmt(tr(lang, "About {app}"), &[("app", "Vulcanio Photo")]).contains("Vulcanio Photo"));
 }
 
 /// Bosnian locales, with or without region, script or encoding, select the Latin catalog.

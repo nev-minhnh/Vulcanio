@@ -30,7 +30,7 @@ fn release_of(found: &photocraft_engine::updates_cmds::Release) -> craft_update:
     craft_update::Release {
         tag: format!("v{}", found.version),
         version: craft_update::parse_version(&found.version),
-        name: format!("Krasis Photo {}", found.version),
+        name: format!("Vulcanio Photo {}", found.version),
         html_url: found.url.clone(),
         ..Default::default()
     }

@@ -134,5 +134,5 @@ pub(super) fn scale_list(w: &mut W, scales: &[(&cadcraft_doc::AnnoScale, String)
 }
 
 pub(super) fn cadcraft_fonts_name() -> &'static str {
-    "Krasis CAD Stroke"
+    "Vulcanio CAD Stroke"
 }

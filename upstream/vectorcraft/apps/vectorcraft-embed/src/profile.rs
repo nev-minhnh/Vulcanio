@@ -2,16 +2,16 @@
 //!
 //! In order:
 //! 1. `VECTORCRAFT_CONFIG_DIR`, when set (tests, agents, custom setups).
-//! 2. **Portable mode** (#1366), as in Krasis Photo: a marker file ([`PORTABLE_MARKERS`]) in the
+//! 2. **Portable mode** (#1366), as in Vulcanio Photo: a marker file ([`PORTABLE_MARKERS`]) in the
 //!    install folder puts the settings in `VectorCraftData` beside it, so a portable copy leaves
 //!    nothing in `%APPDATA%`. The install folder is the executable's; on macOS the one holding
-//!    `Krasis Vector.app` (nothing is written inside a signed bundle), for an AppImage the one holding
+//!    `Vulcanio Vector.app` (nothing is written inside a signed bundle), for an AppImage the one holding
 //!    the `.AppImage` file (`$APPIMAGE`; the executable runs from a read-only mount). The Windows
 //!    portable zip ships with `portable.txt`; the MSI doesn't. The first time `VectorCraftData` is
 //!    created, the settings in the user's profile are copied into it, so a portable zip that gains
 //!    the marker keeps its users' settings. If the folder can't be written (read-only medium,
 //!    Program Files), a warning is logged and the platform folder is used. A portable copy never
-//!    reads the old Krasis Vector profile, and a run without preferences (`VECTORCRAFT_NO_PREFS`) never
+//!    reads the old Vulcanio Vector profile, and a run without preferences (`VECTORCRAFT_NO_PREFS`) never
 //!    looks for the marker.
 //! 3. The platform convention.
 
@@ -32,22 +32,22 @@ pub fn prefs_path(legacy: bool) -> Option<PathBuf> {
 /// preferences are in use.
 fn prefs_path_with(os: &str, legacy: bool, env: impl Fn(&str) -> Option<OsString>, portable: impl FnOnce() -> Option<PathBuf>) -> Option<PathBuf> {
     if let Some(root) = env("VECTORCRAFT_CONFIG_DIR") {
-        // Never fall back to Krasis Vector's real profile when the isolated file does not exist.
+        // Never fall back to Vulcanio Vector's real profile when the isolated file does not exist.
         return (!legacy && !root.is_empty()).then(|| PathBuf::from(root).join("ui.json"));
     }
     // A run without preferences reads and writes nothing, so it must not create the portable folder.
     if env("VECTORCRAFT_NO_PREFS").is_none()
         && let Some(dir) = portable()
     {
-        // A portable copy is self-contained: Krasis Vector's old profile is not read into it.
+        // A portable copy is self-contained: Vulcanio Vector's old profile is not read into it.
         return (!legacy).then(|| dir.join("ui.json"));
     }
     platform_dir(os, legacy, &env).map(|p| p.join("ui.json"))
 }
 
-/// The platform's settings folder of Krasis Vector, or of Krasis Vector (`legacy`).
+/// The platform's settings folder of Vulcanio Vector, or of Vulcanio Vector (`legacy`).
 fn platform_dir(os: &str, legacy: bool, env: &impl Fn(&str) -> Option<OsString>) -> Option<PathBuf> {
-    let (name, lower) = if legacy { ("Krasis Vector", "drawcraft") } else { ("Krasis Vector", "vectorcraft") };
+    let (name, lower) = if legacy { ("Vulcanio Vector", "drawcraft") } else { ("Vulcanio Vector", "vectorcraft") };
     match os {
         "macos" => env("HOME").map(|p| PathBuf::from(p).join("Library/Application Support").join(name)),
         "windows" => env("APPDATA").map(|p| PathBuf::from(p).join(name)),
@@ -74,7 +74,7 @@ fn portable_dir() -> Option<PathBuf> {
 }
 
 /// The folder the user sees the app in, where the portable marker is looked for: the executable's;
-/// on macOS the one holding `Krasis Vector.app` when the executable sits in its `Contents/MacOS` (a
+/// on macOS the one holding `Vulcanio Vector.app` when the executable sits in its `Contents/MacOS` (a
 /// signed bundle is never written into); on Linux the one holding the `.AppImage` file when
 /// `$APPIMAGE` names it (the executable itself runs from a read-only mount).
 fn install_dir(os: &str, exe: &Path, env: &impl Fn(&str) -> Option<OsString>) -> Option<PathBuf> {
@@ -245,7 +245,7 @@ mod tests {
     fn unset_override_keeps_platform_paths_and_legacy_migration() {
         assert_eq!(prefs_path_with("macos", false, environment, installed), Some("/user/Library/Application Support/VectorCraft/ui.json".into()));
         assert_eq!(prefs_path_with("macos", true, environment, installed), Some("/user/Library/Application Support/VectorCraft/ui.json".into()));
-        assert_eq!(prefs_path_with("windows", false, environment, installed), Some("/roaming/Krasis Vector/ui.json".into()));
+        assert_eq!(prefs_path_with("windows", false, environment, installed), Some("/roaming/Vulcanio Vector/ui.json".into()));
         assert_eq!(prefs_path_with("linux", false, environment, installed), Some("/xdg-config/vectorcraft/ui.json".into()));
         assert_eq!(
             prefs_path_with("linux", true, |key| if key == "HOME" { environment(key) } else { None }, installed),
@@ -258,7 +258,7 @@ mod tests {
         let portable = || Some(PathBuf::from("/usb/VectorCraft/VectorCraftData"));
         for os in ["macos", "windows", "linux"] {
             assert_eq!(prefs_path_with(os, false, environment, portable), Some("/usb/VectorCraft/VectorCraftData/ui.json".into()), "{os}");
-            // A portable copy is self-contained: the one-time read of Krasis Vector's old settings is skipped.
+            // A portable copy is self-contained: the one-time read of Vulcanio Vector's old settings is skipped.
             assert_eq!(prefs_path_with(os, true, environment, portable), None, "{os}");
         }
     }
@@ -292,7 +292,7 @@ mod tests {
     #[test]
     fn an_appimage_looks_for_the_marker_beside_the_appimage_file() {
         let mounted = Path::new("/tmp/.mount_vc/usr/bin/vectorcraft");
-        let appimage = |key: &str| if key == "APPIMAGE" { Some("/home/user/Apps/Krasis Vector.AppImage".into()) } else { environment(key) };
+        let appimage = |key: &str| if key == "APPIMAGE" { Some("/home/user/Apps/Vulcanio Vector.AppImage".into()) } else { environment(key) };
         assert_eq!(install_dir("linux", mounted, &appimage), Some("/home/user/Apps".into()));
         assert_eq!(install_dir("linux", mounted, &environment), Some("/tmp/.mount_vc/usr/bin".into()));
         let empty = |key: &str| if key == "APPIMAGE" { Some(OsString::new()) } else { environment(key) };

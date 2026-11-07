@@ -522,7 +522,7 @@ impl FontDb {
             .map(Arc::new)
             .collect();
         if faces.is_empty() {
-            return Err("not a font Krasis Layout can read".into());
+            return Err("not a font Vulcanio Layout can read".into());
         }
         self.document_files.lock().unwrap_or_else(PoisonError::into_inner).insert(path.to_path_buf(), (listed, modified, faces.clone()));
         Ok((faces, len))

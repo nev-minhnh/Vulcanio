@@ -240,7 +240,7 @@ pub fn scroll_focus(nav: &mut Nav, ui: &Ui) {
 struct Shared {
     canvas: Option<Id>,
     /// The root `Ui::scope_id` of the frame. A resizable panel's real `__resize` widget is
-    /// `root_scope.with(<panel salt>).with("__resize")`; Krasis Interface's panels are fixed, so its own
+    /// `root_scope.with(<panel salt>).with("__resize")`; Vulcanio Interface's panels are fixed, so its own
     /// `panel_edge` and `pages_edge` IDs are the ones to exclude today.
     root_scope: Option<Id>,
     keyboard: bool,
@@ -654,7 +654,7 @@ fn step_within(app: &mut FigApp, ctx: &Context, region: Region, step: i32) {
 /// them, are left out).
 fn focusables(ctx: &Context, nav: &Nav, region: Region) -> Vec<(Id, Rect)> {
     let canvas = nav.last.canvas;
-    // Both the real resize widgets (should a panel ever become resizable) and Krasis Interface's own
+    // Both the real resize widgets (should a panel ever become resizable) and Vulcanio Interface's own
     // custom panel and pages-list edges, which must never enter the F6/Tab order.
     let mut edges = vec![Id::unique(("panel_edge", "left")), Id::unique(("panel_edge", "right")), Id::unique("pages_edge")];
     if let Some(root) = shared(ctx, |s| s.root_scope) {

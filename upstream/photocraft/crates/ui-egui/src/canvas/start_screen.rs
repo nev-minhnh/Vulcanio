@@ -163,22 +163,9 @@ fn render_start_rail(app: &mut PhotocraftApp, ui: &mut egui::Ui, rail_w: f32) {
         crate::links::open(app, ui.ctx(), crate::links::TUTORIALS);
     }
 
-    // 5. Bottom pinned community links
-    let bottom_h = 100.0;
-    let avail_h = ui.available_height();
-    let spacer = (avail_h - bottom_h - 20.0).max(24.0);
-    ui.add_space(spacer);
-
-    let (b_sep_rect, _) = ui.allocate_exact_size(egui::vec2(sep_w, 1.0), Sense::hover());
-    ui.painter().line_segment([b_sep_rect.min, egui::pos2(b_sep_rect.max.x, b_sep_rect.min.y)], egui::Stroke::new(1.0, t.separator));
-
-    ui.add_space(8.0);
-
-    render_rail_link(app, ui, rail_w, tl!("Website"), "link", crate::links::APP_PAGE);
-    render_rail_link(app, ui, rail_w, tl!("Discord"), "message-square", crate::links::DISCORD);
-    render_rail_link(app, ui, rail_w, tl!("GitHub"), "link-2", crate::links::GITHUB);
 }
 
+#[allow(dead_code)]
 fn render_rail_link(app: &mut PhotocraftApp, ui: &mut egui::Ui, rail_w: f32, label: &str, icon_name: &str, url: &str) {
     let t = crate::theme::Tokens::get(ui.ctx());
     let (rect, resp) = ui.allocate_exact_size(egui::vec2(rail_w, 28.0), Sense::click());
@@ -199,7 +186,7 @@ fn render_start_content(app: &mut PhotocraftApp, ui: &mut egui::Ui, recent: &[St
     let t = crate::theme::Tokens::get(ui.ctx());
     ui.add_space(8.0);
 
-    // Top Row: [01] Krasis Photo
+    // Top Row: [01] Vulcanio Photo
     ui.horizontal(|ui| {
         let badge_size = egui::vec2(24.0, 19.0);
         let (badge_rect, _) = ui.allocate_exact_size(badge_size, Sense::hover());
@@ -208,7 +195,7 @@ fn render_start_content(app: &mut PhotocraftApp, ui: &mut egui::Ui, recent: &[St
 
         ui.add_space(10.0);
 
-        let title_galley = ui.painter().layout_no_wrap(tl!("Krasis Photo").into(), crate::theme::semibold(20.0), t.text);
+        let title_galley = ui.painter().layout_no_wrap(tl!("Vulcanio Photo").into(), crate::theme::semibold(20.0), t.text);
         let (title_r, _) = ui.allocate_exact_size(title_galley.size(), Sense::hover());
         ui.painter().galley(title_r.min, title_galley, t.text);
     });

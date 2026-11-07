@@ -16,7 +16,7 @@
 # particular not the Czech localisation of Adobe Photoshop. Add entries the same way.
 # Conventions: menus are nouns (Soubor, Úpravy, Obraz ...), commands are infinitives (Otevřít…,
 # Uložit jako…), sentence case as in the English source. Product and technology names
-# (Krasis Photo, Krasis, OpenType, CMYK, Lab ...) stay in Latin letters; the trailing "…" of
+# (Vulcanio Photo, Vulcanio, OpenType, CMYK, Lab ...) stay in Latin letters; the trailing "…" of
 # dialog commands is kept.
 
 # Layer Mask Display Options (the layer mask rubylith's colour and opacity)
@@ -113,7 +113,7 @@
 # Batch / Image Processor
 
 # Native Windows printing qualification
-# Krasis Photo release checks.
+# Vulcanio Photo release checks.
 # History panel › History Brush source (#2966)
 # Bevel & Emboss shading controls.
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
@@ -943,11 +943,11 @@
 	Pin bar position	Připnout polohu panelu
 	Move bar	Přesunout panel
 	More options	Další možnosti
-	About Krasis Photo	O aplikaci Krasis Photo
-	Krasis Photo Website	Web Krasis Photo
-	Krasis Photo on GitHub	Krasis Photo na GitHubu
-	Krasis Website	Web Krasis
-	Join the Krasis Discord…	Připojit se k Discordu Krasis…
+	About Vulcanio Photo	O aplikaci Vulcanio Photo
+	Vulcanio Photo Website	Web Vulcanio Photo
+	Vulcanio Photo on GitHub	Vulcanio Photo na GitHubu
+	Vulcanio Website	Web Vulcanio
+	Join the Vulcanio Discord…	Připojit se k Discordu Vulcanio…
 	Report an Issue…	Nahlásit problém…
 	WIA Support…	Podpora WIA…
 	Apply	Použít
@@ -1006,7 +1006,7 @@
 	All Caps	Verzálky
 	All Slices	Všechny řezy
 	All User Slices	Všechny uživatelské řezy
-	All shortcuts reset to Krasis Photo defaults.	Všechny zkratky byly obnoveny na výchozí hodnoty PhotoCraftu.
+	All shortcuts reset to Vulcanio Photo defaults.	Všechny zkratky byly obnoveny na výchozí hodnoty PhotoCraftu.
 	Alt	Alt
 	Always use pressure for opacity	Vždy použít přítlak pro krytí
 	Always use pressure for size	Vždy použít přítlak pro velikost
@@ -1256,8 +1256,8 @@
 	Drop an image or PSD anywhere to open it.	Přetáhněte sem obrázek nebo PSD a otevře se.
 	Native file drag-and-drop is unavailable	Nativní přetahování souborů ve Waylandu není dostupné
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Nativní přetahování souborů ve Waylandu zatím není podporováno. Použijte Soubor › Otevřít, nebo obrázek zkopírujte ve správci souborů a vložte ho pomocí {paste}.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Chcete-li soubory přetahovat, spusťte Krasis Photo v XWayland: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Nebo nastavte Předvolby › Výkon › Zobrazovací server Linuxu na X11: Krasis Photo se pak vždy spustí v XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Chcete-li soubory přetahovat, spusťte Vulcanio Photo v XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Nebo nastavte Předvolby › Výkon › Zobrazovací server Linuxu na X11: Vulcanio Photo se pak vždy spustí v XWayland.
 	Edit › Paste	Úpravy › Vložit
 	Duplicate Layers…	Duplikovat vrstvy…
 	Duplicate style	Duplikovat styl
@@ -1507,9 +1507,9 @@
 	Perspective Warp is not active	Perspektivní deformace není aktivní
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Perspektivní deformace: nakreslete roviny podle perspektivy obrazu a pak přepněte na deformaci
 	Photo Filter	Fotografický filtr
-	Krasis Photo	Krasis Photo
-	Krasis Photo Manages Colors	Barvy spravuje Krasis Photo
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — nativní editor obrázků s otevřeným zdrojovým kódem napsaný v jazyce Rust.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo Manages Colors	Barvy spravuje Vulcanio Photo
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — nativní editor obrázků s otevřeným zdrojovým kódem napsaný v jazyce Rust.
 	Pin Depth:	Hloubka špendlíku:
 	Pixel Length:	Délka v pixelech:
 	Pixels/Centimeter	Pixely/centimetr
@@ -1584,11 +1584,11 @@
 	Import Shortcuts…	Importovat zkratky…
 	Load a keyboard shortcut set saved as .kys	Načíst sadu klávesových zkratek uloženou jako .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Importováno zkratek: {n} ze souboru {file}. Klepnutím na OK je ponecháte.
-	{n} commands are not in Krasis Photo.	Příkazů, které v PhotoCraftu nejsou: {n}.
+	{n} commands are not in Vulcanio Photo.	Příkazů, které v PhotoCraftu nejsou: {n}.
 	Keyboard shortcuts imported	Klávesové zkratky importovány
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Vaše sada klávesových zkratek {set} se zde používá: {n} zkratek se liší od výchozích. Zobrazí je Úpravy › Klávesové zkratky; Obnovit vše na výchozí to vrátí zpět.
 	Import keyboard shortcuts?	Importovat klávesové zkratky?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo na tomto počítači našel vaši sadu klávesových zkratek {set} z jiného editoru obrázků: {n} jejích zkratek se liší od zkratek PhotoCraftu. Importovat ji?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo na tomto počítači našel vaši sadu klávesových zkratek {set} z jiného editoru obrázků: {n} jejích zkratek se liší od zkratek PhotoCraftu. Importovat ji?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Úpravy › Klávesové zkratky › Obnovit vše na výchozí import vrátí zpět.
 	Don't Import	Neimportovat
 	The keyboard shortcut set was not imported: {error}	Sada klávesových zkratek nebyla importována: {error}
@@ -1779,7 +1779,7 @@
 	Apple Watch 45mm	Apple Watch 45 mm
 	Aqua	Akvamarínové
 	Art & Illustration	Umění a ilustrace
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Background Eraser Tool	Nástroj guma pozadí
 	Bevel & Emboss	Úkos a reliéf
 	Blend Mode	Režim prolnutí
@@ -1816,7 +1816,7 @@
 	Current Tool	Aktuální nástroj
 	Custom Shape Tool	Nástroj vlastní tvar
 	Cyans	Azurové
-	Default Krasis Photo Size	Výchozí velikost Krasis Photo
+	Default Vulcanio Photo Size	Výchozí velikost Vulcanio Photo
 	Delete Workspace	Odstranit pracovní prostor
 	Diamond	Kosočtverec
 	Dimensions:	Rozměry:
@@ -1928,7 +1928,7 @@
 	Pen Tool	Nástroj pero
 	Convert Point Tool	Nástroj převést bod
 	Photo	Fotografie
-	Krasis Photo website	Web Krasis Photo
+	Vulcanio Photo website	Web Vulcanio Photo
 	Picas	Pica
 	Pillow Emboss	Polštářový reliéf
 	Pixel Replacement	Nahrazení pixelů
@@ -2266,7 +2266,7 @@
 	System Info	Informace o systému
 	More panels	Další panely
 	More documents	Další dokumenty
-	These settings aren't available in Krasis Photo yet.	Tato nastavení zatím v aplikaci Krasis Photo nejsou k dispozici.
+	These settings aren't available in Vulcanio Photo yet.	Tato nastavení zatím v aplikaci Vulcanio Photo nejsou k dispozici.
 	Graphics	Grafika
 	Reset GPU Backend	Obnovit grafický backend
 	Applies at next launch.	Projeví se při příštím spuštění.
@@ -2397,7 +2397,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Automatický režim používá dostupnou GPU a při chybě přejde na CPU.
 	Switched to CPU rendering	Přepnuto na vykreslování CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Akcelerace GPU nemohla pokračovat. Dokumenty zůstaly nezměněny.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo skládá obraz pomocí CPU. Okno může nadále používat grafický adaptér.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo skládá obraz pomocí CPU. Okno může nadále používat grafický adaptér.
 	Retry GPU requires a restart. Save your work first.	Opakování GPU vyžaduje restart. Nejprve uložte práci.
 	Retry GPU tries the graphics processor again now.	Opakování GPU zkusí grafický procesor znovu hned teď.
 	GPU acceleration resumed.	Akcelerace GPU obnovena.
@@ -2619,7 +2619,7 @@ fontWeight	Italic	Kurzíva
 	Color to Alpha…	Barva na alfu…
 	Transparency Threshold	Práh průhlednosti
 	Opacity Threshold	Práh krytí
-	Krasis Photo — Screen Color Picker	Krasis Photo — Výběr barvy obrazovky
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Výběr barvy obrazovky
 	Rasterize svg groups deeper than	Rasterizovat skupiny SVG hlubší než tato úroveň
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	0 vypne tento práh; skupiny SVG vnořené hlouběji než 100 úrovní se rastrují vždy.
 	Rule of Thirds	Pravidlo třetin
@@ -3374,7 +3374,7 @@ cameraData	Lens	Objektiv
 	Pyramids	Pyramidy
 	Quick Selection	Rychlý výběr
 	Quit	Ukončit
-	Quit Krasis Photo	Ukončit Krasis Photo
+	Quit Vulcanio Photo	Ukončit Vulcanio Photo
 	Quit {app}	Ukončit {app}
 	RGB	RGB
 	Radial Blur	Radiální rozostření
@@ -3783,9 +3783,9 @@ curves	Smooth	Vyhladit
 	{message} (notes: {n}; {warning})	{message} (poznámky: {n}; {warning})
 @plural	{warning} (+{n} more brush preset warning)|{warning} (+{n} more brush preset warnings)	{warning} (+{n} další upozornění k přednastavení štětců)|{warning} (+{n} další upozornění k přednastavení štětců)|{warning} (+{n} dalších upozornění k přednastavení štětců)
 	Preferences can't be saved	Předvolby nelze uložit
-	Krasis Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Krasis Photo se nadále pokouší o uložení; dokud nebude úspěšné, změny předvoleb se při zavření ztratí.
+	Vulcanio Photo keeps retrying; until a save succeeds, preference changes are lost when it closes.	Vulcanio Photo se nadále pokouší o uložení; dokud nebude úspěšné, změny předvoleb se při zavření ztratí.
 	GPU retry scheduled	Naplánován další pokus o použití GPU
-	Save your work and restart Krasis Photo to retry GPU acceleration. CPU rendering remains active for this session.	Chcete-li znovu zkusit akceleraci GPU, uložte práci a restartujte Krasis Photo. V této relaci zůstane aktivní vykreslování pomocí CPU.
+	Save your work and restart Vulcanio Photo to retry GPU acceleration. CPU rendering remains active for this session.	Chcete-li znovu zkusit akceleraci GPU, uložte práci a restartujte Vulcanio Photo. V této relaci zůstane aktivní vykreslování pomocí CPU.
 	GPU device was lost; using the CPU renderer.	Spojení se zařízením GPU bylo ztraceno; používá se vykreslování pomocí CPU.
 	GPU error; using the CPU renderer.	Chyba GPU; používá se vykreslování pomocí CPU.
 @plural	{what} with {n} warning|{what} with {n} warnings	{what} ({n} upozornění)|{what} ({n} upozornění)|{what} ({n} upozornění)
@@ -3860,7 +3860,7 @@ navigator	Zoom	Zvětšení
 	on	zapnuto
 	off	vypnuto
 	This adjustment ({key}) is kept as imported and can't be edited yet.	Tato úprava ({key}) se uchovává v importované podobě a zatím ji nelze měnit.
-	Join the Krasis Discord ({url})	Přidejte se na Discord Krasis ({url})
+	Join the Vulcanio Discord ({url})	Přidejte se na Discord Vulcanio ({url})
 	{index} of {total}	{index} z {total}
 @plural	{n} step|{n} steps	{n} krok|{n} kroky|{n} kroků
 	{shortcut} assigned.	Zkratka {shortcut} přiřazena.
@@ -3903,7 +3903,7 @@ navigator	Zoom	Zvětšení
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Načtena {n} akce ze souboru {file}|Načteny {n} akce ze souboru {file}|Načteno {n} akcí ze souboru {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} krok zatím nemá v PhotoCraftu obdobu|{n} kroky zatím nemají v PhotoCraftu obdobu|{n} kroků zatím nemá v PhotoCraftu obdobu
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} krok zatím nemá v PhotoCraftu obdobu|{n} kroky zatím nemají v PhotoCraftu obdobu|{n} kroků zatím nemá v PhotoCraftu obdobu
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Uložena {n} akce do souboru {file}|Uloženy {n} akce do souboru {file}|Uloženo {n} akcí do souboru {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Vynechán {n} krok bez obdoby v Photoshopu|Vynechány {n} kroky bez obdoby v Photoshopu|Vynecháno {n} kroků bez obdoby v Photoshopu
 @plural	{n} action file loaded|{n} action files loaded	Načten {n} soubor akcí|Načteny {n} soubory akcí|Načteno {n} souborů akcí
@@ -4005,12 +4005,12 @@ navigator	Zoom	Zvětšení
 	Bicubic Smoother	Bikubická hladší
 	Bicubic Sharper	Bikubická ostřejší
 	Pasting from other apps is unavailable	Vkládání z jiných aplikací není k dispozici
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo v této relaci nemá přístup k systémové schránce. Na Waylandu sandbox Flatpaku skrývá protokol, přes který se čtou obrázky z jiných aplikací.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Chcete-li vkládat z jiných aplikací, spusťte Krasis Photo pod XWaylandem: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Není co vložit: Krasis Photo zde nemůže číst systémovou schránku
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo v této relaci nemá přístup k systémové schránce. Na Waylandu sandbox Flatpaku skrývá protokol, přes který se čtou obrázky z jiných aplikací.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Chcete-li vkládat z jiných aplikací, spusťte Vulcanio Photo pod XWaylandem: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Není co vložit: Vulcanio Photo zde nemůže číst systémovou schránku
 	Delete this set	Smazat tuto sadu
 	New Set…	Nová sada…
-	Krasis Photo Defaults	Výchozí Krasis Photo
+	Vulcanio Photo Defaults	Výchozí Vulcanio Photo
 	Save a list of these shortcuts as a web page	Uložit seznam těchto zkratek jako webovou stránku
 	Save the changes to this set	Uložit změny do této sady
 	Save these shortcuts as a .kys file	Uložit tyto zkratky jako soubor .kys

@@ -1,6 +1,6 @@
-# Krasis CAD Georgian (ქართული) interface catalog — original translations by the Krasis CAD contributors.
+# Vulcanio CAD Georgian (ქართული) interface catalog — original translations by the Vulcanio CAD contributors.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from Krasis CAD's English strings; no proprietary translations were copied.
+# Written from Vulcanio CAD's English strings; no proprietary translations were copied.
 # Clean room: every entry is written from the plain meaning of the English label in ordinary
 # Georgian computing and technical-drawing (ხაზვა) vocabulary (შრე, ზომა, დაშტრიხვა, მომრგვალება,
 # ფასკა, წანაცვლება, მოკვეთა, ობიექტზე მიბმა, ხედვის არე, განლაგება). No other product's Georgian
@@ -61,7 +61,7 @@
 	> Greater than	> მეტია
 	A variable name starts with a letter and has only letters, digits and _	ცვლადის სახელი ასოთი იწყება და მხოლოდ ასოებს, ციფრებსა და _-ს შეიცავს
 	About	პროგრამის შესახებ
-	About Krasis CAD	Krasis CAD-ის შესახებ
+	About Vulcanio CAD	Vulcanio CAD-ის შესახებ
 	Absolute	აბსოლუტური
 	Add Leader	მიმთითებლის დამატება
 	Additional angles	დამატებითი კუთხეები
@@ -124,7 +124,7 @@
 	ByBlock	ბლოკის მიხედვით
 	ByColor	ფერის მიხედვით
 	ByLayer	შრის მიხედვით
-	Krasis CAD Help	Krasis CAD-ის დახმარება
+	Vulcanio CAD Help	Vulcanio CAD-ის დახმარება
 	Cancel	გაუქმება
 	Cartesian (x, y)	დეკარტული (x, y)
 	Center	ცენტრი
@@ -461,7 +461,7 @@
 	Jogged	გატეხილი
 	Jogged Linear	გატეხილი წრფივი
 	Join	შეერთება
-	Join the Krasis Discord…	შემოუერთდით Krasis-ის Discord-ს…
+	Join the Vulcanio Discord…	შემოუერთდით Vulcanio-ის Discord-ს…
 	Join us on Discord	შემოგვიერთდით Discord-ზე
 	Isometric Plane	იზომეტრიული სიბრტყე
 	Isometric snap	იზომეტრიული მიბმა
@@ -605,7 +605,7 @@
 	Offset	წანაცვლება
 	On	ჩართული
 	On/Off	ჩართვა/გამორთვა
-	Part of Krasis.	Krasis-ის გუნდისა და საზოგადოების ერთ-ერთი Crafting App.
+	Part of Vulcanio.	Vulcanio-ის გუნდისა და საზოგადოების ერთ-ერთი Crafting App.
 	Only in this drawing: {n}	მხოლოდ ამ ნახაზში: {n}
 	Only in {name}: {n}	მხოლოდ ფაილში {name}: {n}
 	Open (⌘O)	გახსნა (⌘O)
@@ -725,7 +725,7 @@
 	Quick Select...	სწრაფი მონიშვნა...
 	QuickCalc	სწრაფი კალკულატორი
 	QuickCalc Pick	სწრაფი კალკულატორი: არჩევა
-	Quit Krasis CAD	Krasis CAD-იდან გასვლა
+	Quit Vulcanio CAD	Vulcanio CAD-იდან გასვლა
 	Radius	რადიუსი
 	Raster Image	რასტრული გამოსახულება
 	Ray	სხივი
@@ -959,7 +959,7 @@
 	Specify insertion point	მიუთითეთ ჩასმის წერტილი
 	A drawing opened from a file keeps that file's format.	ფაილიდან გახსნილი ნახაზი ინარჩუნებს ამ ფაილის ფორმატს.
 	An array that would create more objects than this is refused.	მასივი, რომელიც ამაზე მეტ ობიექტს შექმნიდა, უარყოფილია.
-	Krasis CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Krasis CAD ინახავს ამ პარამეტრებს, ობიექტზე მიბმის რეჟიმებს და ხაზვის გადამრთველებს თქვენი მომხმარებლის ანგარიშისთვის და აღადგენს მათ გაშვებისას.
+	Vulcanio CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Vulcanio CAD ინახავს ამ პარამეტრებს, ობიექტზე მიბმის რეჟიმებს და ხაზვის გადამრთველებს თქვენი მომხმარებლის ანგარიშისთვის და აღადგენს მათ გაშვებისას.
 	Changes apply at once and are kept for next time.	ცვლილებები მაშინვე მოქმედებს და შემდეგი ჯერისთვისაც ინახება.
 	Command line history	ბრძანების სტრიქონის ისტორია
 	Copy as JSON	კოპირება JSON-ად
@@ -1234,7 +1234,7 @@
 @plural	{n} contributor	{n} მონაწილე
 	Drawing as bytes	ნახაზი ბაიტებად
 	Services	სერვისები
-	Hide Krasis CAD	Krasis CAD-ის დამალვა
+	Hide Vulcanio CAD	Vulcanio CAD-ის დამალვა
 	Hide Others	სხვების დამალვა
 	Accessibility	ხელმისაწვდომობა
 	Show System Cursor	სისტემის კურსორის ჩვენება
@@ -1421,10 +1421,10 @@
 	Customize	მორგება
 	Edit Command Aliases (PGP)...	ბრძანებების ფსევდონიმების რედაქტირება (PGP)...
 	Check for Updates…	განახლებების შემოწმება…
-	Krasis CAD is up to date.	Krasis CAD განახლებულია.
+	Vulcanio CAD is up to date.	Vulcanio CAD განახლებულია.
 	Could not check for updates.	განახლებების შემოწმება ვერ მოხერხდა.
 	B	B
-	Krasis CAD	Krasis CAD
+	Vulcanio CAD	Vulcanio CAD
 	X	X
 	Y	Y
 menu	Dimension	ზომების დატანა

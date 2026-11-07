@@ -2547,7 +2547,7 @@ impl Context {
     /// This will overwrite the existing fonts.
     ///
     /// These fonts will be used before any system fallback.
-    /// Krasis: the font definitions in effect once queued changes ([`Self::set_fonts`],
+    /// Vulcanio: the font definitions in effect once queued changes ([`Self::set_fonts`],
     /// [`Self::add_font`]) apply; valid before the first pass too.
     pub fn effective_font_definitions(&self) -> FontDefinitions {
         self.read(|ctx| {
@@ -4666,7 +4666,7 @@ impl Context {
     /// Send a command to a specific viewport.
     ///
     /// This lets you affect another viewport, e.g. resizing its window.
-    /// Krasis: keep, change or drop the commands queued for the current viewport this pass (the
+    /// Vulcanio: keep, change or drop the commands queued for the current viewport this pass (the
     /// host filters what an embedded app asked of the window). `f` returns `false` to drop one.
     pub fn retain_viewport_commands(&self, mut f: impl FnMut(&mut ViewportCommand) -> bool) {
         let id = self.viewport_id();

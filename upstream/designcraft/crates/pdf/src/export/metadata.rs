@@ -38,8 +38,8 @@ pub(super) fn file_info_metadata(doc: &Document, title: Option<&str>, author: Op
     let info = &doc.file_info;
     let description = info.description.trim();
     Metadata {
-        creator: "Krasis Layout".into(),
-        producer: "Krasis Layout".into(),
+        creator: "Vulcanio Layout".into(),
+        producer: "Vulcanio Layout".into(),
         title: Some(title.unwrap_or_else(|| doc.metadata_title()).to_string()),
         authors: author.or_else(|| doc.metadata_author()).map(str::to_string).into_iter().collect(),
         description: (!description.is_empty()).then(|| description.to_string()),

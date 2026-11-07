@@ -425,7 +425,7 @@ impl Server {
                         "completions": {},
                         "logging": {},
                     },
-                    "serverInfo": {"name": "vectorcraft", "title": "Krasis Vector", "version": env!("CARGO_PKG_VERSION")},
+                    "serverInfo": {"name": "vectorcraft", "title": "Vulcanio Vector", "version": env!("CARGO_PKG_VERSION")},
                     "instructions": format!("{INSTRUCTIONS} Backend: {}.", self.backend.describe()),
                 }))
             }

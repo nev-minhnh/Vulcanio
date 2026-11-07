@@ -1,5 +1,5 @@
 //! One app per user (#4892): a file opened from the file manager (double-click, Open With, a drop
-//! on the executable) while Krasis Vector runs opens as a new document tab in the running app, which
+//! on the executable) while Vulcanio Vector runs opens as a new document tab in the running app, which
 //! comes to the front, instead of in a second app.
 //!
 //! The running app (the primary) listens on a loopback port and records the port and two random
@@ -67,7 +67,7 @@ pub fn start(automation: bool, new_instance: bool, files: &[String]) -> Start {
         Ok(()) if send.is_empty() => Start::Running(None),
         Ok(()) => Start::Forwarded,
         Err(e) => {
-            log::debug!("no running Krasis Vector to hand files to ({e})");
+            log::debug!("no running Vulcanio Vector to hand files to ({e})");
             Start::Running(listen(&path, queue))
         }
     }
@@ -135,7 +135,7 @@ fn forward(path: &Path, files: &[String]) -> io::Result<()> {
     stream.set_write_timeout(Some(CLIENT_TIMEOUT))?;
     // The token and the paths go only to a listener that knows the greeting.
     if !same(read_message(&stream)?.get("hello"), &endpoint.hello) {
-        return Err(invalid("the listener isn't Krasis Vector"));
+        return Err(invalid("the listener isn't Vulcanio Vector"));
     }
     write_message(&stream, &json!({ "token": endpoint.token, "files": files }))?;
     match read_message(&stream)?.get("ok") {
@@ -147,7 +147,7 @@ fn forward(path: &Path, files: &[String]) -> io::Result<()> {
 /// Listen for later launches and record this app at `path`; each launch's files go to `deliver`.
 /// `None` when that fails (logged): the app then runs on its own, as before.
 fn listen(path: &Path, deliver: impl Fn(Vec<String>) + Send + 'static) -> Option<Primary> {
-    try_listen(path, deliver).inspect_err(|e| log::warn!("files opened while Krasis Vector runs will open in another window: {e}")).ok()
+    try_listen(path, deliver).inspect_err(|e| log::warn!("files opened while Vulcanio Vector runs will open in another window: {e}")).ok()
 }
 
 fn try_listen(path: &Path, deliver: impl Fn(Vec<String>) + Send + 'static) -> io::Result<Primary> {

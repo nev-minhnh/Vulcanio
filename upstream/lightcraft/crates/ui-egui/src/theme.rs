@@ -414,7 +414,7 @@ pub fn current(ctx: &egui::Context) -> Option<ThemeKind> {
 
 /// Windows only: tell the window its theme again, the first time it has focus. A first theme that
 /// reaches a focused window as it comes up changes the title's colour but not the caption's, so
-/// with Krasis Library dark on a light system the title is white on a light caption (it looks blank),
+/// with Vulcanio Library dark on a light system the title is white on a light caption (it looks blank),
 /// and light on dark is dark on dark, until focus next moves (#3381). The same command repaints
 /// the caption once the window is up. A window that opens without focus shows the right colours
 /// from the start.

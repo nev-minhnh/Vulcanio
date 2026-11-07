@@ -970,7 +970,7 @@ fn text_shortcut(app: &mut FigApp, key: Key, physical: Option<Key>, m: Modifiers
 /// Tell the platform where the caret is (inside the composition while composing) so IME
 /// candidate windows open next to it.
 ///
-/// This is Krasis Interface's one custom IME producer. Geometry stays the actual caret (the composition
+/// This is Vulcanio Interface's one custom IME producer. Geometry stays the actual caret (the composition
 /// cursor while composing); the descriptor also carries the reviewed E21b payload: a stable
 /// per-edit owner, a viewport-scoped context generation, a bounded committed-text snapshot around
 /// the selection (UTF-8 byte offsets, reversed direction preserved, pre-edit excluded) and an

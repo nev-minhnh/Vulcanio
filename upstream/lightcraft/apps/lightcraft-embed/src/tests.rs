@@ -389,13 +389,13 @@ fn a_gpu_lost_while_running_turns_the_gpu_off_next_time() {
     assert!(gpu_lost_check_at(Some(&m), false).is_some());
     assert!(!m.exists());
     assert_eq!(gpu_lost_check_at(Some(&m), false), None, "said once");
-    // the message box: Krasis Library stopped (not "could not open its window"), and why
+    // the message box: Vulcanio Library stopped (not "could not open its window"), and why
     let text = stopped_text("its window stopped drawing (the renderer panicked)", Some("device lost (Unknown): Device is lost"));
     assert!(text.contains("reset the GPU (device lost (Unknown)") && text.contains("renders on the CPU from its next start"), "{text}");
     assert_eq!(stopped_text("its window stopped drawing", None), "its window stopped drawing");
     let (title, body) = lightcraft_ui_egui::i18n::stopped_message(&text, Some("/logs/lightcraft.log"));
-    assert_eq!(title, "Krasis Library stopped");
-    assert!(body.starts_with("Krasis Library stopped unexpectedly: its window stopped drawing") && body.ends_with("/logs/lightcraft.log"), "{body}");
+    assert_eq!(title, "Vulcanio Library stopped");
+    assert!(body.starts_with("Vulcanio Library stopped unexpectedly: its window stopped drawing") && body.ends_with("/logs/lightcraft.log"), "{body}");
     let _ = std::fs::remove_dir_all(&d);
 }
 

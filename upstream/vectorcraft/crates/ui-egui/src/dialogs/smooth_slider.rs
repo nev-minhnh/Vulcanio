@@ -4,7 +4,7 @@
 //! minimum smoothing (left) to maximum smoothing (right). While it is open the canvas previews
 //! `object.path.smooth {level}`; Enter or a click outside the strip keeps the result as one undo
 //! step, and Escape puts the paths back. It opens at Auto-Smooth's level, as Simplify's slider
-//! opens at Auto-Simplify's (Krasis Vector's choice: the page doesn't say where it starts).
+//! opens at Auto-Simplify's (Vulcanio Vector's choice: the page doesn't say where it starts).
 //!
 //! Fields: `level` (0..=100, the command's parameter).
 

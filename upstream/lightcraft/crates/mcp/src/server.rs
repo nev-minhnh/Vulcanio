@@ -167,7 +167,7 @@ impl Server {
                 Ok(json!({
                     "protocolVersion": version,
                     "capabilities": {"tools": {"listChanged": false}, "resources": {"subscribe": false, "listChanged": false}},
-                    "serverInfo": {"name": "lightcraft", "title": "Krasis Library", "version": env!("CARGO_PKG_VERSION")},
+                    "serverInfo": {"name": "lightcraft", "title": "Vulcanio Library", "version": env!("CARGO_PKG_VERSION")},
                     "instructions": format!("{INSTRUCTIONS} Backend: {}.", self.backend.describe()),
                 }))
             }

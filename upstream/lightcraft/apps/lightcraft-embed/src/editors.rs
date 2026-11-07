@@ -1,12 +1,12 @@
-//! Starting external editors for Photo ▸ Edit In: Krasis Photo, found where its installers put it,
+//! Starting external editors for Photo ▸ Edit In: Vulcanio Photo, found where its installers put it,
 //! or any other application the user named in Settings ▸ External Editing.
 
 use std::path::{Path, PathBuf};
 use std::process::Command;
 
-/// The name the UI asks for when it means Krasis Photo (`lightcraft_ui_egui::state::PHOTOCRAFT`).
+/// The name the UI asks for when it means Vulcanio Photo (`lightcraft_ui_egui::state::PHOTOCRAFT`).
 const PHOTOCRAFT: &str = lightcraft_ui_egui::state::PHOTOCRAFT;
-/// Krasis Photo's application id (Flatpak, desktop entry).
+/// Vulcanio Photo's application id (Flatpak, desktop entry).
 const PHOTOCRAFT_ID: &str = "ai.storyteller.photocraft";
 
 /// How an editor is started.
@@ -18,12 +18,12 @@ enum Launcher {
     Program(PathBuf),
     /// macOS: `open -a <app>` (an application name or bundle path).
     MacApp(String),
-    /// The Krasis Photo Flatpak, with the file forwarded into its sandbox.
+    /// The Vulcanio Photo Flatpak, with the file forwarded into its sandbox.
     Flatpak,
 }
 
 /// Whether `app` can be started (Settings ▸ External Editing names it; "" = the system default):
-/// for Krasis Photo, that it is installed. The error says what to do instead.
+/// for Vulcanio Photo, that it is installed. The error says what to do instead.
 pub fn check(app: &str) -> Result<(), String> {
     launcher(app).map(|_| ())
 }
@@ -120,7 +120,7 @@ fn launcher(app: &str) -> Result<Launcher, String> {
         return Ok(if cfg!(target_os = "macos") { Launcher::MacApp(app.to_string()) } else { Launcher::Program(PathBuf::from(app)) });
     }
     find_photocraft().ok_or_else(|| {
-        "Krasis Photo isn't installed. Get it from getartcraft.com/apps/photocraft, or give where it is in Settings ▸ External Editing.".to_string()
+        "No photo editor is set. Choose one in Settings ▸ External Editing.".to_string()
     })
 }
 
@@ -138,7 +138,7 @@ fn find_photocraft() -> Option<Launcher> {
         return usual.or_else(spotlight).map(|p| Launcher::MacApp(p.to_string_lossy().to_string()));
     }
     if cfg!(target_os = "windows") {
-        let install_dir = reg_query(r"HKLM\Software\Krasis Photo", Some("InstallDir"));
+        let install_dir = reg_query(r"HKLM\Software\Vulcanio Photo", Some("InstallDir"));
         let app_path = reg_query(r"HKLM\Software\Microsoft\Windows\CurrentVersion\App Paths\photocraft.exe", None);
         return windows_candidates(install_dir, app_path, env).into_iter().find(|p| p.is_file()).map(Launcher::Program);
     }
@@ -151,7 +151,7 @@ fn find_photocraft() -> Option<Launcher> {
         desktop_entry_dirs(env).into_iter().find_map(|d| {
             let text = std::fs::read_to_string(d.join(format!("{PHOTOCRAFT_ID}.desktop"))).ok()?;
             desktop_exec(&text)
-                // a wrapper (`Exec=env VAR=1 /opt/Krasis Photo/photocraft %F`) would be started with the photo only:
+                // a wrapper (`Exec=env VAR=1 /opt/Vulcanio Photo/photocraft %F`) would be started with the photo only:
                 // skip it and look further
                 .filter(|p| p.file_name().is_some_and(|n| n.to_string_lossy().to_lowercase().contains("photocraft")))
                 .and_then(|p| on_path(&p))
@@ -178,7 +178,7 @@ fn find_photocraft() -> Option<Launcher> {
 }
 
 /// Where the Windows installers put `photocraft.exe`, most specific first: the folder the MSI
-/// recorded (`HKLM\Software\Krasis Photo\InstallDir`), its App Paths entry, then the default
+/// recorded (`HKLM\Software\Vulcanio Photo\InstallDir`), its App Paths entry, then the default
 /// folders (per machine, then per user).
 fn windows_candidates(install_dir: Option<String>, app_path: Option<String>, env: impl Fn(&str) -> Option<String>) -> Vec<PathBuf> {
     let mut out: Vec<PathBuf> = Vec::new();
@@ -265,7 +265,7 @@ fn version_key(name: &str) -> Vec<(u64, String)> {
     out
 }
 
-/// An AppImage of Krasis Photo by its file name (`Krasis Photo-1.2-x86_64.AppImage`, any case).
+/// An AppImage of Vulcanio Photo by its file name (`Vulcanio Photo-1.2-x86_64.AppImage`, any case).
 fn is_photocraft_appimage(p: &Path) -> bool {
     let name = p.file_name().map(|n| n.to_string_lossy().to_lowercase()).unwrap_or_default();
     name.contains("photocraft") && name.ends_with(".appimage")
@@ -328,7 +328,7 @@ mod tests {
 
     #[test]
     fn reg_query_output_is_read() {
-        let out = "\r\nHKEY_LOCAL_MACHINE\\Software\\Krasis Photo\r\n    InstallDir    REG_SZ    C:\\Program Files\\Krasis Photo\\\r\n\r\n";
+        let out = "\r\nHKEY_LOCAL_MACHINE\\Software\\Vulcanio Photo\r\n    InstallDir    REG_SZ    C:\\Program Files\\Vulcanio Photo\\\r\n\r\n";
         assert_eq!(reg_value(out).as_deref(), Some(r"C:\Program Files\PhotoCraft\"));
         let default = "\r\nHKEY_LOCAL_MACHINE\\...\\photocraft.exe\r\n    (Default)    REG_SZ    C:\\Program Files\\PhotoCraft\\photocraft.exe\r\n";
         assert_eq!(reg_value(default).as_deref(), Some(r"C:\Program Files\PhotoCraft\photocraft.exe"));
@@ -337,7 +337,7 @@ mod tests {
 
     #[test]
     fn desktop_entries_give_their_program() {
-        let appimage = "[Desktop Entry]\nName=Krasis Photo\nExec=\"/home/simon/Apps/photocraft-1.2-linux-x86_64.AppImage\" %F\n";
+        let appimage = "[Desktop Entry]\nName=Vulcanio Photo\nExec=\"/home/simon/Apps/photocraft-1.2-linux-x86_64.AppImage\" %F\n";
         assert_eq!(desktop_exec(appimage), Some(PathBuf::from("/home/simon/Apps/photocraft-1.2-linux-x86_64.AppImage")));
         assert_eq!(desktop_exec("Exec=/opt/photocraft/photocraft %F\n"), Some(PathBuf::from("/opt/photocraft/photocraft")));
         assert_eq!(desktop_exec("Exec=photocraft %F\nTryExec=photocraft\n"), Some(PathBuf::from("photocraft")), "a bare name, for a PATH lookup");

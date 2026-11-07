@@ -1,4 +1,4 @@
-# Greek (el) Krasis Photo interface catalog.
+# Greek (el) Vulcanio Photo interface catalog.
 # Columns separated by TAB: context, English source, Greek translation.
 # Original translations based on general Greek graphics/computing terminology.
 # Covers every source label the i18n coverage check lists.
@@ -67,7 +67,7 @@
 # Batch / Image Processor
 
 # Native Windows printing qualification
-# Krasis Photo release checks.
+# Vulcanio Photo release checks.
 # History panel › History Brush source (#2966)
 # Bevel & Emboss shading controls.
 # Embedded Profile Mismatch: profile names beside the choices, Remember this choice
@@ -310,7 +310,7 @@
 	Distort	Παραμόρφωση
 	Pixelate	Εικονοστοιχείωση
 	Render	Απόδοση
-	About Krasis Photo	Πληροφορίες για το Krasis Photo
+	About Vulcanio Photo	Πληροφορίες για το Vulcanio Photo
 	Content-Aware Fill…	Γέμισμα βάσει περιεχομένου…
 	Content-Aware Scale	Κλιμάκωση βάσει περιεχομένου
 	Puppet Warp	Παραμόρφωση με σημεία ελέγχου
@@ -812,7 +812,7 @@
 	Restart Required	Απαιτείται επανεκκίνηση
 	Restart	Επανεκκίνηση
 	Quit	Έξοδος
-	Quit Krasis Photo	Έξοδος από το Krasis Photo
+	Quit Vulcanio Photo	Έξοδος από το Vulcanio Photo
 	Close Window	Κλείσιμο παραθύρου
 	New Window	Νέο παράθυρο
 	Open Image	Άνοιγμα εικόνας
@@ -908,8 +908,8 @@
 	Pattern Size	Μέγεθος μοτίβου
 	Perspective Warp is not active	Ο μετασχηματισμός προοπτικής δεν είναι ενεργός
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Μετασχηματισμός προοπτικής: σχεδιάστε επίπεδα σύμφωνα με την προοπτική της εικόνας και έπειτα επιλέξτε Παραμόρφωση
-	Krasis Photo Manages Colors	Διαχείριση χρωμάτων από το Krasis Photo
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — εγγενής εφαρμογή επεξεργασίας εικόνας ανοικτού κώδικα, γραμμένη σε Rust.
+	Vulcanio Photo Manages Colors	Διαχείριση χρωμάτων από το Vulcanio Photo
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — εγγενής εφαρμογή επεξεργασίας εικόνας ανοικτού κώδικα, γραμμένη σε Rust.
 	Pixels/Centimeter	Εικονοστοιχεία/εκατοστό
 	Pixels/Inch	Εικονοστοιχεία/ίντσα
 	Position and Size	Θέση και μέγεθος
@@ -930,7 +930,7 @@
 	Quick Actions	Γρήγορες ενέργειες
 	Radial Gradient	Ακτινική διαβάθμιση
 	Paints from the document's opening state	Ζωγραφίζει χρησιμοποιώντας την αρχική κατάσταση του εγγράφου
-	Krasis Photo website	Ιστότοπος Krasis Photo
+	Vulcanio Photo website	Ιστότοπος Vulcanio Photo
 	Pen Pressure	Πίεση γραφίδας
 	Pen Tilt	Κλίση γραφίδας
 	Portrait, 4 x 6	Κατακόρυφο, 4 × 6
@@ -1212,7 +1212,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Η αυτόματη λειτουργία χρησιμοποιεί επιτάχυνση GPU όταν είναι διαθέσιμη και επιστρέφει στην CPU σε περίπτωση σφάλματος.
 	Switched to CPU rendering	Έγινε μετάβαση σε απόδοση μέσω CPU
 	GPU acceleration could not continue. Your documents are unchanged.	Η επιτάχυνση GPU δεν μπόρεσε να συνεχιστεί. Τα έγγραφά σας δεν έχουν αλλάξει.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Το Krasis Photo χρησιμοποιεί σύνθεση εικόνας μέσω CPU. Το παράθυρο μπορεί να εξακολουθεί να χρησιμοποιεί την κάρτα γραφικών.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Το Vulcanio Photo χρησιμοποιεί σύνθεση εικόνας μέσω CPU. Το παράθυρο μπορεί να εξακολουθεί να χρησιμοποιεί την κάρτα γραφικών.
 	Retry GPU requires a restart. Save your work first.	Η νέα προσπάθεια χρήσης GPU απαιτεί επανεκκίνηση. Αποθηκεύστε πρώτα την εργασία σας.
 	Retry GPU tries the graphics processor again now.	Η νέα προσπάθεια χρήσης GPU δοκιμάζει ξανά τον επεξεργαστή γραφικών αμέσως.
 	GPU acceleration resumed.	Η επιτάχυνση GPU συνεχίζεται.
@@ -1355,7 +1355,7 @@
 	Custom Pixel Aspect Ratio	Προσαρμοσμένη αναλογία εικονοστοιχείων
 	32-bit Preview Options	Επιλογές προεπισκόπησης 32 bit
 	New Guide	Νέος οδηγός
-	Join the Krasis Discord	Συμμετοχή στο Discord του Krasis
+	Join the Vulcanio Discord	Συμμετοχή στο Discord του Vulcanio
 	Report an Issue	Αναφορά προβλήματος
 	Load Files into Stack	Φόρτωση αρχείων σε στοίβα
 	Statistics	Στατιστικά
@@ -2175,7 +2175,7 @@
 	All Caps	Όλα κεφαλαία
 	All Slices	Όλες οι τομές
 	All User Slices	Όλες οι τομές χρήστη
-	All shortcuts reset to Krasis Photo defaults.	Όλες οι συντομεύσεις επανήλθαν στις προεπιλογές του Krasis Photo.
+	All shortcuts reset to Vulcanio Photo defaults.	Όλες οι συντομεύσεις επανήλθαν στις προεπιλογές του Vulcanio Photo.
 	Alternates for Current Selection	Εναλλακτικοί χαρακτήρες για την τρέχουσα επιλογή
 	Altitude	Υψόμετρο
 	Always	Πάντα
@@ -2196,7 +2196,7 @@
 	Arc	Τόξο
 	Arch	Καμάρα
 	Art & Illustration	Τέχνη και εικονογράφηση
-	Krasis Website	Ιστότοπος Krasis
+	Vulcanio Website	Ιστότοπος Vulcanio
 	Artboard Background Color	Χρώμα φόντου πίνακα σχεδίασης
 	Artboard Guides	Οδηγοί πίνακα σχεδίασης
 	Artboard from Group	Πίνακας σχεδίασης από ομάδα
@@ -2699,7 +2699,7 @@
 	Iris Blur…	Θόλωση ίριδας…
 	Italic	Πλάγια
 	Jag	Οδοντωτό
-	Join the Krasis Discord…	Συμμετοχή στο Discord του Krasis…
+	Join the Vulcanio Discord…	Συμμετοχή στο Discord του Vulcanio…
 	Join us on Discord	Ελάτε στην κοινότητά μας στο Discord
 	Jpeg quality	Ποιότητα JPEG
 	Justification	Πλήρης στοίχιση
@@ -2863,7 +2863,7 @@
 	Move to	Μετακίνηση σε
 	NTSC Colors	Χρώματα NTSC
 	Name:	Όνομα:
-	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Krasis Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Η μεταφορά και απόθεση αρχείων δεν υποστηρίζεται ακόμη στο Wayland. Χρησιμοποιήστε Αρχείο › Άνοιγμα ή εκτελέστε το Krasis Photo μέσω XWayland με `WAYLAND_DISPLAY= photocraft`.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Vulcanio Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Η μεταφορά και απόθεση αρχείων δεν υποστηρίζεται ακόμη στο Wayland. Χρησιμοποιήστε Αρχείο › Άνοιγμα ή εκτελέστε το Vulcanio Photo μέσω XWayland με `WAYLAND_DISPLAY= photocraft`.
 	Nearest Neighbor	Πλησιέστερος γείτονας
 	Nearest Neighbor (hard edges)	Πλησιέστερος γείτονας (σκληρές ακμές)
 	Nearest neighbor	Πλησιέστερος γείτονας
@@ -2940,8 +2940,8 @@
 	Performance	Επιδόσεις
 	Perspective Warp	Παραμόρφωση προοπτικής
 	Photo	Φωτογραφία
-	Krasis Photo Website	Ιστότοπος Krasis Photo
-	Krasis Photo on GitHub	Krasis Photo στο GitHub
+	Vulcanio Photo Website	Ιστότοπος Vulcanio Photo
+	Vulcanio Photo on GitHub	Vulcanio Photo στο GitHub
 	Photocopy	Φωτοαντίγραφο
 	Photography	Φωτογραφία
 	Photomerge	Συγχώνευση φωτογραφιών
@@ -3066,11 +3066,11 @@
 	Import Shortcuts…	Εισαγωγή συντομεύσεων…
 	Load a keyboard shortcut set saved as .kys	Φόρτωση ενός σετ συντομεύσεων πληκτρολογίου αποθηκευμένου ως .kys
 	Imported {n} shortcuts from {file}. Click OK to keep them.	Εισήχθησαν {n} συντομεύσεις από το {file}. Πατήστε OK για να τις κρατήσετε.
-	{n} commands are not in Krasis Photo.	{n} εντολές δεν υπάρχουν στο Krasis Photo.
+	{n} commands are not in Vulcanio Photo.	{n} εντολές δεν υπάρχουν στο Vulcanio Photo.
 	Keyboard shortcuts imported	Οι συντομεύσεις πληκτρολογίου εισήχθησαν
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	Το σετ συντομεύσεων πληκτρολογίου {set} χρησιμοποιείται εδώ: {n} συντομεύσεις διαφέρουν από τις προεπιλογές. Το Επεξεργασία › Συντομεύσεις πληκτρολογίου τις δείχνει· η Επαναφορά όλων στις προεπιλογές το αναιρεί.
 	Import keyboard shortcuts?	Εισαγωγή συντομεύσεων πληκτρολογίου;
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Το Krasis Photo βρήκε σε αυτόν τον υπολογιστή το σετ συντομεύσεων πληκτρολογίου {set} από άλλο πρόγραμμα επεξεργασίας εικόνας: {n} συντομεύσεις του διαφέρουν από του Krasis Photo. Να γίνει εισαγωγή;
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Το Vulcanio Photo βρήκε σε αυτόν τον υπολογιστή το σετ συντομεύσεων πληκτρολογίου {set} από άλλο πρόγραμμα επεξεργασίας εικόνας: {n} συντομεύσεις του διαφέρουν από του Vulcanio Photo. Να γίνει εισαγωγή;
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Το Επεξεργασία › Συντομεύσεις πληκτρολογίου › Επαναφορά όλων στις προεπιλογές αναιρεί μια εισαγωγή.
 	Don't Import	Χωρίς εισαγωγή
 	The keyboard shortcut set was not imported: {error}	Το σετ συντομεύσεων πληκτρολογίου δεν εισήχθη: {error}
@@ -3299,7 +3299,7 @@
 	Text Position:	Θέση κειμένου:
 	Texture Each Tip	Υφή σε κάθε αποτύπωμα πινέλου
 	Texturizer	Εφαρμογή υφής
-	These settings aren't available in Krasis Photo yet.	Αυτές οι ρυθμίσεις δεν είναι ακόμη διαθέσιμες στο Krasis Photo.
+	These settings aren't available in Vulcanio Photo yet.	Αυτές οι ρυθμίσεις δεν είναι ακόμη διαθέσιμες στο Vulcanio Photo.
 	Thin	Λεπτό
 	Threshold Level	Στάθμη κατωφλίου
 	Thumbnail size (smallest: list)	Μέγεθος μικρογραφίας (μικρότερο: λίστα)
@@ -3542,7 +3542,7 @@ cameraRaw	Yellow	Κίτρινο
 	Add to Swatches	Προσθήκη στα δείγματα χρωμάτων
 	Alt	Alt
 	Anamorphic 2:1 (2)	Αναμορφικό 2:1 (2)
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Blend If:	Ανάμειξη υπό όρους:
 	Current Layer:	Τρέχον επίπεδο:
 	Underlying Layer:	Υποκείμενο επίπεδο:
@@ -3581,7 +3581,7 @@ cameraRaw	Yellow	Κίτρινο
 	New Swatch Group…	Νέα ομάδα δειγμάτων χρωμάτων…
 	New Swatch…	Νέο δείγμα χρώματος…
 	OpenType	OpenType
-	Krasis Photo	Krasis Photo
+	Vulcanio Photo	Vulcanio Photo
 	Pupil Size	Μέγεθος κόρης
 	Replace Swatches…	Αντικατάσταση δειγμάτων χρωμάτων…
 	Reset Swatches	Επαναφορά δειγμάτων χρωμάτων
@@ -3624,7 +3624,7 @@ cameraRaw	Yellow	Κίτρινο
 	Color…	Χρώμα…
 	Cone (Inverted)	Κώνος (αντεστραμμένος)
 	Could not open	Δεν ήταν δυνατό το άνοιγμα
-	Default Krasis Photo Size	Προεπιλεγμένο μέγεθος Krasis Photo
+	Default Vulcanio Photo Size	Προεπιλεγμένο μέγεθος Vulcanio Photo
 	Diagonal (Descending)	Διαγώνιος (φθίνουσα)
 	Contour Editor	Επεξεργαστής περιγράμματος
 	Anti-aliased	Εξομάλυνση
@@ -3669,8 +3669,8 @@ cameraRaw	Yellow	Κίτρινο
 	Red Eye Tool	Κόκκινα μάτια (Red Eye Tool)
 	Seafoam	Θαλασσί
 	Srgb	sRGB
-	To drop files, start Krasis Photo under XWayland: `{command}`	Για να αποθέσετε αρχεία, εκκινήστε το Krasis Photo μέσω XWayland: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Ή ορίστε Προτιμήσεις › Επιδόσεις › Διακομιστής οθόνης Linux σε X11: το Krasis Photo θα εκκινεί τότε πάντα μέσω XWayland.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Για να αποθέσετε αρχεία, εκκινήστε το Vulcanio Photo μέσω XWayland: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Ή ορίστε Προτιμήσεις › Επιδόσεις › Διακομιστής οθόνης Linux σε X11: το Vulcanio Photo θα εκκινεί τότε πάντα μέσω XWayland.
 	Vulkan	Vulkan
 	WebP (lossless)	WebP (χωρίς απώλειες)
 	Webp	WebP
@@ -3713,7 +3713,7 @@ fontWeight	Thin	Πολύ λεπτά
 	Color to Alpha…	Χρώμα σε άλφα…
 	Transparency Threshold	Κατώφλι διαφάνειας
 	Opacity Threshold	Κατώφλι αδιαφάνειας
-	Krasis Photo — Screen Color Picker	Krasis Photo — Επιλογή χρώματος οθόνης
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Επιλογή χρώματος οθόνης
 	Rasterize svg groups deeper than	Ραστεροποίηση ομάδων SVG πέρα από αυτό το βάθος
 	0 turns this threshold off; SVG groups nested deeper than 100 levels are always rasterized.	Το 0 απενεργοποιεί αυτό το όριο· ομάδες SVG με ένθεση βαθύτερη από 100 επίπεδα ραστεροποιούνται πάντα.
 	Rule of Thirds	Κανόνας των τρίτων
@@ -3986,7 +3986,7 @@ curves	Smooth	Εξομάλυνση
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	Φορτώθηκε {n} ενέργεια από το {file}|Φορτώθηκαν {n} ενέργειες από το {file}
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} βήμα δεν έχει ακόμη αντίστοιχο στο Krasis Photo|{n} βήματα δεν έχουν ακόμη αντίστοιχο στο Krasis Photo
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} βήμα δεν έχει ακόμη αντίστοιχο στο Vulcanio Photo|{n} βήματα δεν έχουν ακόμη αντίστοιχο στο Vulcanio Photo
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	Αποθηκεύτηκε {n} ενέργεια στο {file}|Αποθηκεύτηκαν {n} ενέργειες στο {file}
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Παραλείφθηκε {n} βήμα χωρίς αντίστοιχο στο Photoshop|Παραλείφθηκαν {n} βήματα χωρίς αντίστοιχο στο Photoshop
 @plural	{n} action file loaded|{n} action files loaded	Φορτώθηκε {n} αρχείο ενεργειών|Φορτώθηκαν {n} αρχεία ενεργειών
@@ -4086,12 +4086,12 @@ curves	Smooth	Εξομάλυνση
 	Bicubic Smoother	Δικυβική πιο ομαλή
 	Bicubic Sharper	Δικυβική πιο ευκρινής
 	Pasting from other apps is unavailable	Η επικόλληση από άλλες εφαρμογές δεν είναι διαθέσιμη
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Το Krasis Photo δεν έχει πρόσβαση στο πρόχειρο του συστήματος σε αυτή τη συνεδρία. Στο Wayland, το sandbox του Flatpak κρύβει το πρωτόκολλο μέσω του οποίου διαβάζονται εικόνες από άλλες εφαρμογές.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Για επικόλληση από άλλες εφαρμογές, ξεκινήστε το Krasis Photo σε XWayland: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Τίποτα για επικόλληση: το Krasis Photo δεν μπορεί να διαβάσει εδώ το πρόχειρο του συστήματος
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Το Vulcanio Photo δεν έχει πρόσβαση στο πρόχειρο του συστήματος σε αυτή τη συνεδρία. Στο Wayland, το sandbox του Flatpak κρύβει το πρωτόκολλο μέσω του οποίου διαβάζονται εικόνες από άλλες εφαρμογές.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Για επικόλληση από άλλες εφαρμογές, ξεκινήστε το Vulcanio Photo σε XWayland: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Τίποτα για επικόλληση: το Vulcanio Photo δεν μπορεί να διαβάσει εδώ το πρόχειρο του συστήματος
 	Delete this set	Διαγραφή αυτού του συνόλου
 	New Set…	Νέο σύνολο…
-	Krasis Photo Defaults	Προεπιλογές Krasis Photo
+	Vulcanio Photo Defaults	Προεπιλογές Vulcanio Photo
 	Save a list of these shortcuts as a web page	Αποθήκευση λίστας αυτών των συντομεύσεων ως ιστοσελίδας
 	Save the changes to this set	Αποθήκευση των αλλαγών σε αυτό το σύνολο
 	Save these shortcuts as a .kys file	Αποθήκευση αυτών των συντομεύσεων ως αρχείου .kys

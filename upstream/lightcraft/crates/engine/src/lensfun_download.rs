@@ -389,7 +389,7 @@ impl DirLock {
             .map_err(|e| format!("could not create {}: {e}", path.display()))?;
         match file.try_lock() {
             Ok(()) => Ok(DirLock { file }),
-            Err(std::fs::TryLockError::WouldBlock) => Err("the lens database is already downloading (in another Krasis Library window)".into()),
+            Err(std::fs::TryLockError::WouldBlock) => Err("the lens database is already downloading (in another Vulcanio Library window)".into()),
             Err(std::fs::TryLockError::Error(e)) => Err(format!("could not lock {}: {e}", path.display())),
         }
     }
@@ -411,7 +411,7 @@ fn fetch_all(dir: &Path, mirrors: &[String], files: &[Pin], shared: &Shared) -> 
     .map_err(|e| match e {
         lightcraft_fetch::DownloadError::AllMirrorsFailed { errors, .. } => {
             let detail: String = errors.join("; ").chars().take(300).collect();
-            format!("could not download the lens database ({detail}): check the internet connection; Krasis Library tries again next time it starts")
+            format!("could not download the lens database ({detail}): check the internet connection; Vulcanio Library tries again next time it starts")
         }
         other => other.to_string(),
     })?;

@@ -343,7 +343,7 @@ fn help_button(app: &mut FigApp, ui: &mut Ui, canvas: Rect, pill: Rect, t: &Toke
             (tr("Keyboard shortcuts"), "help.shortcuts"),
             (tr("Help page"), "help.page"),
             (tr("Check for updates…"), "help.checkForUpdates"),
-            (tr("About Krasis Interface"), "help.about"),
+            (tr("About Vulcanio Interface"), "help.about"),
         ] {
             if crate::right::menu_item(ui, l, crate::shortcuts::shortcut(c).unwrap_or("")) {
                 crate::menus::invoke(app, c);

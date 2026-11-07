@@ -32,7 +32,7 @@ use tabs::{CLOSE_BEFORE_TITLE, first_tab_shown, tab_drop, tab_groups, tab_title}
 pub use tabs::{doc_tabs, isolation_bar, step_document};
 pub(crate) use tabs::{document_window_title, show_document, window_tab};
 
-/// The application bar's height, in points (compact, as in Krasis Photo).
+/// The application bar's height, in points (compact, as in Vulcanio Photo).
 pub const APP_BAR_HEIGHT: f32 = 32.0;
 /// The brand mark's side.
 const MARK: f32 = 18.0;
@@ -84,7 +84,7 @@ pub fn app_bar(app: &mut VectorcraftApp, ui: &mut Ui) {
             let ws = ui.painter().layout_no_wrap(ws_name, egui::FontId::proportional(12.0), t.text);
             let ws_w = (ws.size().x + 36.0).clamp(112.0, 190.0);
             let gap = ui.spacing().item_spacing.x;
-            // The search icon, as in Krasis Photo: shown while a minimal switcher fits beside it.
+            // The search icon, as in Vulcanio Photo: shown while a minimal switcher fits beside it.
             let icon = 28.0;
             let search = room >= 64.0 + 8.0 + gap + icon;
             let ws_w = ws_w.min(room - 8.0 - gap - if search { icon } else { 0.0 }).max(64.0);
@@ -115,7 +115,7 @@ pub fn app_bar(app: &mut VectorcraftApp, ui: &mut Ui) {
                 crate::community::discord_button(app, ui, false);
             }
             if app.services.native_menu.is_some() {
-                let title = ui.painter().layout_no_wrap("Krasis Vector".into(), egui::FontId::proportional(13.5), t.text);
+                let title = ui.painter().layout_no_wrap("Vulcanio Vector".into(), egui::FontId::proportional(13.5), t.text);
                 let title_rect = egui::Rect::from_center_size(full.center(), title.size());
                 // Keep the title centered only while the interactive groups leave room for it.
                 if title_rect.left() >= menus_end + 8.0 && title_rect.right() <= ui.min_rect().left() - 8.0 {
@@ -144,8 +144,8 @@ pub fn system_title_bar(app: &VectorcraftApp) -> bool {
 pub fn window_title(app: &VectorcraftApp) -> String {
     app.session
         .active()
-        .map(|d| format!("{}{} \u{2014} Krasis Vector", if d.is_dirty() { "*" } else { "" }, d.title()))
-        .unwrap_or_else(|| "Krasis Vector".into())
+        .map(|d| format!("{}{} \u{2014} Vulcanio Vector", if d.is_dirty() { "*" } else { "" }, d.title()))
+        .unwrap_or_else(|| "Vulcanio Vector".into())
 }
 
 /// Keep the OS window title (and the taskbar / Alt-Tab entry) on the active file. Sends
@@ -284,12 +284,12 @@ mod visual_regressions {
                             _ => None,
                         })
                         .collect();
-                    let title = texts.iter().find(|text| text.galley.job.text == "Krasis Vector");
+                    let title = texts.iter().find(|text| text.galley.job.text == "Vulcanio Vector");
                     if width >= 1280.0 {
                         assert!(title.is_some(), "the title remains visible when the header has room");
                     }
                     if let Some(title) = title {
-                        for text in texts.iter().filter(|text| text.galley.job.text != "Krasis Vector") {
+                        for text in texts.iter().filter(|text| text.galley.job.text != "Vulcanio Vector") {
                             assert!(
                                 !title.visual_bounding_rect().intersects(text.visual_bounding_rect()),
                                 "{width}: title overlaps {:?}",

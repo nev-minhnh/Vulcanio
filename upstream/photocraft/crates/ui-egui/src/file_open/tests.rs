@@ -1166,7 +1166,7 @@ fn a_drop_slot_counts_documents_not_the_tabs_shown() {
     assert_eq!(crate::canvas::TabStrip { rect: strip.rect, tabs: vec![] }.slot(10.0), 0);
 }
 
-/// #5687: files dropped from another app's window bring Krasis Photo to the front (a focus request
+/// #5687: files dropped from another app's window bring Vulcanio Photo to the front (a focus request
 /// in the frame that takes the drop), so the source window ends up behind it.
 #[test]
 fn a_drop_brings_the_window_to_the_front() {

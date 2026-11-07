@@ -116,7 +116,7 @@ pub fn start(app: &mut FigApp, id: &str, command: &str) {
 }
 
 /// A plugin offered a file to save (`dialog.pluginSave`: `name`, `data` as base64): the user picks
-/// where it goes in Krasis Interface's own save dialog, or the browser downloads it. The plugin never learns
+/// where it goes in Vulcanio Interface's own save dialog, or the browser downloads it. The plugin never learns
 /// the path.
 pub(crate) fn save_file(app: &mut FigApp, data: &Value) {
     use base64::Engine as _;
@@ -497,7 +497,7 @@ fn confirm_window(app: &mut FigApp, ctx: &Context, t: &Tokens) {
         ui.add_space(8.0);
         widgets::label(
             ui,
-            tr("Plugins run in Krasis Interface's sandbox, without files, network or clock. Install only plugins you trust."),
+            tr("Plugins run in Vulcanio Interface's sandbox, without files, network or clock. Install only plugins you trust."),
             t.text_secondary,
         );
         ui.add_space(4.0);

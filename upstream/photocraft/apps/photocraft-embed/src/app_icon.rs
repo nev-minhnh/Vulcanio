@@ -27,7 +27,7 @@ pub fn window_icon() -> egui::IconData {
 }
 
 /// Whether the window gets [`window_icon`] at runtime: everywhere except inside a macOS app
-/// bundle. There the Dock shows the bundle's `Krasis Photo.icns` (`CFBundleIconFile`), which macOS
+/// bundle. There the Dock shows the bundle's `Vulcanio Photo.icns` (`CFBundleIconFile`), which macOS
 /// renders in its own style (Liquid Glass and its tinted and dark variants); a runtime PNG
 /// replaced it with a flat picture (#5849). `exe` is the running executable.
 pub fn sets_runtime_icon(exe: Option<&std::path::Path>) -> bool {
@@ -77,7 +77,7 @@ mod tests {
     fn only_a_macos_app_bundle_skips_the_runtime_icon() {
         use std::path::Path;
         assert!(in_app_bundle(Path::new("/Applications/PhotoCraft.app/Contents/MacOS/photocraft")));
-        assert!(in_app_bundle(Path::new("/Users/a/Downloads/Krasis Photo Beta.APP/Contents/MacOS/photocraft")));
+        assert!(in_app_bundle(Path::new("/Users/a/Downloads/Vulcanio Photo Beta.APP/Contents/MacOS/photocraft")));
         assert!(!in_app_bundle(Path::new("/Users/a/src/photocraft/target/release/photocraft")));
         assert!(!in_app_bundle(Path::new("/opt/Contents/MacOS/photocraft")), "not inside a .app");
         assert!(!in_app_bundle(Path::new("/.app/Contents/MacOS/photocraft")), "a bare `.app` is no bundle name");

@@ -766,7 +766,7 @@ fn notice_titles(app: &PhotocraftApp) -> Vec<String> {
     app.ui.notices.iter().map(|n| n.title.clone()).filter(|t| t.contains(".xmp")).collect()
 }
 
-/// A Lightroom or Bridge sidecar holds settings Krasis Photo can't keep (crop, masks, rating,
+/// A Lightroom or Bridge sidecar holds settings Vulcanio Photo can't keep (crop, masks, rating,
 /// keywords): Open uses its develop settings but never writes over it, and says so.
 #[test]
 fn a_foreign_sidecar_is_never_overwritten() {
@@ -783,7 +783,7 @@ fn a_foreign_sidecar_is_never_overwritten() {
     let _ = std::fs::remove_dir_all(&dir);
 }
 
-/// Bridge writes a sidecar with only a rating (no Camera Raw settings): it is not Krasis Photo's
+/// Bridge writes a sidecar with only a rating (no Camera Raw settings): it is not Vulcanio Photo's
 /// to replace, with or without a change in the dialog.
 #[test]
 fn a_rating_only_sidecar_is_left_alone() {

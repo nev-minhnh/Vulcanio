@@ -128,7 +128,7 @@ impl Default for TextStyle {
     fn default() -> Self {
         TextStyle {
             name: "Standard".into(),
-            font: "Krasis CAD Stroke".into(),
+            font: "Vulcanio CAD Stroke".into(),
             big_font: String::new(),
             height: 0.0,
             width_factor: 1.0,

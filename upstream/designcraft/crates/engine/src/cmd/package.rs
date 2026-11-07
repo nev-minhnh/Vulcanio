@@ -325,7 +325,7 @@ fn write_links(d: &Document, root: &OutputRoot, dir: &Path, only: Option<&[Asset
 /// report adds after the font's name (nothing when copied).
 fn copy_font(root: &OutputRoot, face: &FontFace, dir: &Path, copied: &mut Vec<PathBuf>, taken: &mut Vec<String>, files: &mut Vec<PathBuf>) -> String {
     let from = match &face.source {
-        FontSource::Bundled => return " — included with Krasis Layout".into(),
+        FontSource::Bundled => return " — included with Vulcanio Layout".into(),
         FontSource::Memory => return " — not copied: no font file".into(),
         FontSource::Installed(p) | FontSource::Document(p) => p,
     };
@@ -449,7 +449,7 @@ fn package(s: &mut Session, p: &Value) -> Result<Value> {
         root.write(&path, &designcraft_idml::export_idml_with(&packed, &opts))?;
         files.push(path);
         if super::interchange::has_applicable_pdf_layer_overrides(&packed) {
-            idml_layer_note = "\nPlaced PDF layers\nThe IDML copy links the placed PDFs, so it shows their file defaults. The Krasis Layout document keeps each placement's Object Layer Options choice.\n";
+            idml_layer_note = "\nPlaced PDF layers\nThe IDML copy links the placed PDFs, so it shows their file defaults. The Vulcanio Layout document keeps each placement's Object Layer Options choice.\n";
         }
     }
     let mut warnings = Vec::new();

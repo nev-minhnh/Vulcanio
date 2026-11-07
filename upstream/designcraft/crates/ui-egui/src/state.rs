@@ -358,7 +358,7 @@ pub struct UiState {
     /// Where the Contextual Task Bar was last shown, like [`Self::task_bar_pin`].
     #[serde(skip)]
     pub task_bar_at: Option<[f32; 2]>,
-    /// Help › About Krasis Layout is open.
+    /// Help › About Vulcanio Layout is open.
     pub about: bool,
     /// The About window's tab: 0 About, 1 Contributors, 2 Models (`about::ABOUT_TABS`).
     #[serde(skip)]

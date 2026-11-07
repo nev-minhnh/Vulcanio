@@ -487,7 +487,7 @@ pub use self::{
     },
     containers::{
         Aligned, Area, AreaState, CentralPanel, ClosableTag, CollapsingHeader, CollapsingResponse,
-        ComboBox, DragPanButtons, Frame, IconPainter, Modal, ModalResponse, Panel, PanelState,
+        ComboBox, DragPanButtons, Frame, IconPainter, Modal, ModalResponse, Panel, PanelState, set_panel_appear_seconds, suppress_panel_appear,
         Popup, PopupAnchor, PopupCloseBehavior, PopupKind, Resize, Scene, ScrollArea,
         SetOpenCommand, Sides, Tooltip, Window, WindowDrag, collapsing_header, frame,
         menu::{self, MenuBar},

@@ -83,7 +83,7 @@ pub enum Icon {
     Edited,
     /// Targeted adjustment: a ring with a centre dot and up/down arrows (drag vertically).
     Target,
-    /// Community chat (opens the Krasis Discord): a speech bubble with three dots. Our own
+    /// Community chat (opens the Vulcanio Discord): a speech bubble with three dots. Our own
     /// generic drawing, not any service's logo.
     Chat,
     /// Face boxes on/off: four corner brackets round a small face.

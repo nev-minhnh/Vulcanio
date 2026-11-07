@@ -1,12 +1,12 @@
 //! Community and project links (Help menu, About dialog, top-bar Discord button).
 
-/// The app's id in Krasis URLs.
+/// The app's id in Vulcanio URLs.
 pub const APP: &str = "lightcraft";
-/// The Krasis community Discord.
+/// The Vulcanio community Discord.
 pub const DISCORD: &str = "https://discord.gg/artcraft";
-/// The Krasis website.
+/// The Vulcanio website.
 pub const WEBSITE: &str = "https://getartcraft.com";
-/// This app's page on the Krasis website.
+/// This app's page on the Vulcanio website.
 pub const APP_PAGE: &str = "https://getartcraft.com/apps/lightcraft";
 /// This app's source repository.
 pub const GITHUB: &str = "https://github.com/storytold/lightcraft";
@@ -16,11 +16,7 @@ pub const GITHUB: &str = "https://github.com/storytold/lightcraft";
 pub const HELP: &str = "https://github.com/storytold/lightcraft/tree/main/docs";
 
 pub const LINKS: &[(&str, &str, &str)] = &[
-    ("app.help", "Krasis Library Help", HELP),
-    ("app.discord", "Join the Krasis Discord…", DISCORD),
-    ("app.website", "Krasis Library Website", APP_PAGE),
-    ("app.github", "Krasis Library on GitHub", GITHUB),
-    ("app.artcraft", "Krasis Website", WEBSITE),
+    ("app.help", "Vulcanio Library Help", HELP),
     ("app.feedback", "Send Feedback…", FEEDBACK),
 ];
 

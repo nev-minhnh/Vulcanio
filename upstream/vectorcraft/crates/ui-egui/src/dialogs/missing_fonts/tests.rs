@@ -120,7 +120,7 @@ fn the_documents_fonts_folder_is_offered_and_searched_off_the_ui_thread() {
     for label in ["Findme.otf", "Copy only fonts you own or are licensed to install.", "Add Fonts"] {
         assert!(text.contains(label), "{label} in {text}");
     }
-    // Adding needs Krasis Vector's Fonts folder, which only the apps set.
+    // Adding needs Vulcanio Vector's Fonts folder, which only the apps set.
     let e = super::super::confirm(&mut app).unwrap_err();
     assert!(e.contains("isn't set here"), "{e}");
     assert_eq!(kind(&app), Some(KIND));

@@ -126,9 +126,9 @@ const MAX_DEVICES: usize = 1000;
 
 /// The built-in devices: name, output, description.
 const BUILTIN: [(&str, PlotOutput, &str); 3] = [
-    ("Krasis CAD PDF", PlotOutput::Pdf, "Vector PDF"),
-    ("Krasis CAD PNG", PlotOutput::Png, "Raster PNG image"),
-    ("Krasis CAD SVG", PlotOutput::Svg, "Vector SVG image"),
+    ("Vulcanio CAD PDF", PlotOutput::Pdf, "Vector PDF"),
+    ("Vulcanio CAD PNG", PlotOutput::Png, "Raster PNG image"),
+    ("Vulcanio CAD SVG", PlotOutput::Svg, "Vector SVG image"),
 ];
 
 /// A page setup's "no device" name.

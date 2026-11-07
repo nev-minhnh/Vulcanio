@@ -1,6 +1,6 @@
 [workspace]
 resolver = "3"
-members = ["apps/krasis", "crates/krasis-host"]
+members = ["apps/vulcanio", "crates/vulcanio-host"]
 exclude = ["upstream", "vendor"]
 
 [workspace.package]
@@ -23,7 +23,7 @@ lto = "thin"
 codegen-units = 16
 debug = 0
 
-# One egui family for every module: the reviewed storytold fork, vendored so Krasis can construct
+# One egui family for every module: the reviewed storytold fork, vendored so Vulcanio can construct
 # a CreationContext for a module opened after startup.
 [patch.crates-io]
 ecolor = { path = "vendor/egui/crates/ecolor" }

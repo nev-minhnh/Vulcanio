@@ -1,4 +1,4 @@
-//! macOS: Krasis CAD's menu tree as the native system menu bar. Items dispatch through the same
+//! macOS: Vulcanio CAD's menu tree as the native system menu bar. Items dispatch through the same
 //! command path as the in-window menus; enablement is refreshed a few times per second.
 
 use std::collections::HashMap;
@@ -50,27 +50,27 @@ impl NativeMenu {
         let language = app.language();
         let mut submenus = Vec::new();
         let mut counter = 0usize;
-        let app_menu = Submenu::new("Krasis CAD", true);
-        let about = MenuItem::with_id("cc-about", i18n::tr(language, "About Krasis CAD"), true, None);
-        let discord = MenuItem::with_id("cc-discord", i18n::tr(language, "Join the Krasis Discord…"), true, None);
+        let app_menu = Submenu::new("Vulcanio CAD", true);
+        let about = MenuItem::with_id("cc-about", i18n::tr(language, "About Vulcanio CAD"), true, None);
+        let discord = MenuItem::with_id("cc-discord", i18n::tr(language, "Join the Vulcanio Discord…"), true, None);
         let predefined = vec![
             ("Services", PredefinedMenuItem::services(Some(i18n::tr(language, "Services")))),
-            ("Hide Krasis CAD", PredefinedMenuItem::hide(Some(i18n::tr(language, "Hide Krasis CAD")))),
+            ("Hide Vulcanio CAD", PredefinedMenuItem::hide(Some(i18n::tr(language, "Hide Vulcanio CAD")))),
             ("Hide Others", PredefinedMenuItem::hide_others(Some(i18n::tr(language, "Hide Others")))),
             ("Show All", PredefinedMenuItem::show_all(Some(i18n::tr(language, "Show All")))),
-            ("Quit Krasis CAD", PredefinedMenuItem::quit(Some(i18n::tr(language, "Quit Krasis CAD")))),
+            ("Quit Vulcanio CAD", PredefinedMenuItem::quit(Some(i18n::tr(language, "Quit Vulcanio CAD")))),
         ];
-        // The Mac place for preferences: Krasis CAD ▸ Settings… (⌘,) opens the Options dialog.
+        // The Mac place for preferences: Vulcanio CAD ▸ Settings… (⌘,) opens the Options dialog.
         let settings = MenuItem::with_id("cc-settings", i18n::tr(language, "Settings..."), true, accel("Cmd+Comma"));
-        let _ = app_menu.append_items(&[&about, &discord, &PredefinedMenuItem::separator(), &settings, &PredefinedMenuItem::separator()]);
+        let _ = app_menu.append_items(&[&about, &PredefinedMenuItem::separator(), &settings, &PredefinedMenuItem::separator()]);
         for (label, item) in &predefined {
             let _ = app_menu.append(item);
             if ["Services", "Show All"].contains(label) {
                 let _ = app_menu.append(&PredefinedMenuItem::separator());
             }
         }
-        items.insert("cc-about".into(), ("ui.dialog.about".into(), "About Krasis CAD".into(), about));
-        items.insert("cc-discord".into(), ("ui.discord".into(), "Join the Krasis Discord…".into(), discord));
+        items.insert("cc-about".into(), ("ui.dialog.about".into(), "About Vulcanio CAD".into(), about));
+        items.insert("cc-discord".into(), ("ui.discord".into(), "Join the Vulcanio Discord…".into(), discord));
         items.insert("cc-settings".into(), ("options".into(), "Settings...".into(), settings));
         let _ = menu.append(&app_menu);
         for (title, entries) in menus::tree(app) {

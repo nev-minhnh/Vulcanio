@@ -32,7 +32,7 @@ pub fn enabled(app: &DesignApp, id: &str) -> bool {
     if is_window_control(id) {
         return window_control_available(app, id);
     }
-    // Shared docking commands Krasis Layout does not provide (native panel windows, Lock Workspace).
+    // Shared docking commands Vulcanio Layout does not provide (native panel windows, Lock Workspace).
     if matches!(id, "window.panel.window" | "window.workspace.lock") {
         return false;
     }

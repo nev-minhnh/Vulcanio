@@ -86,7 +86,7 @@ pub fn paste(app: &mut FigApp, event_text: Option<&str>, at: Option<(f64, f64)>)
     }
 }
 
-/// The marker Krasis Interface puts on the system clipboard for copied layers with no text/SVG mirror.
+/// The marker Vulcanio Interface puts on the system clipboard for copied layers with no text/SVG mirror.
 fn is_clipboard_marker(text: &str) -> bool {
     text.starts_with("figcraft://clipboard/")
 }

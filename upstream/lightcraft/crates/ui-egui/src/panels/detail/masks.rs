@@ -32,7 +32,7 @@ const REGION_HANDLES: [(f32, f32, egui::CursorIcon); 8] = [
 /// a × in its corner and eight resize handles, and dragging its body moves it (not under a tool that
 /// draws on the photo). A drag previews the new box live and is reported once,
 /// on release (one undo step); the × reports the region to remove. Both are catalog-only edits:
-/// Krasis Library doesn't write regions to XMP. Regions are stored on the upright (EXIF-oriented) photo;
+/// Vulcanio Library doesn't write regions to XMP. Regions are stored on the upright (EXIF-oriented) photo;
 /// `orient` is the user's Rotate / Flip on top of it, which the loupe's normalized frame includes.
 /// What the face/pet/focus regions of a photo are drawn from.
 pub(super) struct RegionContext<'a> {

@@ -154,7 +154,7 @@ impl OriginalGuard {
             let same = if hard_links {
                 same_file_strict(p, target).map_err(|e| {
                     format!(
-                        "{}: Krasis Library cannot tell whether this is {what} in the library ({e}) and never writes over an original (choose another folder or file name)",
+                        "{}: Vulcanio Library cannot tell whether this is {what} in the library ({e}) and never writes over an original (choose another folder or file name)",
                         target.display()
                     )
                 })?
@@ -163,7 +163,7 @@ impl OriginalGuard {
             };
             if same {
                 return Err(format!(
-                    "{} is {what} in the library: Krasis Library never writes over an original (choose another folder or file name)",
+                    "{} is {what} in the library: Vulcanio Library never writes over an original (choose another folder or file name)",
                     target.display()
                 ));
             }

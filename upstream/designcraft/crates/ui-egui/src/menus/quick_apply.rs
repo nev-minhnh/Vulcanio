@@ -140,7 +140,7 @@ const NOT_SEARCHED: &[&str] = &[
     "view.zoom",
     // Where to pin the Contextual Task Bar.
     "window.taskBarPin",
-    // Shared docking commands Krasis Layout doesn't provide, those that need a panel or a name,
+    // Shared docking commands Vulcanio Layout doesn't provide, those that need a panel or a name,
     // and older ids that share a label with a searched docking command.
     "window.panel",
     "window.panel.window",

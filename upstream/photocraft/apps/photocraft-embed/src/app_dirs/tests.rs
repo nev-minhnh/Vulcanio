@@ -353,7 +353,7 @@ fn a_launch_that_times_out_never_writes_where_a_move_removes() {
     let _ = std::fs::remove_dir_all(&root);
 }
 
-/// A writer that still uses the old path while it is being copied (an older Krasis Photo)
+/// A writer that still uses the old path while it is being copied (an older Vulcanio Photo)
 /// starts a new folder there; the move removes only the original it held aside.
 #[test]
 fn a_write_to_the_old_path_during_a_copy_is_not_removed() {

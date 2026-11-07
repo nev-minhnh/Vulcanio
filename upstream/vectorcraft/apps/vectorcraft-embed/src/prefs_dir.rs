@@ -1,4 +1,4 @@
-//! Where Krasis Vector keeps its settings, `ui.json`, and next to it folders of the user's own
+//! Where Vulcanio Vector keeps its settings, `ui.json`, and next to it folders of the user's own
 //! (Swatches, Graphic Styles, Fonts, Data Recovery, logs). The desktop app and `vectorcraft-cli`
 //! (which shares this file) read the same Fonts folder.
 
@@ -11,11 +11,11 @@ mod profile;
 /// Support (macOS) or %APPDATA% (Windows), or `lower` in $XDG_CONFIG_HOME or ~/.config (Linux and
 /// BSD).
 pub fn prefs_path_for(name: &str, lower: &str) -> Option<PathBuf> {
-    let legacy = name == "Krasis Vector" || lower == "drawcraft";
+    let legacy = name == "Vulcanio Vector" || lower == "drawcraft";
     profile::prefs_path(legacy)
 }
 
-/// Have the font scans read Krasis Vector's own Fonts folder, next to the settings, which
+/// Have the font scans read Vulcanio Vector's own Fonts folder, next to the settings, which
 /// `text.addFontFiles` copies font files into. The folder is set whether or not
 /// `VECTORCRAFT_NO_PREFS` is set, as the Swatches and Graphic Styles folders are.
 pub fn install_fonts() {

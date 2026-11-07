@@ -307,7 +307,7 @@ pub type ClipboardUnreadableFn = Box<dyn Fn() -> bool>;
 /// An editor selected by the user, never an executable supplied by document metadata.
 #[derive(Clone, Debug, PartialEq, Eq)]
 pub enum ExternalSvgEditor {
-    /// A known Krasis Vector installation, found by the desktop shell.
+    /// A known Vulcanio Vector installation, found by the desktop shell.
     VectorCraft,
     /// A known Adobe Illustrator installation (offered where the shell can discover one).
     Illustrator,

@@ -93,7 +93,7 @@ pub(crate) fn intercept(app: &mut PhotocraftApp, id: &str, params: &Value) -> Op
         return None;
     }
     let doc = st.doc.id;
-    // Contents already open in Krasis Photo's own editor: the engine switches to that document.
+    // Contents already open in Vulcanio Photo's own editor: the engine switches to that document.
     if app.session.smart_links.iter().any(|link| link.parent == doc && link.contents_id == smart.contents_id) {
         return None;
     }
@@ -281,10 +281,10 @@ pub(crate) fn show(app: &mut PhotocraftApp, ctx: &egui::Context) {
             ));
         }
         for (choice, label) in [
-            (Editor::VectorCraft, "Krasis Vector"),
+            (Editor::VectorCraft, "Vulcanio Vector"),
             (Editor::Illustrator, "Adobe Illustrator"),
             (Editor::Program, "Other application"),
-            (Editor::Internal, "Krasis Photo (internal editor)"),
+            (Editor::Internal, "Vulcanio Photo (internal editor)"),
         ] {
             // The desktop shell discovers Illustrator installations only on Windows and macOS.
             if choice == Editor::Illustrator && !cfg!(any(windows, target_os = "macos")) {
@@ -303,9 +303,9 @@ pub(crate) fn show(app: &mut PhotocraftApp, ctx: &egui::Context) {
         ui.add_space(8.0);
         ui.label(
             egui::RichText::new(tr(if pending.target.extension == "svg" {
-                "Save to the opened SVG file. Each saved change becomes one undo step in Krasis Photo."
+                "Save to the opened SVG file. Each saved change becomes one undo step in Vulcanio Photo."
             } else {
-                "Save to the opened original-format file. Each saved change becomes one undo step in Krasis Photo."
+                "Save to the opened original-format file. Each saved change becomes one undo step in Vulcanio Photo."
             }))
             .small()
             .color(tokens.text_dim),

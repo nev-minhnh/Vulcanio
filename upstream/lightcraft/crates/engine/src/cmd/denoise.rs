@@ -119,13 +119,13 @@ fn identify(path: &Path, c: &str, sha_known: Option<&str>) -> Result<Source> {
     {
         let m = manifest::parse(&bytes).map_err(|e| bad(c, format!("{}: {e}", sibling.display())))?;
         if m.id == lightcraft_denoise::builtin::ID {
-            return Err(bad(c, "the id `builtin` is Krasis Library's own denoiser: give the model another id in its denoise-model.json"));
+            return Err(bad(c, "the id `builtin` is Vulcanio Library's own denoiser: give the model another id in its denoise-model.json"));
         }
         return Ok(Source { manifest: m, entry: None, file_name });
     }
     Err(bad(
         c,
-        "Krasis Library does not know this file. A denoise model is an .onnx file with a denoise-model.json beside it that says how to use it \
+        "Vulcanio Library does not know this file. A denoise model is an .onnx file with a denoise-model.json beside it that says how to use it \
          (see docs/denoise.md), or an archive LightCraft can fetch itself (`denoise.models.download`)",
     ))
 }
@@ -325,10 +325,10 @@ fn inspect(s: &mut Session, p: &Value) -> Result<Value> {
             "denoise-model.json could not be read or is too large"
         } else if src.with_file_name("model.json").is_file() {
             // other apps ship their models with a model.json of their own (#1381)
-            "No denoise-model.json beside this .onnx file. The model.json there is another app's description, which Krasis Library \
+            "No denoise-model.json beside this .onnx file. The model.json there is another app's description, which Vulcanio Library \
              does not read: it needs its own denoise-model.json (see docs/denoise.md)"
         } else {
-            "No denoise-model.json beside this .onnx file: Krasis Library needs one that says how to use the model (see docs/denoise.md)"
+            "No denoise-model.json beside this .onnx file: Vulcanio Library needs one that says how to use the model (see docs/denoise.md)"
         };
         return Err(bad(C, why));
     };
@@ -380,8 +380,8 @@ fn download(s: &mut Session, p: &Value) -> Result<Value> {
     const C: &str = "denoise.models.download";
     let id = str_param(p, "id").ok_or_else(|| bad(C, "missing `id`"))?;
     let dir = models_dir(s, C)?;
-    let k = known::find(id).ok_or_else(|| bad(C, "Krasis Library has no download for that model: get the file from its page, then add it"))?;
-    let spec = k.download.clone().ok_or_else(|| bad(C, "Krasis Library has no download for that model: get the file from its page, then add it"))?;
+    let k = known::find(id).ok_or_else(|| bad(C, "Vulcanio Library has no download for that model: get the file from its page, then add it"))?;
+    let spec = k.download.clone().ok_or_else(|| bad(C, "Vulcanio Library has no download for that model: get the file from its page, then add it"))?;
     if !cfg!(feature = "denoise") {
         return Err(bad(C, "this build cannot run denoise models, so there is nothing to download for it"));
     }
@@ -657,14 +657,14 @@ pub fn specs() -> Vec<CommandSpec> {
     vec![
         cmd!(query "denoise.models.list", "Denoise Models", [], None, "{} → {dir, productsDir, model, runtime, auto, cacheGb, threads, runOn, models: [{id, name, version, licence{name, commercial, url, notice}, provenance, source, sizeBytes, sha256, tile, known, downloadHost, installed, selected, accepted}]}", always, list),
         cmd!(query "denoise.models.inspect", "Inspect Denoise Model", [], None, "{path} → model terms from an adjacent manifest; never executes the file", always, inspect),
-        cmd!(query "denoise.models.install", "Install Denoise Model", [], None, "{path, acknowledged: true, activate?: true, background?: false} → {installed, model} or {started} — install a denoise model from a file: an .onnx with a denoise-model.json beside it, or an archive Krasis Library knows (the darktable `.dtmodel`). `acknowledged` must be true: the user has been shown the model's licence and accepted it. Unless `activate` is false it becomes the model in use", always, install),
-        cmd!(query "denoise.models.download", "Download Denoise Model", [], None, "{id, acknowledged: true} → {started, from} — fetch a model Krasis Library has a pinned address for (see `downloadHost` in the list) in the background over HTTPS with lightcraft-fetch. `acknowledged` must be true: the user has been shown the model's terms and accepted them. It is checked against its size and SHA-256, installed and chosen by itself; `denoise.models.downloads` shows how far it is", always, download),
+        cmd!(query "denoise.models.install", "Install Denoise Model", [], None, "{path, acknowledged: true, activate?: true, background?: false} → {installed, model} or {started} — install a denoise model from a file: an .onnx with a denoise-model.json beside it, or an archive Vulcanio Library knows (the darktable `.dtmodel`). `acknowledged` must be true: the user has been shown the model's licence and accepted it. Unless `activate` is false it becomes the model in use", always, install),
+        cmd!(query "denoise.models.download", "Download Denoise Model", [], None, "{id, acknowledged: true} → {started, from} — fetch a model Vulcanio Library has a pinned address for (see `downloadHost` in the list) in the background over HTTPS with lightcraft-fetch. `acknowledged` must be true: the user has been shown the model's terms and accepted them. It is checked against its size and SHA-256, installed and chosen by itself; `denoise.models.downloads` shows how far it is", always, download),
         cmd!(query "denoise.models.downloads", "Denoise Model Downloads", [], None, "{} → {running, downloads: [{id, state: running | done | installed | failed | cancelled, bytes, total, error, from}]} — also installs any download that has arrived", always, downloads),
         cmd!(query "denoise.models.downloadCancel", "Cancel Denoise Model Download", [], None, "{id} → {discarded} — stop a download, or delete a finished one that was not installed", always, download_cancel),
         cmd!(query "denoise.models.test", "Test Denoise Model", [], None, "{id} → {ok, result} — load an installed model and check it gives sensible pictures; needs the denoise runtime", always, test),
         cmd!(query "denoise.models.remove", "Remove Denoise Model", [], None, "{id} → {removed, model} — delete an installed model (its cached pictures stay until they are evicted)", always, remove),
         cmd!(query "denoise.models.select", "Choose Denoise Model", [], None, "{id: installed model | null} → {model} — null uses the built-in denoiser", always, select),
-        cmd!(query "denoise.settings", "Denoise Settings", [], None, "{auto?: bool, cacheGb?: 1..10000, threads?: 1..64 | null, runOn?: auto | gpu | cpu} → the settings — `auto`: make the picture of the photos being looked at that have a Denoise amount; `cacheGb`: how much the cached pictures may take; `threads`: most tiles run at once; `runOn`: where the model runs — `auto` (the default) the graphics card where it is faster than the processor (both timed on this computer when the card is set up), `gpu` the card whenever it can run the model, `cpu` the processor. Setting `runOn` also lets the card be tried again after a set-up that failed or closed Krasis Library", always, settings),
+        cmd!(query "denoise.settings", "Denoise Settings", [], None, "{auto?: bool, cacheGb?: 1..10000, threads?: 1..64 | null, runOn?: auto | gpu | cpu} → the settings — `auto`: make the picture of the photos being looked at that have a Denoise amount; `cacheGb`: how much the cached pictures may take; `threads`: most tiles run at once; `runOn`: where the model runs — `auto` (the default) the graphics card where it is faster than the processor (both timed on this computer when the card is set up), `gpu` the card whenever it can run the model, `cpu` the processor. Setting `runOn` also lets the card be tried again after a set-up that failed or closed Vulcanio Library", always, settings),
         cmd!(
             "denoise.toggle",
             "AI Denoise",

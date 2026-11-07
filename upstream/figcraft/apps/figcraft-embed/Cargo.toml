@@ -13,7 +13,7 @@ doctest = false
 workspace = true
 
 [dependencies]
-krasis-host = { path = "../../../../crates/krasis-host" }
+vulcanio-host = { path = "../../../../crates/vulcanio-host" }
 figcraft-engine = { workspace = true }
 figcraft-ui-egui = { workspace = true }
 figcraft-collab-net = { workspace = true }

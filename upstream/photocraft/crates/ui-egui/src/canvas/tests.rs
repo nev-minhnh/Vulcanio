@@ -1419,7 +1419,7 @@ fn wayland_start_screen_hint_does_not_claim_file_drop_works() {
     assert!(hint.ends_with(&format!("paste a copied image with {}.", crate::notices::paste_hint(&wayland))), "{hint}");
 }
 
-/// A tiling window manager can hand Krasis Photo a canvas narrower than the Home card (460
+/// A tiling window manager can hand Vulcanio Photo a canvas narrower than the Home card (460
 /// points): the two buttons must stay inside the window instead of being clipped at its edges.
 #[test]
 fn start_screen_buttons_stay_inside_a_narrow_canvas() {

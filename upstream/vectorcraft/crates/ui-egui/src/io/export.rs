@@ -220,8 +220,8 @@ pub(crate) fn open_in_app(app: &mut VectorcraftApp, path: &str) -> Result<(), St
 }
 
 /// Edit Original: open `path` in the system's default app for it, or with Preferences › File
-/// Handling › Use System Defaults for Edit Original off, in the app that made it (#5236): Krasis Photo
-/// for a raster image where it is installed. Any other file, or no Krasis Photo, uses the system's app.
+/// Handling › Use System Defaults for Edit Original off, in the app that made it (#5236): Vulcanio Photo
+/// for a raster image where it is installed. Any other file, or no Vulcanio Photo, uses the system's app.
 pub(crate) fn open_original(app: &mut VectorcraftApp, path: &str) -> Result<(), String> {
     let ext = std::path::Path::new(path).extension().map(|e| e.to_string_lossy().into_owned()).unwrap_or_default();
     let raster = vectorcraft_engine::cmd::fileio::readable_format(&ext).is_some_and(|f| f.raster);

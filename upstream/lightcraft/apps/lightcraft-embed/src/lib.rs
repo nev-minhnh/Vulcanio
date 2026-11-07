@@ -1,5 +1,5 @@
-//! Krasis Library as a Krasis module: the desktop app's frame logic and UI unchanged, created inside
-//! the Krasis window instead of its own.
+//! Vulcanio Library as a Vulcanio module: the desktop app's frame logic and UI unchanged, created inside
+//! the Vulcanio window instead of its own.
 #![forbid(unsafe_code)]
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 #![allow(dead_code, unused_imports)]
@@ -199,15 +199,15 @@ impl eframe::App for App {
 const EXIT_WAIT: std::time::Duration = std::time::Duration::from_secs(2);
 
 
-fn locale(lang: krasis_host::Lang) -> lightcraft_ui_egui::i18n::Locale {
+fn locale(lang: vulcanio_host::Lang) -> lightcraft_ui_egui::i18n::Locale {
     match lang {
-        krasis_host::Lang::En => lightcraft_ui_egui::i18n::Locale::default(),
-        krasis_host::Lang::Vi => lightcraft_ui_egui::i18n::Locale::Vi,
+        vulcanio_host::Lang::En => lightcraft_ui_egui::i18n::Locale::default(),
+        vulcanio_host::Lang::Vi => lightcraft_ui_egui::i18n::Locale::Vi,
     }
 }
 
-/// Create Krasis Library inside the Krasis window.
-pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Module> {
+/// Create Vulcanio Library inside the Vulcanio window.
+pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::Module> {
     let cc = host.cc;
     lightcraft_engine::guard::install_hook(panic_log_path_with(|name| std::env::var_os(name), std::env::temp_dir()));
     alloc_release::install();
@@ -233,7 +233,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     session = session.with_default_sam3_model();
     hdr_display::report(cc.wgpu_render_state.as_ref().map(|r| r.target_format));
     let mut app = LightcraftApp::new(session, services(cc, None));
-    // No update check: Krasis updates as one app, never Krasis Library's executable on its own.
+    // No update check: Vulcanio updates as one app, never Vulcanio Library's executable on its own.
     if let Some(ui) = prefs {
         app.ui = ui;
     }
@@ -298,7 +298,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     ))
 }
 
-impl krasis_host::Module for App {
+impl vulcanio_host::Module for App {
     fn app(&mut self) -> &mut dyn eframe::App {
         self
     }
@@ -329,7 +329,7 @@ impl krasis_host::Module for App {
         ctx.request_repaint();
     }
 
-    fn set_language(&mut self, ctx: &egui::Context, lang: krasis_host::Lang) {
+    fn set_language(&mut self, ctx: &egui::Context, lang: vulcanio_host::Lang) {
         self.0.ui.language = locale(lang);
         lightcraft_ui_egui::i18n::set_language(self.0.ui.language);
         ctx.request_repaint();

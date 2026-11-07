@@ -27,6 +27,55 @@ fn animate_expansion(ctx: &Context, id: Id, is_expanded: bool) -> f32 {
     ctx.animate_bool_responsive(id, is_expanded)
 }
 
+/// Vulcanio: how long a panel takes to slide in when it appears (seconds, as an `f32`'s bits); 0
+/// turns the slide off.
+static PANEL_APPEAR_BITS: std::sync::atomic::AtomicU32 = std::sync::atomic::AtomicU32::new(0);
+
+/// Make every [`Panel::show`] panel slide in over `seconds` when it appears (0: no slide).
+pub fn set_panel_appear_seconds(seconds: f32) {
+    PANEL_APPEAR_BITS.store(seconds.clamp(0.0, 1.0).to_bits(), std::sync::atomic::Ordering::Relaxed);
+}
+
+/// Panels that appear during this pass show at once (e.g. a whole screen arriving together).
+pub fn suppress_panel_appear(ctx: &Context) {
+    let pass = ctx.cumulative_pass_nr();
+    ctx.data_mut(|d| d.insert_temp(Id::new("__vulcanio_panel_appear_suppressed"), pass));
+}
+
+#[derive(Clone, Copy)]
+struct Appear {
+    last_pass: u64,
+    since: f64,
+}
+
+/// 0..=1: how far a panel has slid in (1: in place).
+fn appear_fraction(ctx: &Context, id: Id) -> f32 {
+    let seconds = f32::from_bits(PANEL_APPEAR_BITS.load(std::sync::atomic::Ordering::Relaxed));
+    let pass = ctx.cumulative_pass_nr();
+    let now = ctx.input(|i| i.time);
+    let key = id.with("__vulcanio_appear");
+    let suppressed = ctx.data(|d| d.get_temp::<u64>(Id::new("__vulcanio_panel_appear_suppressed"))) == Some(pass);
+    let prev = ctx.data(|d| d.get_temp::<Appear>(key));
+    let since = match prev {
+        // Shown on the previous pass (or again this pass): keep going.
+        Some(a) if a.last_pass + 1 >= pass => a.since,
+        // Appearing now.
+        Some(_) if seconds > 0.0 && !suppressed => now,
+        // First sight ever (the screen it is on just opened), or sliding is off.
+        _ => f64::NEG_INFINITY,
+    };
+    ctx.data_mut(|d| d.insert_temp(key, Appear { last_pass: pass, since }));
+    if seconds <= 0.0 {
+        return 1.0;
+    }
+    let t = ((now - since) as f32 / seconds).clamp(0.0, 1.0);
+    if t < 1.0 {
+        ctx.request_repaint();
+    }
+    // Decelerate (Fluent's ease-out).
+    1.0 - (1.0 - t).powi(3)
+}
+
 /// [`Id`] of a panel's resize-handle widget.
 ///
 /// A panel registers its handle under this same id whether it is open,
@@ -423,6 +472,11 @@ impl Panel {
 impl Panel {
     /// Show the panel inside a [`Ui`].
     pub fn show<R>(self, ui: &mut Ui, add_contents: impl FnOnce(&mut Ui) -> R) -> InnerResponse<R> {
+        // Vulcanio: a panel that wasn't shown on the previous pass slides in from its edge.
+        let appear = appear_fraction(ui.ctx(), self.id(ui));
+        if appear < 1.0 {
+            return self.with_slide_fraction(appear).resizable(false).show_inside_dyn(ui, None, Box::new(add_contents));
+        }
         self.show_inside_dyn(ui, None, Box::new(add_contents))
     }
 

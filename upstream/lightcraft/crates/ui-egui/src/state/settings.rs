@@ -46,7 +46,7 @@ pub const RECENT_LIBRARIES: usize = 8;
 pub enum AppearanceMode {
     /// Follow the operating system's dark/light setting (dark when it gives no answer).
     Auto,
-    /// The dark theme, whatever the system says (the default: Krasis Library's look so far).
+    /// The dark theme, whatever the system says (the default: Vulcanio Library's look so far).
     #[default]
     Dark,
     Light,
@@ -146,10 +146,10 @@ pub struct AppSettings {
     pub external_editor: String,
     /// The file Edit in Other Editor hands over.
     pub external_file: EditFile,
-    /// Edit in Krasis Photo: where Krasis Photo is ("" = found where its installer put it; a portable
+    /// Edit in Vulcanio Photo: where Vulcanio Photo is ("" = found where its installer put it; a portable
     /// copy needs its path).
     pub photocraft_path: String,
-    /// The file Edit in Krasis Photo hands over.
+    /// The file Edit in Vulcanio Photo hands over.
     pub photocraft_file: EditFile,
     /// Memory the caches may hold together, in MB (0 = automatic; `app.memoryBudget`).
     pub memory_mb: u32,
@@ -264,9 +264,9 @@ impl Default for AppSettings {
     }
 }
 
-/// The editor name that means Krasis Photo (Photo ▸ Edit In ▸ Edit in Krasis Photo): the host finds
+/// The editor name that means Vulcanio Photo (Photo ▸ Edit In ▸ Edit in Vulcanio Photo): the host finds
 /// where it is installed.
-pub const PHOTOCRAFT: &str = "Krasis Photo";
+pub const PHOTOCRAFT: &str = "Vulcanio Photo";
 
 /// The file format Edit In renders the copy as.
 #[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
@@ -274,7 +274,7 @@ pub const PHOTOCRAFT: &str = "Krasis Photo";
 pub enum EditFormat {
     #[default]
     Tiff,
-    /// A flat PSD: Krasis Photo saves back to it in place (a TIFF it saves only through Save As).
+    /// A flat PSD: Vulcanio Photo saves back to it in place (a TIFF it saves only through Save As).
     Psd,
 }
 

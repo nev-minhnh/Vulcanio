@@ -667,7 +667,7 @@ fn naming_a_face_in_the_loupe() {
 }
 
 /// Adding a face model: the dialog shows the file's terms, the model is installed only once they are
-/// accepted, and a file Krasis Library cannot use only says why.
+/// accepted, and a file Vulcanio Library cannot use only says why.
 #[test]
 fn adding_a_face_model_shows_its_terms_and_installs_only_once_accepted() {
     use crate::state::Dialog;
@@ -1901,7 +1901,7 @@ fn export_dialog_previews_the_watermark() {
     h.settle(SETTLE);
     assert!(preview(&mut h).is_none(), "no preview without a watermark");
     if let Some(crate::state::Dialog::Export { opts, .. }) = &mut h.app.ui.dialog {
-        opts.watermark = Some(lightcraft_engine::export::Watermark { text: "© Krasis Library".into(), ..Default::default() });
+        opts.watermark = Some(lightcraft_engine::export::Watermark { text: "© Vulcanio Library".into(), ..Default::default() });
     }
     let t0 = Instant::now();
     while preview(&mut h).is_none() && t0.elapsed() < Duration::from_secs(30) {
@@ -3235,7 +3235,7 @@ fn return_commits_the_crop_tool() {
     assert_eq!(h.app.ui.right, crate::state::RightPanel::Edit, "no-op outside tools");
 }
 
-/// ⌘Q (File → Quit Krasis Library) closes the window.
+/// ⌘Q (File → Quit Vulcanio Library) closes the window.
 #[test]
 fn cmd_q_quits() {
     let mut h = demo([900.0, 600.0]);

@@ -580,7 +580,7 @@ pub fn adopt_window_device(device: wgpu::Device, queue: wgpu::Queue, info: wgpu:
     if env_disabled() || !ENABLED.load(Ordering::Relaxed) {
         return Err("GPU rendering is off".into());
     }
-    let _work = exit::enter().ok_or("Krasis Library is closing")?;
+    let _work = exit::enter().ok_or("Vulcanio Library is closing")?;
     let mut declined = None;
     let g = GPU.get_or_init(|| {
         let adopted = if info.device_type == wgpu::DeviceType::Cpu {

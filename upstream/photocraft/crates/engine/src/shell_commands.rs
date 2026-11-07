@@ -94,7 +94,7 @@ pub const SHELL_COMMANDS: &[(&str, &str, &[&str], Option<&str>)] = &[
     ("window.theme.system", "Sync with system", &["Window", "Theme"], None),
     ("edit.search", "Search…", &["Edit"], Some("Cmd+F")),
     ("help.systemInfo", "System Info…", &["Help"], None),
-    ("help.about", "About Krasis Photo", &["Help"], None),
+    ("help.about", "About Vulcanio Photo", &["Help"], None),
 ];
 
 /// The tools, in toolbar order: shortcut id (`tools.select.<tool>`), Photoshop's name for it

@@ -1,6 +1,6 @@
-# Krasis CAD Ukrainian interface catalog — original translations by @dmatviichuk.
+# Vulcanio CAD Ukrainian interface catalog — original translations by @dmatviichuk.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from Krasis CAD's English strings; no proprietary translations were copied.
+# Written from Vulcanio CAD's English strings; no proprietary translations were copied.
 # UTF-8: context<TAB>English source<TAB>Ukrainian translation.
 # Empty context = ordinary label; @plural = one|few|many forms with {n}.
 # Keep command IDs, keywords, technology/product names and user data unchanged.
@@ -52,7 +52,7 @@
 	> Greater than	> Більше ніж
 	A variable name starts with a letter and has only letters, digits and _	Ім'я змінної починається з літери й містить лише літери, цифри та _
 	About	Про програму
-	About Krasis CAD	Про Krasis CAD
+	About Vulcanio CAD	Про Vulcanio CAD
 	Absolute	Абсолютні
 	Add Leader	Додати виноску
 	Additional angles	Додаткові кути
@@ -115,7 +115,7 @@
 	ByBlock	За блоком
 	ByColor	За кольором
 	ByLayer	За шаром
-	Krasis CAD Help	Довідка Krasis CAD
+	Vulcanio CAD Help	Довідка Vulcanio CAD
 	Cancel	Скасувати
 	Cartesian (x, y)	Декартові (x, y)
 	Center	Центр
@@ -456,7 +456,7 @@
 	Jogged	Зі зламом
 	Jogged Linear	Лінійний зі зламом
 	Join	Об'єднати
-	Join the Krasis Discord…	Приєднатися до Discord Krasis…
+	Join the Vulcanio Discord…	Приєднатися до Discord Vulcanio…
 	Join us on Discord	Приєднуйтеся до нас у Discord
 	Isometric Plane	Ізометрична площина
 	Isometric snap	Ізометрична крокова прив'язка
@@ -600,7 +600,7 @@
 	Offset	Зміщення
 	On	Увімкнено
 	On/Off	Увімкнути/вимкнути
-	Part of Krasis.	Одна з програм Crafting Apps від команди та спільноти Krasis.
+	Part of Vulcanio.	Одна з програм Crafting Apps від команди та спільноти Vulcanio.
 	Only in this drawing: {n}	Лише в цьому кресленні: {n}
 	Only in {name}: {n}	Лише в {name}: {n}
 	Oops	Відновити стерті об'єкти
@@ -721,7 +721,7 @@
 	Quick Select...	Швидкий вибір...
 	QuickCalc	Калькулятор
 	QuickCalc Pick	Вибір для калькулятора
-	Quit Krasis CAD	Вийти з Krasis CAD
+	Quit Vulcanio CAD	Вийти з Vulcanio CAD
 	Radius	Радіус
 	Raster Image	Растрове зображення
 	Ray	Промінь
@@ -955,7 +955,7 @@
 # Options dialog (OPTIONS).
 	A drawing opened from a file keeps that file's format.	Креслення, відкрите з файлу, зберігає формат цього файлу.
 	An array that would create more objects than this is refused.	Масив, що створив би більше об'єктів, буде відхилено.
-	Krasis CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Krasis CAD зберігає ці параметри, режими об'єктної прив'язки та перемикачі креслення для вашого облікового запису й відновлює їх під час запуску.
+	Vulcanio CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Vulcanio CAD зберігає ці параметри, режими об'єктної прив'язки та перемикачі креслення для вашого облікового запису й відновлює їх під час запуску.
 	Changes apply at once and are kept for next time.	Зміни застосовуються одразу й зберігаються на наступний раз.
 	Command line history	Історія командного рядка
 	Copy as JSON	Копіювати як JSON
@@ -1230,7 +1230,7 @@
 @plural	{n} contributor	{n} учасник|{n} учасники|{n} учасників
 	Drawing as bytes	Креслення як байти
 	Services	Служби
-	Hide Krasis CAD	Приховати Krasis CAD
+	Hide Vulcanio CAD	Приховати Vulcanio CAD
 	Hide Others	Приховати інші
 	Accessibility	Спеціальні можливості
 	Show System Cursor	Показувати системний курсор
@@ -1364,7 +1364,7 @@
 	More than {n} aliases.	Понад {n} псевдонімів.
 	Alias file: {file}	Файл псевдонімів: {file}
 	No alias file loaded. REINIT replaces these aliases with a file's.	Файл псевдонімів не завантажено. REINIT замінює ці псевдоніми псевдонімами з файлу.
-	Aliases are saved in your Krasis CAD profile and survive restarts.	Псевдоніми зберігаються в профілі Krasis CAD і не зникають після перезапуску.
+	Aliases are saved in your Vulcanio CAD profile and survive restarts.	Псевдоніми зберігаються в профілі Vulcanio CAD і не зникають після перезапуску.
 	Alias	Псевдонім
 	Command	Команда
 	overrides built-in	замінює вбудований
@@ -1380,7 +1380,7 @@
 	Customize	Налаштування інтерфейсу
 	Edit Command Aliases (PGP)...	Редагувати псевдоніми команд (PGP)...
 	Check for Updates…	Перевірити оновлення…
-	Krasis CAD is up to date.	Встановлено найновішу версію Krasis CAD.
+	Vulcanio CAD is up to date.	Встановлено найновішу версію Vulcanio CAD.
 	Could not check for updates.	Не вдалося перевірити оновлення.
 	Save changes to block "{name}"?	Зберегти зміни в блоці «{name}»?
 	Find All	Find All
@@ -1403,8 +1403,8 @@
 	Replaces the shortcut of {commands}	Замінює комбінацію клавіш команди: {commands}
 	Needs Ctrl, Alt or a function key	Потрібна клавіша Ctrl, Alt або функціональна клавіша
 	Press the keys	Натисніть клавіші
-	Back to Krasis CAD's shortcut	Повернути комбінацію Krasis CAD
-	A shortcut you give wins over Krasis CAD's own. Changes apply at once and are kept for next time.	Ваша комбінація клавіш має перевагу над комбінацією Krasis CAD. Зміни застосовуються одразу й зберігаються.
+	Back to Vulcanio CAD's shortcut	Повернути комбінацію Vulcanio CAD
+	A shortcut you give wins over Vulcanio CAD's own. Changes apply at once and are kept for next time.	Ваша комбінація клавіш має перевагу над комбінацією Vulcanio CAD. Зміни застосовуються одразу й зберігаються.
 	Right-Click Customization...	Налаштування правої кнопки...
 	Right-Click Customization	Налаштування правої кнопки
 	Turn on time-sensitive right-click	Увімкнути залежне від часу клацання правою кнопкою

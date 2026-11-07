@@ -306,7 +306,7 @@ fn apply(layout: &mut Layout<String>, action: Action<String>) -> Result<Vec<Stri
     layout.apply_with_permissions(action, model_permissions).map_err(|e| e.to_string())
 }
 
-/// The docking commands Krasis Vector handles here: `window.panel` (the Window menu), its own
+/// The docking commands Vulcanio Vector handles here: `window.panel` (the Window menu), its own
 /// `window.panel.collapse` and `window.collapseDock`, the Tools panel's float and dock
 /// ([`crate::tools_float`]) and craft-ui's shared ids. Workspaces stay [`crate::workspaces`]'.
 pub(crate) fn command(app: &mut VectorcraftApp, id: &str, params: &Value) -> Option<Result<Value, String>> {
@@ -444,7 +444,7 @@ pub(crate) fn collapse_dock(app: &mut VectorcraftApp, collapsed: Option<bool>) -
     Ok(json!(iconic))
 }
 
-/// Where `window.panel.float` and `window.panel.dock` put a panel by the parameters Krasis Vector
+/// Where `window.panel.float` and `window.panel.dock` put a panel by the parameters Vulcanio Vector
 /// gave them before its panels moved to craft-ui's layout.
 enum Legacy {
     /// `onto` (a tab of the group holding `anchor`, which floats unless the panel docks), `above`
@@ -459,7 +459,7 @@ enum Legacy {
     Column(usize),
 }
 
-/// The Krasis Vector-only parameters of `window.panel.float` / `window.panel.dock`, taken out of
+/// The Vulcanio Vector-only parameters of `window.panel.float` / `window.panel.dock`, taken out of
 /// `fields` so craft-ui parses the rest: where the panel goes, and `collapsed`.
 fn take_legacy(id: &str, fields: &mut serde_json::Map<String, Value>) -> Result<(Option<Legacy>, Option<bool>), String> {
     let dock = id == "window.panel.dock";
@@ -527,7 +527,7 @@ fn take_legacy(id: &str, fields: &mut serde_json::Map<String, Value>) -> Result<
     Ok((legacy, minimized))
 }
 
-/// `window.panel.float` and `window.panel.dock`: craft-ui's commands, with Krasis Vector's own
+/// `window.panel.float` and `window.panel.dock`: craft-ui's commands, with Vulcanio Vector's own
 /// parameters ([`Legacy`], `collapsed`) done in the same transaction.
 fn float_or_dock(app: &mut VectorcraftApp, id: &str, params: &Value) -> Result<Value, String> {
     let mut params = if params.is_null() { json!({}) } else { params.clone() };
@@ -690,7 +690,7 @@ impl Legacy {
     }
 }
 
-/// Command params with Krasis Vector's panel names resolved (a panel id or English name, in any
+/// Command params with Vulcanio Vector's panel names resolved (a panel id or English name, in any
 /// case).
 fn resolve_panels(params: &Value) -> Result<Value, String> {
     let mut params = if params.is_null() { json!({}) } else { params.clone() };
@@ -707,7 +707,7 @@ fn resolve_panels(params: &Value) -> Result<Value, String> {
 }
 
 /// A shared docking command (`window.panel.*`, `ui.dock`) on the layout in use, all or nothing.
-/// craft-ui's `DockCommand` parses it and makes the layout actions; Krasis Vector resolves panel
+/// craft-ui's `DockCommand` parses it and makes the layout actions; Vulcanio Vector resolves panel
 /// names, shows a hidden panel before moving, floating or docking it, floats a panel the layout
 /// has no place for, and returns a floated panel to its dock place on Dock Panel.
 fn shared_command(app: &mut VectorcraftApp, id: &str, params: &Value) -> Result<Value, String> {
@@ -727,11 +727,11 @@ fn shared_command_with(app: &mut VectorcraftApp, id: &str, params: &Value, legac
         DockCommand::NewWorkspace { name } => return app.run("window.workspace.new", json!({"name": name})),
         DockCommand::DeleteWorkspace { name } => return app.run("window.workspace.delete", json!({"name": name})),
         DockCommand::ResetWorkspace {} => return app.run("window.workspace.reset", json!({})),
-        DockCommand::Lock { .. } => return Err("Lock Workspace is not available in Krasis Vector".into()),
+        DockCommand::Lock { .. } => return Err("Lock Workspace is not available in Vulcanio Vector".into()),
         DockCommand::Window { .. } => return Err("Move Panel to New Window is not available: floating panels stay in the main window".into()),
         _ => {}
     }
-    // Krasis Vector's docks are columns beside the canvas, so a dock at a window edge is a `side`,
+    // Vulcanio Vector's docks are columns beside the canvas, so a dock at a window edge is a `side`,
     // not a frame on the outer edge (craft-ui's `Placement::Edge`).
     if let DockCommand::Dock { anchor: None, side: None, zone: Some(_), .. } = &command {
         return Err("zone needs an anchor: dock beside a panel with anchor, or in a new dock column with side (Start or End)".into());
@@ -1090,7 +1090,7 @@ fn known(action: &Action<String>) -> bool {
         | Action::ResizeIconic { panel, .. }
         | Action::SetNative { panel, .. }
         | Action::SetMonitor { panel, .. } => registered(panel),
-        // Actions newer than this list are rejected until Krasis Vector checks them.
+        // Actions newer than this list are rejected until Vulcanio Vector checks them.
         _ => false,
     }
 }
@@ -1291,7 +1291,7 @@ fn keep_field_ending_keys(ui: &egui::Ui) {
     ui.input_mut(|i| i.events.retain(|e| !matches!(e, egui::Event::Key { key: egui::Key::Enter | egui::Key::Escape, pressed: true, .. })));
 }
 
-/// Krasis Vector's look and wording of craft-ui's docking.
+/// Vulcanio Vector's look and wording of craft-ui's docking.
 fn dock_style(ui: &egui::Ui) -> craft_ui::docking::DockStyle {
     let t = crate::theme::Tokens::get(ui.ctx());
     let mut style = craft_ui::docking::DockStyle::from_ui(ui);
@@ -1312,7 +1312,7 @@ fn dock_style(ui: &egui::Ui) -> craft_ui::docking::DockStyle {
     style.localized(|key| DOCK_LABELS.iter().find(|(k, _)| *k == key).map(|(_, english)| tl!(english).to_owned()))
 }
 
-/// Krasis Vector's wording of craft-ui's docking labels, translated through `tl!`.
+/// Vulcanio Vector's wording of craft-ui's docking labels, translated through `tl!`.
 const DOCK_LABELS: &[(&str, &str)] = &[
     ("dock.float", "Float Panel"),
     ("dock.close", "Close Panel"),

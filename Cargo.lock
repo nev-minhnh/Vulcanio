@@ -1009,7 +1009,6 @@ dependencies = [
  "eframe",
  "egui",
  "hidapi",
- "krasis-host",
  "log",
  "muda",
  "objc2-app-kit 0.3.2",
@@ -1018,6 +1017,7 @@ dependencies = [
  "serde_json",
  "sys-locale",
  "thiserror 2.0.21",
+ "vulcanio-host",
  "windows",
  "winit",
  "zbus",
@@ -2608,7 +2608,6 @@ dependencies = [
  "eframe",
  "egui",
  "fmv-macos-events",
- "krasis-host",
  "log",
  "muda",
  "objc2 0.6.5",
@@ -2617,6 +2616,7 @@ dependencies = [
  "rfd",
  "serde",
  "serde_json",
+ "vulcanio-host",
  "winit",
  "winsafe",
 ]
@@ -3686,12 +3686,12 @@ dependencies = [
  "figcraft-ui-egui",
  "fmv-macos-events",
  "image",
- "krasis-host",
  "log",
  "objc2-app-kit 0.3.2",
  "objc2-foundation 0.3.2",
  "rfd",
  "serde_json",
+ "vulcanio-host",
  "webbrowser",
  "windows",
  "winit",
@@ -6126,45 +6126,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e2db585e1d738fc771bf08a151420d3ed193d9d895a36df7f6f8a9456b911ddc"
 
 [[package]]
-name = "krasis"
-version = "1.1.0"
-dependencies = [
- "cadcraft-embed",
- "chrono",
- "designcraft-embed",
- "eframe",
- "egui",
- "figcraft-embed",
- "image",
- "krasis-host",
- "libc",
- "lightcraft-embed",
- "log",
- "open",
- "photocraft-embed",
- "rfd",
- "ron",
- "serde",
- "serde_json",
- "sys-locale",
- "vectorcraft-embed",
- "windows-sys 0.60.2",
- "winit",
- "winresource",
-]
-
-[[package]]
-name = "krasis-host"
-version = "0.1.0"
-dependencies = [
- "eframe",
- "egui",
- "log",
- "ron",
- "serde",
-]
-
-[[package]]
 name = "krilla"
 version = "0.8.2"
 source = "git+https://github.com/storytold/craft-libs?rev=9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb#9be9a63782298ab59cd9b7a42ee9cba4f42a5ccb"
@@ -6440,7 +6401,6 @@ dependencies = [
  "craft-update 0.1.0 (git+https://github.com/storytold/craft-libs?rev=a231e517c3b371e1bf0ee8af71ed807424a9a05d)",
  "eframe",
  "egui",
- "krasis-host",
  "lightcraft-codecs",
  "lightcraft-engine",
  "lightcraft-raster",
@@ -6456,6 +6416,7 @@ dependencies = [
  "raw-window-handle",
  "rfd",
  "serde_json",
+ "vulcanio-host",
  "winit",
  "zbus",
 ]
@@ -8361,7 +8322,6 @@ dependencies = [
  "egui",
  "fmv-macos-events",
  "futures-lite",
- "krasis-host",
  "log",
  "muda",
  "objc2 0.6.5",
@@ -8391,6 +8351,7 @@ dependencies = [
  "serde_json",
  "tempfile",
  "thiserror 2.0.21",
+ "vulcanio-host",
  "winit",
  "winsafe",
  "wl-clipboard-rs",
@@ -11949,7 +11910,6 @@ dependencies = [
  "eframe",
  "egui",
  "image",
- "krasis-host",
  "log",
  "muda",
  "objc2 0.6.5",
@@ -11968,6 +11928,7 @@ dependencies = [
  "vectorcraft-render",
  "vectorcraft-text",
  "vectorcraft-ui-egui",
+ "vulcanio-host",
  "wayland-backend",
  "wayland-client",
  "wayland-protocols",
@@ -12368,6 +12329,45 @@ name = "version_check"
 version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
+
+[[package]]
+name = "vulcanio"
+version = "1.2.0"
+dependencies = [
+ "cadcraft-embed",
+ "chrono",
+ "designcraft-embed",
+ "eframe",
+ "egui",
+ "figcraft-embed",
+ "image",
+ "libc",
+ "lightcraft-embed",
+ "log",
+ "open",
+ "photocraft-embed",
+ "rfd",
+ "ron",
+ "serde",
+ "serde_json",
+ "sys-locale",
+ "vectorcraft-embed",
+ "vulcanio-host",
+ "windows-sys 0.60.2",
+ "winit",
+ "winresource",
+]
+
+[[package]]
+name = "vulcanio-host"
+version = "0.1.0"
+dependencies = [
+ "eframe",
+ "egui",
+ "log",
+ "ron",
+ "serde",
+]
 
 [[package]]
 name = "walkdir"

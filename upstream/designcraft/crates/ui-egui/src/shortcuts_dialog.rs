@@ -1,4 +1,4 @@
-//! Edit › Keyboard Shortcuts: craft-keymap's shared dialog over Krasis Layout's keymap and the user's
+//! Edit › Keyboard Shortcuts: craft-keymap's shared dialog over Vulcanio Layout's keymap and the user's
 //! named shortcut sets.
 //!
 //! The dialog edits `DesignApp::keymap` and `UiState::shortcut_sets` in place, so menus show new
@@ -23,7 +23,7 @@ use crate::i18n::tr;
 /// The `app.ui.dialog` id while the dialog is open.
 pub const DIALOG_ID: &str = "keyboardShortcuts";
 
-/// Krasis Layout's built-in shortcut set: its default keys.
+/// Vulcanio Layout's built-in shortcut set: its default keys.
 pub static BUILTINS: [(&str, Overrides); 1] = [("Default", Overrides::new())];
 
 /// The name edits of the built-in set are saved under (translated, made unique).
@@ -62,7 +62,7 @@ fn options() -> Options {
     })
 }
 
-/// The dialog's words through Krasis Layout's catalogs; strings without a translation stay English.
+/// The dialog's words through Vulcanio Layout's catalogs; strings without a translation stay English.
 pub struct DcText<'a> {
     pub lang: &'a str,
 }
@@ -108,7 +108,7 @@ fn size(screen: egui::Vec2) -> egui::Vec2 {
     (screen * 0.8).clamp(min, max)
 }
 
-/// One frame of the open dialog, drawn in Krasis Layout's movable modal.
+/// One frame of the open dialog, drawn in Vulcanio Layout's movable modal.
 pub(crate) fn show(app: &mut DesignApp, ctx: &egui::Context) {
     let mut host = app.shortcut_dialog.take().unwrap_or_else(|| Box::new(Host::new()));
     let lang = app.ui.language.clone();

@@ -1,4 +1,4 @@
-//! Krasis Layout's icon set, drawn in code (original artwork; no external icon assets).
+//! Vulcanio Layout's icon set, drawn in code (original artwork; no external icon assets).
 //!
 //! Icons are designed on a 20×20 grid and scaled to the target rect.
 

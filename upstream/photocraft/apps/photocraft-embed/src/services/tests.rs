@@ -76,10 +76,10 @@ fn the_picked_file_type_gives_the_name_its_extension() {
         ("/pics/Untitled-1.psd", opened, &png, "/pics/Untitled-1.png"),
         ("/pics/art.psd", opened, &png, "/pics/art.png"),
         ("/pics/ART.PSD", opened, &png, "/pics/ART.png"),
-        // No extension: the type's. One Krasis Photo doesn't save is part of the name.
+        // No extension: the type's. One Vulcanio Photo doesn't save is part of the name.
         ("/pics/art", opened, &png, "/pics/art.png"),
         ("/pics/scan.2024", opened, &png, "/pics/scan.2024.png"),
-        // Typed, an extension Krasis Photo saves is the user's: kept, whatever the type says
+        // Typed, an extension Vulcanio Photo saves is the user's: kept, whatever the type says
         // (the PSD type untouched, or PNG picked and .jpg typed).
         ("/pics/art.png", opened, &psd, "/pics/art.png"),
         ("/pics/art.jpg", opened, &png, "/pics/art.jpg"),
@@ -317,7 +317,7 @@ fn every_save_dialog_leads_with_its_own_extension() {
     assert_eq!(save_filters("Untitled")[0].0, "PSD Document", "no extension keeps the default");
 }
 
-/// Every flat format Save As offers is one Krasis Photo writes, and ICO is among them (#4357).
+/// Every flat format Save As offers is one Vulcanio Photo writes, and ICO is among them (#4357).
 #[test]
 fn save_as_offers_only_writable_formats_including_ico() {
     // Layered formats, and PDF, are written by `photocraft-io`, not a codec.
@@ -380,7 +380,7 @@ fn save_as_offers_only_writable_formats_including_ico() {
 }
 
 /// #4394: with File name extensions shown, Windows kept `image.psd` when the type was changed to
-/// Krasis Photo. Given the bare `image`, it adds the extension of whichever type is picked
+/// Vulcanio Photo. Given the bare `image`, it adds the extension of whichever type is picked
 /// (checked by hand with rfd 0.17.2 on Windows 11), defaulting to the first type's.
 #[test]
 fn the_windows_save_dialog_gets_a_bare_name_so_the_type_picks_the_extension() {

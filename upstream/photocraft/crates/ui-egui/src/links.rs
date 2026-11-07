@@ -42,11 +42,11 @@ pub fn discord_button(app: &mut PhotocraftApp, ui: &mut egui::Ui, min_width: f32
     r
 }
 
-/// "Krasis Photo website · GitHub · Krasis" as links, centred. Clicks route through [`open`] (the
+/// "Vulcanio Photo website · GitHub · Vulcanio" as links, centred. Clicks route through [`open`] (the
 /// platform browser service) rather than `ui.hyperlink_to`, which uses the unreliable `ctx.open_url`.
 pub fn link_row(app: &mut PhotocraftApp, ui: &mut egui::Ui) {
     let t = crate::theme::Tokens::get(ui.ctx());
-    let links = [(tl!("Krasis Photo website"), APP_PAGE), (tl!("GitHub"), GITHUB), (tl!("Krasis"), ARTCRAFT_WEBSITE)];
+    let links = [(tl!("Vulcanio Photo website"), APP_PAGE), (tl!("GitHub"), GITHUB), (tl!("Vulcanio"), ARTCRAFT_WEBSITE)];
     let font = egui::FontId::proportional(12.5);
     let sep = "  ·  ";
     let width: f32 = links.iter().map(|(l, _)| ui.painter().layout_no_wrap((*l).into(), font.clone(), t.text).size().x).sum::<f32>()

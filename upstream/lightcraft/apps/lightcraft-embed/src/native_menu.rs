@@ -456,10 +456,10 @@ impl NativeMenu {
         self.app_items.clear();
 
         // the application menu
-        let app_menu = Submenu::new("Krasis Library", true);
-        let about = MenuItem::with_id("app.about", lightcraft_ui_egui::i18n::tr("About Krasis Library"), true, None);
+        let app_menu = Submenu::new("Vulcanio Library", true);
+        let about = MenuItem::with_id("app.about", lightcraft_ui_egui::i18n::tr("About Vulcanio Library"), true, None);
         let settings = MenuItem::with_id(SETTINGS, lightcraft_ui_egui::i18n::tr("Settings…"), true, accelerator(SETTINGS_KEY));
-        let quit = MenuItem::with_id(QUIT, lightcraft_ui_egui::i18n::tr("Quit Krasis Library"), true, accelerator("Cmd+Q"));
+        let quit = MenuItem::with_id(QUIT, lightcraft_ui_egui::i18n::tr("Quit Vulcanio Library"), true, accelerator("Cmd+Q"));
         let _ = app_menu.append_items(&[
             &about,
             &PredefinedMenuItem::separator(),
@@ -467,13 +467,13 @@ impl NativeMenu {
             &PredefinedMenuItem::separator(),
             &PredefinedMenuItem::services(Some(lightcraft_ui_egui::i18n::tr("Services"))),
             &PredefinedMenuItem::separator(),
-            &PredefinedMenuItem::hide(Some(lightcraft_ui_egui::i18n::tr("Hide Krasis Library"))),
+            &PredefinedMenuItem::hide(Some(lightcraft_ui_egui::i18n::tr("Hide Vulcanio Library"))),
             &PredefinedMenuItem::hide_others(Some(lightcraft_ui_egui::i18n::tr("Hide Others"))),
             &PredefinedMenuItem::show_all(Some(lightcraft_ui_egui::i18n::tr("Show All"))),
             &PredefinedMenuItem::separator(),
             &quit,
         ]);
-        for (handle, cmd, shortcut, text) in [(&settings, SETTINGS, SETTINGS_KEY, "Settings…"), (&quit, QUIT, "Cmd+Q", "Quit Krasis Library")] {
+        for (handle, cmd, shortcut, text) in [(&settings, SETTINGS, SETTINGS_KEY, "Settings…"), (&quit, QUIT, "Cmd+Q", "Quit Vulcanio Library")] {
             let accel = accelerator(shortcut);
             self.app_items.push(Item {
                 handle: Handle::Plain(handle.clone()),

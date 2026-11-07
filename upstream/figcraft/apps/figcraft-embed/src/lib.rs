@@ -1,5 +1,5 @@
-//! Krasis Interface as a Krasis module: the desktop app's frame logic and UI unchanged, created inside
-//! the Krasis window instead of its own.
+//! Vulcanio Interface as a Vulcanio module: the desktop app's frame logic and UI unchanged, created inside
+//! the Vulcanio window instead of its own.
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 #![allow(dead_code)]
 
@@ -118,12 +118,12 @@ impl eframe::App for App {
 }
 
 
-fn lang_code(lang: krasis_host::Lang) -> String {
+fn lang_code(lang: vulcanio_host::Lang) -> String {
     lang.code().to_string()
 }
 
-/// Create Krasis Interface inside the Krasis window.
-pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Module> {
+/// Create Vulcanio Interface inside the Vulcanio window.
+pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::Module> {
     let cc = host.cc;
     let ctx_slot: Arc<Mutex<Option<egui::Context>>> = Arc::new(Mutex::new(Some(cc.egui_ctx.clone())));
     let wake = |slot: &Arc<Mutex<Option<egui::Context>>>| {
@@ -134,7 +134,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
             }
         }
     };
-    // System fonts are indexed when a font list or a missing font needs them (Krasis keeps an
+    // System fonts are indexed when a font list or a missing font needs them (Vulcanio keeps an
     // app's start light).
     figcraft_text::scan_system_fonts_on_demand();
     let mut session = Session::empty();
@@ -173,7 +173,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     session.prefs.language = lang_code(host.lang);
     figcraft_ui_egui::i18n::set(&session.prefs.language, figcraft_ui_egui::Services::system_language(&svc).as_deref());
     let mut fig = FigApp::new(session, Box::new(svc));
-    // No update check: Krasis updates as one app, never Krasis Interface's executable on its own.
+    // No update check: Vulcanio updates as one app, never Vulcanio Interface's executable on its own.
     fig.ui.home = false;
     fig.ui.font_checks = opened;
     fig.note_recovered(recovered.copies);
@@ -184,7 +184,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     if let Some(p) = port {
         control_server::start(p, graphics::port_wait(), queue.clone(), ctx_slot.clone(), fig.session.events.clone());
     }
-    // Krasis draws the window frame (the system's).
+    // Vulcanio draws the window frame (the system's).
     fig.ui.title_bar = figcraft_ui_egui::TitleBar::Native;
     figcraft_ui_egui::windows::install(fig);
     with_app(|fig| fig.services.set_egui_context(&cc.egui_ctx));
@@ -198,7 +198,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     })
 }
 
-impl krasis_host::Module for App {
+impl vulcanio_host::Module for App {
     fn app(&mut self) -> &mut dyn eframe::App {
         self
     }
@@ -223,7 +223,7 @@ impl krasis_host::Module for App {
         ctx.request_repaint();
     }
 
-    fn set_language(&mut self, ctx: &egui::Context, lang: krasis_host::Lang) {
+    fn set_language(&mut self, ctx: &egui::Context, lang: vulcanio_host::Lang) {
         with_app(|fig| fig.session.prefs.language = lang_code(lang));
         ctx.request_repaint();
     }

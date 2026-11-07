@@ -466,5 +466,5 @@ pub(super) fn finish_brushes_within(
 
 /// The note for brushes [`finish_brushes`] left out.
 pub(super) fn left_out_note(n: usize) -> String {
-    format!("brushes Krasis Vector can't read yet were left out of the Brushes panel ({n})")
+    format!("brushes Vulcanio Vector can't read yet were left out of the Brushes panel ({n})")
 }

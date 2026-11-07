@@ -24,7 +24,7 @@
 //! another GPU allocates, which kills the window's Wayland connection; egui-wgpu then panics while
 //! configuring the surface. Creating the device can fail too: on an Intel Mac, wgpu's check of
 //! indirect draw arguments needs a compute shader the Metal driver couldn't compile, and the device
-//! was lost before the window showed (#334; Krasis Layout never draws indirectly, so that check is
+//! was lost before the window showed (#334; Vulcanio Layout never draws indirectly, so that check is
 //! off, [`instance_flags`]). Nothing in the process can show a window after that, so when the
 //! graphics fail while the window is starting up, [`finish`] starts the app again without that
 //! adapter, as the next one in the order would be tried. When no adapter of the start's backends
@@ -109,7 +109,7 @@ pub fn preferred_displays(env: Option<PowerPreference>) -> Vec<DisplayGpu> {
 }
 
 /// wgpu's instance flags without its check of indirect draw and dispatch arguments: nothing in
-/// Krasis Layout or egui draws indirectly, so the check only costs a compute shader at start-up, one
+/// Vulcanio Layout or egui draws indirectly, so the check only costs a compute shader at start-up, one
 /// some drivers can't compile (Metal on an Intel Iris Pro lost the device, #334).
 /// `WGPU_VALIDATION_INDIRECT_CALL=1` turns it back on, like wgpu's other flag variables.
 pub fn instance_flags() -> wgpu::InstanceFlags {
@@ -462,7 +462,7 @@ enum Verdict {
     Hung,
 }
 
-/// The first-frame watch. Krasis Vector gives up on an adapter once the first frame is
+/// The first-frame watch. Vulcanio Vector gives up on an adapter once the first frame is
 /// [`FIRST_FRAME_TIMEOUT`] late. That also fired on healthy starts: a window on a locked screen or
 /// another workspace whose compositor holds its frames back, or a large document composing on a
 /// slow machine. So here a late frame is only reported; the adapter counts as hanging only when the

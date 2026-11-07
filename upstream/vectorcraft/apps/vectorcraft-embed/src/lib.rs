@@ -1,5 +1,5 @@
-//! Krasis Vector as a Krasis module: the desktop app's frame logic and UI unchanged, created inside
-//! the Krasis window instead of its own.
+//! Vulcanio Vector as a Vulcanio module: the desktop app's frame logic and UI unchanged, created inside
+//! the Vulcanio window instead of its own.
 #![allow(dead_code, unused_imports)]
 
 mod automation_args;
@@ -99,8 +99,8 @@ struct App {
 
 /// `vectorcraft --help`. Headless work (convert, run, MCP) is `vectorcraft-cli`'s.
 
-/// Krasis Vector's Windows message hook (Alt + keypad codes, the stylus): Krasis' window calls it
-/// for every message, as Krasis Vector's own window did. `true` consumes the message.
+/// Vulcanio Vector's Windows message hook (Alt + keypad codes, the stylus): Vulcanio's window calls it
+/// for every message, as Vulcanio Vector's own window did. `true` consumes the message.
 #[cfg(windows)]
 pub fn msg_hook(msg: *const std::ffi::c_void) -> bool {
     windows_alt_codes::msg_hook(msg);
@@ -117,8 +117,8 @@ pub fn startup() {
     prefs_dir::install_fonts();
 }
 
-/// Create Krasis Vector inside the Krasis window.
-pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Module> {
+/// Create Vulcanio Vector inside the Vulcanio window.
+pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::Module> {
     static STARTED: std::sync::Once = std::sync::Once::new();
     STARTED.call_once(startup);
     let cc = host.cc;
@@ -128,7 +128,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     prefs_dir::attach_plugin_store(&mut session);
     VectorcraftApp::install_ime_reset_hooks(&cc.egui_ctx);
     let mut app = VectorcraftApp::new(session, services(cc.winit_window().cloned(), cc.egui_ctx.clone()));
-    // No update check: Krasis updates as one app, never Krasis Vector's executable on its own.
+    // No update check: Vulcanio updates as one app, never Vulcanio Vector's executable on its own.
     load_prefs(&mut app, saved);
     prefs_dir::attach_pdf_preset_store(&mut app.session);
     let winit_window = cc.winit_window().cloned();
@@ -157,7 +157,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
         let (loss, ctx) = (graphics_loss.clone(), cc.egui_ctx.clone());
         rs.device.set_device_lost_callback(move |reason, msg| loss.report(&ctx, format!("{reason:?}: {msg}")));
     }
-    // Krasis draws the window frame (the system's), so Krasis Vector's own title bar stays off.
+    // Vulcanio draws the window frame (the system's), so Vulcanio Vector's own title bar stays off.
     app.custom_titlebar = false;
     app.session.prefs.interface_language = host.lang.code().to_string();
     if let Some(port) = automation_args::env_control_port(std::env::var_os("VECTORCRAFT_CONTROL_PORT")).ok().flatten() {
@@ -181,7 +181,7 @@ pub fn create(host: &krasis_host::HostContext<'_>) -> Box<dyn krasis_host::Modul
     })
 }
 
-impl krasis_host::Module for App {
+impl vulcanio_host::Module for App {
     fn app(&mut self) -> &mut dyn eframe::App {
         self
     }
@@ -199,7 +199,7 @@ impl krasis_host::Module for App {
         ctx.request_repaint();
     }
 
-    fn set_language(&mut self, ctx: &egui::Context, lang: krasis_host::Lang) {
+    fn set_language(&mut self, ctx: &egui::Context, lang: vulcanio_host::Lang) {
         self.app.session.prefs.interface_language = lang.code().to_string();
         ctx.request_repaint();
     }

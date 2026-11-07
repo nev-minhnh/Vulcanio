@@ -317,7 +317,7 @@ impl<W: Write + Seek> Mp4Writer<W> {
         hdlr.extend_from_slice(&[0; 4]);
         hdlr.extend_from_slice(b"vide");
         hdlr.extend_from_slice(&[0; 12]);
-        hdlr.extend_from_slice(b"Krasis Library video\0");
+        hdlr.extend_from_slice(b"Vulcanio Library video\0");
 
         let mut vmhd = Vec::new();
         vmhd.extend_from_slice(&[0; 8]); // graphics mode, opcolor
@@ -531,8 +531,8 @@ impl<W: Write + Seek> WebmWriter<W> {
         let mut info = el_uint(TIMESTAMP_SCALE, 1_000_000);
         let duration_offset = info.len() + 3; // after Duration's id (2 bytes) and size (1 byte)
         info.extend_from_slice(&el_float(DURATION, 0.0));
-        info.extend_from_slice(&el(0x4D80, b"Krasis Library")); // MuxingApp
-        info.extend_from_slice(&el(0x5741, b"Krasis Library")); // WritingApp
+        info.extend_from_slice(&el(0x4D80, b"Vulcanio Library")); // MuxingApp
+        info.extend_from_slice(&el(0x5741, b"Vulcanio Library")); // WritingApp
         let info_el = el(INFO, &info);
         let duration_at = segment_start + info_at + (info_el.len() - info.len()) as u64 + duration_offset as u64;
         w.write_all(&info_el).map_err(io)?;

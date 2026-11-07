@@ -1,15 +1,15 @@
 use super::{VectorcraftApp, fileio, prefs_dir};
 
-/// Where UI preferences live: ~/Library/Application Support/Krasis Vector (macOS),
-/// %APPDATA%\Krasis Vector (Windows), $XDG_CONFIG_HOME or ~/.config/vectorcraft (Linux).
+/// Where UI preferences live: ~/Library/Application Support/Vulcanio Vector (macOS),
+/// %APPDATA%\Vulcanio Vector (Windows), $XDG_CONFIG_HOME or ~/.config/vectorcraft (Linux).
 pub(crate) fn prefs_path() -> Option<std::path::PathBuf> {
-    prefs_dir::prefs_path_for("Krasis Vector", "vectorcraft")
+    prefs_dir::prefs_path_for("Vulcanio Vector", "vectorcraft")
 }
 
-/// The same place under the project's former name (Krasis Vector): read once if there are no
-/// Krasis Vector preferences yet, so settings survive the rename.
+/// The same place under the project's former name (Vulcanio Vector): read once if there are no
+/// Vulcanio Vector preferences yet, so settings survive the rename.
 fn legacy_prefs_path() -> Option<std::path::PathBuf> {
-    prefs_dir::prefs_path_for("Krasis Vector", "drawcraft")
+    prefs_dir::prefs_path_for("Vulcanio Vector", "drawcraft")
 }
 
 /// Where the log files live: `logs` in the preferences folder (see `logging`).
@@ -56,7 +56,7 @@ pub(crate) fn decode_saved_prefs(bytes: &[u8]) -> Option<vectorcraft_ui_egui::Ui
 pub(crate) static KEEP_UI_PREFS: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
 
 /// Copy `ui.json` beside it as `<stem>.json` or the first free `<stem>-N.json`, before the next
-/// save replaces it: `ui.unreadable` when it could not be read in full (a newer Krasis Vector may
+/// save replaces it: `ui.unreadable` when it could not be read in full (a newer Vulcanio Vector may
 /// have written it), `ui.before-layout-migration` when its layouts were converted.
 pub(crate) fn keep_prefs_copy(path: &std::path::Path, bytes: &[u8], stem: &str) {
     use std::io::Write as _;
@@ -94,7 +94,7 @@ pub(crate) fn load_prefs(app: &mut VectorcraftApp, saved: Option<vectorcraft_ui_
 }
 
 /// Save what this window changed since it last read or saved the preferences, merged into the
-/// file as it is now ([`merge_changes`]): another Krasis Vector window open at the same time, which
+/// file as it is now ([`merge_changes`]): another Vulcanio Vector window open at the same time, which
 /// read the file before this one saved, then keeps this window's changes when it saves or quits
 /// (#4625). Nothing is written when nothing changed.
 pub(crate) fn save_prefs(app: &VectorcraftApp) {

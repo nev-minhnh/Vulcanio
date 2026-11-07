@@ -137,7 +137,7 @@ fn the_system_title_bar_preference_keeps_the_window_decorations() {
     let on = ui_state_with_prefs(serde_json::json!({"systemTitleBar": true}));
     assert!(super::opted_into_system_title_bar(Some(&on)));
 
-    // The suite-wide mapping (Frame + preference -> whether Krasis Vector draws its own title
+    // The suite-wide mapping (Frame + preference -> whether Vulcanio Vector draws its own title
     // bar). The desktop frame (macOS, Windows, X11, KDE/Wayland, …) always keeps native
     // decorations; the app frame (GNOME/Wayland, or a `VECTORCRAFT_TITLEBAR` override) draws
     // our own title bar — unless the user opted into the system title bar, which forces the
@@ -146,7 +146,7 @@ fn the_system_title_bar_preference_keeps_the_window_decorations() {
     let desktop = Frame::Desktop;
     #[cfg(not(any(target_os = "macos", target_os = "windows")))]
     {
-        assert!(super::custom_titlebar_from(&app, false), "GNOME/Wayland: Krasis Vector draws its own");
+        assert!(super::custom_titlebar_from(&app, false), "GNOME/Wayland: Vulcanio Vector draws its own");
         assert!(!super::custom_titlebar_from(&app, true), "System Title Bar preference forces native");
         assert!(!super::custom_titlebar_from(&desktop, false), "KDE/X11/…: keep the compositor's frame");
         assert!(!super::custom_titlebar_from(&desktop, true));
@@ -191,7 +191,7 @@ fn the_macos_bundle_opens_every_readable_format() {
     assert!(!plist.contains("<key>NSDocumentClass</key>"), "not an NSDocument app: AppKit would refuse the files");
     let types = plist.matches("<key>CFBundleTypeName</key>").count();
     assert!(types > 1 && plist.matches("<key>LSHandlerRank</key>").count() == types, "every document type has a rank");
-    assert_eq!(plist.matches("<string>Owner</string>").count(), 2, "only Krasis Vector documents and templates are owned");
+    assert_eq!(plist.matches("<string>Owner</string>").count(), 2, "only Vulcanio Vector documents and templates are owned");
 }
 
 /// The MIME types a Linux desktop gives each extension in `OPEN_EXTS` but `UNASSOCIATED_EXTS`

@@ -130,7 +130,7 @@ pub fn preferred_compositor(pref: Option<&str>, env: Option<PowerPreference>) ->
 /// only when `opengl` ([`windows_opengl`]), unless `WGPU_BACKEND` names others (`env_set`;
 /// `default` then holds them). Creating a Vulkan instance loads every installed Vulkan driver into
 /// the process, and a faulty one (Intel's `igvk64.dll`, #806) crashed the app before its window
-/// appeared. DX12 is Windows' own backend, as in Krasis PDF. Elsewhere, `default`.
+/// appeared. DX12 is Windows' own backend, as in Vulcanio PDF. Elsewhere, `default`.
 pub fn backends(default: Backends, env_set: bool, opengl: bool) -> Backends {
     match (cfg!(windows) && !env_set, opengl) {
         (true, true) => Backends::DX12 | Backends::GL,
@@ -675,7 +675,7 @@ impl Startup {
         let (file, previous) = match StartFile::open(dir) {
             Ok(Some(opened)) => opened,
             Ok(None) => {
-                log::info!("{START_FILE}: another Krasis Vector is starting, so this start isn't recorded");
+                log::info!("{START_FILE}: another Vulcanio Vector is starting, so this start isn't recorded");
                 return LeftOut::default();
             }
             Err(e) => {

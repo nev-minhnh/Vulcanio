@@ -169,7 +169,7 @@ impl VectorcraftApp {
     /// ([`Self::write_formats_before_text_input`]). Once they are written, the status bar shows
     /// the first of the PNG's and PDF's warnings.
     pub(crate) fn publish_clipboard(&mut self) {
-        // Ruler guides copied alone stay in Krasis Vector, but the Copy still replaces what the
+        // Ruler guides copied alone stay in Vulcanio Vector, but the Copy still replaces what the
         // system clipboard held: it is emptied, so the next Paste takes the guides rather than
         // what another app copied before, and what another app copies after still wins (#3226).
         if !self.session.clipboard.has_art() {

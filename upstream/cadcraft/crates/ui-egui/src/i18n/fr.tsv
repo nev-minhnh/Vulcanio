@@ -1,6 +1,6 @@
-# Krasis CAD French interface catalog — original translations by @pechnikov2026-star.
+# Vulcanio CAD French interface catalog — original translations by @pechnikov2026-star.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from Krasis CAD's English strings; no proprietary translations were copied.
+# Written from Vulcanio CAD's English strings; no proprietary translations were copied.
 # UTF-8: context<TAB>English source<TAB>French translation.
 # Empty context = ordinary label; @plural = one|other forms with {n}.
 # Command IDs, typed keywords, technology/product names and user data stay unchanged.
@@ -28,7 +28,7 @@
 	= Equals	= Égal à
 	> Greater than	> Supérieur à
 	About	À propos
-	About Krasis CAD	À propos de Krasis CAD
+	About Vulcanio CAD	À propos de Vulcanio CAD
 	Absolute	Absolu
 	Add Leader	Ajouter un repère
 	Align	Aligner
@@ -84,7 +84,7 @@
 	ByBlock	DuBloc
 	ByColor	Par couleur
 	ByLayer	DuCalque
-	Krasis CAD Help	Aide de Krasis CAD
+	Vulcanio CAD Help	Aide de Vulcanio CAD
 	Cancel	Annuler
 	Cartesian (x, y)	Cartésien (x, y)
 	Center	Centre
@@ -358,7 +358,7 @@
 	Isolate Layer	Isoler le calque
 	Isometric Drafting	Dessin isométrique
 	Join	Rejoindre
-	Join the Krasis Discord…	Rejoindre le Discord d'Krasis…
+	Join the Vulcanio Discord…	Rejoindre le Discord d'Vulcanio…
 	Join us on Discord	Rejoignez-nous sur Discord
 	Language	Langue
 	Last	Dernier
@@ -489,7 +489,7 @@
 	Offset	Décalage
 	On	Activé
 	On/Off	Activer/Désactiver
-	Part of Krasis.	L'une des applications Crafting Apps de l'équipe et de la communauté Krasis.
+	Part of Vulcanio.	L'une des applications Crafting Apps de l'équipe et de la communauté Vulcanio.
 	Oops	Restaurer les objets effacés
 	Open (⌘O)	Ouvrir (⌘O)
 	Open Sample Drawing	Ouvrir un dessin d'exemple
@@ -590,7 +590,7 @@
 	Quick Select Properties	Propriétés de la sélection rapide
 	Quick Select...	Sélection rapide...
 	QuickCalc	Calculatrice rapide
-	Quit Krasis CAD	Quitter Krasis CAD
+	Quit Vulcanio CAD	Quitter Vulcanio CAD
 	Radius	Rayon
 	Raster Image	Image raster
 	Ray	Rayon
@@ -997,7 +997,7 @@
 @plural	{n} contributor	{n} contributeur|{n} contributeurs
 	Drawing as bytes	Dessin sous forme d'octets
 	Services	Services
-	Hide Krasis CAD	Masquer Krasis CAD
+	Hide Vulcanio CAD	Masquer Vulcanio CAD
 	Hide Others	Masquer les autres
 	Accessibility	Accessibilité
 	Show System Cursor	Afficher le curseur système
@@ -1012,7 +1012,7 @@
 	Query Texts	Interroger les textes
 	Analyze Shapes	Analyser les formes
 	Check for Updates…	Rechercher des mises à jour…
-	Krasis CAD is up to date.	Krasis CAD est à jour.
+	Vulcanio CAD is up to date.	Vulcanio CAD est à jour.
 	Could not check for updates.	Impossible de rechercher les mises à jour.
 	Find All	Find All
 	Find what:	Find what:
@@ -1034,5 +1034,5 @@
 	Replaces the shortcut of {commands}	Remplace le raccourci de : {commands}
 	Needs Ctrl, Alt or a function key	Il faut Ctrl, Alt ou une touche de fonction
 	Press the keys	Appuyez sur les touches
-	Back to Krasis CAD's shortcut	Revenir au raccourci de Krasis CAD
-	A shortcut you give wins over Krasis CAD's own. Changes apply at once and are kept for next time.	Un raccourci que vous définissez l'emporte sur celui de Krasis CAD. Les modifications s'appliquent tout de suite et sont conservées.
+	Back to Vulcanio CAD's shortcut	Revenir au raccourci de Vulcanio CAD
+	A shortcut you give wins over Vulcanio CAD's own. Changes apply at once and are kept for next time.	Un raccourci que vous définissez l'emporte sur celui de Vulcanio CAD. Les modifications s'appliquent tout de suite et sont conservées.

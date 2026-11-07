@@ -445,8 +445,8 @@ mod tests {
     }
 }
 
-/// Krasis: how long a mouse-wheel notch takes to reach 90% of its scroll or zoom (seconds), as an
-/// `f32`'s bits. 0.1 s is egui's own; Krasis sets an Edge-like ease from its settings.
+/// Vulcanio: how long a mouse-wheel notch takes to reach 90% of its scroll or zoom (seconds), as an
+/// `f32`'s bits. 0.1 s is egui's own; Vulcanio sets an Edge-like ease from its settings.
 static WHEEL_SMOOTHING_BITS: std::sync::atomic::AtomicU32 = std::sync::atomic::AtomicU32::new(0x3DCC_CCCD);
 
 /// The wheel easing time (see [`set_wheel_smoothing_seconds`]).

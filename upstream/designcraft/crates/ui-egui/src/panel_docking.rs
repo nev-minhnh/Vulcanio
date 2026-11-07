@@ -498,9 +498,9 @@ fn number(params: &Value, key: &str, default: f32) -> Result<f32, String> {
     }
 }
 
-/// The shared docking command a Krasis Layout command id names. `window.floatPanel` and
-/// `window.dockPanel` are Krasis Layout's names for Float Panel and Dock Panel. `window.workspace`
-/// stays Krasis Layout's own command (same id and params), with the other workspace commands.
+/// The shared docking command a Vulcanio Layout command id names. `window.floatPanel` and
+/// `window.dockPanel` are Vulcanio Layout's names for Float Panel and Dock Panel. `window.workspace`
+/// stays Vulcanio Layout's own command (same id and params), with the other workspace commands.
 fn shared_id(id: &str) -> Option<&'static str> {
     match id {
         "window.floatPanel" => Some("window.panel.float"),
@@ -557,7 +557,7 @@ fn close_flyout(app: &mut DesignApp) -> Value {
     json!({"layout": layout_of(app), "closed": [], "floating": floating_panels(app)})
 }
 
-/// Command params with Krasis Layout's panel names resolved (a panel id or English name, in any
+/// Command params with Vulcanio Layout's panel names resolved (a panel id or English name, in any
 /// case) and `onto` read as `anchor`.
 fn resolve_panels(params: &Value) -> Result<Value, String> {
     let mut params = if params.is_null() { json!({}) } else { params.clone() };
@@ -578,7 +578,7 @@ fn resolve_panels(params: &Value) -> Result<Value, String> {
 
 /// A shared docking command (`window.panel.*`, `window.workspace.*`, `ui.dock`) on the layout in
 /// use, all or nothing. craft-ui's `DockCommand` parses it and makes the layout actions;
-/// Krasis Layout resolves panel names, shows a hidden panel before moving, floating or docking
+/// Vulcanio Layout resolves panel names, shows a hidden panel before moving, floating or docking
 /// it, and returns a floated panel to its dock place on Dock Panel.
 fn shared_command(app: &mut DesignApp, id: &str, params: &Value) -> Result<Value, String> {
     let mut params = resolve_panels(params)?;
@@ -591,7 +591,7 @@ fn shared_command(app: &mut DesignApp, id: &str, params: &Value) -> Result<Value
         DockCommand::NewWorkspace { name } => return app.run("window.newWorkspace", json!({"name": name})),
         DockCommand::DeleteWorkspace { name } => return app.run("window.deleteWorkspace", json!({"name": name})),
         DockCommand::ResetWorkspace {} => return app.run("window.resetWorkspace", json!({})),
-        DockCommand::Lock { .. } => return Err("Lock Workspace is not available in Krasis Layout".into()),
+        DockCommand::Lock { .. } => return Err("Lock Workspace is not available in Vulcanio Layout".into()),
         DockCommand::Window { .. } => {
             return Err(
                 "Move Panel to New Window is not available: a floating panel has its own window on the desktop and stays in the page on the web"
@@ -600,7 +600,7 @@ fn shared_command(app: &mut DesignApp, id: &str, params: &Value) -> Result<Value
         }
         _ => {}
     }
-    // A zone is a side of `anchor`. Krasis Layout's docks are columns beside the canvas, so a dock at
+    // A zone is a side of `anchor`. Vulcanio Layout's docks are columns beside the canvas, so a dock at
     // a window edge is a `side`, not a frame on the outer edge (craft-ui's `Placement::Edge`).
     if let DockCommand::Dock { anchor: None, side: None, zone: Some(_), .. } = &command {
         return Err("zone needs an anchor: dock beside a panel with anchor, or in a new dock column with side (Start or End)".into());
@@ -650,7 +650,7 @@ fn shared_command(app: &mut DesignApp, id: &str, params: &Value) -> Result<Value
     Ok(txn.commit(app, closed, reveal))
 }
 
-/// Where floating windows may go: the window, below the title-bar strip when Krasis Layout draws
+/// Where floating windows may go: the window, below the title-bar strip when Vulcanio Layout draws
 /// its own title bar under macOS's transparent one. A floating window in that strip would take
 /// presses that move the whole app window.
 fn float_bounds(app: &DesignApp, ctx: &egui::Context) -> egui::Rect {
@@ -889,7 +889,7 @@ fn known(action: &Action<String>) -> bool {
         | Action::ResizeIconic { panel, .. }
         | Action::SetNative { panel, .. }
         | Action::SetMonitor { panel, .. } => registered(panel),
-        // Actions newer than this list are rejected until Krasis Layout checks them.
+        // Actions newer than this list are rejected until Vulcanio Layout checks them.
         _ => false,
     }
 }
@@ -974,7 +974,7 @@ fn open_floating_group(app: &mut DesignApp, params: &Value) -> Option<Result<Val
     Some(open(app))
 }
 
-/// Forget what Krasis Layout keeps about panels that just closed: the focus, the panel last
+/// Forget what Vulcanio Layout keeps about panels that just closed: the focus, the panel last
 /// opened (for `ui.set closePanel`) and a pending raise.
 fn release_closed(app: &mut DesignApp, closed: &[String]) {
     for slot in [&mut app.ui.docking_focused, &mut app.ui.docking_opened, &mut app.ui.docking_raise, &mut app.ui.docking_flyout] {
@@ -1156,7 +1156,7 @@ fn dock_style(ui: &egui::Ui, language: &str) -> craft_ui::docking::DockStyle {
     style.localized(|key| DOCK_LABELS.iter().find(|(k, _)| *k == key).map(|(_, english)| crate::i18n::tr(language, english).to_owned()))
 }
 
-/// Krasis Layout's wording of craft-ui's docking labels, translated through `i18n::tr`.
+/// Vulcanio Layout's wording of craft-ui's docking labels, translated through `i18n::tr`.
 pub(crate) const DOCK_LABELS: &[(&str, &str)] = &[
     ("dock.float", "Float Panel"),
     ("dock.close", "Close"),

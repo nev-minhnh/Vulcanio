@@ -1,6 +1,6 @@
-# Krasis CAD Czech interface catalog — original translations by @Losminek (AI-assisted).
+# Vulcanio CAD Czech interface catalog — original translations by @Losminek (AI-assisted).
 # SPDX-License-Identifier: MIT OR Apache-2.0
-# Written from the meaning of Krasis CAD English strings; no proprietary translations copied.
+# Written from the meaning of Vulcanio CAD English strings; no proprietary translations copied.
 # UTF-8: context<TAB>English source<TAB>Czech translation.
 # @plural = one|few|other forms for integer counts.
 	Apply	Použít
@@ -50,7 +50,7 @@
 	> Greater than	> Větší než
 	A variable name starts with a letter and has only letters, digits and _	Název proměnné začíná písmenem a obsahuje pouze písmena, číslice a _
 	About	O aplikaci
-	About Krasis CAD	O aplikaci Krasis CAD
+	About Vulcanio CAD	O aplikaci Vulcanio CAD
 	Absolute	Absolutní
 	Add Leader	Přidat odkaz
 	Additional angles	Další úhly
@@ -112,7 +112,7 @@
 	ByBlock	Dle bloku
 	ByColor	Dle barvy
 	ByLayer	Dle hladiny
-	Krasis CAD Help	Nápověda Krasis CAD
+	Vulcanio CAD Help	Nápověda Vulcanio CAD
 	Cancel	Zrušit
 	Cartesian (x, y)	Kartézské (x, y)
 	Center	Střed
@@ -437,7 +437,7 @@
 	Jogged	Zalomená
 	Jogged Linear	Zalomená lineární
 	Join	Spojit
-	Join the Krasis Discord…	Připojit se na Discord Krasis…
+	Join the Vulcanio Discord…	Připojit se na Discord Vulcanio…
 	Join us on Discord	Připojte se k nám na Discordu
 	Isometric Plane	Izometrická rovina
 	Isometric snap	Izometrické uchopení
@@ -580,7 +580,7 @@
 	Offset	Ekvidistanta
 	On	Zapnuto
 	On/Off	Zapnout/Vypnout
-	Part of Krasis.	Jedna z aplikací Crafting Apps od týmu Krasis a komunity.
+	Part of Vulcanio.	Jedna z aplikací Crafting Apps od týmu Vulcanio a komunity.
 	Only in this drawing: {n}	Pouze v tomto výkresu: {n}
 	Only in {name}: {n}	Pouze v {name}: {n}
 	Oops	Obnovit vymazané objekty
@@ -699,7 +699,7 @@
 	Quick Select...	Rychlý výběr...
 	QuickCalc	Rychlá kalkulačka
 	QuickCalc Pick	Výběr pro rychlou kalkulačku
-	Quit Krasis CAD	Ukončit Krasis CAD
+	Quit Vulcanio CAD	Ukončit Vulcanio CAD
 	Radius	Poloměr
 	Raster Image	Rastrový obrázek
 	Ray	Polopřímka
@@ -930,7 +930,7 @@
 	Specify insertion point	Určete bod vložení
 	A drawing opened from a file keeps that file's format.	Výkres otevřený ze souboru si zachová formát tohoto souboru.
 	An array that would create more objects than this is refused.	Pole překračující tento počet objektů bude odmítnuto.
-	Krasis CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Krasis CAD ukládá tyto předvolby, režimy uchopení objektu a přepínače kreslení pro váš uživatelský účet a obnovuje je při spuštění.
+	Vulcanio CAD keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Vulcanio CAD ukládá tyto předvolby, režimy uchopení objektu a přepínače kreslení pro váš uživatelský účet a obnovuje je při spuštění.
 	Changes apply at once and are kept for next time.	Změny se projeví okamžitě a uloží se pro příště.
 	Command line history	Historie příkazového řádku
 	Copy as JSON	Kopírovat jako JSON
@@ -1176,7 +1176,7 @@
 @plural	{n} contributor	{n} přispěvatel|{n} přispěvatelé|{n} přispěvatelů
 	Drawing as bytes	Výkres jako bajty
 	Services	Služby
-	Hide Krasis CAD	Skrýt Krasis CAD
+	Hide Vulcanio CAD	Skrýt Vulcanio CAD
 	Hide Others	Skrýt ostatní
 	Accessibility	Zpřístupnění
 	Show System Cursor	Zobrazit systémový kurzor
@@ -1210,7 +1210,7 @@
 	X	X
 	Y	Y
 	B	B
-	Krasis CAD	Krasis CAD
+	Vulcanio CAD	Vulcanio CAD
 	More toolbar commands	Další příkazy panelu nástrojů
 menu	View	Zobrazení
 menu	Draw	Kreslení
@@ -1222,7 +1222,7 @@ menu	Modify	Modifikace
 	Query Texts	Dotaz na texty
 	Analyze Shapes	Analyzovat tvary
 	Check for Updates…	Zkontrolovat aktualizace…
-	Krasis CAD is up to date.	Krasis CAD je aktuální.
+	Vulcanio CAD is up to date.	Vulcanio CAD je aktuální.
 	Could not check for updates.	Aktualizace se nepodařilo zkontrolovat.
 	Find All	Find All
 	Find what:	Find what:

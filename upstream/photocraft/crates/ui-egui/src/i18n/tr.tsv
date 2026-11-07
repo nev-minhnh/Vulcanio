@@ -4,7 +4,7 @@
 # Clean-room: every entry was written from the plain meaning of the English label using ordinary
 # Turkish computing vocabulary (katman, seçim, maske, ayar katmanı, fırça, degrade ...). No
 # proprietary localisation resource, string table or product UI was consulted or copied; add
-# entries the same way. Product and technology names (Krasis Photo, Krasis, OpenType, CMYK, Lab ...)
+# entries the same way. Product and technology names (Vulcanio Photo, Vulcanio, OpenType, CMYK, Lab ...)
 # stay as they are; the trailing "…" of dialog commands is kept.
 #
 # Custom paper dimensions in Print Settings.
@@ -826,11 +826,11 @@
 	Pin bar position	Çubuk konumunu sabitle
 	Move bar	Çubuğu taşı
 	More options	Diğer seçenekler
-	About Krasis Photo	Krasis Photo Hakkında
-	Krasis Photo Website	Krasis Photo Web Sitesi
-	Krasis Photo on GitHub	GitHub'da Krasis Photo
-	Krasis Website	Krasis Web Sitesi
-	Join the Krasis Discord…	Krasis Discord'una Katıl…
+	About Vulcanio Photo	Vulcanio Photo Hakkında
+	Vulcanio Photo Website	Vulcanio Photo Web Sitesi
+	Vulcanio Photo on GitHub	GitHub'da Vulcanio Photo
+	Vulcanio Website	Vulcanio Web Sitesi
+	Join the Vulcanio Discord…	Vulcanio Discord'una Katıl…
 	Report an Issue…	Sorun Bildir…
 	WIA Support…	WIA Desteği…
 	Apply	Uygula
@@ -882,7 +882,7 @@
 	All Caps	Tamamı Büyük Harf
 	All Slices	Tüm Dilimler
 	All User Slices	Tüm Kullanıcı Dilimleri
-	All shortcuts reset to Krasis Photo defaults.	Tüm kısayollar Krasis Photo varsayılanlarına sıfırlanır.
+	All shortcuts reset to Vulcanio Photo defaults.	Tüm kısayollar Vulcanio Photo varsayılanlarına sıfırlanır.
 	Alt	Alt
 	Always use pressure for opacity	Opaklık için her zaman basıncı kullan
 	Always use pressure for size	Boyut için her zaman basıncı kullan
@@ -1127,8 +1127,8 @@
 	Drop an image or PSD anywhere to open it.	Açmak için bir görüntüyü veya PSD'yi herhangi bir yere bırakın.
 	Native file drag-and-drop is unavailable	Yerel dosya sürükle ve bırak özelliği kullanılamıyor
 	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or copy the image in your file manager and paste it with {paste}.	Yerel dosya sürükle ve bırak özelliği henüz Wayland'de desteklenmiyor. Dosya › Aç'ı kullanın veya görüntüyü dosya yöneticinizde kopyalayıp {paste} ile yapıştırın.
-	To drop files, start Krasis Photo under XWayland: `{command}`	Dosyaları bırakmak için XWayland altında Krasis Photo'ı başlatın: `{command}`
-	Or set Preferences › Performance › Linux display server to X11: Krasis Photo then always starts under XWayland.	Veya Tercihler › Performans › Linux görüntüleme sunucusunu X11 olarak ayarlayın: Krasis Photo bundan sonra her zaman XWayland altında başlar.
+	To drop files, start Vulcanio Photo under XWayland: `{command}`	Dosyaları bırakmak için XWayland altında Vulcanio Photo'ı başlatın: `{command}`
+	Or set Preferences › Performance › Linux display server to X11: Vulcanio Photo then always starts under XWayland.	Veya Tercihler › Performans › Linux görüntüleme sunucusunu X11 olarak ayarlayın: Vulcanio Photo bundan sonra her zaman XWayland altında başlar.
 	Edit › Paste	Düzenle › Yapıştır
 	Duplicate Layers…	Katmanları Çoğalt…
 	Duplicate style	Stili çoğalt
@@ -1375,9 +1375,9 @@
 	Perspective Warp is not active	Perspektif Çarpıtma etkin değil
 	Perspective Warp: draw planes along the image's perspective, then switch to Warp	Perspektif Çarpıtma: görüntünün perspektifi boyunca düzlemler çizin, ardından Çarpıtma'ya geçin
 	Photo Filter	Fotoğraf Filtresi
-	Krasis Photo	Krasis Photo
-	Krasis Photo Manages Colors	Krasis Photo Renkleri Yönetir
-	Krasis Photo — an open-source, native image editor written in Rust.	Krasis Photo — Rust'ta yazılmış açık kaynaklı, yerel bir görüntü düzenleyici.
+	Vulcanio Photo	Vulcanio Photo
+	Vulcanio Photo Manages Colors	Vulcanio Photo Renkleri Yönetir
+	Vulcanio Photo — an open-source, native image editor written in Rust.	Vulcanio Photo — Rust'ta yazılmış açık kaynaklı, yerel bir görüntü düzenleyici.
 	Pin Depth:	Pim Derinliği:
 	Pixel Length:	Piksel Uzunluğu:
 	Pixels/Centimeter	Piksel/Santimetre
@@ -1451,11 +1451,11 @@
 	Import Shortcuts…	Kısayolları İçe Aktar…
 	Load a keyboard shortcut set saved as .kys	.kys olarak kaydedilen bir klavye kısayolu kümesi yükleyin
 	Imported {n} shortcuts from {file}. Click OK to keep them.	{n} kısayol {file} dosyasından içe aktarıldı. Saklamak için Tamam'a tıklayın.
-	{n} commands are not in Krasis Photo.	{n} komut Krasis Photo'ta yok.
+	{n} commands are not in Vulcanio Photo.	{n} komut Vulcanio Photo'ta yok.
 	Keyboard shortcuts imported	Klavye kısayolları içe aktarıldı
 	Your keyboard shortcut set {set} is in use here: {n} shortcuts differ from the defaults. Edit › Keyboard Shortcuts shows them; Reset All to Defaults undoes this.	{set} klavye kısayol setiniz burada kullanılıyor: {n} kısayol varsayılanlardan farklı. Düzenle › Klavye Kısayolları bunları gösterir; Tümünü Varsayılanlara Sıfırla bu işlemi geri alır.
 	Import keyboard shortcuts?	Klavye kısayolları içe aktarılsın mı?
-	Krasis Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Krasis Photo's. Import it?	Krasis Photo, bu bilgisayardaki başka bir görüntü düzenleyicide {set} klavye kısayol setinizi buldu: {n} kısayol Krasis Photo'tan farklı. İçe aktarılsın mı?
+	Vulcanio Photo found your keyboard shortcut set {set} from another image editor on this computer: {n} of its shortcuts differ from Vulcanio Photo's. Import it?	Vulcanio Photo, bu bilgisayardaki başka bir görüntü düzenleyicide {set} klavye kısayol setinizi buldu: {n} kısayol Vulcanio Photo'tan farklı. İçe aktarılsın mı?
 	Edit › Keyboard Shortcuts › Reset All to Defaults undoes an import.	Düzenle › Klavye Kısayolları › Tümünü Varsayılanlara Sıfırla, içe aktarma işlemini geri alır.
 	Don't Import	İçe Aktarma
 	The keyboard shortcut set was not imported: {error}	Klavye kısayol seti içe aktarılmadı: {error}
@@ -1641,7 +1641,7 @@
 	Apple Watch 45mm	Apple Watch 45mm
 	Aqua	Turkuaz
 	Art & Illustration	Sanat ve İllüstrasyon
-	Krasis	Krasis
+	Vulcanio	Vulcanio
 	Background Eraser Tool	Arka Plan Silgisi Aracı
 	Bevel & Emboss	Eğim ve Kabartma
 	Blend Mode	Karıştırma Modu
@@ -1677,7 +1677,7 @@
 	Current Tool	Geçerli Araç
 	Custom Shape Tool	Özel Şekil Aracı
 	Cyans	Camgöbeği
-	Default Krasis Photo Size	Varsayılan Krasis Photo Boyutu
+	Default Vulcanio Photo Size	Varsayılan Vulcanio Photo Boyutu
 	Delete Workspace	Çalışma Alanını Sil
 	Diamond	Elmas
 	Dimensions:	Ölçüler:
@@ -1789,7 +1789,7 @@
 	Pen Tool	Kalem Aracı
 	Convert Point Tool	Nokta Dönüştürme Aracı
 	Photo	Fotoğraf
-	Krasis Photo website	Krasis Photo web sitesi
+	Vulcanio Photo website	Vulcanio Photo web sitesi
 	Picas	Pikalar
 	Pillow Emboss	Yastık Kabartma
 	Pixel Replacement	Piksel Değiştirme
@@ -2123,7 +2123,7 @@
 	System Info	Sistem Bilgisi
 	More panels	Daha fazla panel
 	More documents	Daha fazla belge
-	These settings aren't available in Krasis Photo yet.	Bu ayarlar henüz Krasis Photo'ta mevcut değildir.
+	These settings aren't available in Vulcanio Photo yet.	Bu ayarlar henüz Vulcanio Photo'ta mevcut değildir.
 	Graphics	Grafik
 	Reset GPU Backend	GPU Arka Ucunu Sıfırla
 	Applies at next launch.	Bir sonraki açılışta geçerlidir.
@@ -2336,7 +2336,7 @@
 	Automatic uses GPU acceleration when available and falls back to CPU rendering on errors.	Otomatik, mümkün olduğunda GPU hızlandırmayı kullanır ve hatalarda CPU oluşturmaya geri döner.
 	Switched to CPU rendering	CPU oluşturmaya geçildi
 	GPU acceleration could not continue. Your documents are unchanged.	GPU hızlandırması devam edemedi. Belgeleriniz değişmedi.
-	Krasis Photo is using the CPU image compositor. The window may still use your graphics adapter.	Krasis Photo, CPU görüntü birleştiricisini kullanıyor. Pencere yine de grafik bağdaştırıcınızı kullanıyor olabilir.
+	Vulcanio Photo is using the CPU image compositor. The window may still use your graphics adapter.	Vulcanio Photo, CPU görüntü birleştiricisini kullanıyor. Pencere yine de grafik bağdaştırıcınızı kullanıyor olabilir.
 	Retry GPU requires a restart. Save your work first.	GPU'yu yeniden dene, yeniden başlatma gerektirir. Öncelikle çalışmanızı kaydedin.
 	Keep Using CPU	CPU'yu Kullanmaya Devam Et
 	Retry GPU tries the graphics processor again now.	GPU'yu yeniden dene, grafik işlemciyi hemen yeniden dener.
@@ -2723,7 +2723,7 @@ cameraRaw	Color	Renk
 	Restart Required	Yeniden Başlatma Gerekli
 	Restart	Yeniden başlat
 	Quit	Çıkış
-	Quit Krasis Photo	Krasis Photo'tan Çık
+	Quit Vulcanio Photo	Vulcanio Photo'tan Çık
 	Close Window	Pencereyi Kapat
 	New Window	Yeni Pencere
 	Open Image	Görüntüyü Aç
@@ -3114,7 +3114,7 @@ cameraRaw	Color	Renk
 	Custom Pixel Aspect Ratio	Özel Piksel En Boy Oranı
 	32-bit Preview Options	32 bit Önizleme Seçenekleri
 	New Guide	Yeni Kılavuz
-	Join the Krasis Discord	Krasis Discord'una Katıl
+	Join the Vulcanio Discord	Vulcanio Discord'una Katıl
 	Report an Issue	Sorun Bildir
 	Load Files into Stack	Dosyaları Yığına Yükle
 	Statistics	İstatistikler
@@ -3505,7 +3505,7 @@ cameraRaw	Color	Renk
 	Modify Date	Değiştirilme Tarihi
 	Mosaic	Mozaik
 	Motion Blur	Hareket Bulanıklığı
-	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Krasis Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Yerel dosya sürükle ve bırak özelliği henüz Wayland'de desteklenmiyor. Dosya › Aç'ı kullanın veya Krasis Photo'ı XWayland altında `WAYLAND_DISPLAY= photocraft` ile çalıştırın.
+	Native file drag-and-drop is not supported on Wayland yet. Use File › Open, or run Vulcanio Photo under XWayland with `WAYLAND_DISPLAY= photocraft`.	Yerel dosya sürükle ve bırak özelliği henüz Wayland'de desteklenmiyor. Dosya › Aç'ı kullanın veya Vulcanio Photo'ı XWayland altında `WAYLAND_DISPLAY= photocraft` ile çalıştırın.
 	Neon Glow	Neon Işıma
 	New Guide Layout	Yeni Kılavuz Düzeni
 	New Path	Yeni Yol
@@ -3864,7 +3864,7 @@ cameraData	Lens	Lens
 	There is no crop size or ratio to save	Kaydedilecek kırpma boyutu veya oranı yok
 	Search settings…	Arama ayarları…
 	No matching settings	Eşleşen ayar yok
-	Krasis Photo — Screen Color Picker	Krasis Photo — Ekran Rengi Seçici
+	Vulcanio Photo — Screen Color Picker	Vulcanio Photo — Ekran Rengi Seçici
 	Loading fonts…	Yazı tipleri yükleniyor…
 	Onion Skin	Soğan Kabuğu
 	Marching Ants	Yürüyen Karıncalar
@@ -3973,7 +3973,7 @@ cameraData	Lens	Lens
 	{name} (Photoshop)	{name} (Photoshop)
 	{message} ({note})	{message} ({note})
 @plural	Loaded {n} action from {file}|Loaded {n} actions from {file}	{file} dosyasından {n} eylem yüklendi
-@plural	{n} step has no Krasis Photo equivalent yet|{n} steps have no Krasis Photo equivalent yet	{n} adımın Krasis Photo’ta henüz karşılığı yok
+@plural	{n} step has no Vulcanio Photo equivalent yet|{n} steps have no Vulcanio Photo equivalent yet	{n} adımın Vulcanio Photo’ta henüz karşılığı yok
 @plural	Saved {n} action to {file}|Saved {n} actions to {file}	{n} eylem {file} dosyasına kaydedildi
 @plural	{n} step with no Photoshop equivalent left out|{n} steps with no Photoshop equivalent left out	Photoshop karşılığı olmayan {n} adım atlandı
 @plural	{n} action file loaded|{n} action files loaded	{n} eylem dosyası yüklendi
@@ -4084,12 +4084,12 @@ cameraData	Lens	Lens
 	Bicubic Smoother	Bikübik Pürüzsüzleştirici
 	Bicubic Sharper	Bikübik Daha Keskin
 	Pasting from other apps is unavailable	Diğer uygulamalardan yapıştırma kullanılamıyor
-	Krasis Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Krasis Photo bu oturumda sistem panosuna erişemiyor. Wayland'de Flatpak korumalı alanı, diğer uygulamalardaki görüntülerin okunduğu protokolü gizler.
-	To paste from other apps, start Krasis Photo under XWayland: `{command}`	Diğer uygulamalardan yapıştırmak için Krasis Photo'ı XWayland altında başlatın: `{command}`
-	Nothing to paste: Krasis Photo can't read the system clipboard here	Yapıştırılacak bir şey yok: Krasis Photo burada sistem panosunu okuyamıyor
+	Vulcanio Photo can't reach the system clipboard in this session. On Wayland, a Flatpak sandbox hides the protocol that images from other apps are read through.	Vulcanio Photo bu oturumda sistem panosuna erişemiyor. Wayland'de Flatpak korumalı alanı, diğer uygulamalardaki görüntülerin okunduğu protokolü gizler.
+	To paste from other apps, start Vulcanio Photo under XWayland: `{command}`	Diğer uygulamalardan yapıştırmak için Vulcanio Photo'ı XWayland altında başlatın: `{command}`
+	Nothing to paste: Vulcanio Photo can't read the system clipboard here	Yapıştırılacak bir şey yok: Vulcanio Photo burada sistem panosunu okuyamıyor
 	Delete this set	Bu Kümeyi Sil
 	New Set…	Yeni Küme…
-	Krasis Photo Defaults	Krasis Photo Varsayılanları
+	Vulcanio Photo Defaults	Vulcanio Photo Varsayılanları
 	Save a list of these shortcuts as a web page	Bu kısayolların listesini web sayfası olarak kaydet
 	Save the changes to this set	Bu kümedeki değişiklikleri kaydet
 	Save these shortcuts as a .kys file	Bu kısayolları .kys dosyası olarak kaydet
@@ -4193,9 +4193,9 @@ smartSvg	Choose executable…	Çalıştırılabilir dosya seç…
 smartSvg	Choose the application used to edit this SVG:	Bu SVG'yi düzenlemek için kullanılacak uygulamayı seçin:
 smartSvg	Edit SVG Smart Object	SVG Akıllı Nesnesini Düzenle
 smartSvg	Other application	Diğer uygulama
-smartSvg	Krasis Photo (internal editor)	Krasis Photo (dahili düzenleyici)
+smartSvg	Vulcanio Photo (internal editor)	Vulcanio Photo (dahili düzenleyici)
 smartSvg	SVG editor opened. Save the SVG to update this Smart Object.	SVG düzenleyicisi açıldı. Bu Akıllı Nesneyi güncellemek için SVG'yi kaydedin.
-smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Krasis Photo.	Açılan SVG dosyasına kaydedin. Kaydedilen her değişiklik Krasis Photo'ta bir geri alma adımı olur.
+smartSvg	Save to the opened SVG file. Each saved change becomes one undo step in Vulcanio Photo.	Açılan SVG dosyasına kaydedin. Kaydedilen her değişiklik Vulcanio Photo'ta bir geri alma adımı olur.
 smartSvg	Stop syncing this Smart Object	Bu Akıllı Nesnenin eşitlemesini durdur
 smartSvg	Updates wait while another document or an editing dialog is active.	Başka bir belge veya düzenleme iletişim kutusu etkin olduğunda güncellemeler bekler.
 smartSvg	AI/PDF/EPS contents will be edited as SVG. Saving replaces the embedded source; format-specific features may change.	AI/PDF/EPS içeriği SVG olarak düzenlenecek. Kaydetmek gömülü kaynağı değiştirir; biçime özgü özellikler değişebilir.

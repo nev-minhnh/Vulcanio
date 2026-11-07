@@ -1,4 +1,4 @@
-//! Pathfinder panel: Shape Modes (+ Expand) and Pathfinders, with icons drawn for Krasis Vector.
+//! Pathfinder panel: Shape Modes (+ Expand) and Pathfinders, with icons drawn for Vulcanio Vector.
 //! Alt-clicking a Shape Mode makes a compound shape; with members of one selected, a Shape Mode
 //! sets theirs.
 

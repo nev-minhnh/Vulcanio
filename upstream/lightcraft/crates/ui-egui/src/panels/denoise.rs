@@ -700,7 +700,7 @@ pub fn model_dialog(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens, info
         ui.label(RichText::new(tr("This file cannot be used yet")).font(t.semibold(13.5)).color(t.caution));
         ui.add(
             egui::Label::new(
-                RichText::new(sentence(tr(info["reason"].as_str().unwrap_or("It is not a denoise model Krasis Library understands"))))
+                RichText::new(sentence(tr(info["reason"].as_str().unwrap_or("It is not a denoise model Vulcanio Library understands"))))
                     .color(t.text_label),
             )
             .wrap(),
@@ -723,7 +723,7 @@ pub fn model_dialog(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens, info
         ui.add(
             egui::Label::new(
                 RichText::new(tr_format!(
-                    "Downloads from {host}. Once it has arrived and checked out, Krasis Library installs it, {after}.",
+                    "Downloads from {host}. Once it has arrived and checked out, Vulcanio Library installs it, {after}.",
                     host = host,
                     after = tr(after)
                 ))
@@ -744,7 +744,7 @@ pub fn model_dialog(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens, info
     }
     if kind == "draft" {
         ui.add_space(2.0);
-        ui.label(RichText::new(tr("Krasis Library does not know this model, so it assumed:")).color(t.text_label));
+        ui.label(RichText::new(tr("Vulcanio Library does not know this model, so it assumed:")).color(t.text_label));
         for a in info["assumptions"].as_array().into_iter().flatten().filter_map(Value::as_str) {
             ui.add(egui::Label::new(RichText::new(tr_format!("•  {assumption}", assumption = tr(a))).font(t.font(12.0)).color(t.text_dim)).wrap());
         }
@@ -759,9 +759,9 @@ pub fn model_dialog(app: &mut LightcraftApp, ui: &mut egui::Ui, t: &Tokens, info
     ui.add_space(4.0);
     check(ui, "denoiseModel.accept", accepted, "I have read these terms and accept them for my own use");
     let closing = if download {
-        "Nothing is fetched until you accept. The model is kept on this computer only; Krasis Library never uploads or shares it."
+        "Nothing is fetched until you accept. The model is kept on this computer only; Vulcanio Library never uploads or shares it."
     } else {
-        "The model is kept on this computer only. Krasis Library never uploads or shares it."
+        "The model is kept on this computer only. Vulcanio Library never uploads or shares it."
     };
     ui.label(RichText::new(tr(closing)).font(t.font(11.5)).color(t.text_dim));
 }

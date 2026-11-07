@@ -19,7 +19,7 @@ pub const FIELD_H: f32 = 24.0;
 pub const PAD: f32 = 16.0;
 /// A section's right margin: 8. The panel's grid is `16 | 88 | 8 | 88 | 8 | 24 | 8`: a 240 pt
 /// panel, its content 16 in from the left and 8 from the right, two 88 pt columns, an 8 pt gutter
-/// between them and 8 + 24 + 8 for the buttons at a row's end. Krasis Interface's own: the columns are
+/// between them and 8 + 24 + 8 for the buttons at a row's end. Vulcanio Interface's own: the columns are
 /// equal, and the buttons sit on the same 24 pt rhythm as the icon buttons the panel already has.
 pub const PAD_RIGHT: f32 = 8.0;
 /// Between the panel's grid columns.

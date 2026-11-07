@@ -169,11 +169,11 @@ fn edit_original_and_show_in_folder_hand_the_file_to_the_system() {
 }
 
 /// #5236: with Preferences › File Handling › Use System Defaults for Edit Original off, Edit
-/// Original opens a raster image in the app that made it, Krasis Photo, and falls back to the
-/// system's default app when Krasis Photo isn't installed or the file isn't a raster image.
+/// Original opens a raster image in the app that made it, Vulcanio Photo, and falls back to the
+/// system's default app when Vulcanio Photo isn't installed or the file isn't a raster image.
 #[test]
 fn edit_original_opens_raster_images_in_photocraft_without_system_defaults() {
-    /// What each open asked for: (`true` for Krasis Photo, the path).
+    /// What each open asked for: (`true` for Vulcanio Photo, the path).
     type Opened = Rc<RefCell<Vec<(bool, String)>>>;
     let dir = Folder::new("with");
     let (mut app, linked, _) = app(&dir);
@@ -200,8 +200,8 @@ fn edit_original_opens_raster_images_in_photocraft_without_system_defaults() {
     // A file that isn't a raster image goes to the system's app.
     crate::io::open_original(&mut app, "/Art/plan.emf").unwrap();
     assert_eq!(*opened.borrow(), [(false, path.clone()), (true, path.clone()), (false, path), (false, "/Art/plan.emf".to_string())]);
-    // Krasis Photo failing to open it is said, not hidden behind the system's app.
-    app.services.open_in_photocraft = Some(Box::new(|_: &str| Err("Krasis Photo didn't start".to_string())));
+    // Vulcanio Photo failing to open it is said, not hidden behind the system's app.
+    app.services.open_in_photocraft = Some(Box::new(|_: &str| Err("Vulcanio Photo didn't start".to_string())));
     assert!(app.run("links.editOriginal", json!({"id": linked})).is_err());
     assert_eq!(opened.borrow().len(), 4);
 }

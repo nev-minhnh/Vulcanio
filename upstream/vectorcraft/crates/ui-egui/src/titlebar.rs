@@ -291,7 +291,7 @@ mod tests {
             let texts: Vec<String> = texts(&out).into_iter().map(|(t, _)| t).collect();
             let has = |s: &str| texts.iter().any(|t| t == s);
             assert_eq!(has("Discord"), width > 1000.0, "{width}: {texts:?}");
-            // Search is an icon only (as in Krasis Photo): its label lives in the tooltip.
+            // Search is an icon only (as in Vulcanio Photo): its label lives in the tooltip.
             assert!(!has("Search commands and tools"), "{width}: {texts:?}");
         }
     }

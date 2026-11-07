@@ -7,7 +7,7 @@
 //! (<https://developer.apple.com/documentation/coretext/ctfontmanagerregisterfontsforurl(_:_:_:)>).
 //! The font manager's list of available fonts holds them
 //! (<https://developer.apple.com/documentation/coretext/ctfontmanagercopyavailablefonturls()>), so
-//! Krasis Vector lists them as it does on Windows (`system_fonts.rs`), reading the files in place
+//! Vulcanio Vector lists them as it does on Windows (`system_fonts.rs`), reading the files in place
 //! (#579).
 //!
 //! CoreText is a C API with no safe binding, hence the scoped `unsafe_code` allowance.

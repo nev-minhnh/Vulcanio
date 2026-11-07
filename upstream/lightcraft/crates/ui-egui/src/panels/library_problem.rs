@@ -376,7 +376,7 @@ impl LibraryProblem {
     }
 
     /// The window listing the recent libraries, each checked now without writing anything
-    /// ([`unavailable`]): one that is gone, isn't a Krasis Library library any more or can't be read
+    /// ([`unavailable`]): one that is gone, isn't a Vulcanio Library library any more or can't be read
     /// is greyed out with the reason. The last library opened is selected, or else the first one
     /// that can be opened.
     #[cfg(test)]
@@ -452,7 +452,7 @@ pub enum Unavailable {
     NotAFolder,
     /// The folder can't be listed (the system's reason).
     Unreadable(String),
-    /// The folder holds no Krasis Library library any more.
+    /// The folder holds no Vulcanio Library library any more.
     NoLibrary,
     /// The library's catalog file can't be opened (the system's reason).
     CatalogUnreadable(String),
@@ -479,7 +479,7 @@ impl Unavailable {
             Unavailable::NotFound => crate::i18n::tr("Not found: moved, renamed or on a disconnected drive").to_string(),
             Unavailable::NotAFolder => crate::i18n::tr("This is a file, not a library folder").to_string(),
             Unavailable::Unreadable(e) => format!("{} {e}", crate::i18n::tr("This folder can't be read:")),
-            Unavailable::NoLibrary => crate::i18n::tr("There is no Krasis Library library in this folder any more").to_string(),
+            Unavailable::NoLibrary => crate::i18n::tr("There is no Vulcanio Library library in this folder any more").to_string(),
             Unavailable::CatalogUnreadable(e) => format!("{} {e}", crate::i18n::tr("The library's catalog can't be read:")),
             Unavailable::CheckFailed(e) => e.clone(),
             Unavailable::LookupFailed(e) => format!("{} {e}", crate::i18n::tr("This library couldn't be checked:")),
@@ -740,7 +740,7 @@ fn unavailable(path: &str) -> Option<Unavailable> {
 pub fn missing_library_reason(dir: &Path) -> Option<String> {
     match lightcraft_engine::library::library_state(dir) {
         Ok(true) => None,
-        Ok(false) if dir.exists() => Some(crate::i18n::tr("There is no Krasis Library library in this folder any more.").to_string()),
+        Ok(false) if dir.exists() => Some(crate::i18n::tr("There is no Vulcanio Library library in this folder any more.").to_string()),
         Ok(false) => {
             Some(crate::i18n::tr("The library isn't there: it was moved or renamed, or its drive or network share isn't connected.").to_string())
         }
@@ -1088,9 +1088,9 @@ pub fn show(app: &mut LightcraftApp, ctx: &egui::Context, blocked: bool) {
     let frame = egui::Frame::window(&ctx.global_style()).inner_margin(egui::Margin::symmetric(18, 14));
     // what the window says, in one piece, for a screen reader: the labels below are separate nodes
     let description = if problem.path.is_empty() {
-        format!("{} {} {EXPLANATION}", crate::i18n::tr("Krasis Library couldn't find where to keep your library."), problem.error)
+        format!("{} {} {EXPLANATION}", crate::i18n::tr("Vulcanio Library couldn't find where to keep your library."), problem.error)
     } else {
-        format!("{} {}. {} {EXPLANATION}", crate::i18n::tr("Krasis Library couldn't open the library at"), problem.path, problem.error)
+        format!("{} {}. {} {EXPLANATION}", crate::i18n::tr("Vulcanio Library couldn't open the library at"), problem.path, problem.error)
     };
     let shown = egui::Window::new(crate::i18n::tr("Your library couldn't be opened"))
         .id(egui::Id::unique(ERROR_WINDOW_ID))
@@ -1105,9 +1105,9 @@ pub fn show(app: &mut LightcraftApp, ctx: &egui::Context, blocked: bool) {
             ui.set_width(440.0);
             ui.spacing_mut().item_spacing.y = 8.0;
             if problem.path.is_empty() {
-                ui.label(RichText::new(crate::i18n::tr("Krasis Library couldn't find where to keep your library.")).color(t.text));
+                ui.label(RichText::new(crate::i18n::tr("Vulcanio Library couldn't find where to keep your library.")).color(t.text));
             } else {
-                ui.label(RichText::new(crate::i18n::tr("Krasis Library couldn't open the library at")).color(t.text_label));
+                ui.label(RichText::new(crate::i18n::tr("Vulcanio Library couldn't open the library at")).color(t.text_label));
                 ui.label(RichText::new(&problem.path).font(t.semibold(12.5)).color(t.text));
             }
             ui.add(egui::Label::new(RichText::new(&problem.error).color(t.caution)).wrap());

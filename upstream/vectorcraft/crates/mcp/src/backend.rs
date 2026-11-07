@@ -146,7 +146,7 @@ impl Backend for Remote {
     fn call(&mut self, method: &str, params: Value) -> Result<Value, String> {
         self.prepare_connection().map_err(|e| {
             self.conn = None;
-            format!("Krasis Vector app at {} is not reachable: {e}; `{method}`: nothing was sent", self.addr)
+            format!("Vulcanio Vector app at {} is not reachable: {e}; `{method}`: nothing was sent", self.addr)
         })?;
         let id = self.next_id;
         self.next_id += 1;
@@ -159,14 +159,14 @@ impl Backend for Remote {
             })
             .map_err(|e| {
                 self.conn = None;
-                format!("Krasis Vector app at {}: `{method}` failed: {e}; operation may have completed; inspect state before retrying", self.addr)
+                format!("Vulcanio Vector app at {}: `{method}` failed: {e}; operation may have completed; inspect state before retrying", self.addr)
             })?;
         if v.get("id").is_none() && v.get("ok").and_then(Value::as_bool) == Some(false) {
             // The app's refusals carry no id (too many connections, a line it would not read):
             // it ran nothing and closes the connection, so the next call starts a fresh one.
             self.conn = None;
             let why = v.get("error").and_then(Value::as_str).unwrap_or("unknown error");
-            return Err(format!("Krasis Vector app at {} refused `{method}`: {why}; nothing was run", self.addr));
+            return Err(format!("Vulcanio Vector app at {} refused `{method}`: {why}; nothing was run", self.addr));
         }
         if v.get("id") != Some(&json!(id)) {
             // Not the answer to this call: the stream is desynchronised (or the endpoint faulty),
