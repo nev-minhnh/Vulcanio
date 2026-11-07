@@ -16,8 +16,11 @@ pub enum Icon {
 
 /// Paint `icon` centred in `rect` (a square) in `color`.
 pub fn paint(p: &Painter, rect: Rect, icon: &Icon, color: Color32) {
-    let s = rect.width().min(rect.height());
-    let c = rect.center();
+    // Whole-pixel size and a pixel-centred middle: strokes stay crisp and centred at any display
+    // scale (125%, 150%…).
+    let ppp = p.pixels_per_point();
+    let s = (rect.width().min(rect.height()) * ppp).round() / ppp;
+    let c = pos2(p.round_to_pixel_center(rect.center().x), p.round_to_pixel_center(rect.center().y));
     let w = (s * 0.085).max(1.3);
     let st = Stroke::new(w, color);
     let at = |x: f32, y: f32| pos2(c.x + x * s, c.y + y * s);
@@ -41,13 +44,13 @@ pub fn paint(p: &Painter, rect: Rect, icon: &Icon, color: Color32) {
             }
         }
         Icon::Module(ModuleId::Vector) => {
-            let (a, b) = (at(-0.36, 0.26), at(0.36, -0.26));
-            p.add(CubicBezierShape::from_points_stroke([a, at(-0.3, -0.3), at(0.3, 0.3), b], false, Color32::TRANSPARENT, PathStroke::from(st)));
+            let (a, b) = (at(-0.36, 0.28), at(0.36, -0.24));
+            p.add(CubicBezierShape::from_points_stroke([a, at(-0.3, -0.28), at(0.3, 0.32), b], false, Color32::TRANSPARENT, PathStroke::from(st)));
             for q in [a, b] {
                 p.rect_filled(Rect::from_center_size(q, vec2(s * 0.14, s * 0.14)), 1.0, color);
             }
-            p.line_segment([at(-0.3, -0.3), a], Stroke::new(w * 0.6, color.gamma_multiply(0.7)));
-            p.circle_filled(at(-0.3, -0.3), s * 0.05, color);
+            p.line_segment([at(-0.3, -0.28), a], Stroke::new(w * 0.6, color.gamma_multiply(0.7)));
+            p.circle_filled(at(-0.3, -0.28), s * 0.05, color);
         }
         Icon::Module(ModuleId::Design) => {
             let page = Rect::from_min_max(at(-0.3, -0.38), at(0.3, 0.38));

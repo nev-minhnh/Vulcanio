@@ -174,7 +174,7 @@ fn title_bar(ui: &mut egui::Ui, title: &str, close_tip: &str) -> bool {
     let text = ui.visuals().strong_text_color();
     ui.painter().text(row.left_center(), egui::Align2::LEFT_CENTER, title, crate::shell::strong(ui.ctx(), 20.0), text);
     let x = egui::Rect::from_center_size(pos2(row.right() - 16.0, row.center().y), vec2(32.0, 32.0));
-    let resp = ui.interact(x, ui.id().with("vulcanio_dialog_x"), egui::Sense::click()).on_hover_text(close_tip);
+    let resp = ui.interact(x, ui.scope_id().with("vulcanio_dialog_x"), egui::Sense::click()).on_hover_text(close_tip);
     let h = ui.ctx().animate_bool_with_time(resp.id.with("h"), resp.hovered(), 0.1);
     if h > 0.0 {
         ui.painter().rect_filled(x, 8.0, ui.visuals().widgets.hovered.bg_fill.gamma_multiply(h));
@@ -194,7 +194,7 @@ fn footer_button(ui: &mut egui::Ui, label: &str) -> bool {
     let galley = ui.painter().layout_no_wrap(label.to_string(), egui::FontId::proportional(14.0), egui::Color32::WHITE);
     let w = galley.size().x + 36.0;
     let r = egui::Rect::from_min_size(pos2(row.right() - w, row.top()), vec2(w, 34.0));
-    let resp = ui.interact(r, ui.id().with("vulcanio_dialog_ok"), egui::Sense::click());
+    let resp = ui.interact(r, ui.scope_id().with("vulcanio_dialog_ok"), egui::Sense::click());
     let h = ui.ctx().animate_bool_with_time(resp.id.with("h"), resp.hovered(), 0.1);
     let fill = ui.visuals().selection.bg_fill;
     ui.painter().rect_filled(r, 10.0, fill.linear_multiply(1.0 - 0.15 * h).gamma_multiply(1.0));

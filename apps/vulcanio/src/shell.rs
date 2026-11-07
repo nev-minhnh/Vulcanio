@@ -870,8 +870,8 @@ impl Vulcanio {
             let r = ui.max_rect();
             let painter = ui.painter();
             painter.rect_filled(r, 0.0, self.palette.rail);
-            let line = Rect::from_min_max(pos2(r.left() + 1.0, r.top()), pos2(r.right() - 1.0, r.bottom()));
-            gradient_rect(painter, line, &GLOW.map(|c| c.gamma_multiply(0.55 + 0.45 * glow)), true);
+            let line = Rect::from_min_max(pos2(r.left() + 1.0 - glow, r.top()), pos2(r.right() - 1.0 + glow, r.bottom()));
+            gradient_rect(painter, line, &GLOW.map(|c| c.gamma_multiply(0.85 + 0.15 * glow)), true);
         });
         let t = ctx.animate_bool_with_time(Id::unique("vulcanio_rail_reveal"), self.rail_open, time);
         if t <= 0.0 {
