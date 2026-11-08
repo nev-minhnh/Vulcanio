@@ -208,6 +208,18 @@ pub(super) fn f32_bytes(v: &[f32]) -> Vec<u8> {
     v.iter().flat_map(|f| f.to_ne_bytes()).collect()
 }
 
+/// The depth/stencil format of the window's render pass, when the host gives it one.
+static WINDOW_DEPTH_FORMAT: std::sync::OnceLock<Option<wgpu::TextureFormat>> = std::sync::OnceLock::new();
+
+/// Tell the canvas the window pass's depth/stencil format (set once, before the first canvas).
+pub fn set_window_depth_format(format: Option<wgpu::TextureFormat>) {
+    let _ = WINDOW_DEPTH_FORMAT.set(format);
+}
+
+fn window_depth_format() -> Option<wgpu::TextureFormat> {
+    WINDOW_DEPTH_FORMAT.get().copied().flatten()
+}
+
 fn pipeline(
     device: &wgpu::Device,
     label: &str,
@@ -216,13 +228,22 @@ fn pipeline(
     (vs, fs): (&str, &str),
     format: wgpu::TextureFormat,
     blend: Option<wgpu::BlendState>,
+    depth: Option<wgpu::TextureFormat>,
 ) -> wgpu::RenderPipeline {
     device.create_render_pipeline(&wgpu::RenderPipelineDescriptor {
         label: Some(label),
         layout: Some(layout),
         vertex: wgpu::VertexState { module, entry_point: Some(vs), buffers: &[], compilation_options: Default::default() },
         primitive: wgpu::PrimitiveState { topology: wgpu::PrimitiveTopology::TriangleList, ..Default::default() },
-        depth_stencil: None,
+        // Pipelines that draw inside the window's pass must match its depth/stencil attachment
+        // (a host may give the window one); they neither test nor write it.
+        depth_stencil: depth.map(|format| wgpu::DepthStencilState {
+            format,
+            depth_write_enabled: format.has_depth_aspect().then_some(false),
+            depth_compare: format.has_depth_aspect().then_some(wgpu::CompareFunction::Always),
+            stencil: wgpu::StencilState::default(),
+            bias: wgpu::DepthBiasState::default(),
+        }),
         multisample: wgpu::MultisampleState { count: 1, mask: !0, alpha_to_coverage_enabled: false },
         fragment: Some(wgpu::FragmentState {
             module,
@@ -295,8 +316,8 @@ impl Resources {
                 operation: wgpu::BlendOperation::Add,
             },
         };
-        let shadow_pipeline = pipeline(device, "pc_canvas_shadow", &shadow_layout, &module, ("vs_shadow", "fs_shadow"), target, Some(blend));
-        let tile_pipeline = pipeline(device, "pc_canvas_tile", &layout, &module, ("vs_tile", "fs_tile"), target, Some(blend));
+        let shadow_pipeline = pipeline(device, "pc_canvas_shadow", &shadow_layout, &module, ("vs_shadow", "fs_shadow"), target, Some(blend), window_depth_format());
+        let tile_pipeline = pipeline(device, "pc_canvas_tile", &layout, &module, ("vs_tile", "fs_tile"), target, Some(blend), window_depth_format());
         let sampler = device.create_sampler(&wgpu::SamplerDescriptor {
             label: Some("pc_canvas_trilinear"),
             mag_filter: wgpu::FilterMode::Linear,
@@ -310,8 +331,8 @@ impl Resources {
             device.create_bind_group_layout(&wgpu::BindGroupLayoutDescriptor { label: Some("pc_mip"), entries: &[texture_entry(0), sampler_entry(1)] });
         let mip_layout =
             device.create_pipeline_layout(&wgpu::PipelineLayoutDescriptor { label: Some("pc_mip"), bind_group_layouts: &[Some(&mip_bgl)], immediate_size: 0 });
-        let mip_pipeline = pipeline(device, "pc_mip", &mip_layout, &mip_module, ("vs", "fs"), FORMAT, None);
-        let mip_pipeline_high = high.then(|| pipeline(device, "pc_mip_16f", &mip_layout, &mip_module, ("vs", "fs"), FORMAT_HIGH, None));
+        let mip_pipeline = pipeline(device, "pc_mip", &mip_layout, &mip_module, ("vs", "fs"), FORMAT, None, None);
+        let mip_pipeline_high = high.then(|| pipeline(device, "pc_mip_16f", &mip_layout, &mip_module, ("vs", "fs"), FORMAT_HIGH, None, None));
         let mip_sampler = device.create_sampler(&wgpu::SamplerDescriptor {
             label: Some("pc_mip"),
             mag_filter: wgpu::FilterMode::Linear,
@@ -340,8 +361,8 @@ impl Resources {
             bind_group_layouts: &[Some(&encode_bgl)],
             immediate_size: 0,
         });
-        let encode_pipeline = pipeline(device, "pc_encode", &encode_layout, &encode_module, ("vs", "fs"), FORMAT, None);
-        let encode_pipeline_high = high.then(|| pipeline(device, "pc_encode_16f", &encode_layout, &encode_module, ("vs", "fs"), FORMAT_HIGH, None));
+        let encode_pipeline = pipeline(device, "pc_encode", &encode_layout, &encode_module, ("vs", "fs"), FORMAT, None, None);
+        let encode_pipeline_high = high.then(|| pipeline(device, "pc_encode_16f", &encode_layout, &encode_module, ("vs", "fs"), FORMAT_HIGH, None, None));
         let identity_lut = lut_bind_group(device, queue, &lut_bgl, 2, &identity_lut_bytes(), None);
         Self {
             lut_bgl,

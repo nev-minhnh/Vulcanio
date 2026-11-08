@@ -30,6 +30,12 @@ use modules::ModuleId;
 pub const APP_ID: &str = "Vulcanio";
 
 /// Vulcanio's data folder (settings, logs, the running instance's port).
+/// The depth/stencil format of the window's render pass ([`native_options`] asks for CAD's
+/// stencil buffer).
+pub fn window_depth_format() -> Option<eframe::wgpu::TextureFormat> {
+    eframe::egui_wgpu::depth_format_from_bits(0, cadcraft_embed::STENCIL_BITS)
+}
+
 pub fn data_dir() -> Option<PathBuf> {
     eframe::storage_dir(APP_ID)
 }

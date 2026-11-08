@@ -68,7 +68,7 @@ use doc_textures::{mip_count, mip_damage};
 pub use perf::{GpuInfo, Perf, backend_name, now_ms};
 #[cfg(all(test, windows))]
 use photocraft_engine::memory::detect_physical_memory;
-pub use resources::CanvasStyle;
+pub use resources::{CanvasStyle, set_window_depth_format};
 use resources::{DocTextures, Resources, identity_lut_bytes, lut_bind_group};
 #[cfg(test)]
 use setup::device_limits_for;

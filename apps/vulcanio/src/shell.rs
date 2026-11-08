@@ -334,6 +334,11 @@ impl Vulcanio {
         let lang = settings.resolved_lang();
         let ctx = &cc.egui_ctx;
         crate::set_wake_context(ctx.clone());
+        // A graphics error goes into the log instead of ending the program (wgpu's default). An
+        // app may install its own handler later (Photo does, to fall back to the CPU).
+        if let Some(rs) = &cc.wgpu_render_state {
+            rs.device.on_uncaptured_error(std::sync::Arc::new(|e: eframe::wgpu::Error| log::error!("graphics error: {e}")));
+        }
         egui::set_wheel_smoothing_seconds(settings.ease_seconds());
         let palette = Palette::new(false);
         let mut me = Self {
@@ -600,7 +605,7 @@ impl Vulcanio {
         let module = {
             let storage: &dyn eframe::Storage = &self.slots[id.index()].storage;
             let cc = eframe::CreationContext::for_embedded(ctx.clone(), frame, Some(storage));
-            let host = HostContext { cc: &cc, files, lang: self.lang, present_mode: self.present_mode };
+            let host = HostContext { cc: &cc, files, lang: self.lang, present_mode: self.present_mode, depth_format: crate::window_depth_format() };
             let guarded = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| (spec.create)(&host)));
             match guarded {
                 Ok(m) => m,

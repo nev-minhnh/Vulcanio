@@ -64,6 +64,9 @@ pub struct HostContext<'a> {
     pub lang: Lang,
     /// The present mode of the window (vsync or low latency), for modules that cap frames.
     pub present_mode: eframe::wgpu::PresentMode,
+    /// The depth/stencil format of the window's render pass (one window serves every module, and
+    /// CAD needs a stencil buffer). Pipelines that draw inside that pass must declare it.
+    pub depth_format: Option<eframe::wgpu::TextureFormat>,
 }
 
 /// One embedded app. The app keeps its own `eframe::App` implementation (its frame logic, UI,

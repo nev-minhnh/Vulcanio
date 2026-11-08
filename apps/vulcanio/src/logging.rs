@@ -57,4 +57,14 @@ pub fn install() {
     if log::set_logger(logger).is_ok() {
         log::set_max_level(level);
     }
+    // A panic anywhere (an app, the graphics driver glue) goes into the log with where it
+    // happened, before any hook an app installs later runs.
+    let previous = std::panic::take_hook();
+    std::panic::set_hook(Box::new(move |info| {
+        let thread = std::thread::current();
+        let backtrace = std::backtrace::Backtrace::force_capture();
+        log::error!("panic on thread {}: {info}\n{backtrace}", thread.name().unwrap_or("?"));
+        log::logger().flush();
+        previous(info);
+    }));
 }

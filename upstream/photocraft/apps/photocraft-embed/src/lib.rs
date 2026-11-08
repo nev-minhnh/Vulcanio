@@ -174,6 +174,7 @@ fn lang_pref(lang: vulcanio_host::Lang) -> &'static str {
 pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::Module> {
     let cc = host.cc;
     photocraft_engine::malloc_tuning::apply();
+    photocraft_ui_egui::gpu_canvas::set_window_depth_format(host.depth_format);
     crash_guard::install_hook();
     photocraft_ui_egui::type_tool::warm_fonts();
     let files: Vec<String> = host.files.iter().map(|p| p.to_string_lossy().into_owned()).collect();
