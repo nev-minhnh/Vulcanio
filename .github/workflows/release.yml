@@ -1,0 +1,61 @@
+# Publish a finished Windows build as a GitHub release (portable zip and installer).
+name: Publish release
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "ID of the successful 'Windows build' run"
+        required: true
+      version:
+        description: "Version, e.g. 1.2.1"
+        required: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Vulcanio-${{ inputs.version }}-windows-x64
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: dist
+      - name: Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          TAG: v${{ inputs.version }}
+          VERSION: ${{ inputs.version }}
+        run: |
+          ls -la dist
+          sha=$(gh api "repos/$REPO/actions/runs/${{ inputs.run_id }}" --jq .head_sha)
+          cat > notes.md <<EOF
+          **Vulcanio $VERSION — The all-in-one studio** · Windows 11 x64
+
+          - \`Vulcanio-$VERSION-windows-x64.zip\`: unzip and run \`vulcanio.exe\` (no installation needed).
+          - \`Vulcanio-Setup-$VERSION.exe\`: installer; adds Vulcanio to "Open with" for the file types it opens.
+
+          ### $VERSION
+          - Fixed: the window went black when Vulcanio Photo opened a file on a real GPU.
+          - Graphics errors and crashes are written to \`%APPDATA%\\Vulcanio\\data\\logs\\vulcanio.log\`.
+
+          ### 1.2.0
+          - New name, logo and slogan; app bar in the logo's colours that tucks into a thin line.
+          - Settings and About dialogs with a close (×) button, always in Vulcanio's look.
+          - Panels slide in as they appear; the same motion in every app; pixel-aligned icons.
+          - Leftover community links and update checks removed.
+
+          Built from $sha. License: MIT OR Apache-2.0.
+          EOF
+          sed -i 's/^          //' notes.md
+          if gh release view "$TAG" -R "$REPO" >/dev/null 2>&1; then
+            gh release edit "$TAG" -R "$REPO" --notes-file notes.md
+            gh release upload "$TAG" dist/* --clobber -R "$REPO"
+          else
+            gh release create "$TAG" dist/* -R "$REPO" --target "$sha" --title "Vulcanio $VERSION" --notes-file notes.md --latest
+          fi
