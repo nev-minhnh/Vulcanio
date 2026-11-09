@@ -34,25 +34,9 @@ jobs:
         run: |
           ls -la dist
           sha=$(gh api "repos/$REPO/actions/runs/${{ inputs.run_id }}" --jq .head_sha)
-          cat > notes.md <<EOF
-          **Vulcanio $VERSION — The all-in-one studio** · Windows 11 x64
-
-          - \`Vulcanio-$VERSION-windows-x64.zip\`: unzip and run \`vulcanio.exe\` (no installation needed).
-          - \`Vulcanio-Setup-$VERSION.exe\`: installer; adds Vulcanio to "Open with" for the file types it opens.
-
-          ### $VERSION
-          - Fixed: the window went black when Vulcanio Photo opened a file on a real GPU.
-          - Graphics errors and crashes are written to \`%APPDATA%\\Vulcanio\\data\\logs\\vulcanio.log\`.
-
-          ### 1.2.0
-          - New name, logo and slogan; app bar in the logo's colours that tucks into a thin line.
-          - Settings and About dialogs with a close (×) button, always in Vulcanio's look.
-          - Panels slide in as they appear; the same motion in every app; pixel-aligned icons.
-          - Leftover community links and update checks removed.
-
-          Built from $sha. License: MIT OR Apache-2.0.
-          EOF
-          sed -i 's/^          //' notes.md
+          # Notes come from packaging/release-notes/<version>.md on the default branch.
+          gh api "repos/$REPO/contents/packaging/release-notes/$VERSION.md" -H "Accept: application/vnd.github.raw" > notes.md \
+            || printf 'Vulcanio %s — The all-in-one studio. Windows 11 x64.\n\nBuilt from %s.\n' "$VERSION" "$sha" > notes.md
           if gh release view "$TAG" -R "$REPO" >/dev/null 2>&1; then
             gh release edit "$TAG" -R "$REPO" --notes-file notes.md
             gh release upload "$TAG" dist/* --clobber -R "$REPO"
