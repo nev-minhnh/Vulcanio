@@ -263,6 +263,12 @@ pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::M
     app.services.right_button_down = tablet::right_button_service();
     app.services.pen_end = tablet::pen_end_service();
     set_language_pref(&mut app, &cc.egui_ctx, host.lang);
+    // Inside Vulcanio every app starts on its home page, so the start screen is always on.
+    if !app.session.prefs().general.auto_show_home_screen
+        && let Err(e) = app.run("prefs.set", serde_json::json!({"path": "general.autoShowHomeScreen", "value": true}))
+    {
+        log::warn!("Vulcanio Photo home screen: {e}");
+    }
     app.open_paths(&files);
     if let Some(w) = &app_dirs::current().warning {
         photocraft_ui_egui::notices::post(&mut app, "Portable mode is off", vec![w.clone()], false, None);

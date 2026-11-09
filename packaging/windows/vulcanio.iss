@@ -6,7 +6,7 @@
 ; apps open. Windows lets only the user pick the default app for a type.
 
 #define AppName "Vulcanio"
-#define AppVersion "1.2.2"
+#define AppVersion "1.3.0"
 #define AppExe "vulcanio.exe"
 
 [Setup]

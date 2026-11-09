@@ -19,6 +19,7 @@ mod logging;
 mod memory;
 mod modules;
 mod settings;
+mod settings_ui;
 mod shell;
 
 use std::path::PathBuf;

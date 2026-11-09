@@ -167,14 +167,16 @@ pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::M
     session.invite_links_startup();
     let port = std::env::var("FIGCRAFT_CONTROL_PORT").ok().and_then(|p| p.parse().ok());
     let first_run = svc.prefs.is_none();
-    if session.docs.is_empty() && opens_new_file(first_run, session.prefs.start_on_home, port.is_some()) {
+    // Inside Vulcanio every start shows Home: no new blank file (a control port still gets one).
+    if session.docs.is_empty() && port.is_some() && opens_new_file(first_run, session.prefs.start_on_home, true) {
         let _ = session.execute("file.new", &json!({}));
     }
     session.prefs.language = lang_code(host.lang);
     figcraft_ui_egui::i18n::set(&session.prefs.language, figcraft_ui_egui::Services::system_language(&svc).as_deref());
     let mut fig = FigApp::new(session, Box::new(svc));
     // No update check: Vulcanio updates as one app, never Vulcanio Interface's executable on its own.
-    fig.ui.home = false;
+    // Home first, unless files were asked for (recovered work stays open in tabs behind it).
+    fig.ui.home = host.files.is_empty();
     fig.ui.font_checks = opened;
     fig.note_recovered(recovered.copies);
     if let Some(message) = failed_open {

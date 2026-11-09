@@ -241,7 +241,8 @@ pub struct Vulcanio {
     /// Apps asked for while another was starting: each starts in turn, nothing is dropped.
     queue: Vec<Loading>,
     /// The tucked-away rail is showing.
-    rail_open: bool,
+    pub rail_open: bool,
+    pub settings_page: crate::settings_ui::Page,
     /// The theme last given to the apps (`true`: dark).
     theme_applied: Option<bool>,
     /// Since when the window has been minimized or in the background.
@@ -362,6 +363,7 @@ impl Vulcanio {
             exiting: false,
             title: String::new(),
             show_settings: false,
+            settings_page: crate::settings_ui::Page::default(),
             show_about: false,
             logo: load_texture(ctx, "vulcanio-logo", include_bytes!("../assets/vulcanio-256.png")),
             mark: load_texture(ctx, "vulcanio-mark", include_bytes!("../assets/vulcanio-mark.png")),

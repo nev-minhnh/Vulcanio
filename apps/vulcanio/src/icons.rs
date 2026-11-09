@@ -12,6 +12,9 @@ pub enum Icon {
     Open,
     Info,
     Sidebar,
+    Palette,
+    Motion,
+    Gauge,
 }
 
 /// Paint `icon` centred in `rect` (a square) in `color`.
@@ -104,6 +107,35 @@ pub fn paint(p: &Painter, rect: Rect, icon: &Icon, color: Color32) {
             let r = Rect::from_min_max(at(-0.38, -0.3), at(0.38, 0.3));
             p.rect_stroke(r, s * 0.07, st, StrokeKind::Middle);
             p.rect_filled(Rect::from_min_max(at(-0.38, -0.3), at(-0.12, 0.3)), s * 0.05, color);
+        }
+        Icon::Palette => {
+            // A painter's palette: a rounded body with a thumb hole and three paint dots.
+            p.circle_stroke(c, s * 0.36, st);
+            p.circle_filled(at(0.14, 0.16), s * 0.07, color);
+            for (x, y) in [(-0.16f32, -0.12f32), (0.04, -0.2), (-0.2, 0.1)] {
+                p.circle_filled(at(x, y), s * 0.06, color);
+            }
+        }
+        Icon::Motion => {
+            // Speed lines and a moving dot.
+            for (i, y) in [-0.2f32, 0.0, 0.2].iter().enumerate() {
+                let start = [-0.38f32, -0.3, -0.38][i];
+                p.line_segment([at(start, *y), at(0.06, *y)], Stroke::new(w, color.gamma_multiply(1.0 - i as f32 * 0.0)));
+            }
+            p.circle_filled(at(0.24, 0.0), s * 0.13, color);
+        }
+        Icon::Gauge => {
+            // A dial with a needle.
+            let pts: Vec<Pos2> = (0..=16)
+                .map(|i| {
+                    let a = std::f32::consts::PI * (1.0 + i as f32 / 16.0);
+                    c + vec2(a.cos(), a.sin()) * s * 0.38 + vec2(0.0, s * 0.12)
+                })
+                .collect();
+            p.add(egui::Shape::line(pts, st));
+            let hub = c + vec2(0.0, s * 0.12);
+            p.line_segment([hub, at(0.2, -0.12)], st);
+            p.circle_filled(hub, s * 0.06, color);
         }
         Icon::Info => {
             p.circle_stroke(c, s * 0.38, st);

@@ -4,7 +4,7 @@
 
 *Vulcanio — Studio sáng tạo tất cả trong một*
 
-**Phiên bản 1.2.2** · Windows 11 (x64) · Rust · Giấy phép MIT HOẶC Apache-2.0
+**Phiên bản 1.3.0** · Windows 11 (x64) · Rust · Giấy phép MIT HOẶC Apache-2.0
 
 Vulcanio gộp sáu ứng dụng sáng tạo mã nguồn mở viết bằng Rust vào **một ứng dụng, một cửa sổ**:
 
@@ -31,6 +31,9 @@ bên trong cửa sổ của mình. Nguồn gốc và giấy phép của từng t
 - **Mở tệp đúng ứng dụng**: theo phần mở rộng; khi nhiều ứng dụng mở được (`.png`, `.svg`, `.pdf`,
   `.psd`…), Vulcanio hỏi “Mở bằng” và có thể ghi nhớ lựa chọn. Mở từ Explorer, dòng lệnh, kéo-thả,
   hoặc khi Vulcanio đang chạy (tệp được chuyển cho cửa sổ đang mở).
+- **Trang bắt đầu**: mỗi ứng dụng khởi động vào trang bắt đầu của nó (tệp gần đây, tạo mới, mẫu), không
+  tạo tài liệu trống và không tự mở lại việc cũ. Mở tệp thì vào thẳng tệp đó.
+- **Cài đặt** gọn gàng theo trang: Chung, Giao diện, Chuyển động, Tệp, Hiệu năng, Giới thiệu.
 - **Tab tài liệu** trong từng ứng dụng: mỗi tệp mở ra là một tab trên thanh tab của ứng dụng đó.
 - **Mượt như Microsoft Edge**: VSync với hai khung hình trong hàng đợi; cuộn và thu phóng bằng bánh
   xe có gia tốc êm (chỉnh thời gian trong Cài đặt); chuyển cảnh khi đổi ứng dụng; bảng điều khiển và
@@ -47,8 +50,8 @@ bên trong cửa sổ của mình. Nguồn gốc và giấy phép của từng t
 ## Tải về và chạy
 
 Bản dựng sẵn: tab **Actions** › lần chạy “Windows build” mới nhất › artifact
-`Vulcanio-1.2.2-windows-x64` (gồm `Vulcanio-1.2.2-windows-x64.zip` chạy ngay, và bộ cài
-`Vulcanio-Setup-1.2.2.exe` nếu có). Giải nén và chạy `vulcanio.exe`; không cần cài thêm gì.
+`Vulcanio-1.3.0-windows-x64` (gồm `Vulcanio-1.3.0-windows-x64.zip` chạy ngay, và bộ cài
+`Vulcanio-Setup-1.3.0.exe` nếu có). Giải nén và chạy `vulcanio.exe`; không cần cài thêm gì.
 
 ## Dựng từ mã nguồn
 
@@ -61,7 +64,7 @@ cd vulcanio
 powershell -ExecutionPolicy Bypass -File packaging\windows\build.ps1   # thêm -WithFonts để nhúng phông CJK
 ```
 
-Kết quả: `target\release\vulcanio.exe` và, nếu có Inno Setup, `dist\Vulcanio-Setup-1.2.2.exe`.
+Kết quả: `target\release\vulcanio.exe` và, nếu có Inno Setup, `dist\Vulcanio-Setup-1.3.0.exe`.
 Bộ cài thêm Vulcanio vào “Open with” và Settings › Apps › Default apps cho 98 loại tệp.
 
 Mỗi lần đẩy lên nhánh `main`, GitHub Actions (`.github/workflows/windows.yml`) tự dựng bản Windows.
@@ -91,6 +94,10 @@ packaging/windows/        build.ps1 và bộ cài Inno Setup
 
 ## Lịch sử phiên bản
 
+- **1.3.0** — Mỗi ứng dụng luôn mở vào trang bắt đầu của nó (không còn tài liệu trống hay tự mở lại việc cũ;
+  Thư viện mở vào bảng chọn thư viện). Cài đặt được làm lại: thanh trang bên trái (Chung, Giao diện, Chuyển
+  động, Tệp, Hiệu năng, Giới thiệu), thẻ tùy chọn với công tắc, nút chọn và ô xem trước chủ đề; mọi thay
+  đổi có hiệu lực ngay.
 - **1.2.2** — Khởi động lần đầu sau khi bật máy nhanh hơn: chỉ dùng DirectX 12 (không nạp driver Vulkan
   và OpenGL; chỉ thử chúng khi DirectX 12 không chạy được), dùng GPU mà Windows chọn thay vì luôn đánh
   thức GPU rời, và thêm **Tăng tốc khởi động** (như Microsoft Edge): sau khi đăng nhập Windows, một lần
@@ -114,7 +121,7 @@ thay đổi: [NOTICE.md](NOTICE.md).
 
 ## English
 
-**Vulcanio — The all-in-one studio** (v1.2.2) puts six open-source Rust creative apps (photo
+**Vulcanio — The all-in-one studio** (v1.3.0) puts six open-source Rust creative apps (photo
 editing, a RAW photo library, vector illustration, page layout, interface design and CAD) in one
 Windows 11 app and window. Every app keeps all of its features, its own interface and its document
 tabs. Vulcanio adds an app bar in the logo's colours that tucks into a thin line while you work, a

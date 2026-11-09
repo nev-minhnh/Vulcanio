@@ -218,13 +218,20 @@ pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::M
     let env_library: Option<std::path::PathBuf> = std::env::var_os("LIGHTCRAFT_LIBRARY").filter(|p| !p.is_empty()).map(Into::into);
     let (library_dir, opened_by_argument) = launch_library_choice(None, env_library.as_ref(), launch_library);
     let (prefs, prefs_warning, keep_prefs_file) = load_prefs(in_memory);
-    let launch = lightcraft_ui_egui::panels::library_problem::launch_plan(
-        in_memory,
-        library_dir,
-        env_library,
-        prefs.as_ref().map(|u| &u.settings),
-        lightcraft_engine::library::default_dir(),
-    );
+    // Inside Vulcanio the Library starts on its library chooser (recent libraries, New, Open)
+    // unless files, a library argument or LIGHTCRAFT_LIBRARY say which library to open.
+    let start_on_chooser = files.is_empty() && !opened_by_argument && env_library.is_none() && !in_memory;
+    let launch = if start_on_chooser {
+        Launch::Ask
+    } else {
+        lightcraft_ui_egui::panels::library_problem::launch_plan(
+            in_memory,
+            library_dir,
+            env_library,
+            prefs.as_ref().map(|u| &u.settings),
+            lightcraft_engine::library::default_dir(),
+        )
+    };
     let gpu_crash = gpu_crash_check(in_memory).or_else(|| gpu_lost_check_at(gpu_lost_marker_path().as_deref(), in_memory));
     let gpu_on = prefs.as_ref().is_none_or(|u| u.settings.gpu) && gpu_crash.is_none();
     lightcraft_engine::gpu::set_enabled(gpu_on);

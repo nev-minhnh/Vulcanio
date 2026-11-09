@@ -278,10 +278,7 @@ pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::M
     for f in &host.files {
         app.open_path(f);
     }
-    if app.session.docs.is_empty() {
-        let metric = app.session.settings.measureinit;
-        app.session.new_drawing(metric);
-    }
+    // Inside Vulcanio CAD starts on its Start page, not a blank drawing.
     let ctx = cc.egui_ctx.clone();
     let desktop_theme = desktop_theme::DesktopTheme::start(move || ctx.request_repaint());
     let ctx = cc.egui_ctx.clone();

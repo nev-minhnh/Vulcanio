@@ -160,6 +160,8 @@ pub fn create(host: &vulcanio_host::HostContext<'_>) -> Box<dyn vulcanio_host::M
     // Vulcanio draws the window frame (the system's), so Vulcanio Vector's own title bar stays off.
     app.custom_titlebar = false;
     app.session.prefs.interface_language = host.lang.code().to_string();
+    // Inside Vulcanio every app starts on its home page.
+    app.session.prefs.show_home_screen = true;
     if let Some(port) = automation_args::env_control_port(std::env::var_os("VECTORCRAFT_CONTROL_PORT")).ok().flatten() {
         let rx = control_server::start(port, cc.egui_ctx.clone());
         app = app.with_control(rx);

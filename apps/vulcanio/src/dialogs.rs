@@ -1,21 +1,22 @@
-//! Vulcanio's dialogs: Open With, Settings and About.
+//! Vulcanio's Open With dialog (Settings and About live in `settings_ui`).
 
-use egui::{Color32, Id, RichText, pos2, vec2};
-use vulcanio_host::Lang;
+use egui::{Id, pos2, vec2};
 
 use crate::i18n::{tr, trf};
 use crate::icons::{self, Icon};
-use crate::modules::{self, ModuleId, SPECS};
-use crate::settings::ThemeChoice;
+use crate::modules::{ModuleId, SPECS};
 use crate::shell::{Vulcanio, file_name};
 
 pub fn show(app: &mut Vulcanio, ctx: &egui::Context) {
     open_with(app, ctx);
-    if app.show_settings {
-        settings(app, ctx);
-    }
+    // About is a page of the Settings window.
     if app.show_about {
-        about(app, ctx);
+        app.show_about = false;
+        app.show_settings = true;
+        app.settings_page = crate::settings_ui::Page::About;
+    }
+    if app.show_settings {
+        crate::settings_ui::show(app, ctx);
     }
 }
 
@@ -73,104 +74,6 @@ fn open_with(app: &mut Vulcanio, ctx: &egui::Context) {
     }
 }
 
-fn settings(app: &mut Vulcanio, ctx: &egui::Context) {
-    let lang = app.lang;
-    let mut close = false;
-    let accent = app.palette.accent;
-    let modal = egui::Modal::new(Id::unique("vulcanio_settings")).show(ctx, |ui| {
-        ui.set_width(540.0);
-        if title_bar(ui, tr(lang, "Settings"), tr(lang, "Close")) {
-            close = true;
-        }
-        ui.add_space(4.0);
-        let max_h = (ctx.content_rect().height() - 200.0).max(160.0);
-        egui::ScrollArea::vertical().max_height(max_h).auto_shrink([false, true]).show(ui, |ui| {
-            heading(ui, accent, tr(lang, "Language"));
-            ui.horizontal(|ui| {
-                ui.radio_value(&mut app.settings.lang, None, tr(lang, "Same as Windows"));
-                for l in Lang::ALL {
-                    ui.radio_value(&mut app.settings.lang, Some(l), l.name());
-                }
-            });
-            heading(ui, accent, tr(lang, "Appearance"));
-            ui.horizontal(|ui| {
-                ui.label(tr(lang, "Theme"));
-                let before = app.settings.theme;
-                ui.radio_value(&mut app.settings.theme, ThemeChoice::System, tr(lang, "System"));
-                ui.radio_value(&mut app.settings.theme, ThemeChoice::Light, tr(lang, "Light"));
-                ui.radio_value(&mut app.settings.theme, ThemeChoice::Dark, tr(lang, "Dark"));
-                // Vulcanio and every app follow the change on the next frame.
-                let _ = before;
-            });
-            heading(ui, accent, tr(lang, "App bar"));
-            ui.checkbox(&mut app.settings.rail_autohide, tr(lang, "Hide while an app is open; show when the pointer reaches the left edge"));
-            heading(ui, accent, tr(lang, "Memory"));
-            ui.checkbox(&mut app.settings.free_idle_apps, tr(lang, "Close apps with nothing open after a minute in the background"));
-            heading(ui, accent, tr(lang, "Motion and smoothness"));
-            ui.checkbox(&mut app.settings.smooth_scrolling, tr(lang, "Smooth scrolling and zooming"));
-            ui.add_enabled_ui(app.settings.smooth_scrolling, |ui| {
-                ui.horizontal(|ui| {
-                    ui.label(tr(lang, "Ease time"));
-                    ui.add(egui::Slider::new(&mut app.settings.ease_ms, 60..=320).suffix(" ms"));
-                });
-            });
-            ui.checkbox(&mut app.settings.animations, tr(lang, "Animated transitions"));
-            ui.horizontal(|ui| {
-                ui.label(tr(lang, "Presentation"));
-            });
-            ui.radio_value(&mut app.settings.low_latency, false, tr(lang, "Smooth (VSync, like Microsoft Edge)"));
-            ui.radio_value(&mut app.settings.low_latency, true, tr(lang, "Lowest latency (for pen drawing)"));
-            ui.label(RichText::new(tr(lang, "Takes effect the next time Vulcanio starts.")).weak().size(12.0));
-            heading(ui, accent, tr(lang, "Startup"));
-            ui.checkbox(&mut app.settings.reopen_last, tr(lang, "Reopen the last app on start"));
-            if ui.checkbox(&mut app.settings.startup_boost, tr(lang, "Startup boost: get Vulcanio ready in the background after Windows starts")).changed() {
-                crate::boost::register(app.settings.startup_boost);
-            }
-            ui.label(RichText::new(tr(lang, "Makes the first start after turning on the computer much faster.")).weak().size(12.0));
-            heading(ui, accent, tr(lang, "Files"));
-            if ui.button(tr(lang, "Make Vulcanio the app for these file types")).clicked() {
-                app.assoc_note = Some(match crate::associations::register() {
-                    Ok(()) => tr(lang, "Registered for the file types Vulcanio opens.").to_string(),
-                    Err(e) => e,
-                });
-            }
-            if let Some(note) = &app.assoc_note {
-                ui.label(RichText::new(note).weak().size(12.0));
-            }
-            ui.add_space(4.0);
-            ui.label(tr(lang, "Remembered choices"));
-            if app.settings.open_with.is_empty() {
-                ui.label(RichText::new(tr(lang, "None yet.")).weak());
-            }
-            let mut forget = None;
-            for (ext, id) in &app.settings.open_with {
-                ui.horizontal(|ui| {
-                    ui.label(format!(".{ext}  →  {}", SPECS[id.index()].title(lang)));
-                    if ui.small_button(tr(lang, "Forget")).clicked() {
-                        forget = Some(ext.clone());
-                    }
-                });
-            }
-            if let Some(ext) = forget {
-                app.settings.open_with.remove(&ext);
-            }
-        });
-        ui.add_space(10.0);
-        if footer_button(ui, tr(lang, "Close")) {
-            close = true;
-        }
-    });
-    if close || modal.should_close() {
-        app.show_settings = false;
-    }
-}
-
-fn heading(ui: &mut egui::Ui, accent: Color32, text: &str) {
-    ui.add_space(10.0);
-    ui.label(RichText::new(text).size(15.0).strong().color(accent));
-    ui.add_space(2.0);
-}
-
 /// A dialog's title with a close (×) button at the right. True when the button is clicked.
 fn title_bar(ui: &mut egui::Ui, title: &str, close_tip: &str) -> bool {
     let width = ui.available_width();
@@ -204,49 +107,4 @@ fn footer_button(ui: &mut egui::Ui, label: &str) -> bool {
     ui.painter().rect_filled(r, 10.0, fill.linear_multiply(1.0 - 0.15 * h).gamma_multiply(1.0));
     ui.painter().galley(r.center() - galley.size() / 2.0, galley, egui::Color32::WHITE);
     resp.clicked()
-}
-
-fn about(app: &mut Vulcanio, ctx: &egui::Context) {
-    let lang = app.lang;
-    let mut close = false;
-    let p = app.palette;
-    let modal = egui::Modal::new(Id::unique("vulcanio_about")).show(ctx, |ui| {
-        ui.set_width(480.0);
-        if title_bar(ui, tr(lang, "About Vulcanio"), tr(lang, "Close")) {
-            close = true;
-        }
-        ui.add_space(6.0);
-        ui.horizontal(|ui| {
-            if let Some(logo) = &app.logo {
-                ui.add(egui::Image::new((logo.id(), vec2(84.0, 84.0))));
-            }
-            ui.add_space(6.0);
-            ui.vertical(|ui| {
-                ui.add_space(8.0);
-                ui.label(RichText::new("Vulcanio").font(crate::shell::strong(ui.ctx(), 28.0)));
-                ui.label(RichText::new(tr(lang, "The all-in-one studio")).size(15.0).color(p.spark));
-                ui.label(RichText::new(format!("{} {}", tr(lang, "Version"), env!("CARGO_PKG_VERSION"))).weak());
-            });
-        });
-        ui.add_space(12.0);
-        ui.label(tr(lang, "Vulcanio brings six open-source creative apps together in one window."));
-        ui.add_space(6.0);
-        for s in &SPECS {
-            ui.horizontal(|ui| {
-                let (r, _) = ui.allocate_exact_size(vec2(18.0, 18.0), egui::Sense::hover());
-                icons::paint(ui.painter(), r, &Icon::Module(s.id), s.accent());
-                ui.label(s.title(lang));
-            });
-        }
-        ui.add_space(6.0);
-        ui.label(RichText::new(tr(lang, "Open-source components under MIT OR Apache-2.0; see NOTICE.md.")).weak().size(12.0));
-        ui.add_space(10.0);
-        if footer_button(ui, tr(lang, "Close")) {
-            close = true;
-        }
-    });
-    if close || modal.should_close() {
-        app.show_about = false;
-    }
-    let _ = modules::all_extensions;
 }

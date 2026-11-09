@@ -33,7 +33,10 @@ the Vulcanio logo, and the apps' own icon artwork (SVG sources and their notes) 
   and code names are unchanged, so files and settings from the original apps keep working.
 - Community links (Discord, websites, GitHub) and the apps' own self-updaters and update checks
   are removed from the interface.
-- Startup: LightCraft opens without its demo library; FigCraft indexes system fonts on demand;
+- Startup: every app starts on its own start page — Vulcanio Photo and Vulcanio Vector show their home
+  screens, Vulcanio Interface shows Home without making a new file, Vulcanio CAD shows its Start page
+  instead of a blank drawing, and Vulcanio Library starts on its library chooser.
+- LightCraft opens without its demo library; FigCraft indexes system fonts on demand;
   VectorCraft installs its fonts when it first opens.
 
 - DesignCraft: a Vietnamese interface catalog (`crates/ui-egui/src/i18n/vi.rs`) and its entry in
