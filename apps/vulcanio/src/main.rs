@@ -9,6 +9,7 @@
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 
 mod associations;
+mod boost;
 mod dialogs;
 mod home;
 mod i18n;
@@ -171,16 +172,20 @@ fn native_options(low_latency: bool) -> eframe::NativeOptions {
         surface.desired_maximum_frame_latency = Some(2);
     }
     if let eframe::egui_wgpu::WgpuSetup::CreateNew(create) = &mut options.wgpu_options.wgpu_setup {
-        // Windows: DirectX 12 (FXC shaders, no extra DLLs), then Vulkan, then OpenGL.
+        // Windows: DirectX 12 only (FXC shaders, no extra DLLs). Asking for Vulkan and OpenGL too
+        // loads both of their drivers at every start, which costs seconds right after the computer
+        // boots; they are tried only if DirectX 12 can't start (see `main`).
         let preferred = if cfg!(windows) {
-            eframe::wgpu::Backends::DX12 | eframe::wgpu::Backends::VULKAN | eframe::wgpu::Backends::GL
+            eframe::wgpu::Backends::DX12
         } else {
             eframe::wgpu::Backends::PRIMARY | eframe::wgpu::Backends::GL
         };
         create.instance_descriptor.backends = eframe::wgpu::Backends::from_env().unwrap_or(preferred);
         create.instance_descriptor.backend_options.dx12.shader_compiler =
             eframe::wgpu::Dx12Compiler::from_env().unwrap_or(eframe::wgpu::Dx12Compiler::Fxc);
-        create.power_preference = eframe::wgpu::PowerPreference::from_env().unwrap_or(eframe::wgpu::PowerPreference::HighPerformance);
+        // The graphics processor Windows chooses for Vulcanio (Settings > System > Display >
+        // Graphics): waking a sleeping discrete GPU slows the start and drains the battery.
+        create.power_preference = eframe::wgpu::PowerPreference::from_env().unwrap_or(eframe::wgpu::PowerPreference::None);
         // One device for every app: the adapter's own limits (LightCraft develops on it, CADCraft
         // and DesignCraft need its largest buffers and textures) and PhotoCraft's GPU timing.
         let base = create.device_descriptor.clone();
@@ -220,7 +225,15 @@ fn native_options(low_latency: bool) -> eframe::NativeOptions {
     options
 }
 
+/// When this process started, for the startup time in the log.
+pub static STARTED: std::sync::OnceLock<std::time::Instant> = std::sync::OnceLock::new();
+
 fn main() -> std::process::ExitCode {
+    STARTED.get_or_init(std::time::Instant::now);
+    if std::env::args_os().nth(1).is_some_and(|a| a == boost::ARG) {
+        boost::run();
+        return std::process::ExitCode::SUCCESS;
+    }
     // A copy of Vulcanio started to read or write a DWG file (CADCraft) does only that.
     if let Some(code) = cadcraft_embed::worker_main() {
         std::process::exit(code);
@@ -259,6 +272,16 @@ fn main() -> std::process::ExitCode {
         Ok(()) => std::process::ExitCode::SUCCESS,
         Err(e) => {
             log::error!("Vulcanio stopped: {e}");
+            // DirectX 12 couldn't start (an old or missing driver): start again on Vulkan or OpenGL.
+            if cfg!(windows) && std::env::var_os("WGPU_BACKEND").is_none() {
+                log::warn!("starting again with Vulkan or OpenGL");
+                if let Ok(exe) = std::env::current_exe() {
+                    let restarted = std::process::Command::new(exe).args(std::env::args_os().skip(1)).env("WGPU_BACKEND", "vulkan,gl").spawn();
+                    if restarted.is_ok() {
+                        return std::process::ExitCode::SUCCESS;
+                    }
+                }
+            }
             std::process::ExitCode::FAILURE
         }
     }

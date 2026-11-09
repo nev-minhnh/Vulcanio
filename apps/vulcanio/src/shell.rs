@@ -217,6 +217,7 @@ pub struct Vulcanio {
     pub view: View,
     shell_look: Look,
     shell_fonts: egui::FontDefinitions,
+    start_logged: bool,
     /// (dark, animations) the shell look was built for.
     shell_key: (bool, bool),
     transition_start: f64,
@@ -339,6 +340,9 @@ impl Vulcanio {
         if let Some(rs) = &cc.wgpu_render_state {
             rs.device.on_uncaptured_error(std::sync::Arc::new(|e: eframe::wgpu::Error| log::error!("graphics error: {e}")));
         }
+        // Keep the startup boost's sign-in entry in step with the setting (and this exe's path).
+        let boost = settings.startup_boost;
+        std::thread::spawn(move || crate::boost::register(boost));
         egui::set_wheel_smoothing_seconds(settings.ease_seconds());
         let palette = Palette::new(false);
         let mut me = Self {
@@ -347,6 +351,7 @@ impl Vulcanio {
             view: View::Home,
             shell_look: fresh_look(),
             shell_fonts: shell_fonts(),
+            start_logged: false,
             shell_key: (false, true),
             transition_start: 0.0,
             loading: None,
@@ -1192,6 +1197,12 @@ impl eframe::App for Vulcanio {
     }
 
     fn ui(&mut self, ui: &mut egui::Ui, frame: &mut eframe::Frame) {
+        if !self.start_logged {
+            self.start_logged = true;
+            if let Some(t) = crate::STARTED.get() {
+                log::info!("first frame {} ms after start", t.elapsed().as_millis());
+            }
+        }
         let ctx = ui.ctx().clone();
         egui::set_wheel_smoothing_seconds(self.settings.ease_seconds());
         let lang = self.settings.resolved_lang();

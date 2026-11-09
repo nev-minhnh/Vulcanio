@@ -96,6 +96,8 @@ fn vi(en: &str) -> Option<&'static str> {
         "Hide while an app is open; show when the pointer reaches the left edge" => "Ẩn khi đang mở ứng dụng; hiện khi đưa chuột tới mép trái",
         "Memory" => "Bộ nhớ",
         "Close apps with nothing open after a minute in the background" => "Đóng các ứng dụng không mở tệp nào sau một phút chạy nền",
+        "Startup boost: get Vulcanio ready in the background after Windows starts" => "Tăng tốc khởi động: chuẩn bị sẵn Vulcanio ở chế độ nền sau khi Windows khởi động",
+        "Makes the first start after turning on the computer much faster." => "Giúp lần mở đầu tiên sau khi bật máy nhanh hơn nhiều.",
         _ => return None,
     })
 }

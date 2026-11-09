@@ -54,6 +54,9 @@ pub struct Settings {
     pub rail_autohide: bool,
     /// Apps with nothing open close after a minute in the background, giving their memory back.
     pub free_idle_apps: bool,
+    /// Startup boost: after Windows signs in, a background run reads Vulcanio and wakes the
+    /// graphics driver so the first start after boot is quick.
+    pub startup_boost: bool,
 }
 
 impl Default for Settings {
@@ -71,6 +74,7 @@ impl Default for Settings {
             last_module: None,
             rail_autohide: true,
             free_idle_apps: true,
+            startup_boost: true,
         }
     }
 }

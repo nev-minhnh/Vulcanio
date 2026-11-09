@@ -6,7 +6,7 @@
 ; apps open. Windows lets only the user pick the default app for a type.
 
 #define AppName "Vulcanio"
-#define AppVersion "1.2.1"
+#define AppVersion "1.2.2"
 #define AppExe "vulcanio.exe"
 
 [Setup]
@@ -56,6 +56,8 @@ Name: "{group}\{#AppName}"; Filename: "{app}\{#AppExe}"; Comment: "Vulcanio - Th
 Name: "{autodesktop}\{#AppName}"; Filename: "{app}\{#AppExe}"; Tasks: desktopicon
 
 [Registry]
+; Startup boost: Vulcanio adds this sign-in entry itself (Settings > Startup); remove it on uninstall.
+Root: HKCU; Subkey: "Software\Microsoft\Windows\CurrentVersion\Run"; ValueType: none; ValueName: "Vulcanio Startup Boost"; Flags: uninsdeletevalue dontcreatekey
 Root: HKA; Subkey: "Software\Classes\Vulcanio.Document"; ValueType: string; ValueName: ""; ValueData: "Vulcanio document"; Flags: uninsdeletekey; Tasks: assoc
 Root: HKA; Subkey: "Software\Classes\Vulcanio.Document\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: """{app}\{#AppExe}"",0"; Tasks: assoc
 Root: HKA; Subkey: "Software\Classes\Vulcanio.Document\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\{#AppExe}"" ""%1"""; Tasks: assoc

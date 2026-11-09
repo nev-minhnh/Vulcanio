@@ -123,6 +123,10 @@ fn settings(app: &mut Vulcanio, ctx: &egui::Context) {
             ui.label(RichText::new(tr(lang, "Takes effect the next time Vulcanio starts.")).weak().size(12.0));
             heading(ui, accent, tr(lang, "Startup"));
             ui.checkbox(&mut app.settings.reopen_last, tr(lang, "Reopen the last app on start"));
+            if ui.checkbox(&mut app.settings.startup_boost, tr(lang, "Startup boost: get Vulcanio ready in the background after Windows starts")).changed() {
+                crate::boost::register(app.settings.startup_boost);
+            }
+            ui.label(RichText::new(tr(lang, "Makes the first start after turning on the computer much faster.")).weak().size(12.0));
             heading(ui, accent, tr(lang, "Files"));
             if ui.button(tr(lang, "Make Vulcanio the app for these file types")).clicked() {
                 app.assoc_note = Some(match crate::associations::register() {

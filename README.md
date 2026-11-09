@@ -4,7 +4,7 @@
 
 *Vulcanio — Studio sáng tạo tất cả trong một*
 
-**Phiên bản 1.2.1** · Windows 11 (x64) · Rust · Giấy phép MIT HOẶC Apache-2.0
+**Phiên bản 1.2.2** · Windows 11 (x64) · Rust · Giấy phép MIT HOẶC Apache-2.0
 
 Vulcanio gộp sáu ứng dụng sáng tạo mã nguồn mở viết bằng Rust vào **một ứng dụng, một cửa sổ**:
 
@@ -39,14 +39,16 @@ bên trong cửa sổ của mình. Nguồn gốc và giấy phép của từng t
 - **Tiếng Anh và tiếng Việt** cho Vulcanio và các ứng dụng.
 - **Tiết kiệm bộ nhớ**: ứng dụng chỉ khởi động khi dùng; ứng dụng không mở tệp nào tự đóng sau 1 phút
   chạy nền; khi Vulcanio thu nhỏ hoặc chạy nền, bộ nhớ không dùng được trả lại Windows.
+- **Tăng tốc khởi động**: sau khi đăng nhập Windows, Vulcanio được chuẩn bị sẵn ở chế độ nền (đọc trước
+  chương trình, nạp driver đồ họa) rồi tự thoát, nên lần mở đầu tiên sau khi bật máy nhanh. Tắt được trong Cài đặt.
 - **Đóng an toàn**: khi đóng cửa sổ, từng ứng dụng đang chạy lần lượt hỏi về thay đổi chưa lưu.
 - Không có liên kết cộng đồng, quảng cáo hay tự cập nhật riêng lẻ trong các ứng dụng con.
 
 ## Tải về và chạy
 
 Bản dựng sẵn: tab **Actions** › lần chạy “Windows build” mới nhất › artifact
-`Vulcanio-1.2.1-windows-x64` (gồm `Vulcanio-1.2.1-windows-x64.zip` chạy ngay, và bộ cài
-`Vulcanio-Setup-1.2.1.exe` nếu có). Giải nén và chạy `vulcanio.exe`; không cần cài thêm gì.
+`Vulcanio-1.2.2-windows-x64` (gồm `Vulcanio-1.2.2-windows-x64.zip` chạy ngay, và bộ cài
+`Vulcanio-Setup-1.2.2.exe` nếu có). Giải nén và chạy `vulcanio.exe`; không cần cài thêm gì.
 
 ## Dựng từ mã nguồn
 
@@ -59,7 +61,7 @@ cd vulcanio
 powershell -ExecutionPolicy Bypass -File packaging\windows\build.ps1   # thêm -WithFonts để nhúng phông CJK
 ```
 
-Kết quả: `target\release\vulcanio.exe` và, nếu có Inno Setup, `dist\Vulcanio-Setup-1.2.1.exe`.
+Kết quả: `target\release\vulcanio.exe` và, nếu có Inno Setup, `dist\Vulcanio-Setup-1.2.2.exe`.
 Bộ cài thêm Vulcanio vào “Open with” và Settings › Apps › Default apps cho 98 loại tệp.
 
 Mỗi lần đẩy lên nhánh `main`, GitHub Actions (`.github/workflows/windows.yml`) tự dựng bản Windows.
@@ -89,6 +91,10 @@ packaging/windows/        build.ps1 và bộ cài Inno Setup
 
 ## Lịch sử phiên bản
 
+- **1.2.2** — Khởi động lần đầu sau khi bật máy nhanh hơn: chỉ dùng DirectX 12 (không nạp driver Vulkan
+  và OpenGL; chỉ thử chúng khi DirectX 12 không chạy được), dùng GPU mà Windows chọn thay vì luôn đánh
+  thức GPU rời, và thêm **Tăng tốc khởi động** (như Microsoft Edge): sau khi đăng nhập Windows, một lần
+  chạy nền ưu tiên thấp đọc sẵn Vulcanio và nạp driver đồ họa rồi thoát. Bật/tắt trong Cài đặt › Khởi động.
 - **1.2.1** — Sửa lỗi cửa sổ đen khi mở ảnh trong Vulcanio Photo trên GPU thật: canvas GPU của Photo
   nay khớp bộ đệm stencil của cửa sổ (cần cho Vulcanio CAD). Lỗi đồ họa và lỗi crash được ghi vào log.
 - **1.2.0** — Đổi tên thành Vulcanio, logo và khẩu hiệu mới; thanh ứng dụng theo màu logo, để lại vạch
@@ -108,7 +114,7 @@ thay đổi: [NOTICE.md](NOTICE.md).
 
 ## English
 
-**Vulcanio — The all-in-one studio** (v1.2.1) puts six open-source Rust creative apps (photo
+**Vulcanio — The all-in-one studio** (v1.2.2) puts six open-source Rust creative apps (photo
 editing, a RAW photo library, vector illustration, page layout, interface design and CAD) in one
 Windows 11 app and window. Every app keeps all of its features, its own interface and its document
 tabs. Vulcanio adds an app bar in the logo's colours that tucks into a thin line while you work, a
